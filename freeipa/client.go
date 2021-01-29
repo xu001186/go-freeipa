@@ -81,7 +81,7 @@ func Connect(host string, tspt *http.Transport, user, pw string) (*Client, error
 		pw:   pw,
 	}
 	if e := c.login(); e != nil {
-		return nil, fmt.Errorf("initial login falied: %v", e)
+		return nil, errors.WithMessage(e, "initial login failed")
 	}
 	return c, nil
 }
@@ -135,7 +135,7 @@ func (c *Client) exec(req *request) (io.ReadCloser, error) {
 	if res.StatusCode == http.StatusUnauthorized {
 		res.Body.Close()
 		if e := c.login(); e != nil {
-			return nil, fmt.Errorf("renewed login failed: %v", e)
+			return nil, errors.WithMessage(e, "renewed login failed")
 		}
 		res, e = c.sendRequest(req)
 		if e != nil {
@@ -163,7 +163,11 @@ func (c *Client) login() error {
 	if e != nil {
 		return e
 	}
+
 	if res.StatusCode != http.StatusOK {
+		if res.StatusCode == http.StatusUnauthorized {
+			return unauthorizedHTTPResponseToFreeipaError(res)
+		}
 		return fmt.Errorf("unexpected http status code: %v", res.StatusCode)
 	}
 	return nil
