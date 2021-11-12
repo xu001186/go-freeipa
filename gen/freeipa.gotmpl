@@ -173,8 +173,27 @@ func (out *{{.UpperName}}) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.({{ToGoType .Type}})
         {{end}}
         if !itemOk {
+          {{if eq "bool" (ToGoType .Type)}}
+          // See https://github.com/tehwalris/go-freeipa/issues/3
+          // Sometimes IPA returns ["TRUE"] as a boolean value
+          strV, strOk := rawItem.(string)
+          if strOk {
+            boolV, err := strconv.ParseBool(strV)
+            if err != nil {
+              sliceOk = false
+              break
+            }
+
+            itemV = boolV
+          } else {
+            sliceOk = false
+            break
+          }
+          {{else}}
           sliceOk = false
           break
+          {{end}}
+
         }
         {{if eq "int" (ToGoType .Type)}}
         intV, e := strconv.Atoi(itemV)
