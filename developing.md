@@ -6,9 +6,9 @@
 ipalib source -----------> errors.json --\
             (./dump-errors)               |------> generated.go
                                           |(./gen)
-FreeIPA instance --------> schema.json ---|   
+FreeIPA instance --------> schema.json ---|
              ("schema" call)              |
-                                          |  
+                                          |
 Local overrides --> dirty_overrides.json -/
              ("local" hacks)
 ```
@@ -42,7 +42,7 @@ in your browser and copy your `ipa_session` cookie. Finally, make a request like
 the following curl command does:
 
 ```bash
-curl 'https://dc1.test.local/ipa/session/json' -H 'Origin: https://dc1.test.local' -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'Cookie: ipa_session=3057327ac9ea5622d7011b122d47790e' -H 'Referer: https://dc1.test.local/ipa/ui/' --data-binary '{"method":"schema","params":[[],{"version":"2.170"}]}' --insecure > ./data/session.json
+curl 'https://dc1.test.local/ipa/session/json' -H 'Origin: https://dc1.test.local' -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'Cookie: ipa_session=3057327ac9ea5622d7011b122d47790e' -H 'Referer: https://dc1.test.local/ipa/ui/' --data-binary '{"method":"schema","params":[[],{"version":"2.170"}]}' --insecure > ./data/schema.json
 ```
 
 You'll need to adjust the URLs and the value of the `ipa_session` cookie. You
