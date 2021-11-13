@@ -1,11 +1,18 @@
 {
-    "classes": {
-        "sudorule": {
-            "params": {
-                "hostmask": {
-                    "required": false
-                }
-            }
+  "classes": {
+    "sudorule": {
+      "params": {
+        "hostmask": {
+          "required": false
         }
+      }
+    },
+    "hbacrule": {
+      "params": {
+        "accessruletype": {
+          "required": false
+        }
+      }
     }
+  }
 }
