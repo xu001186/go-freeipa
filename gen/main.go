@@ -2,6 +2,7 @@ package main
 
 import (
 	"encoding/json"
+	"fmt"
 	"io/ioutil"
 	"log"
 	"os"
@@ -158,8 +159,28 @@ func loadSchema() (*Schema, error) {
 			// even though the schema doesn't say so. Assuming they are multivalued
 			// will work even if they end up actually being single-valued.
 			for _, p := range c.Params {
-				if strings.HasPrefix(p.Name, "member_") || strings.HasPrefix(p.Name, "memberof_") || strings.HasPrefix(p.Name, "memberofindirect_") {
-					p.Multivalue = true
+				multiValuePrefixes := []string{
+					"member_",
+					"memberof_",
+					"memberindirect_",
+					"memberofindirect_",
+					"memberuser_",
+					"memberhost_",
+					"membercmd_",
+					"memberallowcmd_",
+					"memberdenycmd_",
+				}
+				for _, multiValuePrefix := range multiValuePrefixes {
+					if strings.HasPrefix(p.Name, multiValuePrefix) {
+						p.Multivalue = true
+					}
+				}
+			}
+
+			// HACK use the label to guess extra multi valued params
+			for _, p := range c.Params {
+				if p.Name == "hostmask" {
+					fmt.Printf("[%s] Hostmask = %+v\n", c.Name, p)
 				}
 			}
 
@@ -205,4 +226,13 @@ func generateMain(schema *Schema, errs []ErrDesc) error {
 		return e
 	}
 	return nil
+}
+
+func stringSliceContains(slice []string, v string) bool {
+	for _, s := range slice {
+		if s == v {
+			return true
+		}
+	}
+	return false
 }
