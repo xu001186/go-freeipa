@@ -1,3 +1,6 @@
+//
+// Author: Remi Ferrand <remi.ferrand_at_cc<dot>in2p3<dot>fr>
+//
 package main
 
 import (
