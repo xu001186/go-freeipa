@@ -7,6 +7,8 @@ import (
 	"os"
 	"strings"
 	"text/template"
+
+	"github.com/pkg/errors"
 )
 
 var skipCommands = []string{
@@ -36,7 +38,12 @@ func main() {
 }
 
 func actualMain() error {
-	schema, e := loadSchema()
+	overrides, err := loadDirtyOverrides()
+	if err != nil {
+		return errors.Wrap(err, "loading local overrides")
+	}
+
+	schema, e := loadSchema(overrides)
 	if e != nil {
 		return e
 	}
@@ -50,7 +57,7 @@ func actualMain() error {
 	return nil
 }
 
-func loadSchema() (*Schema, error) {
+func loadSchema(localOverrides DirtyOverrides) (*Schema, error) {
 	input, e := ioutil.ReadFile("../data/schema.json")
 	if e != nil {
 		return nil, e
@@ -101,6 +108,15 @@ func loadSchema() (*Schema, error) {
 				skip = true
 			}
 		}
+
+		// HACK !!
+		// do we have local maintained overrides for this particular class ?
+		var classOverrides *ClassOverrides
+		classOverridesRaw, ok := localOverrides.Classes[c.Name]
+		if ok {
+			classOverrides = &classOverridesRaw
+		}
+
 		if !skip {
 			// HACK FreeIPA admin user has no "givenname" or "cn", even though the schema
 			// says these fields are required. This workaround makes it optional.
@@ -158,8 +174,34 @@ func loadSchema() (*Schema, error) {
 			// even though the schema doesn't say so. Assuming they are multivalued
 			// will work even if they end up actually being single-valued.
 			for _, p := range c.Params {
-				if strings.HasPrefix(p.Name, "member_") || strings.HasPrefix(p.Name, "memberof_") || strings.HasPrefix(p.Name, "memberofindirect_") {
-					p.Multivalue = true
+				multiValuePrefixes := []string{
+					"member_",
+					"memberof_",
+					"memberindirect_",
+					"memberofindirect_",
+					"memberuser_",
+					"memberhost_",
+					"membercmd_",
+					"memberallowcmd_",
+					"memberdenycmd_",
+				}
+				for _, multiValuePrefix := range multiValuePrefixes {
+					if strings.HasPrefix(p.Name, multiValuePrefix) {
+						p.Multivalue = true
+					}
+				}
+			}
+
+			// HACK: Use our local overrides
+			if classOverrides != nil {
+				// HACK use local overrides to modify directly the params
+				for _, p := range c.Params {
+					paramOverrides, ok := classOverrides.Params[p.Name]
+					if !ok {
+						continue
+					}
+
+					paramOverrides.OverrideParams(p)
 				}
 			}
 
@@ -205,4 +247,13 @@ func generateMain(schema *Schema, errs []ErrDesc) error {
 		return e
 	}
 	return nil
+}
+
+func stringSliceContains(slice []string, v string) bool {
+	for _, s := range slice {
+		if s == v {
+			return true
+		}
+	}
+	return false
 }

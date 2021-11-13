@@ -71,7 +71,7 @@ type CommandOutput struct {
 
 	Type        string `json:"type"`
 	Multivalue  bool   `json:"multivalue"`
-	RequiredRaw *bool  `json:"required"` // use Requried() instead
+	RequiredRaw *bool  `json:"required"` // use Required() instead
 }
 
 func (t *Param) Required() bool {
