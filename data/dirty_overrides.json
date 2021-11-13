@@ -1,0 +1,11 @@
+{
+    "classes": {
+        "sudorule": {
+            "params": {
+                "hostmask": {
+                    "required": false
+                }
+            }
+        }
+    }
+}

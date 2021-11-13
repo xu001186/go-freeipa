@@ -2,12 +2,13 @@ package main
 
 import (
 	"encoding/json"
-	"fmt"
 	"io/ioutil"
 	"log"
 	"os"
 	"strings"
 	"text/template"
+
+	"github.com/pkg/errors"
 )
 
 var skipCommands = []string{
@@ -37,7 +38,12 @@ func main() {
 }
 
 func actualMain() error {
-	schema, e := loadSchema()
+	overrides, err := loadDirtyOverrides()
+	if err != nil {
+		return errors.Wrap(err, "loading local overrides")
+	}
+
+	schema, e := loadSchema(overrides)
 	if e != nil {
 		return e
 	}
@@ -51,7 +57,7 @@ func actualMain() error {
 	return nil
 }
 
-func loadSchema() (*Schema, error) {
+func loadSchema(localOverrides DirtyOverrides) (*Schema, error) {
 	input, e := ioutil.ReadFile("../data/schema.json")
 	if e != nil {
 		return nil, e
@@ -102,6 +108,15 @@ func loadSchema() (*Schema, error) {
 				skip = true
 			}
 		}
+
+		// HACK !!
+		// do we have local maintained overrides for this particular class ?
+		var classOverrides *ClassOverrides
+		classOverridesRaw, ok := localOverrides.Classes[c.Name]
+		if ok {
+			classOverrides = &classOverridesRaw
+		}
+
 		if !skip {
 			// HACK FreeIPA admin user has no "givenname" or "cn", even though the schema
 			// says these fields are required. This workaround makes it optional.
@@ -177,10 +192,16 @@ func loadSchema() (*Schema, error) {
 				}
 			}
 
-			// HACK use the label to guess extra multi valued params
-			for _, p := range c.Params {
-				if p.Name == "hostmask" {
-					fmt.Printf("[%s] Hostmask = %+v\n", c.Name, p)
+			// HACK: Use our local overrides
+			if classOverrides != nil {
+				// HACK use local overrides to modify directly the params
+				for _, p := range c.Params {
+					paramOverrides, ok := classOverrides.Params[p.Name]
+					if !ok {
+						continue
+					}
+
+					paramOverrides.OverrideParams(p)
 				}
 			}
 

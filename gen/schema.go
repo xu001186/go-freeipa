@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 type SchemaDump struct {
 	Result struct {
 		Result Schema `json:"result"`
@@ -73,23 +71,12 @@ type CommandOutput struct {
 
 	Type        string `json:"type"`
 	Multivalue  bool   `json:"multivalue"`
-	RequiredRaw *bool  `json:"required"` // use Requried() instead
+	RequiredRaw *bool  `json:"required"` // use Required() instead
 }
 
 func (t *Param) Required() bool {
-	if len(t.Default) != 0 {
-		fmt.Printf("[%s] Default=%v\n", t.Name, t.Default)
-	}
-	if len(t.DefaultFromParam) != 0 {
-		fmt.Printf("[%s] DefaultFromParam=%v\n", t.Name, t.DefaultFromParam)
-	}
 	if t.RequiredRaw == nil {
-		v := len(t.Default) == 0 && len(t.DefaultFromParam) == 0
-		// if v {
-		// 	fmt.Printf("[%s] Required set to true\n", t.Name)
-		// 	fmt.Printf("[%s] Default=%v , DefaultFromParam=%v\n", t.Name, t.Default, t.DefaultFromParam)
-		// }
-		return v
+		return len(t.Default) == 0 && len(t.DefaultFromParam) == 0
 	}
 	return *t.RequiredRaw
 }
