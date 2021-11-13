@@ -104017,7 +104017,7 @@ Host Groups
 Host Masks
 
     */
-    Hostmask []string `json:"hostmask,omitempty"`
+    Hostmask *[]string `json:"hostmask,omitempty"`
   
     /*
 External host
@@ -104722,7 +104722,7 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
     
   }
   
-  if true {
+  if in.Hostmask != nil {
     raw := in.Hostmask
     plainV, plainOk := raw.(string)
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
@@ -104747,14 +104747,10 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
     }
     
       if plainOk {
-        out.Hostmask = []string{plainV}
+        out.Hostmask = &[]string{plainV}
       } else if sliceOk {
         
-          if len(sliceV) < 1 {
-            return fmt.Errorf("unexpected value for field Hostmask: %v; expected at least one element", raw)
-          }
-        
-        out.Hostmask = sliceV
+        out.Hostmask = &sliceV
       } else {
         return fmt.Errorf("unexpected value for field Hostmask: %v (%v)", raw, reflect.TypeOf(raw))
       }
