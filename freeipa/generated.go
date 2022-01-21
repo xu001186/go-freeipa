@@ -104000,7 +104000,7 @@ User Groups
 External User
 External User the rule applies to (sudorule-find only)
     */
-    Externaluser *string `json:"externaluser,omitempty"`
+    Externaluser *[]string `json:"externaluser,omitempty"`
   
     /*
 Hosts
@@ -104638,15 +104638,10 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
     }
     
       if plainOk {
-        out.Externaluser = &plainV
+        out.Externaluser = &[]string{plainV}
       } else if sliceOk {
         
-          if len(sliceV) == 1 {
-            out.Externaluser = &sliceV[0]
-          } else if len(sliceV) > 1 {
-            return fmt.Errorf("unexpected value for field Externaluser: %v; expected at most one element", raw)
-          }
-        
+        out.Externaluser = &sliceV
       } else {
         return fmt.Errorf("unexpected value for field Externaluser: %v (%v)", raw, reflect.TypeOf(raw))
       }

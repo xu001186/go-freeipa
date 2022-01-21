@@ -17,12 +17,17 @@ type ClassOverrides struct {
 }
 
 type ClassParamsOverrides struct {
-	Required *bool `json:"required,omitempty"`
+	Required   *bool `json:"required,omitempty"`
+	Multivalue *bool `json:"multivalue,omitempty"`
 }
 
 func (c ClassParamsOverrides) OverrideParams(p *Param) {
 	if c.Required != nil {
 		p.RequiredRaw = c.Required
+	}
+
+	if c.Multivalue != nil {
+		p.Multivalue = *c.Multivalue
 	}
 }
 
