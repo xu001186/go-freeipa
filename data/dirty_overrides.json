@@ -4,6 +4,21 @@
       "params": {
         "hostmask": {
           "required": false
+        },
+        "memberuser_user": {
+          "multivalue": true
+        },
+        "memberuser_group": {
+          "multivalue": true
+        },
+        "memberhost_host": {
+          "multivalue": true
+        },
+        "memberhost_hostgroup": {
+          "multivalue": true
+        },
+        "externaluser": {
+          "multivalue": true
         }
       }
     },
