@@ -104044,13 +104044,13 @@ Sudo Deny Command Groups
 RunAs Users
 Run as a user
     */
-    IpasudorunasUser *string `json:"ipasudorunas_user,omitempty"`
+    IpasudorunasUser *[]string `json:"ipasudorunas_user,omitempty"`
   
     /*
 Groups of RunAs Users
 Run as any user within a specified group
     */
-    IpasudorunasGroup *string `json:"ipasudorunas_group,omitempty"`
+    IpasudorunasGroup *[]string `json:"ipasudorunas_group,omitempty"`
   
     /*
 RunAs External User
@@ -104068,7 +104068,7 @@ External Groups of users that the command can run as
 RunAs Groups
 Run with the gid of a specified POSIX group
     */
-    IpasudorunasgroupGroup *string `json:"ipasudorunasgroup_group,omitempty"`
+    IpasudorunasgroupGroup *[]string `json:"ipasudorunasgroup_group,omitempty"`
   
     /*
 RunAs External Group
@@ -104080,7 +104080,7 @@ External Group the commands can run as (sudorule-find only)
 Sudo Option
 
     */
-    Ipasudoopt *string `json:"ipasudoopt,omitempty"`
+    Ipasudoopt *[]string `json:"ipasudoopt,omitempty"`
   }
 
 func (t *Sudorule) String() string {
@@ -104943,15 +104943,10 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
     }
     
       if plainOk {
-        out.IpasudorunasUser = &plainV
+        out.IpasudorunasUser = &[]string{plainV}
       } else if sliceOk {
         
-          if len(sliceV) == 1 {
-            out.IpasudorunasUser = &sliceV[0]
-          } else if len(sliceV) > 1 {
-            return fmt.Errorf("unexpected value for field IpasudorunasUser: %v; expected at most one element", raw)
-          }
-        
+        out.IpasudorunasUser = &sliceV
       } else {
         return fmt.Errorf("unexpected value for field IpasudorunasUser: %v (%v)", raw, reflect.TypeOf(raw))
       }
@@ -104983,15 +104978,10 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
     }
     
       if plainOk {
-        out.IpasudorunasGroup = &plainV
+        out.IpasudorunasGroup = &[]string{plainV}
       } else if sliceOk {
         
-          if len(sliceV) == 1 {
-            out.IpasudorunasGroup = &sliceV[0]
-          } else if len(sliceV) > 1 {
-            return fmt.Errorf("unexpected value for field IpasudorunasGroup: %v; expected at most one element", raw)
-          }
-        
+        out.IpasudorunasGroup = &sliceV
       } else {
         return fmt.Errorf("unexpected value for field IpasudorunasGroup: %v (%v)", raw, reflect.TypeOf(raw))
       }
@@ -105103,15 +105093,10 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
     }
     
       if plainOk {
-        out.IpasudorunasgroupGroup = &plainV
+        out.IpasudorunasgroupGroup = &[]string{plainV}
       } else if sliceOk {
         
-          if len(sliceV) == 1 {
-            out.IpasudorunasgroupGroup = &sliceV[0]
-          } else if len(sliceV) > 1 {
-            return fmt.Errorf("unexpected value for field IpasudorunasgroupGroup: %v; expected at most one element", raw)
-          }
-        
+        out.IpasudorunasgroupGroup = &sliceV
       } else {
         return fmt.Errorf("unexpected value for field IpasudorunasgroupGroup: %v (%v)", raw, reflect.TypeOf(raw))
       }
@@ -105183,15 +105168,10 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
     }
     
       if plainOk {
-        out.Ipasudoopt = &plainV
+        out.Ipasudoopt = &[]string{plainV}
       } else if sliceOk {
         
-          if len(sliceV) == 1 {
-            out.Ipasudoopt = &sliceV[0]
-          } else if len(sliceV) > 1 {
-            return fmt.Errorf("unexpected value for field Ipasudoopt: %v; expected at most one element", raw)
-          }
-        
+        out.Ipasudoopt = &sliceV
       } else {
         return fmt.Errorf("unexpected value for field Ipasudoopt: %v (%v)", raw, reflect.TypeOf(raw))
       }

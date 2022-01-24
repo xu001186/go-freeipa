@@ -19,6 +19,18 @@
         },
         "externaluser": {
           "multivalue": true
+        },
+        "ipasudoopt": {
+          "multivalue": true
+        },
+        "ipasudorunas_user": {
+          "multivalue": true
+        },
+        "ipasudorunas_group": {
+          "multivalue": true
+        },
+        "ipasudorunasgroup_group": {
+          "multivalue": true
         }
       }
     },
