@@ -85262,13 +85262,13 @@ Source Host Groups
 Services
 
     */
-    MemberserviceHbacsvc *string `json:"memberservice_hbacsvc,omitempty"`
+    MemberserviceHbacsvc *[]string `json:"memberservice_hbacsvc,omitempty"`
   
     /*
 Service Groups
 
     */
-    MemberserviceHbacsvcgroup *string `json:"memberservice_hbacsvcgroup,omitempty"`
+    MemberserviceHbacsvcgroup *[]string `json:"memberservice_hbacsvcgroup,omitempty"`
   
     /*
 External host
@@ -85908,15 +85908,10 @@ func (out *Hbacrule) UnmarshalJSON(data []byte) error {
     }
     
       if plainOk {
-        out.MemberserviceHbacsvc = &plainV
+        out.MemberserviceHbacsvc = &[]string{plainV}
       } else if sliceOk {
         
-          if len(sliceV) == 1 {
-            out.MemberserviceHbacsvc = &sliceV[0]
-          } else if len(sliceV) > 1 {
-            return fmt.Errorf("unexpected value for field MemberserviceHbacsvc: %v; expected at most one element", raw)
-          }
-        
+        out.MemberserviceHbacsvc = &sliceV
       } else {
         return fmt.Errorf("unexpected value for field MemberserviceHbacsvc: %v (%v)", raw, reflect.TypeOf(raw))
       }
@@ -85948,15 +85943,10 @@ func (out *Hbacrule) UnmarshalJSON(data []byte) error {
     }
     
       if plainOk {
-        out.MemberserviceHbacsvcgroup = &plainV
+        out.MemberserviceHbacsvcgroup = &[]string{plainV}
       } else if sliceOk {
         
-          if len(sliceV) == 1 {
-            out.MemberserviceHbacsvcgroup = &sliceV[0]
-          } else if len(sliceV) > 1 {
-            return fmt.Errorf("unexpected value for field MemberserviceHbacsvcgroup: %v; expected at most one element", raw)
-          }
-        
+        out.MemberserviceHbacsvcgroup = &sliceV
       } else {
         return fmt.Errorf("unexpected value for field MemberserviceHbacsvcgroup: %v (%v)", raw, reflect.TypeOf(raw))
       }

@@ -26,6 +26,12 @@
       "params": {
         "accessruletype": {
           "required": false
+        },
+        "memberservice_hbacsvc": {
+          "multivalue": true
+        },
+        "memberservice_hbacsvcgroup": {
+          "multivalue": true
         }
       }
     }
