@@ -31,6 +31,15 @@
         },
         "ipasudorunasgroup_group": {
           "multivalue": true
+        },
+        "ipasudorunasextuser": {
+          "multivalue": true
+        },
+        "ipasudorunasextusergroup": {
+          "multivalue": true
+        },
+        "ipasudorunasextgroup": {
+          "multivalue": true
         }
       }
     },
