@@ -71421,8 +71421,20 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
         
         if !itemOk {
           
-          sliceOk = false
-          break
+          // See https://github.com/ccin2p3/go-freeipa/issues/1
+          mapV, mapVOk := rawItem.(map[string]interface{})
+          if mapVOk {
+            timeV, err := tryParseFreeIPADatetimeMap(mapV)
+            if err != nil {
+              sliceOk = false
+              break
+            }
+
+            itemV = timeV
+          } else {
+            sliceOk = false
+            break
+          }
           
 
         }
@@ -71460,8 +71472,20 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
         
         if !itemOk {
           
-          sliceOk = false
-          break
+          // See https://github.com/ccin2p3/go-freeipa/issues/1
+          mapV, mapVOk := rawItem.(map[string]interface{})
+          if mapVOk {
+            timeV, err := tryParseFreeIPADatetimeMap(mapV)
+            if err != nil {
+              sliceOk = false
+              break
+            }
+
+            itemV = timeV
+          } else {
+            sliceOk = false
+            break
+          }
           
 
         }
@@ -73509,8 +73533,20 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
         
         if !itemOk {
           
-          sliceOk = false
-          break
+          // See https://github.com/ccin2p3/go-freeipa/issues/1
+          mapV, mapVOk := rawItem.(map[string]interface{})
+          if mapVOk {
+            timeV, err := tryParseFreeIPADatetimeMap(mapV)
+            if err != nil {
+              sliceOk = false
+              break
+            }
+
+            itemV = timeV
+          } else {
+            sliceOk = false
+            break
+          }
           
 
         }
@@ -73548,8 +73584,20 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
         
         if !itemOk {
           
-          sliceOk = false
-          break
+          // See https://github.com/ccin2p3/go-freeipa/issues/1
+          mapV, mapVOk := rawItem.(map[string]interface{})
+          if mapVOk {
+            timeV, err := tryParseFreeIPADatetimeMap(mapV)
+            if err != nil {
+              sliceOk = false
+              break
+            }
+
+            itemV = timeV
+          } else {
+            sliceOk = false
+            break
+          }
           
 
         }
@@ -95847,8 +95895,20 @@ func (out *Otptoken) UnmarshalJSON(data []byte) error {
         
         if !itemOk {
           
-          sliceOk = false
-          break
+          // See https://github.com/ccin2p3/go-freeipa/issues/1
+          mapV, mapVOk := rawItem.(map[string]interface{})
+          if mapVOk {
+            timeV, err := tryParseFreeIPADatetimeMap(mapV)
+            if err != nil {
+              sliceOk = false
+              break
+            }
+
+            itemV = timeV
+          } else {
+            sliceOk = false
+            break
+          }
           
 
         }
@@ -95887,8 +95947,20 @@ func (out *Otptoken) UnmarshalJSON(data []byte) error {
         
         if !itemOk {
           
-          sliceOk = false
-          break
+          // See https://github.com/ccin2p3/go-freeipa/issues/1
+          mapV, mapVOk := rawItem.(map[string]interface{})
+          if mapVOk {
+            timeV, err := tryParseFreeIPADatetimeMap(mapV)
+            if err != nil {
+              sliceOk = false
+              break
+            }
+
+            itemV = timeV
+          } else {
+            sliceOk = false
+            break
+          }
           
 
         }
@@ -104659,8 +104731,20 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         
         if !itemOk {
           
-          sliceOk = false
-          break
+          // See https://github.com/ccin2p3/go-freeipa/issues/1
+          mapV, mapVOk := rawItem.(map[string]interface{})
+          if mapVOk {
+            timeV, err := tryParseFreeIPADatetimeMap(mapV)
+            if err != nil {
+              sliceOk = false
+              break
+            }
+
+            itemV = timeV
+          } else {
+            sliceOk = false
+            break
+          }
           
 
         }
@@ -104699,8 +104783,20 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         
         if !itemOk {
           
-          sliceOk = false
-          break
+          // See https://github.com/ccin2p3/go-freeipa/issues/1
+          mapV, mapVOk := rawItem.(map[string]interface{})
+          if mapVOk {
+            timeV, err := tryParseFreeIPADatetimeMap(mapV)
+            if err != nil {
+              sliceOk = false
+              break
+            }
+
+            itemV = timeV
+          } else {
+            sliceOk = false
+            break
+          }
           
 
         }
@@ -110859,8 +110955,20 @@ func (out *User) UnmarshalJSON(data []byte) error {
         
         if !itemOk {
           
-          sliceOk = false
-          break
+          // See https://github.com/ccin2p3/go-freeipa/issues/1
+          mapV, mapVOk := rawItem.(map[string]interface{})
+          if mapVOk {
+            timeV, err := tryParseFreeIPADatetimeMap(mapV)
+            if err != nil {
+              sliceOk = false
+              break
+            }
+
+            itemV = timeV
+          } else {
+            sliceOk = false
+            break
+          }
           
 
         }
@@ -110899,8 +111007,20 @@ func (out *User) UnmarshalJSON(data []byte) error {
         
         if !itemOk {
           
-          sliceOk = false
-          break
+          // See https://github.com/ccin2p3/go-freeipa/issues/1
+          mapV, mapVOk := rawItem.(map[string]interface{})
+          if mapVOk {
+            timeV, err := tryParseFreeIPADatetimeMap(mapV)
+            if err != nil {
+              sliceOk = false
+              break
+            }
+
+            itemV = timeV
+          } else {
+            sliceOk = false
+            break
+          }
           
 
         }

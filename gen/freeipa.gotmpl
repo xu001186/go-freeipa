@@ -193,6 +193,21 @@ func (out *{{.UpperName}}) UnmarshalJSON(data []byte) error {
             sliceOk = false
             break
           }
+          {{ else if eq "time.Time" (ToGoType .Type) }}
+          // See https://github.com/ccin2p3/go-freeipa/issues/1
+          mapV, mapVOk := rawItem.(map[string]interface{})
+          if mapVOk {
+            timeV, err := tryParseFreeIPADatetimeMap(mapV)
+            if err != nil {
+              sliceOk = false
+              break
+            }
+
+            itemV = timeV
+          } else {
+            sliceOk = false
+            break
+          }
           {{else}}
           sliceOk = false
           break
