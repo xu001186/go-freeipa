@@ -29,19 +29,44 @@
 // The fact that you are presently reading this means that you have had
 // knowledge of the CeCILL license and that you accept its terms.
 
-package freeipa
+package main
 
-// String is a helper to fill *string fields in request options.
-func String(v string) *string {
-	return &v
+import (
+	"encoding/json"
+	"io/ioutil"
+)
+
+type DirtyOverrides struct {
+	Classes map[string]ClassOverrides `json:"classes"`
 }
 
-// Int is a helper to fill *int fields in request options.
-func Int(v int) *int {
-	return &v
+type ClassOverrides struct {
+	Params map[string]ClassParamsOverrides `json:"params"`
 }
 
-// Bool is a helper to fill *bool fields in request options.
-func Bool(v bool) *bool {
-	return &v
+type ClassParamsOverrides struct {
+	Required   *bool `json:"required,omitempty"`
+	Multivalue *bool `json:"multivalue,omitempty"`
+}
+
+func (c ClassParamsOverrides) OverrideParams(p *Param) {
+	if c.Required != nil {
+		p.RequiredRaw = c.Required
+	}
+
+	if c.Multivalue != nil {
+		p.Multivalue = *c.Multivalue
+	}
+}
+
+func loadDirtyOverrides() (DirtyOverrides, error) {
+	var overrides DirtyOverrides
+	in, e := ioutil.ReadFile("../data/dirty_overrides.json")
+	if e != nil {
+		return overrides, e
+	}
+	if e = json.Unmarshal(in, &overrides); e != nil {
+		return overrides, e
+	}
+	return overrides, nil
 }

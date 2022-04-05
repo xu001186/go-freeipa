@@ -31,17 +31,40 @@
 
 package freeipa
 
-// String is a helper to fill *string fields in request options.
-func String(v string) *string {
-	return &v
-}
+import "net/http"
 
-// Int is a helper to fill *int fields in request options.
-func Int(v int) *int {
-	return &v
-}
+const (
+	// UnauthorizedReason string extracted from
+	// https://github.com/freeipa/freeipa/blob/master/ipaserver/rpcserver.py
+	passwordExpiredUnauthorizedReason        = "password-expired"
+	invalidSessionPasswordUnauthorizedReason = "invalid-password"
+	krbPrincipalExpiredUnauthorizedReason    = "krbprincipal-expired"
+	userLockedUnauthorizedReason             = "user-locked"
 
-// Bool is a helper to fill *bool fields in request options.
-func Bool(v bool) *bool {
-	return &v
+	ipaRejectionReasonHTTPHeader = "X-Ipa-Rejection-Reason"
+)
+
+func unauthorizedHTTPResponseToFreeipaError(resp *http.Response) *Error {
+	var errorCode int
+	rejectionReason := resp.Header.Get(ipaRejectionReasonHTTPHeader)
+
+	switch rejectionReason {
+	case passwordExpiredUnauthorizedReason:
+		errorCode = PasswordExpiredCode
+	case invalidSessionPasswordUnauthorizedReason:
+		errorCode = InvalidSessionPasswordCode
+	case krbPrincipalExpiredUnauthorizedReason:
+		errorCode = KrbPrincipalExpiredCode
+	case userLockedUnauthorizedReason:
+		errorCode = UserLockedCode
+
+	default:
+		errorCode = GenericErrorCode
+	}
+
+	return &Error{
+		Message: rejectionReason,
+		Name:    rejectionReason,
+		Code:    errorCode,
+	}
 }

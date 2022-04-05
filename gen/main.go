@@ -1,3 +1,34 @@
+// Copyright © 2022 IN2P3 Computing Centre, IN2P3, CNRS
+// Copyright © 2018 Philippe Voinov
+//
+// Contributor(s): Remi Ferrand <remi.ferrand_at_cc.in2p3.fr>, 2021
+//
+// This software is governed by the CeCILL license under French law and
+// abiding by the rules of distribution of free software.  You can  use,
+// modify and/ or redistribute the software under the terms of the CeCILL
+// license as circulated by CEA, CNRS and INRIA at the following URL
+// "http://www.cecill.info".
+//
+// As a counterpart to the access to the source code and  rights to copy,
+// modify and redistribute granted by the license, users are provided only
+// with a limited warranty  and the software's author,  the holder of the
+// economic rights,  and the successive licensors  have only  limited
+// liability.
+//
+// In this respect, the user's attention is drawn to the risks associated
+// with loading,  using,  modifying and/or developing or reproducing the
+// software by the user in light of its specific status of free software,
+// that may mean  that it is complicated to manipulate,  and  that  also
+// therefore means  that it is reserved for developers  and  experienced
+// professionals having in-depth computer knowledge. Users are therefore
+// encouraged to load and test the software's suitability as regards their
+// requirements in conditions enabling the security of their systems and/or
+// data to be ensured and,  more generally, to use and operate it in the
+// same conditions as regards security.
+//
+// The fact that you are presently reading this means that you have had
+// knowledge of the CeCILL license and that you accept its terms.
+
 package main
 
 import (
@@ -7,6 +38,8 @@ import (
 	"os"
 	"strings"
 	"text/template"
+
+	"github.com/pkg/errors"
 )
 
 var skipCommands = []string{
@@ -36,7 +69,12 @@ func main() {
 }
 
 func actualMain() error {
-	schema, e := loadSchema()
+	overrides, err := loadDirtyOverrides()
+	if err != nil {
+		return errors.Wrap(err, "loading local overrides")
+	}
+
+	schema, e := loadSchema(overrides)
 	if e != nil {
 		return e
 	}
@@ -50,7 +88,7 @@ func actualMain() error {
 	return nil
 }
 
-func loadSchema() (*Schema, error) {
+func loadSchema(localOverrides DirtyOverrides) (*Schema, error) {
 	input, e := ioutil.ReadFile("../data/schema.json")
 	if e != nil {
 		return nil, e
@@ -101,6 +139,15 @@ func loadSchema() (*Schema, error) {
 				skip = true
 			}
 		}
+
+		// HACK !!
+		// do we have local maintained overrides for this particular class ?
+		var classOverrides *ClassOverrides
+		classOverridesRaw, ok := localOverrides.Classes[c.Name]
+		if ok {
+			classOverrides = &classOverridesRaw
+		}
+
 		if !skip {
 			// HACK FreeIPA admin user has no "givenname" or "cn", even though the schema
 			// says these fields are required. This workaround makes it optional.
@@ -158,8 +205,34 @@ func loadSchema() (*Schema, error) {
 			// even though the schema doesn't say so. Assuming they are multivalued
 			// will work even if they end up actually being single-valued.
 			for _, p := range c.Params {
-				if strings.HasPrefix(p.Name, "member_") || strings.HasPrefix(p.Name, "memberof_") {
-					p.Multivalue = true
+				multiValuePrefixes := []string{
+					"member_",
+					"memberof_",
+					"memberindirect_",
+					"memberofindirect_",
+					"memberuser_",
+					"memberhost_",
+					"membercmd_",
+					"memberallowcmd_",
+					"memberdenycmd_",
+				}
+				for _, multiValuePrefix := range multiValuePrefixes {
+					if strings.HasPrefix(p.Name, multiValuePrefix) {
+						p.Multivalue = true
+					}
+				}
+			}
+
+			// HACK: Use our local overrides
+			if classOverrides != nil {
+				// HACK use local overrides to modify directly the params
+				for _, p := range c.Params {
+					paramOverrides, ok := classOverrides.Params[p.Name]
+					if !ok {
+						continue
+					}
+
+					paramOverrides.OverrideParams(p)
 				}
 			}
 
@@ -205,4 +278,13 @@ func generateMain(schema *Schema, errs []ErrDesc) error {
 		return e
 	}
 	return nil
+}
+
+func stringSliceContains(slice []string, v string) bool {
+	for _, s := range slice {
+		if s == v {
+			return true
+		}
+	}
+	return false
 }

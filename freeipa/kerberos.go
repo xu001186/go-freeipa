@@ -31,17 +31,11 @@
 
 package freeipa
 
-// String is a helper to fill *string fields in request options.
-func String(v string) *string {
-	return &v
-}
+import "io"
 
-// Int is a helper to fill *int fields in request options.
-func Int(v int) *int {
-	return &v
-}
-
-// Bool is a helper to fill *bool fields in request options.
-func Bool(v bool) *bool {
-	return &v
+type KerberosConnectOptions struct {
+	Krb5ConfigReader io.Reader
+	KeytabReader     io.Reader
+	Username         string
+	Realm            string
 }

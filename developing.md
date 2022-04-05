@@ -3,11 +3,14 @@
 ## Generation process
 
 ```
-ipalib source -----------> errors.json -\
-            (./dump-errors)             |------> generated.go
-                                        |(./gen)
-FreeIPA instance --------> schema.json -/
-             ("schema" call)
+ipalib source -----------> errors.json --\
+            (./dump-errors)               |------> generated.go
+                                          |(./gen)
+FreeIPA instance --------> schema.json ---|
+             ("schema" call)              |
+                                          |
+Local overrides --> dirty_overrides.json -/
+             ("local" hacks)
 ```
 
 The above diagram shows the different steps to create the generated code. The
@@ -39,7 +42,7 @@ in your browser and copy your `ipa_session` cookie. Finally, make a request like
 the following curl command does:
 
 ```bash
-curl 'https://dc1.test.local/ipa/session/json' -H 'Origin: https://dc1.test.local' -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'Cookie: ipa_session=3057327ac9ea5622d7011b122d47790e' -H 'Referer: https://dc1.test.local/ipa/ui/' --data-binary '{"method":"schema","params":[[],{"version":"2.170"}]}' --insecure > ./data/session.json
+curl 'https://dc1.test.local/ipa/session/json' -H 'Origin: https://dc1.test.local' -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'Cookie: ipa_session=3057327ac9ea5622d7011b122d47790e' -H 'Referer: https://dc1.test.local/ipa/ui/' --data-binary '{"method":"schema","params":[[],{"version":"2.170"}]}' --insecure > ./data/schema.json
 ```
 
 You'll need to adjust the URLs and the value of the `ipa_session` cookie. You
@@ -53,6 +56,20 @@ The `schema` call does not return any information about possible error codes
 dependencies. It downloads `ipalib/errors.py` from a fixed commit on GitHub,
 imports it and extracts error codes from the classes which define them. You will
 probably want to adjust `ERRORS_PY_URL` to point to a newer commit.
+
+### Local hacks file
+
+The `schema.json` file contains **a lot** of information.
+
+Sometimes, the information it contains is ... inaccurate and requires _local interpretation_ to really match the reality of the FreeIPA server response.
+
+There is already a lot of required **HACK** in the [gen/main.go](gen/main.go) file. Addind more would increase the complexity of the code and makes it even harder to maintain.
+
+This is why a file was created to express some of those _required but dirty hacks_. The file is named [dirty_overrides.json](data/dirty_overrides.json) and currently contains very little data.
+
+The data in this file is built with a _try and error_ logic when a FreeIPA response breaks the `generated.go` code expectations.
+
+This file is not supposed to be maintained over time and should be dropped as soon as a better solution is found.
 
 ## Common tasks
 

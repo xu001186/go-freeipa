@@ -10,7 +10,7 @@ import (
   "strconv"
 )
 
-var apiVersion = "2.231"
+var apiVersion = "2.237"
 
 type request struct {
   Method string `json:"method"`
@@ -167,27 +167,33 @@ type aciAddResponse struct {
 	Error  *Error      `json:"error"`
 	Result *AciAddResult `json:"result"`
 }
-
 type AciAddResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Aci `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *AciAddResult) String() string {
@@ -272,27 +278,33 @@ type aciDelResponse struct {
 	Error  *Error      `json:"error"`
 	Result *AciDelResult `json:"result"`
 }
-
 type AciDelResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 True means the operation was successful
     (required)
     */
+    
     Result bool `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *AciDelResult) String() string {
@@ -472,33 +484,41 @@ type aciFindResponse struct {
 	Error  *Error      `json:"error"`
 	Result *AciFindResult `json:"result"`
 }
-
 type AciFindResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result []Aci `json:"result,omitempty"`
+    
   
     /*
 Number of entries returned
     (required)
     */
+    
     Count int `json:"count,omitempty"`
+    
   
     /*
 True if not all results were returned
     (required)
     */
+    
     Truncated bool `json:"truncated,omitempty"`
+    
   }
 
 func (t *AciFindResult) String() string {
@@ -655,27 +675,33 @@ type aciModResponse struct {
 	Error  *Error      `json:"error"`
 	Result *AciModResult `json:"result"`
 }
-
 type AciModResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Aci `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *AciModResult) String() string {
@@ -838,27 +864,33 @@ type aciRenameResponse struct {
 	Error  *Error      `json:"error"`
 	Result *AciRenameResult `json:"result"`
 }
-
 type AciRenameResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *AciRenameResult) String() string {
@@ -961,27 +993,33 @@ type aciShowResponse struct {
 	Error  *Error      `json:"error"`
 	Result *AciShowResult `json:"result"`
 }
-
 type AciShowResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Aci `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *AciShowResult) String() string {
@@ -1054,15 +1092,17 @@ type adtrustIsEnabledResponse struct {
 	Error  *Error      `json:"error"`
 	Result *AdtrustIsEnabledResult `json:"result"`
 }
-
 type AdtrustIsEnabledResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   }
 
 func (t *AdtrustIsEnabledResult) String() string {
@@ -1179,27 +1219,33 @@ type automemberAddResponse struct {
 	Error  *Error      `json:"error"`
 	Result *AutomemberAddResult `json:"result"`
 }
-
 type AutomemberAddResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Automember `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *AutomemberAddResult) String() string {
@@ -1320,39 +1366,49 @@ type automemberAddConditionResponse struct {
 	Error  *Error      `json:"error"`
 	Result *AutomemberAddConditionResult `json:"result"`
 }
-
 type AutomemberAddConditionResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   
     /*
 Conditions that could not be added
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of conditions added
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *AutomemberAddConditionResult) String() string {
@@ -1449,27 +1505,33 @@ type automemberDefaultGroupRemoveResponse struct {
 	Error  *Error      `json:"error"`
 	Result *AutomemberDefaultGroupRemoveResult `json:"result"`
 }
-
 type AutomemberDefaultGroupRemoveResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *AutomemberDefaultGroupRemoveResult) String() string {
@@ -1572,27 +1634,33 @@ type automemberDefaultGroupSetResponse struct {
 	Error  *Error      `json:"error"`
 	Result *AutomemberDefaultGroupSetResult `json:"result"`
 }
-
 type AutomemberDefaultGroupSetResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *AutomemberDefaultGroupSetResult) String() string {
@@ -1683,27 +1751,33 @@ type automemberDefaultGroupShowResponse struct {
 	Error  *Error      `json:"error"`
 	Result *AutomemberDefaultGroupShowResult `json:"result"`
 }
-
 type AutomemberDefaultGroupShowResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result AutomemberDefaultGroup `json:"result,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *AutomemberDefaultGroupShowResult) String() string {
@@ -1788,27 +1862,33 @@ type automemberDelResponse struct {
 	Error  *Error      `json:"error"`
 	Result *AutomemberDelResult `json:"result"`
 }
-
 type AutomemberDelResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 List of deletions that failed
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Value []string `json:"value,omitempty"`
+    
   }
 
 func (t *AutomemberDelResult) String() string {
@@ -1912,33 +1992,41 @@ type automemberFindResponse struct {
 	Error  *Error      `json:"error"`
 	Result *AutomemberFindResult `json:"result"`
 }
-
 type AutomemberFindResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result []Automember `json:"result,omitempty"`
+    
   
     /*
 Number of entries returned
     (required)
     */
+    
     Count int `json:"count,omitempty"`
+    
   
     /*
 True if not all results were returned
     (required)
     */
+    
     Truncated bool `json:"truncated,omitempty"`
+    
   }
 
 func (t *AutomemberFindResult) String() string {
@@ -2049,33 +2137,41 @@ type automemberFindOrphansResponse struct {
 	Error  *Error      `json:"error"`
 	Result *AutomemberFindOrphansResult `json:"result"`
 }
-
 type AutomemberFindOrphansResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result []interface{} `json:"result,omitempty"`
+    
   
     /*
 Number of entries returned
     (required)
     */
+    
     Count int `json:"count,omitempty"`
+    
   
     /*
 True if not all results were returned
     (required)
     */
+    
     Truncated bool `json:"truncated,omitempty"`
+    
   }
 
 func (t *AutomemberFindOrphansResult) String() string {
@@ -2205,27 +2301,33 @@ type automemberModResponse struct {
 	Error  *Error      `json:"error"`
 	Result *AutomemberModResult `json:"result"`
 }
-
 type AutomemberModResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Automember `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *AutomemberModResult) String() string {
@@ -2334,27 +2436,33 @@ type automemberRebuildResponse struct {
 	Error  *Error      `json:"error"`
 	Result *AutomemberRebuildResult `json:"result"`
 }
-
 type AutomemberRebuildResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value interface{} `json:"value,omitempty"`
+    
   }
 
 func (t *AutomemberRebuildResult) String() string {
@@ -2475,39 +2583,49 @@ type automemberRemoveConditionResponse struct {
 	Error  *Error      `json:"error"`
 	Result *AutomemberRemoveConditionResult `json:"result"`
 }
-
 type AutomemberRemoveConditionResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   
     /*
 Conditions that could not be removed
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of conditions removed
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *AutomemberRemoveConditionResult) String() string {
@@ -2604,27 +2722,33 @@ type automemberShowResponse struct {
 	Error  *Error      `json:"error"`
 	Result *AutomemberShowResult `json:"result"`
 }
-
 type AutomemberShowResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Automember `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *AutomemberShowResult) String() string {
@@ -2747,27 +2871,33 @@ type automountkeyAddResponse struct {
 	Error  *Error      `json:"error"`
 	Result *AutomountkeyAddResult `json:"result"`
 }
-
 type AutomountkeyAddResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Automountkey `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *AutomountkeyAddResult) String() string {
@@ -2870,27 +3000,33 @@ type automountkeyDelResponse struct {
 	Error  *Error      `json:"error"`
 	Result *AutomountkeyDelResult `json:"result"`
 }
-
 type AutomountkeyDelResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 List of deletions that failed
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Value []string `json:"value,omitempty"`
+    
   }
 
 func (t *AutomountkeyDelResult) String() string {
@@ -3012,33 +3148,41 @@ type automountkeyFindResponse struct {
 	Error  *Error      `json:"error"`
 	Result *AutomountkeyFindResult `json:"result"`
 }
-
 type AutomountkeyFindResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result []Automountkey `json:"result,omitempty"`
+    
   
     /*
 Number of entries returned
     (required)
     */
+    
     Count int `json:"count,omitempty"`
+    
   
     /*
 True if not all results were returned
     (required)
     */
+    
     Truncated bool `json:"truncated,omitempty"`
+    
   }
 
 func (t *AutomountkeyFindResult) String() string {
@@ -3186,27 +3330,33 @@ type automountkeyModResponse struct {
 	Error  *Error      `json:"error"`
 	Result *AutomountkeyModResult `json:"result"`
 }
-
 type AutomountkeyModResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Automountkey `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *AutomountkeyModResult) String() string {
@@ -3321,27 +3471,33 @@ type automountkeyShowResponse struct {
 	Error  *Error      `json:"error"`
 	Result *AutomountkeyShowResult `json:"result"`
 }
-
 type AutomountkeyShowResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Automountkey `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *AutomountkeyShowResult) String() string {
@@ -3446,27 +3602,33 @@ type automountlocationAddResponse struct {
 	Error  *Error      `json:"error"`
 	Result *AutomountlocationAddResult `json:"result"`
 }
-
 type AutomountlocationAddResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Automountlocation `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *AutomountlocationAddResult) String() string {
@@ -3551,27 +3713,33 @@ type automountlocationDelResponse struct {
 	Error  *Error      `json:"error"`
 	Result *AutomountlocationDelResult `json:"result"`
 }
-
 type AutomountlocationDelResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 List of deletions that failed
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Value []string `json:"value,omitempty"`
+    
   }
 
 func (t *AutomountlocationDelResult) String() string {
@@ -3681,33 +3849,41 @@ type automountlocationFindResponse struct {
 	Error  *Error      `json:"error"`
 	Result *AutomountlocationFindResult `json:"result"`
 }
-
 type AutomountlocationFindResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result []Automountlocation `json:"result,omitempty"`
+    
   
     /*
 Number of entries returned
     (required)
     */
+    
     Count int `json:"count,omitempty"`
+    
   
     /*
 True if not all results were returned
     (required)
     */
+    
     Truncated bool `json:"truncated,omitempty"`
+    
   }
 
 func (t *AutomountlocationFindResult) String() string {
@@ -3804,27 +3980,33 @@ type automountlocationShowResponse struct {
 	Error  *Error      `json:"error"`
 	Result *AutomountlocationShowResult `json:"result"`
 }
-
 type AutomountlocationShowResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Automountlocation `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *AutomountlocationShowResult) String() string {
@@ -3903,15 +4085,17 @@ type automountlocationTofilesResponse struct {
 	Error  *Error      `json:"error"`
 	Result *AutomountlocationTofilesResult `json:"result"`
 }
-
 type AutomountlocationTofilesResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   }
 
 func (t *AutomountlocationTofilesResult) String() string {
@@ -4028,27 +4212,33 @@ type automountmapAddResponse struct {
 	Error  *Error      `json:"error"`
 	Result *AutomountmapAddResult `json:"result"`
 }
-
 type AutomountmapAddResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Automountmap `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *AutomountmapAddResult) String() string {
@@ -4177,27 +4367,33 @@ type automountmapAddIndirectResponse struct {
 	Error  *Error      `json:"error"`
 	Result *AutomountmapAddIndirectResult `json:"result"`
 }
-
 type AutomountmapAddIndirectResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *AutomountmapAddIndirectResult) String() string {
@@ -4288,27 +4484,33 @@ type automountmapDelResponse struct {
 	Error  *Error      `json:"error"`
 	Result *AutomountmapDelResult `json:"result"`
 }
-
 type AutomountmapDelResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 List of deletions that failed
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Value []string `json:"value,omitempty"`
+    
   }
 
 func (t *AutomountmapDelResult) String() string {
@@ -4430,33 +4632,41 @@ type automountmapFindResponse struct {
 	Error  *Error      `json:"error"`
 	Result *AutomountmapFindResult `json:"result"`
 }
-
 type AutomountmapFindResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result []Automountmap `json:"result,omitempty"`
+    
   
     /*
 Number of entries returned
     (required)
     */
+    
     Count int `json:"count,omitempty"`
+    
   
     /*
 True if not all results were returned
     (required)
     */
+    
     Truncated bool `json:"truncated,omitempty"`
+    
   }
 
 func (t *AutomountmapFindResult) String() string {
@@ -4586,27 +4796,33 @@ type automountmapModResponse struct {
 	Error  *Error      `json:"error"`
 	Result *AutomountmapModResult `json:"result"`
 }
-
 type AutomountmapModResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Automountmap `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *AutomountmapModResult) String() string {
@@ -4709,27 +4925,33 @@ type automountmapShowResponse struct {
 	Error  *Error      `json:"error"`
 	Result *AutomountmapShowResult `json:"result"`
 }
-
 type AutomountmapShowResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Automountmap `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *AutomountmapShowResult) String() string {
@@ -4852,27 +5074,33 @@ type caAddResponse struct {
 	Error  *Error      `json:"error"`
 	Result *CaAddResult `json:"result"`
 }
-
 type CaAddResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Ca `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *CaAddResult) String() string {
@@ -4957,27 +5185,33 @@ type caDelResponse struct {
 	Error  *Error      `json:"error"`
 	Result *CaDelResult `json:"result"`
 }
-
 type CaDelResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 List of deletions that failed
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Value []string `json:"value,omitempty"`
+    
   }
 
 func (t *CaDelResult) String() string {
@@ -5056,27 +5290,33 @@ type caDisableResponse struct {
 	Error  *Error      `json:"error"`
 	Result *CaDisableResult `json:"result"`
 }
-
 type CaDisableResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 True means the operation was successful
     (required)
     */
+    
     Result bool `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *CaDisableResult) String() string {
@@ -5155,27 +5395,33 @@ type caEnableResponse struct {
 	Error  *Error      `json:"error"`
 	Result *CaEnableResult `json:"result"`
 }
-
 type CaEnableResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 True means the operation was successful
     (required)
     */
+    
     Result bool `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *CaEnableResult) String() string {
@@ -5309,33 +5555,41 @@ type caFindResponse struct {
 	Error  *Error      `json:"error"`
 	Result *CaFindResult `json:"result"`
 }
-
 type CaFindResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result []Ca `json:"result,omitempty"`
+    
   
     /*
 Number of entries returned
     (required)
     */
+    
     Count int `json:"count,omitempty"`
+    
   
     /*
 True if not all results were returned
     (required)
     */
+    
     Truncated bool `json:"truncated,omitempty"`
+    
   }
 
 func (t *CaFindResult) String() string {
@@ -5408,27 +5662,33 @@ type caIsEnabledResponse struct {
 	Error  *Error      `json:"error"`
 	Result *CaIsEnabledResult `json:"result"`
 }
-
 type CaIsEnabledResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 True means the operation was successful
     (required)
     */
+    
     Result bool `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value interface{} `json:"value,omitempty"`
+    
   }
 
 func (t *CaIsEnabledResult) String() string {
@@ -5558,27 +5818,33 @@ type caModResponse struct {
 	Error  *Error      `json:"error"`
 	Result *CaModResult `json:"result"`
 }
-
 type CaModResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Ca `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *CaModResult) String() string {
@@ -5681,27 +5947,33 @@ type caShowResponse struct {
 	Error  *Error      `json:"error"`
 	Result *CaShowResult `json:"result"`
 }
-
 type CaShowResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Ca `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *CaShowResult) String() string {
@@ -5854,27 +6126,33 @@ type caaclAddResponse struct {
 	Error  *Error      `json:"error"`
 	Result *CaaclAddResult `json:"result"`
 }
-
 type CaaclAddResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Caacl `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *CaaclAddResult) String() string {
@@ -5977,27 +6255,33 @@ type caaclAddCaResponse struct {
 	Error  *Error      `json:"error"`
 	Result *CaaclAddCaResult `json:"result"`
 }
-
 type CaaclAddCaResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be added
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of members added
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *CaaclAddCaResult) String() string {
@@ -6106,27 +6390,33 @@ type caaclAddHostResponse struct {
 	Error  *Error      `json:"error"`
 	Result *CaaclAddHostResult `json:"result"`
 }
-
 type CaaclAddHostResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be added
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of members added
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *CaaclAddHostResult) String() string {
@@ -6229,27 +6519,33 @@ type caaclAddProfileResponse struct {
 	Error  *Error      `json:"error"`
 	Result *CaaclAddProfileResult `json:"result"`
 }
-
 type CaaclAddProfileResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be added
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of members added
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *CaaclAddProfileResult) String() string {
@@ -6352,27 +6648,33 @@ type caaclAddServiceResponse struct {
 	Error  *Error      `json:"error"`
 	Result *CaaclAddServiceResult `json:"result"`
 }
-
 type CaaclAddServiceResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be added
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of members added
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *CaaclAddServiceResult) String() string {
@@ -6481,27 +6783,33 @@ type caaclAddUserResponse struct {
 	Error  *Error      `json:"error"`
 	Result *CaaclAddUserResult `json:"result"`
 }
-
 type CaaclAddUserResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be added
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of members added
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *CaaclAddUserResult) String() string {
@@ -6586,27 +6894,33 @@ type caaclDelResponse struct {
 	Error  *Error      `json:"error"`
 	Result *CaaclDelResult `json:"result"`
 }
-
 type CaaclDelResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 List of deletions that failed
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Value []string `json:"value,omitempty"`
+    
   }
 
 func (t *CaaclDelResult) String() string {
@@ -6685,27 +6999,33 @@ type caaclDisableResponse struct {
 	Error  *Error      `json:"error"`
 	Result *CaaclDisableResult `json:"result"`
 }
-
 type CaaclDisableResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 True means the operation was successful
     (required)
     */
+    
     Result bool `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *CaaclDisableResult) String() string {
@@ -6784,27 +7104,33 @@ type caaclEnableResponse struct {
 	Error  *Error      `json:"error"`
 	Result *CaaclEnableResult `json:"result"`
 }
-
 type CaaclEnableResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 True means the operation was successful
     (required)
     */
+    
     Result bool `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *CaaclEnableResult) String() string {
@@ -6962,33 +7288,41 @@ type caaclFindResponse struct {
 	Error  *Error      `json:"error"`
 	Result *CaaclFindResult `json:"result"`
 }
-
 type CaaclFindResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result []Caacl `json:"result,omitempty"`
+    
   
     /*
 Number of entries returned
     (required)
     */
+    
     Count int `json:"count,omitempty"`
+    
   
     /*
 True if not all results were returned
     (required)
     */
+    
     Truncated bool `json:"truncated,omitempty"`
+    
   }
 
 func (t *CaaclFindResult) String() string {
@@ -7154,27 +7488,33 @@ type caaclModResponse struct {
 	Error  *Error      `json:"error"`
 	Result *CaaclModResult `json:"result"`
 }
-
 type CaaclModResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Caacl `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *CaaclModResult) String() string {
@@ -7277,27 +7617,33 @@ type caaclRemoveCaResponse struct {
 	Error  *Error      `json:"error"`
 	Result *CaaclRemoveCaResult `json:"result"`
 }
-
 type CaaclRemoveCaResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be removed
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of members removed
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *CaaclRemoveCaResult) String() string {
@@ -7406,27 +7752,33 @@ type caaclRemoveHostResponse struct {
 	Error  *Error      `json:"error"`
 	Result *CaaclRemoveHostResult `json:"result"`
 }
-
 type CaaclRemoveHostResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be removed
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of members removed
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *CaaclRemoveHostResult) String() string {
@@ -7529,27 +7881,33 @@ type caaclRemoveProfileResponse struct {
 	Error  *Error      `json:"error"`
 	Result *CaaclRemoveProfileResult `json:"result"`
 }
-
 type CaaclRemoveProfileResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be removed
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of members removed
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *CaaclRemoveProfileResult) String() string {
@@ -7652,27 +8010,33 @@ type caaclRemoveServiceResponse struct {
 	Error  *Error      `json:"error"`
 	Result *CaaclRemoveServiceResult `json:"result"`
 }
-
 type CaaclRemoveServiceResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be removed
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of members removed
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *CaaclRemoveServiceResult) String() string {
@@ -7781,27 +8145,33 @@ type caaclRemoveUserResponse struct {
 	Error  *Error      `json:"error"`
 	Result *CaaclRemoveUserResult `json:"result"`
 }
-
 type CaaclRemoveUserResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be removed
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of members removed
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *CaaclRemoveUserResult) String() string {
@@ -7904,27 +8274,33 @@ type caaclShowResponse struct {
 	Error  *Error      `json:"error"`
 	Result *CaaclShowResult `json:"result"`
 }
-
 type CaaclShowResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Caacl `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *CaaclShowResult) String() string {
@@ -8166,33 +8542,41 @@ type certFindResponse struct {
 	Error  *Error      `json:"error"`
 	Result *CertFindResult `json:"result"`
 }
-
 type CertFindResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result []Cert `json:"result,omitempty"`
+    
   
     /*
 Number of entries returned
     (required)
     */
+    
     Count int `json:"count,omitempty"`
+    
   
     /*
 True if not all results were returned
     (required)
     */
+    
     Truncated bool `json:"truncated,omitempty"`
+    
   }
 
 func (t *CertFindResult) String() string {
@@ -8277,15 +8661,17 @@ type certRemoveHoldResponse struct {
 	Error  *Error      `json:"error"`
 	Result *CertRemoveHoldResult `json:"result"`
 }
-
 type CertRemoveHoldResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   }
 
 func (t *CertRemoveHoldResult) String() string {
@@ -8412,27 +8798,33 @@ type certRequestResponse struct {
 	Error  *Error      `json:"error"`
 	Result *CertRequestResult `json:"result"`
 }
-
 type CertRequestResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value int `json:"value,omitempty"`
+    
   }
 
 func (t *CertRequestResult) String() string {
@@ -8523,15 +8915,17 @@ type certRevokeResponse struct {
 	Error  *Error      `json:"error"`
 	Result *CertRevokeResult `json:"result"`
 }
-
 type CertRevokeResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   }
 
 func (t *CertRevokeResult) String() string {
@@ -8646,27 +9040,33 @@ type certShowResponse struct {
 	Error  *Error      `json:"error"`
 	Result *CertShowResult `json:"result"`
 }
-
 type CertShowResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Cert `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value int `json:"value,omitempty"`
+    
   }
 
 func (t *CertShowResult) String() string {
@@ -8763,27 +9163,33 @@ type certStatusResponse struct {
 	Error  *Error      `json:"error"`
 	Result *CertStatusResult `json:"result"`
 }
-
 type CertStatusResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value int `json:"value,omitempty"`
+    
   }
 
 func (t *CertStatusResult) String() string {
@@ -8878,33 +9284,41 @@ type certmapMatchResponse struct {
 	Error  *Error      `json:"error"`
 	Result *CertmapMatchResult `json:"result"`
 }
-
 type CertmapMatchResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result []interface{} `json:"result,omitempty"`
+    
   
     /*
 Number of entries returned
     (required)
     */
+    
     Count int `json:"count,omitempty"`
+    
   
     /*
 True if not all results were returned
     (required)
     */
+    
     Truncated bool `json:"truncated,omitempty"`
+    
   }
 
 func (t *CertmapMatchResult) String() string {
@@ -9022,27 +9436,33 @@ type certmapconfigModResponse struct {
 	Error  *Error      `json:"error"`
 	Result *CertmapconfigModResult `json:"result"`
 }
-
 type CertmapconfigModResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Certmapconfig `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value interface{} `json:"value,omitempty"`
+    
   }
 
 func (t *CertmapconfigModResult) String() string {
@@ -9133,27 +9553,33 @@ type certmapconfigShowResponse struct {
 	Error  *Error      `json:"error"`
 	Result *CertmapconfigShowResult `json:"result"`
 }
-
 type CertmapconfigShowResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Certmapconfig `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value interface{} `json:"value,omitempty"`
+    
   }
 
 func (t *CertmapconfigShowResult) String() string {
@@ -9294,27 +9720,33 @@ type certmapruleAddResponse struct {
 	Error  *Error      `json:"error"`
 	Result *CertmapruleAddResult `json:"result"`
 }
-
 type CertmapruleAddResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Certmaprule `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *CertmapruleAddResult) String() string {
@@ -9399,27 +9831,33 @@ type certmapruleDelResponse struct {
 	Error  *Error      `json:"error"`
 	Result *CertmapruleDelResult `json:"result"`
 }
-
 type CertmapruleDelResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 List of deletions that failed
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Value []string `json:"value,omitempty"`
+    
   }
 
 func (t *CertmapruleDelResult) String() string {
@@ -9498,27 +9936,33 @@ type certmapruleDisableResponse struct {
 	Error  *Error      `json:"error"`
 	Result *CertmapruleDisableResult `json:"result"`
 }
-
 type CertmapruleDisableResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 True means the operation was successful
     (required)
     */
+    
     Result bool `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *CertmapruleDisableResult) String() string {
@@ -9597,27 +10041,33 @@ type certmapruleEnableResponse struct {
 	Error  *Error      `json:"error"`
 	Result *CertmapruleEnableResult `json:"result"`
 }
-
 type CertmapruleEnableResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 True means the operation was successful
     (required)
     */
+    
     Result bool `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *CertmapruleEnableResult) String() string {
@@ -9763,33 +10213,41 @@ type certmapruleFindResponse struct {
 	Error  *Error      `json:"error"`
 	Result *CertmapruleFindResult `json:"result"`
 }
-
 type CertmapruleFindResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result []Certmaprule `json:"result,omitempty"`
+    
   
     /*
 Number of entries returned
     (required)
     */
+    
     Count int `json:"count,omitempty"`
+    
   
     /*
 True if not all results were returned
     (required)
     */
+    
     Truncated bool `json:"truncated,omitempty"`
+    
   }
 
 func (t *CertmapruleFindResult) String() string {
@@ -9943,27 +10401,33 @@ type certmapruleModResponse struct {
 	Error  *Error      `json:"error"`
 	Result *CertmapruleModResult `json:"result"`
 }
-
 type CertmapruleModResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Certmaprule `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *CertmapruleModResult) String() string {
@@ -10060,27 +10524,33 @@ type certmapruleShowResponse struct {
 	Error  *Error      `json:"error"`
 	Result *CertmapruleShowResult `json:"result"`
 }
-
 type CertmapruleShowResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Certmaprule `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *CertmapruleShowResult) String() string {
@@ -10165,27 +10635,33 @@ type certprofileDelResponse struct {
 	Error  *Error      `json:"error"`
 	Result *CertprofileDelResult `json:"result"`
 }
-
 type CertprofileDelResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 List of deletions that failed
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Value []string `json:"value,omitempty"`
+    
   }
 
 func (t *CertprofileDelResult) String() string {
@@ -10307,33 +10783,41 @@ type certprofileFindResponse struct {
 	Error  *Error      `json:"error"`
 	Result *CertprofileFindResult `json:"result"`
 }
-
 type CertprofileFindResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result []Certprofile `json:"result,omitempty"`
+    
   
     /*
 Number of entries returned
     (required)
     */
+    
     Count int `json:"count,omitempty"`
+    
   
     /*
 True if not all results were returned
     (required)
     */
+    
     Truncated bool `json:"truncated,omitempty"`
+    
   }
 
 func (t *CertprofileFindResult) String() string {
@@ -10442,27 +10926,33 @@ type certprofileImportResponse struct {
 	Error  *Error      `json:"error"`
 	Result *CertprofileImportResult `json:"result"`
 }
-
 type CertprofileImportResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *CertprofileImportResult) String() string {
@@ -10598,27 +11088,33 @@ type certprofileModResponse struct {
 	Error  *Error      `json:"error"`
 	Result *CertprofileModResult `json:"result"`
 }
-
 type CertprofileModResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Certprofile `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *CertprofileModResult) String() string {
@@ -10721,27 +11217,33 @@ type certprofileShowResponse struct {
 	Error  *Error      `json:"error"`
 	Result *CertprofileShowResult `json:"result"`
 }
-
 type CertprofileShowResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Certprofile `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *CertprofileShowResult) String() string {
@@ -10833,33 +11335,41 @@ type classFindResponse struct {
 	Error  *Error      `json:"error"`
 	Result *ClassFindResult `json:"result"`
 }
-
 type ClassFindResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result []Class `json:"result,omitempty"`
+    
   
     /*
 Number of entries returned
     (required)
     */
+    
     Count int `json:"count,omitempty"`
+    
   
     /*
 True if not all results were returned
     (required)
     */
+    
     Truncated bool `json:"truncated,omitempty"`
+    
   }
 
 func (t *ClassFindResult) String() string {
@@ -10950,27 +11460,33 @@ type classShowResponse struct {
 	Error  *Error      `json:"error"`
 	Result *ClassShowResult `json:"result"`
 }
-
 type ClassShowResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Class `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *ClassShowResult) String() string {
@@ -11062,33 +11578,41 @@ type commandFindResponse struct {
 	Error  *Error      `json:"error"`
 	Result *CommandFindResult `json:"result"`
 }
-
 type CommandFindResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result []Command `json:"result,omitempty"`
+    
   
     /*
 Number of entries returned
     (required)
     */
+    
     Count int `json:"count,omitempty"`
+    
   
     /*
 True if not all results were returned
     (required)
     */
+    
     Truncated bool `json:"truncated,omitempty"`
+    
   }
 
 func (t *CommandFindResult) String() string {
@@ -11179,27 +11703,33 @@ type commandShowResponse struct {
 	Error  *Error      `json:"error"`
 	Result *CommandShowResult `json:"result"`
 }
-
 type CommandShowResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Command `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *CommandShowResult) String() string {
@@ -11272,15 +11802,17 @@ type compatIsEnabledResponse struct {
 	Error  *Error      `json:"error"`
 	Result *CompatIsEnabledResult `json:"result"`
 }
-
 type CompatIsEnabledResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   }
 
 func (t *CompatIsEnabledResult) String() string {
@@ -11512,27 +12044,33 @@ type configModResponse struct {
 	Error  *Error      `json:"error"`
 	Result *ConfigModResult `json:"result"`
 }
-
 type ConfigModResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Config `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value interface{} `json:"value,omitempty"`
+    
   }
 
 func (t *ConfigModResult) String() string {
@@ -11623,27 +12161,33 @@ type configShowResponse struct {
 	Error  *Error      `json:"error"`
 	Result *ConfigShowResult `json:"result"`
 }
-
 type ConfigShowResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Config `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value interface{} `json:"value,omitempty"`
+    
   }
 
 func (t *ConfigShowResult) String() string {
@@ -11760,27 +12304,33 @@ type cosentryAddResponse struct {
 	Error  *Error      `json:"error"`
 	Result *CosentryAddResult `json:"result"`
 }
-
 type CosentryAddResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Cosentry `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *CosentryAddResult) String() string {
@@ -11865,27 +12415,33 @@ type cosentryDelResponse struct {
 	Error  *Error      `json:"error"`
 	Result *CosentryDelResult `json:"result"`
 }
-
 type CosentryDelResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 List of deletions that failed
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Value []string `json:"value,omitempty"`
+    
   }
 
 func (t *CosentryDelResult) String() string {
@@ -12007,33 +12563,41 @@ type cosentryFindResponse struct {
 	Error  *Error      `json:"error"`
 	Result *CosentryFindResult `json:"result"`
 }
-
 type CosentryFindResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result []Cosentry `json:"result,omitempty"`
+    
   
     /*
 Number of entries returned
     (required)
     */
+    
     Count int `json:"count,omitempty"`
+    
   
     /*
 True if not all results were returned
     (required)
     */
+    
     Truncated bool `json:"truncated,omitempty"`
+    
   }
 
 func (t *CosentryFindResult) String() string {
@@ -12163,27 +12727,33 @@ type cosentryModResponse struct {
 	Error  *Error      `json:"error"`
 	Result *CosentryModResult `json:"result"`
 }
-
 type CosentryModResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Cosentry `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *CosentryModResult) String() string {
@@ -12280,27 +12850,33 @@ type cosentryShowResponse struct {
 	Error  *Error      `json:"error"`
 	Result *CosentryShowResult `json:"result"`
 }
-
 type CosentryShowResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Cosentry `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *CosentryShowResult) String() string {
@@ -12415,27 +12991,33 @@ type delegationAddResponse struct {
 	Error  *Error      `json:"error"`
 	Result *DelegationAddResult `json:"result"`
 }
-
 type DelegationAddResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Delegation `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *DelegationAddResult) String() string {
@@ -12514,27 +13096,33 @@ type delegationDelResponse struct {
 	Error  *Error      `json:"error"`
 	Result *DelegationDelResult `json:"result"`
 }
-
 type DelegationDelResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 True means the operation was successful
     (required)
     */
+    
     Result bool `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *DelegationDelResult) String() string {
@@ -12656,33 +13244,41 @@ type delegationFindResponse struct {
 	Error  *Error      `json:"error"`
 	Result *DelegationFindResult `json:"result"`
 }
-
 type DelegationFindResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result []Delegation `json:"result,omitempty"`
+    
   
     /*
 Number of entries returned
     (required)
     */
+    
     Count int `json:"count,omitempty"`
+    
   
     /*
 True if not all results were returned
     (required)
     */
+    
     Truncated bool `json:"truncated,omitempty"`
+    
   }
 
 func (t *DelegationFindResult) String() string {
@@ -12797,27 +13393,33 @@ type delegationModResponse struct {
 	Error  *Error      `json:"error"`
 	Result *DelegationModResult `json:"result"`
 }
-
 type DelegationModResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Delegation `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *DelegationModResult) String() string {
@@ -12908,27 +13510,33 @@ type delegationShowResponse struct {
 	Error  *Error      `json:"error"`
 	Result *DelegationShowResult `json:"result"`
 }
-
 type DelegationShowResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Delegation `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *DelegationShowResult) String() string {
@@ -13001,27 +13609,33 @@ type dnsIsEnabledResponse struct {
 	Error  *Error      `json:"error"`
 	Result *DNSIsEnabledResult `json:"result"`
 }
-
 type DNSIsEnabledResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 True means the operation was successful
     (required)
     */
+    
     Result bool `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value interface{} `json:"value,omitempty"`
+    
   }
 
 func (t *DNSIsEnabledResult) String() string {
@@ -13100,27 +13714,33 @@ type dnsResolveResponse struct {
 	Error  *Error      `json:"error"`
 	Result *DNSResolveResult `json:"result"`
 }
-
 type DNSResolveResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 True means the operation was successful
     (required)
     */
+    
     Result bool `json:"result,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *DNSResolveResult) String() string {
@@ -13211,21 +13831,25 @@ type dnsUpdateSystemRecordsResponse struct {
 	Error  *Error      `json:"error"`
 	Result *DNSUpdateSystemRecordsResult `json:"result"`
 }
-
 type DNSUpdateSystemRecordsResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Result of the command
     (required)
     */
+    
     Value bool `json:"value,omitempty"`
+    
   }
 
 func (t *DNSUpdateSystemRecordsResult) String() string {
@@ -13361,27 +13985,33 @@ type dnsconfigModResponse struct {
 	Error  *Error      `json:"error"`
 	Result *DnsconfigModResult `json:"result"`
 }
-
 type DnsconfigModResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Dnsconfig `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value interface{} `json:"value,omitempty"`
+    
   }
 
 func (t *DnsconfigModResult) String() string {
@@ -13472,27 +14102,33 @@ type dnsconfigShowResponse struct {
 	Error  *Error      `json:"error"`
 	Result *DnsconfigShowResult `json:"result"`
 }
-
 type DnsconfigShowResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Dnsconfig `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value interface{} `json:"value,omitempty"`
+    
   }
 
 func (t *DnsconfigShowResult) String() string {
@@ -13621,27 +14257,33 @@ type dnsforwardzoneAddResponse struct {
 	Error  *Error      `json:"error"`
 	Result *DnsforwardzoneAddResult `json:"result"`
 }
-
 type DnsforwardzoneAddResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Dnsforwardzone `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *DnsforwardzoneAddResult) String() string {
@@ -13720,27 +14362,33 @@ type dnsforwardzoneAddPermissionResponse struct {
 	Error  *Error      `json:"error"`
 	Result *DnsforwardzoneAddPermissionResult `json:"result"`
 }
-
 type DnsforwardzoneAddPermissionResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 True means the operation was successful
     (required)
     */
+    
     Result bool `json:"result,omitempty"`
+    
   
     /*
 Permission value
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *DnsforwardzoneAddPermissionResult) String() string {
@@ -13825,27 +14473,33 @@ type dnsforwardzoneDelResponse struct {
 	Error  *Error      `json:"error"`
 	Result *DnsforwardzoneDelResult `json:"result"`
 }
-
 type DnsforwardzoneDelResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 List of deletions that failed
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Value []string `json:"value,omitempty"`
+    
   }
 
 func (t *DnsforwardzoneDelResult) String() string {
@@ -13924,27 +14578,33 @@ type dnsforwardzoneDisableResponse struct {
 	Error  *Error      `json:"error"`
 	Result *DnsforwardzoneDisableResult `json:"result"`
 }
-
 type DnsforwardzoneDisableResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 True means the operation was successful
     (required)
     */
+    
     Result bool `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *DnsforwardzoneDisableResult) String() string {
@@ -14023,27 +14683,33 @@ type dnsforwardzoneEnableResponse struct {
 	Error  *Error      `json:"error"`
 	Result *DnsforwardzoneEnableResult `json:"result"`
 }
-
 type DnsforwardzoneEnableResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 True means the operation was successful
     (required)
     */
+    
     Result bool `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *DnsforwardzoneEnableResult) String() string {
@@ -14177,33 +14843,41 @@ type dnsforwardzoneFindResponse struct {
 	Error  *Error      `json:"error"`
 	Result *DnsforwardzoneFindResult `json:"result"`
 }
-
 type DnsforwardzoneFindResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result []Dnsforwardzone `json:"result,omitempty"`
+    
   
     /*
 Number of entries returned
     (required)
     */
+    
     Count int `json:"count,omitempty"`
+    
   
     /*
 True if not all results were returned
     (required)
     */
+    
     Truncated bool `json:"truncated,omitempty"`
+    
   }
 
 func (t *DnsforwardzoneFindResult) String() string {
@@ -14339,27 +15013,33 @@ type dnsforwardzoneModResponse struct {
 	Error  *Error      `json:"error"`
 	Result *DnsforwardzoneModResult `json:"result"`
 }
-
 type DnsforwardzoneModResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Dnsforwardzone `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *DnsforwardzoneModResult) String() string {
@@ -14438,27 +15118,33 @@ type dnsforwardzoneRemovePermissionResponse struct {
 	Error  *Error      `json:"error"`
 	Result *DnsforwardzoneRemovePermissionResult `json:"result"`
 }
-
 type DnsforwardzoneRemovePermissionResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 True means the operation was successful
     (required)
     */
+    
     Result bool `json:"result,omitempty"`
+    
   
     /*
 Permission value
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *DnsforwardzoneRemovePermissionResult) String() string {
@@ -14555,27 +15241,33 @@ type dnsforwardzoneShowResponse struct {
 	Error  *Error      `json:"error"`
 	Result *DnsforwardzoneShowResult `json:"result"`
 }
-
 type DnsforwardzoneShowResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Dnsforwardzone `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *DnsforwardzoneShowResult) String() string {
@@ -15250,27 +15942,33 @@ type dnsrecordAddResponse struct {
 	Error  *Error      `json:"error"`
 	Result *DnsrecordAddResult `json:"result"`
 }
-
 type DnsrecordAddResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Dnsrecord `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *DnsrecordAddResult) String() string {
@@ -15565,27 +16263,33 @@ type dnsrecordDelResponse struct {
 	Error  *Error      `json:"error"`
 	Result *DnsrecordDelResult `json:"result"`
 }
-
 type DnsrecordDelResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 List of deletions that failed
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Value []string `json:"value,omitempty"`
+    
   }
 
 func (t *DnsrecordDelResult) String() string {
@@ -15676,27 +16380,33 @@ type dnsrecordDelentryResponse struct {
 	Error  *Error      `json:"error"`
 	Result *DnsrecordDelentryResult `json:"result"`
 }
-
 type DnsrecordDelentryResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 List of deletions that failed
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Value []string `json:"value,omitempty"`
+    
   }
 
 func (t *DnsrecordDelentryResult) String() string {
@@ -16010,33 +16720,41 @@ type dnsrecordFindResponse struct {
 	Error  *Error      `json:"error"`
 	Result *DnsrecordFindResult `json:"result"`
 }
-
 type DnsrecordFindResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result []Dnsrecord `json:"result,omitempty"`
+    
   
     /*
 Number of entries returned
     (required)
     */
+    
     Count int `json:"count,omitempty"`
+    
   
     /*
 True if not all results were returned
     (required)
     */
+    
     Truncated bool `json:"truncated,omitempty"`
+    
   }
 
 func (t *DnsrecordFindResult) String() string {
@@ -16712,27 +17430,33 @@ type dnsrecordModResponse struct {
 	Error  *Error      `json:"error"`
 	Result *DnsrecordModResult `json:"result"`
 }
-
 type DnsrecordModResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Dnsrecord `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *DnsrecordModResult) String() string {
@@ -16841,27 +17565,33 @@ type dnsrecordShowResponse struct {
 	Error  *Error      `json:"error"`
 	Result *DnsrecordShowResult `json:"result"`
 }
-
 type DnsrecordShowResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Dnsrecord `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *DnsrecordShowResult) String() string {
@@ -16946,15 +17676,17 @@ type dnsrecordSplitPartsResponse struct {
 	Error  *Error      `json:"error"`
 	Result *DnsrecordSplitPartsResult `json:"result"`
 }
-
 type DnsrecordSplitPartsResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   }
 
 func (t *DnsrecordSplitPartsResult) String() string {
@@ -17082,33 +17814,41 @@ type dnsserverFindResponse struct {
 	Error  *Error      `json:"error"`
 	Result *DnsserverFindResult `json:"result"`
 }
-
 type DnsserverFindResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result []Dnsserver `json:"result,omitempty"`
+    
   
     /*
 Number of entries returned
     (required)
     */
+    
     Count int `json:"count,omitempty"`
+    
   
     /*
 True if not all results were returned
     (required)
     */
+    
     Truncated bool `json:"truncated,omitempty"`
+    
   }
 
 func (t *DnsserverFindResult) String() string {
@@ -17244,27 +17984,33 @@ type dnsserverModResponse struct {
 	Error  *Error      `json:"error"`
 	Result *DnsserverModResult `json:"result"`
 }
-
 type DnsserverModResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Dnsserver `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *DnsserverModResult) String() string {
@@ -17361,27 +18107,33 @@ type dnsserverShowResponse struct {
 	Error  *Error      `json:"error"`
 	Result *DnsserverShowResult `json:"result"`
 }
-
 type DnsserverShowResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Dnsserver `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *DnsserverShowResult) String() string {
@@ -17630,27 +18382,33 @@ type dnszoneAddResponse struct {
 	Error  *Error      `json:"error"`
 	Result *DnszoneAddResult `json:"result"`
 }
-
 type DnszoneAddResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Dnszone `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *DnszoneAddResult) String() string {
@@ -17729,27 +18487,33 @@ type dnszoneAddPermissionResponse struct {
 	Error  *Error      `json:"error"`
 	Result *DnszoneAddPermissionResult `json:"result"`
 }
-
 type DnszoneAddPermissionResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 True means the operation was successful
     (required)
     */
+    
     Result bool `json:"result,omitempty"`
+    
   
     /*
 Permission value
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *DnszoneAddPermissionResult) String() string {
@@ -17834,27 +18598,33 @@ type dnszoneDelResponse struct {
 	Error  *Error      `json:"error"`
 	Result *DnszoneDelResult `json:"result"`
 }
-
 type DnszoneDelResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 List of deletions that failed
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Value []string `json:"value,omitempty"`
+    
   }
 
 func (t *DnszoneDelResult) String() string {
@@ -17933,27 +18703,33 @@ type dnszoneDisableResponse struct {
 	Error  *Error      `json:"error"`
 	Result *DnszoneDisableResult `json:"result"`
 }
-
 type DnszoneDisableResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 True means the operation was successful
     (required)
     */
+    
     Result bool `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *DnszoneDisableResult) String() string {
@@ -18032,27 +18808,33 @@ type dnszoneEnableResponse struct {
 	Error  *Error      `json:"error"`
 	Result *DnszoneEnableResult `json:"result"`
 }
-
 type DnszoneEnableResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 True means the operation was successful
     (required)
     */
+    
     Result bool `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *DnszoneEnableResult) String() string {
@@ -18294,33 +19076,41 @@ type dnszoneFindResponse struct {
 	Error  *Error      `json:"error"`
 	Result *DnszoneFindResult `json:"result"`
 }
-
 type DnszoneFindResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result []Dnszone `json:"result,omitempty"`
+    
   
     /*
 Number of entries returned
     (required)
     */
+    
     Count int `json:"count,omitempty"`
+    
   
     /*
 True if not all results were returned
     (required)
     */
+    
     Truncated bool `json:"truncated,omitempty"`
+    
   }
 
 func (t *DnszoneFindResult) String() string {
@@ -18564,27 +19354,33 @@ type dnszoneModResponse struct {
 	Error  *Error      `json:"error"`
 	Result *DnszoneModResult `json:"result"`
 }
-
 type DnszoneModResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Dnszone `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *DnszoneModResult) String() string {
@@ -18663,27 +19459,33 @@ type dnszoneRemovePermissionResponse struct {
 	Error  *Error      `json:"error"`
 	Result *DnszoneRemovePermissionResult `json:"result"`
 }
-
 type DnszoneRemovePermissionResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 True means the operation was successful
     (required)
     */
+    
     Result bool `json:"result,omitempty"`
+    
   
     /*
 Permission value
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *DnszoneRemovePermissionResult) String() string {
@@ -18780,27 +19582,33 @@ type dnszoneShowResponse struct {
 	Error  *Error      `json:"error"`
 	Result *DnszoneShowResult `json:"result"`
 }
-
 type DnszoneShowResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Dnszone `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *DnszoneShowResult) String() string {
@@ -18873,15 +19681,17 @@ type domainlevelGetResponse struct {
 	Error  *Error      `json:"error"`
 	Result *DomainlevelGetResult `json:"result"`
 }
-
 type DomainlevelGetResult struct {
+  
   
   
     /*
 Current domain level:
     (required)
     */
+    
     Result int `json:"result,omitempty"`
+    
   }
 
 func (t *DomainlevelGetResult) String() string {
@@ -18960,15 +19770,17 @@ type domainlevelSetResponse struct {
 	Error  *Error      `json:"error"`
 	Result *DomainlevelSetResult `json:"result"`
 }
-
 type DomainlevelSetResult struct {
+  
   
   
     /*
 Current domain level:
     (required)
     */
+    
     Result int `json:"result,omitempty"`
+    
   }
 
 func (t *DomainlevelSetResult) String() string {
@@ -19103,27 +19915,33 @@ type groupAddResponse struct {
 	Error  *Error      `json:"error"`
 	Result *GroupAddResult `json:"result"`
 }
-
 type GroupAddResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Group `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *GroupAddResult) String() string {
@@ -19238,27 +20056,33 @@ type groupAddMemberResponse struct {
 	Error  *Error      `json:"error"`
 	Result *GroupAddMemberResult `json:"result"`
 }
-
 type GroupAddMemberResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be added
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of members added
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *GroupAddMemberResult) String() string {
@@ -19343,27 +20167,33 @@ type groupDelResponse struct {
 	Error  *Error      `json:"error"`
 	Result *GroupDelResult `json:"result"`
 }
-
 type GroupDelResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 List of deletions that failed
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Value []string `json:"value,omitempty"`
+    
   }
 
 func (t *GroupDelResult) String() string {
@@ -19442,27 +20272,33 @@ type groupDetachResponse struct {
 	Error  *Error      `json:"error"`
 	Result *GroupDetachResult `json:"result"`
 }
-
 type GroupDetachResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 True means the operation was successful
     (required)
     */
+    
     Result bool `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *GroupDetachResult) String() string {
@@ -19698,33 +20534,41 @@ type groupFindResponse struct {
 	Error  *Error      `json:"error"`
 	Result *GroupFindResult `json:"result"`
 }
-
 type GroupFindResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result []Group `json:"result,omitempty"`
+    
   
     /*
 Number of entries returned
     (required)
     */
+    
     Count int `json:"count,omitempty"`
+    
   
     /*
 True if not all results were returned
     (required)
     */
+    
     Truncated bool `json:"truncated,omitempty"`
+    
   }
 
 func (t *GroupFindResult) String() string {
@@ -19878,27 +20722,33 @@ type groupModResponse struct {
 	Error  *Error      `json:"error"`
 	Result *GroupModResult `json:"result"`
 }
-
 type GroupModResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Group `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *GroupModResult) String() string {
@@ -20013,27 +20863,33 @@ type groupRemoveMemberResponse struct {
 	Error  *Error      `json:"error"`
 	Result *GroupRemoveMemberResult `json:"result"`
 }
-
 type GroupRemoveMemberResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be removed
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of members removed
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *GroupRemoveMemberResult) String() string {
@@ -20136,27 +20992,33 @@ type groupShowResponse struct {
 	Error  *Error      `json:"error"`
 	Result *GroupShowResult `json:"result"`
 }
-
 type GroupShowResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Group `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *GroupShowResult) String() string {
@@ -20315,27 +21177,33 @@ type hbacruleAddResponse struct {
 	Error  *Error      `json:"error"`
 	Result *HbacruleAddResult `json:"result"`
 }
-
 type HbacruleAddResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Hbacrule `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *HbacruleAddResult) String() string {
@@ -20444,27 +21312,33 @@ type hbacruleAddHostResponse struct {
 	Error  *Error      `json:"error"`
 	Result *HbacruleAddHostResult `json:"result"`
 }
-
 type HbacruleAddHostResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be added
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of members added
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *HbacruleAddHostResult) String() string {
@@ -20573,27 +21447,33 @@ type hbacruleAddServiceResponse struct {
 	Error  *Error      `json:"error"`
 	Result *HbacruleAddServiceResult `json:"result"`
 }
-
 type HbacruleAddServiceResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be added
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of members added
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *HbacruleAddServiceResult) String() string {
@@ -20702,27 +21582,33 @@ type hbacruleAddSourcehostResponse struct {
 	Error  *Error      `json:"error"`
 	Result *HbacruleAddSourcehostResult `json:"result"`
 }
-
 type HbacruleAddSourcehostResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be added
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of members added
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *HbacruleAddSourcehostResult) String() string {
@@ -20831,27 +21717,33 @@ type hbacruleAddUserResponse struct {
 	Error  *Error      `json:"error"`
 	Result *HbacruleAddUserResult `json:"result"`
 }
-
 type HbacruleAddUserResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be added
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of members added
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *HbacruleAddUserResult) String() string {
@@ -20936,27 +21828,33 @@ type hbacruleDelResponse struct {
 	Error  *Error      `json:"error"`
 	Result *HbacruleDelResult `json:"result"`
 }
-
 type HbacruleDelResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 List of deletions that failed
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Value []string `json:"value,omitempty"`
+    
   }
 
 func (t *HbacruleDelResult) String() string {
@@ -21035,27 +21933,33 @@ type hbacruleDisableResponse struct {
 	Error  *Error      `json:"error"`
 	Result *HbacruleDisableResult `json:"result"`
 }
-
 type HbacruleDisableResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 True means the operation was successful
     (required)
     */
+    
     Result bool `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *HbacruleDisableResult) String() string {
@@ -21134,27 +22038,33 @@ type hbacruleEnableResponse struct {
 	Error  *Error      `json:"error"`
 	Result *HbacruleEnableResult `json:"result"`
 }
-
 type HbacruleEnableResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 True means the operation was successful
     (required)
     */
+    
     Result bool `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *HbacruleEnableResult) String() string {
@@ -21318,33 +22228,41 @@ type hbacruleFindResponse struct {
 	Error  *Error      `json:"error"`
 	Result *HbacruleFindResult `json:"result"`
 }
-
 type HbacruleFindResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result []Hbacrule `json:"result,omitempty"`
+    
   
     /*
 Number of entries returned
     (required)
     */
+    
     Count int `json:"count,omitempty"`
+    
   
     /*
 True if not all results were returned
     (required)
     */
+    
     Truncated bool `json:"truncated,omitempty"`
+    
   }
 
 func (t *HbacruleFindResult) String() string {
@@ -21522,27 +22440,33 @@ type hbacruleModResponse struct {
 	Error  *Error      `json:"error"`
 	Result *HbacruleModResult `json:"result"`
 }
-
 type HbacruleModResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Hbacrule `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *HbacruleModResult) String() string {
@@ -21651,27 +22575,33 @@ type hbacruleRemoveHostResponse struct {
 	Error  *Error      `json:"error"`
 	Result *HbacruleRemoveHostResult `json:"result"`
 }
-
 type HbacruleRemoveHostResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be removed
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of members removed
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *HbacruleRemoveHostResult) String() string {
@@ -21780,27 +22710,33 @@ type hbacruleRemoveServiceResponse struct {
 	Error  *Error      `json:"error"`
 	Result *HbacruleRemoveServiceResult `json:"result"`
 }
-
 type HbacruleRemoveServiceResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be removed
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of members removed
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *HbacruleRemoveServiceResult) String() string {
@@ -21909,27 +22845,33 @@ type hbacruleRemoveSourcehostResponse struct {
 	Error  *Error      `json:"error"`
 	Result *HbacruleRemoveSourcehostResult `json:"result"`
 }
-
 type HbacruleRemoveSourcehostResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be removed
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of members removed
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *HbacruleRemoveSourcehostResult) String() string {
@@ -22038,27 +22980,33 @@ type hbacruleRemoveUserResponse struct {
 	Error  *Error      `json:"error"`
 	Result *HbacruleRemoveUserResult `json:"result"`
 }
-
 type HbacruleRemoveUserResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be removed
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of members removed
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *HbacruleRemoveUserResult) String() string {
@@ -22161,27 +23109,33 @@ type hbacruleShowResponse struct {
 	Error  *Error      `json:"error"`
 	Result *HbacruleShowResult `json:"result"`
 }
-
 type HbacruleShowResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Hbacrule `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *HbacruleShowResult) String() string {
@@ -22298,27 +23252,33 @@ type hbacsvcAddResponse struct {
 	Error  *Error      `json:"error"`
 	Result *HbacsvcAddResult `json:"result"`
 }
-
 type HbacsvcAddResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Hbacsvc `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *HbacsvcAddResult) String() string {
@@ -22403,27 +23363,33 @@ type hbacsvcDelResponse struct {
 	Error  *Error      `json:"error"`
 	Result *HbacsvcDelResult `json:"result"`
 }
-
 type HbacsvcDelResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 List of deletions that failed
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Value []string `json:"value,omitempty"`
+    
   }
 
 func (t *HbacsvcDelResult) String() string {
@@ -22545,33 +23511,41 @@ type hbacsvcFindResponse struct {
 	Error  *Error      `json:"error"`
 	Result *HbacsvcFindResult `json:"result"`
 }
-
 type HbacsvcFindResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result []Hbacsvc `json:"result,omitempty"`
+    
   
     /*
 Number of entries returned
     (required)
     */
+    
     Count int `json:"count,omitempty"`
+    
   
     /*
 True if not all results were returned
     (required)
     */
+    
     Truncated bool `json:"truncated,omitempty"`
+    
   }
 
 func (t *HbacsvcFindResult) String() string {
@@ -22701,27 +23675,33 @@ type hbacsvcModResponse struct {
 	Error  *Error      `json:"error"`
 	Result *HbacsvcModResult `json:"result"`
 }
-
 type HbacsvcModResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Hbacsvc `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *HbacsvcModResult) String() string {
@@ -22824,27 +23804,33 @@ type hbacsvcShowResponse struct {
 	Error  *Error      `json:"error"`
 	Result *HbacsvcShowResult `json:"result"`
 }
-
 type HbacsvcShowResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Hbacsvc `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *HbacsvcShowResult) String() string {
@@ -22961,27 +23947,33 @@ type hbacsvcgroupAddResponse struct {
 	Error  *Error      `json:"error"`
 	Result *HbacsvcgroupAddResult `json:"result"`
 }
-
 type HbacsvcgroupAddResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Hbacsvcgroup `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *HbacsvcgroupAddResult) String() string {
@@ -23084,27 +24076,33 @@ type hbacsvcgroupAddMemberResponse struct {
 	Error  *Error      `json:"error"`
 	Result *HbacsvcgroupAddMemberResult `json:"result"`
 }
-
 type HbacsvcgroupAddMemberResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be added
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of members added
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *HbacsvcgroupAddMemberResult) String() string {
@@ -23189,27 +24187,33 @@ type hbacsvcgroupDelResponse struct {
 	Error  *Error      `json:"error"`
 	Result *HbacsvcgroupDelResult `json:"result"`
 }
-
 type HbacsvcgroupDelResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 List of deletions that failed
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Value []string `json:"value,omitempty"`
+    
   }
 
 func (t *HbacsvcgroupDelResult) String() string {
@@ -23331,33 +24335,41 @@ type hbacsvcgroupFindResponse struct {
 	Error  *Error      `json:"error"`
 	Result *HbacsvcgroupFindResult `json:"result"`
 }
-
 type HbacsvcgroupFindResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result []Hbacsvcgroup `json:"result,omitempty"`
+    
   
     /*
 Number of entries returned
     (required)
     */
+    
     Count int `json:"count,omitempty"`
+    
   
     /*
 True if not all results were returned
     (required)
     */
+    
     Truncated bool `json:"truncated,omitempty"`
+    
   }
 
 func (t *HbacsvcgroupFindResult) String() string {
@@ -23487,27 +24499,33 @@ type hbacsvcgroupModResponse struct {
 	Error  *Error      `json:"error"`
 	Result *HbacsvcgroupModResult `json:"result"`
 }
-
 type HbacsvcgroupModResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Hbacsvcgroup `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *HbacsvcgroupModResult) String() string {
@@ -23610,27 +24628,33 @@ type hbacsvcgroupRemoveMemberResponse struct {
 	Error  *Error      `json:"error"`
 	Result *HbacsvcgroupRemoveMemberResult `json:"result"`
 }
-
 type HbacsvcgroupRemoveMemberResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be removed
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of members removed
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *HbacsvcgroupRemoveMemberResult) String() string {
@@ -23733,27 +24757,33 @@ type hbacsvcgroupShowResponse struct {
 	Error  *Error      `json:"error"`
 	Result *HbacsvcgroupShowResult `json:"result"`
 }
-
 type HbacsvcgroupShowResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Hbacsvcgroup `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *HbacsvcgroupShowResult) String() string {
@@ -23880,45 +24910,57 @@ type hbactestResponse struct {
 	Error  *Error      `json:"error"`
 	Result *HbactestResult `json:"result"`
 }
-
 type HbactestResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 Warning
     (optional)
     */
+    
     Warning *[]interface{} `json:"warning,omitempty"`
+    
   
     /*
 Matched rules
     (optional)
     */
+    
     Matched *[]interface{} `json:"matched,omitempty"`
+    
   
     /*
 Not matched rules
     (optional)
     */
+    
     Notmatched *[]interface{} `json:"notmatched,omitempty"`
+    
   
     /*
 Non-existent or invalid rules
     (optional)
     */
+    
     Error *[]interface{} `json:"error,omitempty"`
+    
   
     /*
 Result of simulation
     (required)
     */
+    
     Value bool `json:"value,omitempty"`
+    
   }
 
 func (t *HbactestResult) String() string {
@@ -24143,27 +25185,33 @@ type hostAddResponse struct {
 	Error  *Error      `json:"error"`
 	Result *HostAddResult `json:"result"`
 }
-
 type HostAddResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Host `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *HostAddResult) String() string {
@@ -24266,27 +25314,33 @@ type hostAddCertResponse struct {
 	Error  *Error      `json:"error"`
 	Result *HostAddCertResult `json:"result"`
 }
-
 type HostAddCertResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *HostAddCertResult) String() string {
@@ -24389,27 +25443,33 @@ type hostAddManagedbyResponse struct {
 	Error  *Error      `json:"error"`
 	Result *HostAddManagedbyResult `json:"result"`
 }
-
 type HostAddManagedbyResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be added
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of members added
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *HostAddManagedbyResult) String() string {
@@ -24512,27 +25572,33 @@ type hostAddPrincipalResponse struct {
 	Error  *Error      `json:"error"`
 	Result *HostAddPrincipalResult `json:"result"`
 }
-
 type HostAddPrincipalResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *HostAddPrincipalResult) String() string {
@@ -24653,27 +25719,33 @@ type hostAllowCreateKeytabResponse struct {
 	Error  *Error      `json:"error"`
 	Result *HostAllowCreateKeytabResult `json:"result"`
 }
-
 type HostAllowCreateKeytabResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be added
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of members added
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *HostAllowCreateKeytabResult) String() string {
@@ -24794,27 +25866,33 @@ type hostAllowRetrieveKeytabResponse struct {
 	Error  *Error      `json:"error"`
 	Result *HostAllowRetrieveKeytabResult `json:"result"`
 }
-
 type HostAllowRetrieveKeytabResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be added
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of members added
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *HostAllowRetrieveKeytabResult) String() string {
@@ -24905,27 +25983,33 @@ type hostDelResponse struct {
 	Error  *Error      `json:"error"`
 	Result *HostDelResult `json:"result"`
 }
-
 type HostDelResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 List of deletions that failed
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Value []string `json:"value,omitempty"`
+    
   }
 
 func (t *HostDelResult) String() string {
@@ -25004,27 +26088,33 @@ type hostDisableResponse struct {
 	Error  *Error      `json:"error"`
 	Result *HostDisableResult `json:"result"`
 }
-
 type HostDisableResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 True means the operation was successful
     (required)
     */
+    
     Result bool `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *HostDisableResult) String() string {
@@ -25145,27 +26235,33 @@ type hostDisallowCreateKeytabResponse struct {
 	Error  *Error      `json:"error"`
 	Result *HostDisallowCreateKeytabResult `json:"result"`
 }
-
 type HostDisallowCreateKeytabResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be removed
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of members removed
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *HostDisallowCreateKeytabResult) String() string {
@@ -25286,27 +26382,33 @@ type hostDisallowRetrieveKeytabResponse struct {
 	Error  *Error      `json:"error"`
 	Result *HostDisallowRetrieveKeytabResult `json:"result"`
 }
-
 type HostDisallowRetrieveKeytabResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be removed
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of members removed
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *HostDisallowRetrieveKeytabResult) String() string {
@@ -25399,12 +26501,6 @@ Operating system
 Host operating system and version (e.g. "Fedora 9")
     */
     Nsosversion *string `json:"nsosversion,omitempty"`
-  
-    /*
-User password
-Password used in bulk enrollment
-    */
-    Userpassword *string `json:"userpassword,omitempty"`
   
     /*
 Certificate
@@ -25584,33 +26680,41 @@ type hostFindResponse struct {
 	Error  *Error      `json:"error"`
 	Result *HostFindResult `json:"result"`
 }
-
 type HostFindResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result []Host `json:"result,omitempty"`
+    
   
     /*
 Number of entries returned
     (required)
     */
+    
     Count int `json:"count,omitempty"`
+    
   
     /*
 True if not all results were returned
     (required)
     */
+    
     Truncated bool `json:"truncated,omitempty"`
+    
   }
 
 func (t *HostFindResult) String() string {
@@ -25842,27 +26946,33 @@ type hostModResponse struct {
 	Error  *Error      `json:"error"`
 	Result *HostModResult `json:"result"`
 }
-
 type HostModResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Host `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *HostModResult) String() string {
@@ -25965,27 +27075,33 @@ type hostRemoveCertResponse struct {
 	Error  *Error      `json:"error"`
 	Result *HostRemoveCertResult `json:"result"`
 }
-
 type HostRemoveCertResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *HostRemoveCertResult) String() string {
@@ -26088,27 +27204,33 @@ type hostRemoveManagedbyResponse struct {
 	Error  *Error      `json:"error"`
 	Result *HostRemoveManagedbyResult `json:"result"`
 }
-
 type HostRemoveManagedbyResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be removed
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of members removed
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *HostRemoveManagedbyResult) String() string {
@@ -26211,27 +27333,33 @@ type hostRemovePrincipalResponse struct {
 	Error  *Error      `json:"error"`
 	Result *HostRemovePrincipalResult `json:"result"`
 }
-
 type HostRemovePrincipalResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *HostRemovePrincipalResult) String() string {
@@ -26340,27 +27468,33 @@ type hostShowResponse struct {
 	Error  *Error      `json:"error"`
 	Result *HostShowResult `json:"result"`
 }
-
 type HostShowResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Host `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *HostShowResult) String() string {
@@ -26477,27 +27611,33 @@ type hostgroupAddResponse struct {
 	Error  *Error      `json:"error"`
 	Result *HostgroupAddResult `json:"result"`
 }
-
 type HostgroupAddResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Hostgroup `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *HostgroupAddResult) String() string {
@@ -26606,27 +27746,33 @@ type hostgroupAddMemberResponse struct {
 	Error  *Error      `json:"error"`
 	Result *HostgroupAddMemberResult `json:"result"`
 }
-
 type HostgroupAddMemberResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be added
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of members added
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *HostgroupAddMemberResult) String() string {
@@ -26711,27 +27857,33 @@ type hostgroupDelResponse struct {
 	Error  *Error      `json:"error"`
 	Result *HostgroupDelResult `json:"result"`
 }
-
 type HostgroupDelResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 List of deletions that failed
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Value []string `json:"value,omitempty"`
+    
   }
 
 func (t *HostgroupDelResult) String() string {
@@ -26925,33 +28077,41 @@ type hostgroupFindResponse struct {
 	Error  *Error      `json:"error"`
 	Result *HostgroupFindResult `json:"result"`
 }
-
 type HostgroupFindResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result []Hostgroup `json:"result,omitempty"`
+    
   
     /*
 Number of entries returned
     (required)
     */
+    
     Count int `json:"count,omitempty"`
+    
   
     /*
 True if not all results were returned
     (required)
     */
+    
     Truncated bool `json:"truncated,omitempty"`
+    
   }
 
 func (t *HostgroupFindResult) String() string {
@@ -27064,6 +28224,12 @@ Print entries as stored on the server. Only affects output format.
 Suppress processing of membership attributes.
     */
     NoMembers *bool `json:"no_members,omitempty"`
+  
+    /*
+Rename
+Rename the host group object
+    */
+    Rename *string `json:"rename,omitempty"`
   }
 
 type hostgroupModKwParams struct {
@@ -27081,27 +28247,33 @@ type hostgroupModResponse struct {
 	Error  *Error      `json:"error"`
 	Result *HostgroupModResult `json:"result"`
 }
-
 type HostgroupModResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Hostgroup `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *HostgroupModResult) String() string {
@@ -27210,27 +28382,33 @@ type hostgroupRemoveMemberResponse struct {
 	Error  *Error      `json:"error"`
 	Result *HostgroupRemoveMemberResult `json:"result"`
 }
-
 type HostgroupRemoveMemberResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be removed
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of members removed
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *HostgroupRemoveMemberResult) String() string {
@@ -27333,27 +28511,33 @@ type hostgroupShowResponse struct {
 	Error  *Error      `json:"error"`
 	Result *HostgroupShowResult `json:"result"`
 }
-
 type HostgroupShowResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Hostgroup `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *HostgroupShowResult) String() string {
@@ -27426,15 +28610,17 @@ type i18nMessagesResponse struct {
 	Error  *Error      `json:"error"`
 	Result *I18nMessagesResult `json:"result"`
 }
-
 type I18nMessagesResult struct {
+  
   
   
     /*
 Dict of I18N messages
     (required)
     */
+    
     Texts interface{} `json:"texts,omitempty"`
+    
   }
 
 func (t *I18nMessagesResult) String() string {
@@ -27569,27 +28755,33 @@ type idoverridegroupAddResponse struct {
 	Error  *Error      `json:"error"`
 	Result *IdoverridegroupAddResult `json:"result"`
 }
-
 type IdoverridegroupAddResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Idoverridegroup `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *IdoverridegroupAddResult) String() string {
@@ -27686,27 +28878,33 @@ type idoverridegroupDelResponse struct {
 	Error  *Error      `json:"error"`
 	Result *IdoverridegroupDelResult `json:"result"`
 }
-
 type IdoverridegroupDelResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 List of deletions that failed
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Value []string `json:"value,omitempty"`
+    
   }
 
 func (t *IdoverridegroupDelResult) String() string {
@@ -27846,33 +29044,41 @@ type idoverridegroupFindResponse struct {
 	Error  *Error      `json:"error"`
 	Result *IdoverridegroupFindResult `json:"result"`
 }
-
 type IdoverridegroupFindResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result []Idoverridegroup `json:"result,omitempty"`
+    
   
     /*
 Number of entries returned
     (required)
     */
+    
     Count int `json:"count,omitempty"`
+    
   
     /*
 True if not all results were returned
     (required)
     */
+    
     Truncated bool `json:"truncated,omitempty"`
+    
   }
 
 func (t *IdoverridegroupFindResult) String() string {
@@ -28026,27 +29232,33 @@ type idoverridegroupModResponse struct {
 	Error  *Error      `json:"error"`
 	Result *IdoverridegroupModResult `json:"result"`
 }
-
 type IdoverridegroupModResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Idoverridegroup `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *IdoverridegroupModResult) String() string {
@@ -28155,27 +29367,33 @@ type idoverridegroupShowResponse struct {
 	Error  *Error      `json:"error"`
 	Result *IdoverridegroupShowResult `json:"result"`
 }
-
 type IdoverridegroupShowResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Idoverridegroup `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *IdoverridegroupShowResult) String() string {
@@ -28352,27 +29570,33 @@ type idoverrideuserAddResponse struct {
 	Error  *Error      `json:"error"`
 	Result *IdoverrideuserAddResult `json:"result"`
 }
-
 type IdoverrideuserAddResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Idoverrideuser `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *IdoverrideuserAddResult) String() string {
@@ -28481,27 +29705,33 @@ type idoverrideuserAddCertResponse struct {
 	Error  *Error      `json:"error"`
 	Result *IdoverrideuserAddCertResult `json:"result"`
 }
-
 type IdoverrideuserAddCertResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *IdoverrideuserAddCertResult) String() string {
@@ -28598,27 +29828,33 @@ type idoverrideuserDelResponse struct {
 	Error  *Error      `json:"error"`
 	Result *IdoverrideuserDelResult `json:"result"`
 }
-
 type IdoverrideuserDelResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 List of deletions that failed
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Value []string `json:"value,omitempty"`
+    
   }
 
 func (t *IdoverrideuserDelResult) String() string {
@@ -28788,33 +30024,41 @@ type idoverrideuserFindResponse struct {
 	Error  *Error      `json:"error"`
 	Result *IdoverrideuserFindResult `json:"result"`
 }
-
 type IdoverrideuserFindResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result []Idoverrideuser `json:"result,omitempty"`
+    
   
     /*
 Number of entries returned
     (required)
     */
+    
     Count int `json:"count,omitempty"`
+    
   
     /*
 True if not all results were returned
     (required)
     */
+    
     Truncated bool `json:"truncated,omitempty"`
+    
   }
 
 func (t *IdoverrideuserFindResult) String() string {
@@ -29010,27 +30254,33 @@ type idoverrideuserModResponse struct {
 	Error  *Error      `json:"error"`
 	Result *IdoverrideuserModResult `json:"result"`
 }
-
 type IdoverrideuserModResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Idoverrideuser `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *IdoverrideuserModResult) String() string {
@@ -29139,27 +30389,33 @@ type idoverrideuserRemoveCertResponse struct {
 	Error  *Error      `json:"error"`
 	Result *IdoverrideuserRemoveCertResult `json:"result"`
 }
-
 type IdoverrideuserRemoveCertResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *IdoverrideuserRemoveCertResult) String() string {
@@ -29268,27 +30524,33 @@ type idoverrideuserShowResponse struct {
 	Error  *Error      `json:"error"`
 	Result *IdoverrideuserShowResult `json:"result"`
 }
-
 type IdoverrideuserShowResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Idoverrideuser `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *IdoverrideuserShowResult) String() string {
@@ -29465,27 +30727,33 @@ type idrangeAddResponse struct {
 	Error  *Error      `json:"error"`
 	Result *IdrangeAddResult `json:"result"`
 }
-
 type IdrangeAddResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Idrange `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *IdrangeAddResult) String() string {
@@ -29570,27 +30838,33 @@ type idrangeDelResponse struct {
 	Error  *Error      `json:"error"`
 	Result *IdrangeDelResult `json:"result"`
 }
-
 type IdrangeDelResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 List of deletions that failed
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Value []string `json:"value,omitempty"`
+    
   }
 
 func (t *IdrangeDelResult) String() string {
@@ -29736,33 +31010,41 @@ type idrangeFindResponse struct {
 	Error  *Error      `json:"error"`
 	Result *IdrangeFindResult `json:"result"`
 }
-
 type IdrangeFindResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result []Idrange `json:"result,omitempty"`
+    
   
     /*
 Number of entries returned
     (required)
     */
+    
     Count int `json:"count,omitempty"`
+    
   
     /*
 True if not all results were returned
     (required)
     */
+    
     Truncated bool `json:"truncated,omitempty"`
+    
   }
 
 func (t *IdrangeFindResult) String() string {
@@ -29929,27 +31211,33 @@ type idrangeModResponse struct {
 	Error  *Error      `json:"error"`
 	Result *IdrangeModResult `json:"result"`
 }
-
 type IdrangeModResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Idrange `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *IdrangeModResult) String() string {
@@ -30046,27 +31334,33 @@ type idrangeShowResponse struct {
 	Error  *Error      `json:"error"`
 	Result *IdrangeShowResult `json:"result"`
 }
-
 type IdrangeShowResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Idrange `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *IdrangeShowResult) String() string {
@@ -30183,27 +31477,33 @@ type idviewAddResponse struct {
 	Error  *Error      `json:"error"`
 	Result *IdviewAddResult `json:"result"`
 }
-
 type IdviewAddResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Idview `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *IdviewAddResult) String() string {
@@ -30294,33 +31594,41 @@ type idviewApplyResponse struct {
 	Error  *Error      `json:"error"`
 	Result *IdviewApplyResult `json:"result"`
 }
-
 type IdviewApplyResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 Hosts that this ID View was applied to.
     (required)
     */
+    
     Succeeded interface{} `json:"succeeded,omitempty"`
+    
   
     /*
 Hosts or hostgroups that this ID View could not be applied to.
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of hosts the ID View was applied to:
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *IdviewApplyResult) String() string {
@@ -30405,27 +31713,33 @@ type idviewDelResponse struct {
 	Error  *Error      `json:"error"`
 	Result *IdviewDelResult `json:"result"`
 }
-
 type IdviewDelResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 List of deletions that failed
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Value []string `json:"value,omitempty"`
+    
   }
 
 func (t *IdviewDelResult) String() string {
@@ -30541,33 +31855,41 @@ type idviewFindResponse struct {
 	Error  *Error      `json:"error"`
 	Result *IdviewFindResult `json:"result"`
 }
-
 type IdviewFindResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result []Idview `json:"result,omitempty"`
+    
   
     /*
 Number of entries returned
     (required)
     */
+    
     Count int `json:"count,omitempty"`
+    
   
     /*
 True if not all results were returned
     (required)
     */
+    
     Truncated bool `json:"truncated,omitempty"`
+    
   }
 
 func (t *IdviewFindResult) String() string {
@@ -30703,27 +32025,33 @@ type idviewModResponse struct {
 	Error  *Error      `json:"error"`
 	Result *IdviewModResult `json:"result"`
 }
-
 type IdviewModResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Idview `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *IdviewModResult) String() string {
@@ -30826,27 +32154,33 @@ type idviewShowResponse struct {
 	Error  *Error      `json:"error"`
 	Result *IdviewShowResult `json:"result"`
 }
-
 type IdviewShowResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Idview `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *IdviewShowResult) String() string {
@@ -30931,33 +32265,41 @@ type idviewUnapplyResponse struct {
 	Error  *Error      `json:"error"`
 	Result *IdviewUnapplyResult `json:"result"`
 }
-
 type IdviewUnapplyResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 Hosts that ID View was cleared from.
     (required)
     */
+    
     Succeeded interface{} `json:"succeeded,omitempty"`
+    
   
     /*
 Hosts or hostgroups that ID View could not be cleared from.
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of hosts that had a ID View was unset:
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *IdviewUnapplyResult) String() string {
@@ -31054,8 +32396,8 @@ type joinResponse struct {
 	Error  *Error      `json:"error"`
 	Result *JoinResult `json:"result"`
 }
-
 type JoinResult struct {
+  
   
   }
 
@@ -31149,27 +32491,33 @@ type jsonMetadataResponse struct {
 	Error  *Error      `json:"error"`
 	Result *JSONMetadataResult `json:"result"`
 }
-
 type JSONMetadataResult struct {
+  
   
   
     /*
 Dict of JSON encoded IPA Objects
     (required)
     */
+    
     Objects interface{} `json:"objects,omitempty"`
+    
   
     /*
 Dict of JSON encoded IPA Methods
     (required)
     */
+    
     Methods interface{} `json:"methods,omitempty"`
+    
   
     /*
 Dict of JSON encoded IPA Commands
     (required)
     */
+    
     Commands interface{} `json:"commands,omitempty"`
+    
   }
 
 func (t *JSONMetadataResult) String() string {
@@ -31242,27 +32590,33 @@ type kraIsEnabledResponse struct {
 	Error  *Error      `json:"error"`
 	Result *KraIsEnabledResult `json:"result"`
 }
-
 type KraIsEnabledResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 True means the operation was successful
     (required)
     */
+    
     Result bool `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value interface{} `json:"value,omitempty"`
+    
   }
 
 func (t *KraIsEnabledResult) String() string {
@@ -31387,27 +32741,33 @@ type krbtpolicyModResponse struct {
 	Error  *Error      `json:"error"`
 	Result *KrbtpolicyModResult `json:"result"`
 }
-
 type KrbtpolicyModResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Krbtpolicy `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *KrbtpolicyModResult) String() string {
@@ -31493,27 +32853,33 @@ type krbtpolicyResetResponse struct {
 	Error  *Error      `json:"error"`
 	Result *KrbtpolicyResetResult `json:"result"`
 }
-
 type KrbtpolicyResetResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *KrbtpolicyResetResult) String() string {
@@ -31605,27 +32971,33 @@ type krbtpolicyShowResponse struct {
 	Error  *Error      `json:"error"`
 	Result *KrbtpolicyShowResult `json:"result"`
 }
-
 type KrbtpolicyShowResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Krbtpolicy `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *KrbtpolicyShowResult) String() string {
@@ -31736,27 +33108,33 @@ type locationAddResponse struct {
 	Error  *Error      `json:"error"`
 	Result *LocationAddResult `json:"result"`
 }
-
 type LocationAddResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Location `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *LocationAddResult) String() string {
@@ -31841,27 +33219,33 @@ type locationDelResponse struct {
 	Error  *Error      `json:"error"`
 	Result *LocationDelResult `json:"result"`
 }
-
 type LocationDelResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 List of deletions that failed
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Value []string `json:"value,omitempty"`
+    
   }
 
 func (t *LocationDelResult) String() string {
@@ -31977,33 +33361,41 @@ type locationFindResponse struct {
 	Error  *Error      `json:"error"`
 	Result *LocationFindResult `json:"result"`
 }
-
 type LocationFindResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result []Location `json:"result,omitempty"`
+    
   
     /*
 Number of entries returned
     (required)
     */
+    
     Count int `json:"count,omitempty"`
+    
   
     /*
 True if not all results were returned
     (required)
     */
+    
     Truncated bool `json:"truncated,omitempty"`
+    
   }
 
 func (t *LocationFindResult) String() string {
@@ -32127,27 +33519,33 @@ type locationModResponse struct {
 	Error  *Error      `json:"error"`
 	Result *LocationModResult `json:"result"`
 }
-
 type LocationModResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Location `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *LocationModResult) String() string {
@@ -32244,33 +33642,41 @@ type locationShowResponse struct {
 	Error  *Error      `json:"error"`
 	Result *LocationShowResult `json:"result"`
 }
-
 type LocationShowResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Location `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   
     /*
 Servers in location
     (required)
     */
+    
     Servers interface{} `json:"servers,omitempty"`
+    
   }
 
 func (t *LocationShowResult) String() string {
@@ -32469,33 +33875,41 @@ type migrateDsResponse struct {
 	Error  *Error      `json:"error"`
 	Result *MigrateDsResult `json:"result"`
 }
-
 type MigrateDsResult struct {
+  
   
   
     /*
 Lists of objects migrated; categorized by type.
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Lists of objects that could not be migrated; categorized by type.
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 False if migration mode was disabled.
     (required)
     */
+    
     Enabled bool `json:"enabled,omitempty"`
+    
   
     /*
 False if migration fails because the compatibility plug-in is enabled.
     (required)
     */
+    
     Compat bool `json:"compat,omitempty"`
+    
   }
 
 func (t *MigrateDsResult) String() string {
@@ -32636,27 +34050,33 @@ type netgroupAddResponse struct {
 	Error  *Error      `json:"error"`
 	Result *NetgroupAddResult `json:"result"`
 }
-
 type NetgroupAddResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Netgroup `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *NetgroupAddResult) String() string {
@@ -32783,27 +34203,33 @@ type netgroupAddMemberResponse struct {
 	Error  *Error      `json:"error"`
 	Result *NetgroupAddMemberResult `json:"result"`
 }
-
 type NetgroupAddMemberResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be added
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of members added
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *NetgroupAddMemberResult) String() string {
@@ -32888,27 +34314,33 @@ type netgroupDelResponse struct {
 	Error  *Error      `json:"error"`
 	Result *NetgroupDelResult `json:"result"`
 }
-
 type NetgroupDelResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 List of deletions that failed
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Value []string `json:"value,omitempty"`
+    
   }
 
 func (t *NetgroupDelResult) String() string {
@@ -33144,33 +34576,41 @@ type netgroupFindResponse struct {
 	Error  *Error      `json:"error"`
 	Result *NetgroupFindResult `json:"result"`
 }
-
 type NetgroupFindResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result []Netgroup `json:"result,omitempty"`
+    
   
     /*
 Number of entries returned
     (required)
     */
+    
     Count int `json:"count,omitempty"`
+    
   
     /*
 True if not all results were returned
     (required)
     */
+    
     Truncated bool `json:"truncated,omitempty"`
+    
   }
 
 func (t *NetgroupFindResult) String() string {
@@ -33324,27 +34764,33 @@ type netgroupModResponse struct {
 	Error  *Error      `json:"error"`
 	Result *NetgroupModResult `json:"result"`
 }
-
 type NetgroupModResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Netgroup `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *NetgroupModResult) String() string {
@@ -33471,27 +34917,33 @@ type netgroupRemoveMemberResponse struct {
 	Error  *Error      `json:"error"`
 	Result *NetgroupRemoveMemberResult `json:"result"`
 }
-
 type NetgroupRemoveMemberResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be removed
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of members removed
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *NetgroupRemoveMemberResult) String() string {
@@ -33594,27 +35046,33 @@ type netgroupShowResponse struct {
 	Error  *Error      `json:"error"`
 	Result *NetgroupShowResult `json:"result"`
 }
-
 type NetgroupShowResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Netgroup `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *NetgroupShowResult) String() string {
@@ -33750,27 +35208,33 @@ type otpconfigModResponse struct {
 	Error  *Error      `json:"error"`
 	Result *OtpconfigModResult `json:"result"`
 }
-
 type OtpconfigModResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Otpconfig `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value interface{} `json:"value,omitempty"`
+    
   }
 
 func (t *OtpconfigModResult) String() string {
@@ -33861,27 +35325,33 @@ type otpconfigShowResponse struct {
 	Error  *Error      `json:"error"`
 	Result *OtpconfigShowResult `json:"result"`
 }
-
 type OtpconfigShowResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Otpconfig `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value interface{} `json:"value,omitempty"`
+    
   }
 
 func (t *OtpconfigShowResult) String() string {
@@ -34089,27 +35559,33 @@ type otptokenAddResponse struct {
 	Error  *Error      `json:"error"`
 	Result *OtptokenAddResult `json:"result"`
 }
-
 type OtptokenAddResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Otptoken `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *OtptokenAddResult) String() string {
@@ -34212,27 +35688,33 @@ type otptokenAddManagedbyResponse struct {
 	Error  *Error      `json:"error"`
 	Result *OtptokenAddManagedbyResult `json:"result"`
 }
-
 type OtptokenAddManagedbyResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be added
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of members added
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *OtptokenAddManagedbyResult) String() string {
@@ -34317,27 +35799,33 @@ type otptokenDelResponse struct {
 	Error  *Error      `json:"error"`
 	Result *OtptokenDelResult `json:"result"`
 }
-
 type OtptokenDelResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 List of deletions that failed
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Value []string `json:"value,omitempty"`
+    
   }
 
 func (t *OtptokenDelResult) String() string {
@@ -34537,33 +36025,41 @@ type otptokenFindResponse struct {
 	Error  *Error      `json:"error"`
 	Result *OtptokenFindResult `json:"result"`
 }
-
 type OtptokenFindResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result []Otptoken `json:"result,omitempty"`
+    
   
     /*
 Number of entries returned
     (required)
     */
+    
     Count int `json:"count,omitempty"`
+    
   
     /*
 True if not all results were returned
     (required)
     */
+    
     Truncated bool `json:"truncated,omitempty"`
+    
   }
 
 func (t *OtptokenFindResult) String() string {
@@ -34741,27 +36237,33 @@ type otptokenModResponse struct {
 	Error  *Error      `json:"error"`
 	Result *OtptokenModResult `json:"result"`
 }
-
 type OtptokenModResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Otptoken `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *OtptokenModResult) String() string {
@@ -34864,27 +36366,33 @@ type otptokenRemoveManagedbyResponse struct {
 	Error  *Error      `json:"error"`
 	Result *OtptokenRemoveManagedbyResult `json:"result"`
 }
-
 type OtptokenRemoveManagedbyResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be removed
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of members removed
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *OtptokenRemoveManagedbyResult) String() string {
@@ -34987,27 +36495,33 @@ type otptokenShowResponse struct {
 	Error  *Error      `json:"error"`
 	Result *OtptokenShowResult `json:"result"`
 }
-
 type OtptokenShowResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Otptoken `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *OtptokenShowResult) String() string {
@@ -35105,33 +36619,41 @@ type outputFindResponse struct {
 	Error  *Error      `json:"error"`
 	Result *OutputFindResult `json:"result"`
 }
-
 type OutputFindResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result []Output `json:"result,omitempty"`
+    
   
     /*
 Number of entries returned
     (required)
     */
+    
     Count int `json:"count,omitempty"`
+    
   
     /*
 True if not all results were returned
     (required)
     */
+    
     Truncated bool `json:"truncated,omitempty"`
+    
   }
 
 func (t *OutputFindResult) String() string {
@@ -35228,27 +36750,33 @@ type outputShowResponse struct {
 	Error  *Error      `json:"error"`
 	Result *OutputShowResult `json:"result"`
 }
-
 type OutputShowResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Output `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *OutputShowResult) String() string {
@@ -35346,33 +36874,41 @@ type paramFindResponse struct {
 	Error  *Error      `json:"error"`
 	Result *ParamFindResult `json:"result"`
 }
-
 type ParamFindResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result []Param `json:"result,omitempty"`
+    
   
     /*
 Number of entries returned
     (required)
     */
+    
     Count int `json:"count,omitempty"`
+    
   
     /*
 True if not all results were returned
     (required)
     */
+    
     Truncated bool `json:"truncated,omitempty"`
+    
   }
 
 func (t *ParamFindResult) String() string {
@@ -35469,27 +37005,33 @@ type paramShowResponse struct {
 	Error  *Error      `json:"error"`
 	Result *ParamShowResult `json:"result"`
 }
-
 type ParamShowResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Param `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *ParamShowResult) String() string {
@@ -35586,27 +37128,33 @@ type passwdResponse struct {
 	Error  *Error      `json:"error"`
 	Result *PasswdResult `json:"result"`
 }
-
 type PasswdResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 True means the operation was successful
     (required)
     */
+    
     Result bool `json:"result,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *PasswdResult) String() string {
@@ -35807,27 +37355,33 @@ type permissionAddResponse struct {
 	Error  *Error      `json:"error"`
 	Result *PermissionAddResult `json:"result"`
 }
-
 type PermissionAddResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Permission `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *PermissionAddResult) String() string {
@@ -35930,27 +37484,33 @@ type permissionAddMemberResponse struct {
 	Error  *Error      `json:"error"`
 	Result *PermissionAddMemberResult `json:"result"`
 }
-
 type PermissionAddMemberResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be added
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of members added
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *PermissionAddMemberResult) String() string {
@@ -36053,27 +37613,33 @@ type permissionAddNoaciResponse struct {
 	Error  *Error      `json:"error"`
 	Result *PermissionAddNoaciResult `json:"result"`
 }
-
 type PermissionAddNoaciResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *PermissionAddNoaciResult) String() string {
@@ -36164,27 +37730,33 @@ type permissionDelResponse struct {
 	Error  *Error      `json:"error"`
 	Result *PermissionDelResult `json:"result"`
 }
-
 type PermissionDelResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 List of deletions that failed
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Value []string `json:"value,omitempty"`
+    
   }
 
 func (t *PermissionDelResult) String() string {
@@ -36408,33 +37980,41 @@ type permissionFindResponse struct {
 	Error  *Error      `json:"error"`
 	Result *PermissionFindResult `json:"result"`
 }
-
 type PermissionFindResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result []Permission `json:"result,omitempty"`
+    
   
     /*
 Number of entries returned
     (required)
     */
+    
     Count int `json:"count,omitempty"`
+    
   
     /*
 True if not all results were returned
     (required)
     */
+    
     Truncated bool `json:"truncated,omitempty"`
+    
   }
 
 func (t *PermissionFindResult) String() string {
@@ -36666,27 +38246,33 @@ type permissionModResponse struct {
 	Error  *Error      `json:"error"`
 	Result *PermissionModResult `json:"result"`
 }
-
 type PermissionModResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Permission `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *PermissionModResult) String() string {
@@ -36789,27 +38375,33 @@ type permissionRemoveMemberResponse struct {
 	Error  *Error      `json:"error"`
 	Result *PermissionRemoveMemberResult `json:"result"`
 }
-
 type PermissionRemoveMemberResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be removed
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of members removed
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *PermissionRemoveMemberResult) String() string {
@@ -36912,27 +38504,33 @@ type permissionShowResponse struct {
 	Error  *Error      `json:"error"`
 	Result *PermissionShowResult `json:"result"`
 }
-
 type PermissionShowResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Permission `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *PermissionShowResult) String() string {
@@ -37005,15 +38603,17 @@ type pingResponse struct {
 	Error  *Error      `json:"error"`
 	Result *PingResult `json:"result"`
 }
-
 type PingResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   }
 
 func (t *PingResult) String() string {
@@ -37123,33 +38723,41 @@ type pkinitStatusResponse struct {
 	Error  *Error      `json:"error"`
 	Result *PkinitStatusResult `json:"result"`
 }
-
 type PkinitStatusResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result []interface{} `json:"result,omitempty"`
+    
   
     /*
 Number of entries returned
     (required)
     */
+    
     Count int `json:"count,omitempty"`
+    
   
     /*
 True if not all results were returned
     (required)
     */
+    
     Truncated bool `json:"truncated,omitempty"`
+    
   }
 
 func (t *PkinitStatusResult) String() string {
@@ -37234,27 +38842,33 @@ type pluginsResponse struct {
 	Error  *Error      `json:"error"`
 	Result *PluginsResult `json:"result"`
 }
-
 type PluginsResult struct {
+  
   
   
     /*
 Dictionary mapping plugin names to bases
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Number of plugins loaded
     (required)
     */
+    
     Count int `json:"count,omitempty"`
+    
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   }
 
 func (t *PluginsResult) String() string {
@@ -37371,27 +38985,33 @@ type privilegeAddResponse struct {
 	Error  *Error      `json:"error"`
 	Result *PrivilegeAddResult `json:"result"`
 }
-
 type PrivilegeAddResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Privilege `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *PrivilegeAddResult) String() string {
@@ -37494,27 +39114,33 @@ type privilegeAddMemberResponse struct {
 	Error  *Error      `json:"error"`
 	Result *PrivilegeAddMemberResult `json:"result"`
 }
-
 type PrivilegeAddMemberResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be added
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of members added
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *PrivilegeAddMemberResult) String() string {
@@ -37617,27 +39243,33 @@ type privilegeAddPermissionResponse struct {
 	Error  *Error      `json:"error"`
 	Result *PrivilegeAddPermissionResult `json:"result"`
 }
-
 type PrivilegeAddPermissionResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be added
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of permissions added
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *PrivilegeAddPermissionResult) String() string {
@@ -37722,27 +39354,33 @@ type privilegeDelResponse struct {
 	Error  *Error      `json:"error"`
 	Result *PrivilegeDelResult `json:"result"`
 }
-
 type PrivilegeDelResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 List of deletions that failed
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Value []string `json:"value,omitempty"`
+    
   }
 
 func (t *PrivilegeDelResult) String() string {
@@ -37864,33 +39502,41 @@ type privilegeFindResponse struct {
 	Error  *Error      `json:"error"`
 	Result *PrivilegeFindResult `json:"result"`
 }
-
 type PrivilegeFindResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result []Privilege `json:"result,omitempty"`
+    
   
     /*
 Number of entries returned
     (required)
     */
+    
     Count int `json:"count,omitempty"`
+    
   
     /*
 True if not all results were returned
     (required)
     */
+    
     Truncated bool `json:"truncated,omitempty"`
+    
   }
 
 func (t *PrivilegeFindResult) String() string {
@@ -38026,27 +39672,33 @@ type privilegeModResponse struct {
 	Error  *Error      `json:"error"`
 	Result *PrivilegeModResult `json:"result"`
 }
-
 type PrivilegeModResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Privilege `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *PrivilegeModResult) String() string {
@@ -38149,27 +39801,33 @@ type privilegeRemoveMemberResponse struct {
 	Error  *Error      `json:"error"`
 	Result *PrivilegeRemoveMemberResult `json:"result"`
 }
-
 type PrivilegeRemoveMemberResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be removed
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of members removed
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *PrivilegeRemoveMemberResult) String() string {
@@ -38272,27 +39930,33 @@ type privilegeRemovePermissionResponse struct {
 	Error  *Error      `json:"error"`
 	Result *PrivilegeRemovePermissionResult `json:"result"`
 }
-
 type PrivilegeRemovePermissionResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be added
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of permissions removed
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *PrivilegeRemovePermissionResult) String() string {
@@ -38395,27 +40059,33 @@ type privilegeShowResponse struct {
 	Error  *Error      `json:"error"`
 	Result *PrivilegeShowResult `json:"result"`
 }
-
 type PrivilegeShowResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Privilege `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *PrivilegeShowResult) String() string {
@@ -38574,27 +40244,33 @@ type pwpolicyAddResponse struct {
 	Error  *Error      `json:"error"`
 	Result *PwpolicyAddResult `json:"result"`
 }
-
 type PwpolicyAddResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Pwpolicy `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *PwpolicyAddResult) String() string {
@@ -38679,27 +40355,33 @@ type pwpolicyDelResponse struct {
 	Error  *Error      `json:"error"`
 	Result *PwpolicyDelResult `json:"result"`
 }
-
 type PwpolicyDelResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 List of deletions that failed
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Value []string `json:"value,omitempty"`
+    
   }
 
 func (t *PwpolicyDelResult) String() string {
@@ -38863,33 +40545,41 @@ type pwpolicyFindResponse struct {
 	Error  *Error      `json:"error"`
 	Result *PwpolicyFindResult `json:"result"`
 }
-
 type PwpolicyFindResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result []Pwpolicy `json:"result,omitempty"`
+    
   
     /*
 Number of entries returned
     (required)
     */
+    
     Count int `json:"count,omitempty"`
+    
   
     /*
 True if not all results were returned
     (required)
     */
+    
     Truncated bool `json:"truncated,omitempty"`
+    
   }
 
 func (t *PwpolicyFindResult) String() string {
@@ -39056,27 +40746,33 @@ type pwpolicyModResponse struct {
 	Error  *Error      `json:"error"`
 	Result *PwpolicyModResult `json:"result"`
 }
-
 type PwpolicyModResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Pwpolicy `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *PwpolicyModResult) String() string {
@@ -39174,27 +40870,33 @@ type pwpolicyShowResponse struct {
 	Error  *Error      `json:"error"`
 	Result *PwpolicyShowResult `json:"result"`
 }
-
 type PwpolicyShowResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Pwpolicy `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *PwpolicyShowResult) String() string {
@@ -39335,27 +41037,33 @@ type radiusproxyAddResponse struct {
 	Error  *Error      `json:"error"`
 	Result *RadiusproxyAddResult `json:"result"`
 }
-
 type RadiusproxyAddResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Radiusproxy `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *RadiusproxyAddResult) String() string {
@@ -39440,27 +41148,33 @@ type radiusproxyDelResponse struct {
 	Error  *Error      `json:"error"`
 	Result *RadiusproxyDelResult `json:"result"`
 }
-
 type RadiusproxyDelResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 List of deletions that failed
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Value []string `json:"value,omitempty"`
+    
   }
 
 func (t *RadiusproxyDelResult) String() string {
@@ -39606,33 +41320,41 @@ type radiusproxyFindResponse struct {
 	Error  *Error      `json:"error"`
 	Result *RadiusproxyFindResult `json:"result"`
 }
-
 type RadiusproxyFindResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result []Radiusproxy `json:"result,omitempty"`
+    
   
     /*
 Number of entries returned
     (required)
     */
+    
     Count int `json:"count,omitempty"`
+    
   
     /*
 True if not all results were returned
     (required)
     */
+    
     Truncated bool `json:"truncated,omitempty"`
+    
   }
 
 func (t *RadiusproxyFindResult) String() string {
@@ -39792,27 +41514,33 @@ type radiusproxyModResponse struct {
 	Error  *Error      `json:"error"`
 	Result *RadiusproxyModResult `json:"result"`
 }
-
 type RadiusproxyModResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Radiusproxy `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *RadiusproxyModResult) String() string {
@@ -39909,27 +41637,33 @@ type radiusproxyShowResponse struct {
 	Error  *Error      `json:"error"`
 	Result *RadiusproxyShowResult `json:"result"`
 }
-
 type RadiusproxyShowResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Radiusproxy `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *RadiusproxyShowResult) String() string {
@@ -40065,27 +41799,33 @@ type realmdomainsModResponse struct {
 	Error  *Error      `json:"error"`
 	Result *RealmdomainsModResult `json:"result"`
 }
-
 type RealmdomainsModResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Realmdomains `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value interface{} `json:"value,omitempty"`
+    
   }
 
 func (t *RealmdomainsModResult) String() string {
@@ -40176,27 +41916,33 @@ type realmdomainsShowResponse struct {
 	Error  *Error      `json:"error"`
 	Result *RealmdomainsShowResult `json:"result"`
 }
-
 type RealmdomainsShowResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Realmdomains `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value interface{} `json:"value,omitempty"`
+    
   }
 
 func (t *RealmdomainsShowResult) String() string {
@@ -40313,27 +42059,33 @@ type roleAddResponse struct {
 	Error  *Error      `json:"error"`
 	Result *RoleAddResult `json:"result"`
 }
-
 type RoleAddResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Role `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *RoleAddResult) String() string {
@@ -40460,27 +42212,33 @@ type roleAddMemberResponse struct {
 	Error  *Error      `json:"error"`
 	Result *RoleAddMemberResult `json:"result"`
 }
-
 type RoleAddMemberResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be added
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of members added
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *RoleAddMemberResult) String() string {
@@ -40583,27 +42341,33 @@ type roleAddPrivilegeResponse struct {
 	Error  *Error      `json:"error"`
 	Result *RoleAddPrivilegeResult `json:"result"`
 }
-
 type RoleAddPrivilegeResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be added
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of privileges added
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *RoleAddPrivilegeResult) String() string {
@@ -40688,27 +42452,33 @@ type roleDelResponse struct {
 	Error  *Error      `json:"error"`
 	Result *RoleDelResult `json:"result"`
 }
-
 type RoleDelResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 List of deletions that failed
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Value []string `json:"value,omitempty"`
+    
   }
 
 func (t *RoleDelResult) String() string {
@@ -40830,33 +42600,41 @@ type roleFindResponse struct {
 	Error  *Error      `json:"error"`
 	Result *RoleFindResult `json:"result"`
 }
-
 type RoleFindResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result []Role `json:"result,omitempty"`
+    
   
     /*
 Number of entries returned
     (required)
     */
+    
     Count int `json:"count,omitempty"`
+    
   
     /*
 True if not all results were returned
     (required)
     */
+    
     Truncated bool `json:"truncated,omitempty"`
+    
   }
 
 func (t *RoleFindResult) String() string {
@@ -40992,27 +42770,33 @@ type roleModResponse struct {
 	Error  *Error      `json:"error"`
 	Result *RoleModResult `json:"result"`
 }
-
 type RoleModResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Role `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *RoleModResult) String() string {
@@ -41139,27 +42923,33 @@ type roleRemoveMemberResponse struct {
 	Error  *Error      `json:"error"`
 	Result *RoleRemoveMemberResult `json:"result"`
 }
-
 type RoleRemoveMemberResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be removed
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of members removed
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *RoleRemoveMemberResult) String() string {
@@ -41262,27 +43052,33 @@ type roleRemovePrivilegeResponse struct {
 	Error  *Error      `json:"error"`
 	Result *RoleRemovePrivilegeResult `json:"result"`
 }
-
 type RoleRemovePrivilegeResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be added
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of privileges removed
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *RoleRemovePrivilegeResult) String() string {
@@ -41385,27 +43181,33 @@ type roleShowResponse struct {
 	Error  *Error      `json:"error"`
 	Result *RoleShowResult `json:"result"`
 }
-
 type RoleShowResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Role `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *RoleShowResult) String() string {
@@ -41484,15 +43286,17 @@ type schemaResponse struct {
 	Error  *Error      `json:"error"`
 	Result *SchemaResult `json:"result"`
 }
-
 type SchemaResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   }
 
 func (t *SchemaResult) String() string {
@@ -41595,27 +43399,33 @@ type selfserviceAddResponse struct {
 	Error  *Error      `json:"error"`
 	Result *SelfserviceAddResult `json:"result"`
 }
-
 type SelfserviceAddResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Selfservice `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *SelfserviceAddResult) String() string {
@@ -41694,27 +43504,33 @@ type selfserviceDelResponse struct {
 	Error  *Error      `json:"error"`
 	Result *SelfserviceDelResult `json:"result"`
 }
-
 type SelfserviceDelResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 True means the operation was successful
     (required)
     */
+    
     Result bool `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *SelfserviceDelResult) String() string {
@@ -41824,33 +43640,41 @@ type selfserviceFindResponse struct {
 	Error  *Error      `json:"error"`
 	Result *SelfserviceFindResult `json:"result"`
 }
-
 type SelfserviceFindResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result []Selfservice `json:"result,omitempty"`
+    
   
     /*
 Number of entries returned
     (required)
     */
+    
     Count int `json:"count,omitempty"`
+    
   
     /*
 True if not all results were returned
     (required)
     */
+    
     Truncated bool `json:"truncated,omitempty"`
+    
   }
 
 func (t *SelfserviceFindResult) String() string {
@@ -41953,27 +43777,33 @@ type selfserviceModResponse struct {
 	Error  *Error      `json:"error"`
 	Result *SelfserviceModResult `json:"result"`
 }
-
 type SelfserviceModResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Selfservice `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *SelfserviceModResult) String() string {
@@ -42064,27 +43894,33 @@ type selfserviceShowResponse struct {
 	Error  *Error      `json:"error"`
 	Result *SelfserviceShowResult `json:"result"`
 }
-
 type SelfserviceShowResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Selfservice `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *SelfserviceShowResult) String() string {
@@ -42231,27 +44067,33 @@ type selinuxusermapAddResponse struct {
 	Error  *Error      `json:"error"`
 	Result *SelinuxusermapAddResult `json:"result"`
 }
-
 type SelinuxusermapAddResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Selinuxusermap `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *SelinuxusermapAddResult) String() string {
@@ -42360,27 +44202,33 @@ type selinuxusermapAddHostResponse struct {
 	Error  *Error      `json:"error"`
 	Result *SelinuxusermapAddHostResult `json:"result"`
 }
-
 type SelinuxusermapAddHostResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be added
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of members added
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *SelinuxusermapAddHostResult) String() string {
@@ -42489,27 +44337,33 @@ type selinuxusermapAddUserResponse struct {
 	Error  *Error      `json:"error"`
 	Result *SelinuxusermapAddUserResult `json:"result"`
 }
-
 type SelinuxusermapAddUserResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be added
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of members added
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *SelinuxusermapAddUserResult) String() string {
@@ -42594,27 +44448,33 @@ type selinuxusermapDelResponse struct {
 	Error  *Error      `json:"error"`
 	Result *SelinuxusermapDelResult `json:"result"`
 }
-
 type SelinuxusermapDelResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 List of deletions that failed
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Value []string `json:"value,omitempty"`
+    
   }
 
 func (t *SelinuxusermapDelResult) String() string {
@@ -42693,27 +44553,33 @@ type selinuxusermapDisableResponse struct {
 	Error  *Error      `json:"error"`
 	Result *SelinuxusermapDisableResult `json:"result"`
 }
-
 type SelinuxusermapDisableResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 True means the operation was successful
     (required)
     */
+    
     Result bool `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *SelinuxusermapDisableResult) String() string {
@@ -42792,27 +44658,33 @@ type selinuxusermapEnableResponse struct {
 	Error  *Error      `json:"error"`
 	Result *SelinuxusermapEnableResult `json:"result"`
 }
-
 type SelinuxusermapEnableResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 True means the operation was successful
     (required)
     */
+    
     Result bool `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *SelinuxusermapEnableResult) String() string {
@@ -42964,33 +44836,41 @@ type selinuxusermapFindResponse struct {
 	Error  *Error      `json:"error"`
 	Result *SelinuxusermapFindResult `json:"result"`
 }
-
 type SelinuxusermapFindResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result []Selinuxusermap `json:"result,omitempty"`
+    
   
     /*
 Number of entries returned
     (required)
     */
+    
     Count int `json:"count,omitempty"`
+    
   
     /*
 True if not all results were returned
     (required)
     */
+    
     Truncated bool `json:"truncated,omitempty"`
+    
   }
 
 func (t *SelinuxusermapFindResult) String() string {
@@ -43150,27 +45030,33 @@ type selinuxusermapModResponse struct {
 	Error  *Error      `json:"error"`
 	Result *SelinuxusermapModResult `json:"result"`
 }
-
 type SelinuxusermapModResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Selinuxusermap `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *SelinuxusermapModResult) String() string {
@@ -43279,27 +45165,33 @@ type selinuxusermapRemoveHostResponse struct {
 	Error  *Error      `json:"error"`
 	Result *SelinuxusermapRemoveHostResult `json:"result"`
 }
-
 type SelinuxusermapRemoveHostResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be removed
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of members removed
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *SelinuxusermapRemoveHostResult) String() string {
@@ -43408,27 +45300,33 @@ type selinuxusermapRemoveUserResponse struct {
 	Error  *Error      `json:"error"`
 	Result *SelinuxusermapRemoveUserResult `json:"result"`
 }
-
 type SelinuxusermapRemoveUserResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be removed
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of members removed
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *SelinuxusermapRemoveUserResult) String() string {
@@ -43531,27 +45429,33 @@ type selinuxusermapShowResponse struct {
 	Error  *Error      `json:"error"`
 	Result *SelinuxusermapShowResult `json:"result"`
 }
-
 type SelinuxusermapShowResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Selinuxusermap `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *SelinuxusermapShowResult) String() string {
@@ -43636,27 +45540,33 @@ type serverConncheckResponse struct {
 	Error  *Error      `json:"error"`
 	Result *ServerConncheckResult `json:"result"`
 }
-
 type ServerConncheckResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 True means the operation was successful
     (required)
     */
+    
     Result bool `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *ServerConncheckResult) String() string {
@@ -43759,27 +45669,33 @@ type serverDelResponse struct {
 	Error  *Error      `json:"error"`
 	Result *ServerDelResult `json:"result"`
 }
-
 type ServerDelResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 List of deletions that failed
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Value []string `json:"value,omitempty"`
+    
   }
 
 func (t *ServerDelResult) String() string {
@@ -43937,33 +45853,41 @@ type serverFindResponse struct {
 	Error  *Error      `json:"error"`
 	Result *ServerFindResult `json:"result"`
 }
-
 type ServerFindResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result []Server `json:"result,omitempty"`
+    
   
     /*
 Number of entries returned
     (required)
     */
+    
     Count int `json:"count,omitempty"`
+    
   
     /*
 True if not all results were returned
     (required)
     */
+    
     Truncated bool `json:"truncated,omitempty"`
+    
   }
 
 func (t *ServerFindResult) String() string {
@@ -44099,27 +46023,33 @@ type serverModResponse struct {
 	Error  *Error      `json:"error"`
 	Result *ServerModResult `json:"result"`
 }
-
 type ServerModResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Server `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *ServerModResult) String() string {
@@ -44241,33 +46171,41 @@ type serverRoleFindResponse struct {
 	Error  *Error      `json:"error"`
 	Result *ServerRoleFindResult `json:"result"`
 }
-
 type ServerRoleFindResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result []ServerRole `json:"result,omitempty"`
+    
   
     /*
 Number of entries returned
     (required)
     */
+    
     Count int `json:"count,omitempty"`
+    
   
     /*
 True if not all results were returned
     (required)
     */
+    
     Truncated bool `json:"truncated,omitempty"`
+    
   }
 
 func (t *ServerRoleFindResult) String() string {
@@ -44364,27 +46302,33 @@ type serverRoleShowResponse struct {
 	Error  *Error      `json:"error"`
 	Result *ServerRoleShowResult `json:"result"`
 }
-
 type ServerRoleShowResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result ServerRole `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value interface{} `json:"value,omitempty"`
+    
   }
 
 func (t *ServerRoleShowResult) String() string {
@@ -44487,27 +46431,33 @@ type serverShowResponse struct {
 	Error  *Error      `json:"error"`
 	Result *ServerShowResult `json:"result"`
 }
-
 type ServerShowResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Server `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *ServerShowResult) String() string {
@@ -44592,27 +46542,33 @@ type serverStateResponse struct {
 	Error  *Error      `json:"error"`
 	Result *ServerStateResult `json:"result"`
 }
-
 type ServerStateResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 True means the operation was successful
     (required)
     */
+    
     Result bool `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *ServerStateResult) String() string {
@@ -44765,27 +46721,33 @@ type serviceAddResponse struct {
 	Error  *Error      `json:"error"`
 	Result *ServiceAddResult `json:"result"`
 }
-
 type ServiceAddResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Service `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *ServiceAddResult) String() string {
@@ -44888,27 +46850,33 @@ type serviceAddCertResponse struct {
 	Error  *Error      `json:"error"`
 	Result *ServiceAddCertResult `json:"result"`
 }
-
 type ServiceAddCertResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *ServiceAddCertResult) String() string {
@@ -45011,27 +46979,33 @@ type serviceAddHostResponse struct {
 	Error  *Error      `json:"error"`
 	Result *ServiceAddHostResult `json:"result"`
 }
-
 type ServiceAddHostResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be added
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of members added
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *ServiceAddHostResult) String() string {
@@ -45134,27 +47108,33 @@ type serviceAddPrincipalResponse struct {
 	Error  *Error      `json:"error"`
 	Result *ServiceAddPrincipalResult `json:"result"`
 }
-
 type ServiceAddPrincipalResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *ServiceAddPrincipalResult) String() string {
@@ -45275,27 +47255,33 @@ type serviceAllowCreateKeytabResponse struct {
 	Error  *Error      `json:"error"`
 	Result *ServiceAllowCreateKeytabResult `json:"result"`
 }
-
 type ServiceAllowCreateKeytabResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be added
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of members added
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *ServiceAllowCreateKeytabResult) String() string {
@@ -45416,27 +47402,33 @@ type serviceAllowRetrieveKeytabResponse struct {
 	Error  *Error      `json:"error"`
 	Result *ServiceAllowRetrieveKeytabResult `json:"result"`
 }
-
 type ServiceAllowRetrieveKeytabResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be added
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of members added
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *ServiceAllowRetrieveKeytabResult) String() string {
@@ -45521,27 +47513,33 @@ type serviceDelResponse struct {
 	Error  *Error      `json:"error"`
 	Result *ServiceDelResult `json:"result"`
 }
-
 type ServiceDelResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 List of deletions that failed
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Value []string `json:"value,omitempty"`
+    
   }
 
 func (t *ServiceDelResult) String() string {
@@ -45620,27 +47618,33 @@ type serviceDisableResponse struct {
 	Error  *Error      `json:"error"`
 	Result *ServiceDisableResult `json:"result"`
 }
-
 type ServiceDisableResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 True means the operation was successful
     (required)
     */
+    
     Result bool `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *ServiceDisableResult) String() string {
@@ -45761,27 +47765,33 @@ type serviceDisallowCreateKeytabResponse struct {
 	Error  *Error      `json:"error"`
 	Result *ServiceDisallowCreateKeytabResult `json:"result"`
 }
-
 type ServiceDisallowCreateKeytabResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be removed
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of members removed
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *ServiceDisallowCreateKeytabResult) String() string {
@@ -45902,27 +47912,33 @@ type serviceDisallowRetrieveKeytabResponse struct {
 	Error  *Error      `json:"error"`
 	Result *ServiceDisallowRetrieveKeytabResult `json:"result"`
 }
-
 type ServiceDisallowRetrieveKeytabResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be removed
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of members removed
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *ServiceDisallowRetrieveKeytabResult) String() string {
@@ -46068,33 +48084,41 @@ type serviceFindResponse struct {
 	Error  *Error      `json:"error"`
 	Result *ServiceFindResult `json:"result"`
 }
-
 type ServiceFindResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result []Service `json:"result,omitempty"`
+    
   
     /*
 Number of entries returned
     (required)
     */
+    
     Count int `json:"count,omitempty"`
+    
   
     /*
 True if not all results were returned
     (required)
     */
+    
     Truncated bool `json:"truncated,omitempty"`
+    
   }
 
 func (t *ServiceFindResult) String() string {
@@ -46260,27 +48284,33 @@ type serviceModResponse struct {
 	Error  *Error      `json:"error"`
 	Result *ServiceModResult `json:"result"`
 }
-
 type ServiceModResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Service `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *ServiceModResult) String() string {
@@ -46383,27 +48413,33 @@ type serviceRemoveCertResponse struct {
 	Error  *Error      `json:"error"`
 	Result *ServiceRemoveCertResult `json:"result"`
 }
-
 type ServiceRemoveCertResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *ServiceRemoveCertResult) String() string {
@@ -46506,27 +48542,33 @@ type serviceRemoveHostResponse struct {
 	Error  *Error      `json:"error"`
 	Result *ServiceRemoveHostResult `json:"result"`
 }
-
 type ServiceRemoveHostResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be removed
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of members removed
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *ServiceRemoveHostResult) String() string {
@@ -46629,27 +48671,33 @@ type serviceRemovePrincipalResponse struct {
 	Error  *Error      `json:"error"`
 	Result *ServiceRemovePrincipalResult `json:"result"`
 }
-
 type ServiceRemovePrincipalResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *ServiceRemovePrincipalResult) String() string {
@@ -46758,27 +48806,33 @@ type serviceShowResponse struct {
 	Error  *Error      `json:"error"`
 	Result *ServiceShowResult `json:"result"`
 }
-
 type ServiceShowResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Service `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *ServiceShowResult) String() string {
@@ -46889,27 +48943,33 @@ type servicedelegationruleAddResponse struct {
 	Error  *Error      `json:"error"`
 	Result *ServicedelegationruleAddResult `json:"result"`
 }
-
 type ServicedelegationruleAddResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Servicedelegationrule `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *ServicedelegationruleAddResult) String() string {
@@ -47012,27 +49072,33 @@ type servicedelegationruleAddMemberResponse struct {
 	Error  *Error      `json:"error"`
 	Result *ServicedelegationruleAddMemberResult `json:"result"`
 }
-
 type ServicedelegationruleAddMemberResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be added
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of members added
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *ServicedelegationruleAddMemberResult) String() string {
@@ -47135,27 +49201,33 @@ type servicedelegationruleAddTargetResponse struct {
 	Error  *Error      `json:"error"`
 	Result *ServicedelegationruleAddTargetResult `json:"result"`
 }
-
 type ServicedelegationruleAddTargetResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be added
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of members added
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *ServicedelegationruleAddTargetResult) String() string {
@@ -47240,27 +49312,33 @@ type servicedelegationruleDelResponse struct {
 	Error  *Error      `json:"error"`
 	Result *ServicedelegationruleDelResult `json:"result"`
 }
-
 type ServicedelegationruleDelResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 List of deletions that failed
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Value []string `json:"value,omitempty"`
+    
   }
 
 func (t *ServicedelegationruleDelResult) String() string {
@@ -47376,33 +49454,41 @@ type servicedelegationruleFindResponse struct {
 	Error  *Error      `json:"error"`
 	Result *ServicedelegationruleFindResult `json:"result"`
 }
-
 type ServicedelegationruleFindResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result []Servicedelegationrule `json:"result,omitempty"`
+    
   
     /*
 Number of entries returned
     (required)
     */
+    
     Count int `json:"count,omitempty"`
+    
   
     /*
 True if not all results were returned
     (required)
     */
+    
     Truncated bool `json:"truncated,omitempty"`
+    
   }
 
 func (t *ServicedelegationruleFindResult) String() string {
@@ -47505,27 +49591,33 @@ type servicedelegationruleRemoveMemberResponse struct {
 	Error  *Error      `json:"error"`
 	Result *ServicedelegationruleRemoveMemberResult `json:"result"`
 }
-
 type ServicedelegationruleRemoveMemberResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be removed
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of members removed
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *ServicedelegationruleRemoveMemberResult) String() string {
@@ -47628,27 +49720,33 @@ type servicedelegationruleRemoveTargetResponse struct {
 	Error  *Error      `json:"error"`
 	Result *ServicedelegationruleRemoveTargetResult `json:"result"`
 }
-
 type ServicedelegationruleRemoveTargetResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be removed
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of members removed
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *ServicedelegationruleRemoveTargetResult) String() string {
@@ -47751,27 +49849,33 @@ type servicedelegationruleShowResponse struct {
 	Error  *Error      `json:"error"`
 	Result *ServicedelegationruleShowResult `json:"result"`
 }
-
 type ServicedelegationruleShowResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Servicedelegationrule `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *ServicedelegationruleShowResult) String() string {
@@ -47876,27 +49980,33 @@ type servicedelegationtargetAddResponse struct {
 	Error  *Error      `json:"error"`
 	Result *ServicedelegationtargetAddResult `json:"result"`
 }
-
 type ServicedelegationtargetAddResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Servicedelegationtarget `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *ServicedelegationtargetAddResult) String() string {
@@ -47993,27 +50103,33 @@ type servicedelegationtargetAddMemberResponse struct {
 	Error  *Error      `json:"error"`
 	Result *ServicedelegationtargetAddMemberResult `json:"result"`
 }
-
 type ServicedelegationtargetAddMemberResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be added
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of members added
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *ServicedelegationtargetAddMemberResult) String() string {
@@ -48098,27 +50214,33 @@ type servicedelegationtargetDelResponse struct {
 	Error  *Error      `json:"error"`
 	Result *ServicedelegationtargetDelResult `json:"result"`
 }
-
 type ServicedelegationtargetDelResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 List of deletions that failed
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Value []string `json:"value,omitempty"`
+    
   }
 
 func (t *ServicedelegationtargetDelResult) String() string {
@@ -48228,33 +50350,41 @@ type servicedelegationtargetFindResponse struct {
 	Error  *Error      `json:"error"`
 	Result *ServicedelegationtargetFindResult `json:"result"`
 }
-
 type ServicedelegationtargetFindResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result []Servicedelegationtarget `json:"result,omitempty"`
+    
   
     /*
 Number of entries returned
     (required)
     */
+    
     Count int `json:"count,omitempty"`
+    
   
     /*
 True if not all results were returned
     (required)
     */
+    
     Truncated bool `json:"truncated,omitempty"`
+    
   }
 
 func (t *ServicedelegationtargetFindResult) String() string {
@@ -48351,27 +50481,33 @@ type servicedelegationtargetRemoveMemberResponse struct {
 	Error  *Error      `json:"error"`
 	Result *ServicedelegationtargetRemoveMemberResult `json:"result"`
 }
-
 type ServicedelegationtargetRemoveMemberResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be removed
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of members removed
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *ServicedelegationtargetRemoveMemberResult) String() string {
@@ -48468,27 +50604,33 @@ type servicedelegationtargetShowResponse struct {
 	Error  *Error      `json:"error"`
 	Result *ServicedelegationtargetShowResult `json:"result"`
 }
-
 type ServicedelegationtargetShowResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Servicedelegationtarget `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *ServicedelegationtargetShowResult) String() string {
@@ -48561,15 +50703,17 @@ type sessionLogoutResponse struct {
 	Error  *Error      `json:"error"`
 	Result *SessionLogoutResult `json:"result"`
 }
-
 type SessionLogoutResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   }
 
 func (t *SessionLogoutResult) String() string {
@@ -48642,15 +50786,17 @@ type sidgenWasRunResponse struct {
 	Error  *Error      `json:"error"`
 	Result *SidgenWasRunResult `json:"result"`
 }
-
 type SidgenWasRunResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   }
 
 func (t *SidgenWasRunResult) String() string {
@@ -48747,27 +50893,33 @@ type stageuserActivateResponse struct {
 	Error  *Error      `json:"error"`
 	Result *StageuserActivateResult `json:"result"`
 }
-
 type StageuserActivateResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *StageuserActivateResult) String() string {
@@ -49112,27 +51264,33 @@ type stageuserAddResponse struct {
 	Error  *Error      `json:"error"`
 	Result *StageuserAddResult `json:"result"`
 }
-
 type StageuserAddResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Stageuser `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *StageuserAddResult) String() string {
@@ -49235,27 +51393,33 @@ type stageuserAddCertResponse struct {
 	Error  *Error      `json:"error"`
 	Result *StageuserAddCertResult `json:"result"`
 }
-
 type StageuserAddCertResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *StageuserAddCertResult) String() string {
@@ -49371,27 +51535,33 @@ type stageuserAddCertmapdataResponse struct {
 	Error  *Error      `json:"error"`
 	Result *StageuserAddCertmapdataResult `json:"result"`
 }
-
 type StageuserAddCertmapdataResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *StageuserAddCertmapdataResult) String() string {
@@ -49494,27 +51664,33 @@ type stageuserAddManagerResponse struct {
 	Error  *Error      `json:"error"`
 	Result *StageuserAddManagerResult `json:"result"`
 }
-
 type StageuserAddManagerResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be added
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of members added
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *StageuserAddManagerResult) String() string {
@@ -49617,27 +51793,33 @@ type stageuserAddPrincipalResponse struct {
 	Error  *Error      `json:"error"`
 	Result *StageuserAddPrincipalResult `json:"result"`
 }
-
 type StageuserAddPrincipalResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *StageuserAddPrincipalResult) String() string {
@@ -49722,27 +51904,33 @@ type stageuserDelResponse struct {
 	Error  *Error      `json:"error"`
 	Result *StageuserDelResult `json:"result"`
 }
-
 type StageuserDelResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 List of deletions that failed
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Value []string `json:"value,omitempty"`
+    
   }
 
 func (t *StageuserDelResult) String() string {
@@ -50134,33 +52322,41 @@ type stageuserFindResponse struct {
 	Error  *Error      `json:"error"`
 	Result *StageuserFindResult `json:"result"`
 }
-
 type StageuserFindResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result []Stageuser `json:"result,omitempty"`
+    
   
     /*
 Number of entries returned
     (required)
     */
+    
     Count int `json:"count,omitempty"`
+    
   
     /*
 True if not all results were returned
     (required)
     */
+    
     Truncated bool `json:"truncated,omitempty"`
+    
   }
 
 func (t *StageuserFindResult) String() string {
@@ -50518,27 +52714,33 @@ type stageuserModResponse struct {
 	Error  *Error      `json:"error"`
 	Result *StageuserModResult `json:"result"`
 }
-
 type StageuserModResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Stageuser `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *StageuserModResult) String() string {
@@ -50641,27 +52843,33 @@ type stageuserRemoveCertResponse struct {
 	Error  *Error      `json:"error"`
 	Result *StageuserRemoveCertResult `json:"result"`
 }
-
 type StageuserRemoveCertResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *StageuserRemoveCertResult) String() string {
@@ -50777,27 +52985,33 @@ type stageuserRemoveCertmapdataResponse struct {
 	Error  *Error      `json:"error"`
 	Result *StageuserRemoveCertmapdataResult `json:"result"`
 }
-
 type StageuserRemoveCertmapdataResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *StageuserRemoveCertmapdataResult) String() string {
@@ -50900,27 +53114,33 @@ type stageuserRemoveManagerResponse struct {
 	Error  *Error      `json:"error"`
 	Result *StageuserRemoveManagerResult `json:"result"`
 }
-
 type StageuserRemoveManagerResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be removed
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of members removed
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *StageuserRemoveManagerResult) String() string {
@@ -51023,27 +53243,33 @@ type stageuserRemovePrincipalResponse struct {
 	Error  *Error      `json:"error"`
 	Result *StageuserRemovePrincipalResult `json:"result"`
 }
-
 type StageuserRemovePrincipalResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *StageuserRemovePrincipalResult) String() string {
@@ -51146,27 +53372,33 @@ type stageuserShowResponse struct {
 	Error  *Error      `json:"error"`
 	Result *StageuserShowResult `json:"result"`
 }
-
 type StageuserShowResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Stageuser `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *StageuserShowResult) String() string {
@@ -51283,27 +53515,33 @@ type sudocmdAddResponse struct {
 	Error  *Error      `json:"error"`
 	Result *SudocmdAddResult `json:"result"`
 }
-
 type SudocmdAddResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Sudocmd `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *SudocmdAddResult) String() string {
@@ -51388,27 +53626,33 @@ type sudocmdDelResponse struct {
 	Error  *Error      `json:"error"`
 	Result *SudocmdDelResult `json:"result"`
 }
-
 type SudocmdDelResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 List of deletions that failed
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Value []string `json:"value,omitempty"`
+    
   }
 
 func (t *SudocmdDelResult) String() string {
@@ -51530,33 +53774,41 @@ type sudocmdFindResponse struct {
 	Error  *Error      `json:"error"`
 	Result *SudocmdFindResult `json:"result"`
 }
-
 type SudocmdFindResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result []Sudocmd `json:"result,omitempty"`
+    
   
     /*
 Number of entries returned
     (required)
     */
+    
     Count int `json:"count,omitempty"`
+    
   
     /*
 True if not all results were returned
     (required)
     */
+    
     Truncated bool `json:"truncated,omitempty"`
+    
   }
 
 func (t *SudocmdFindResult) String() string {
@@ -51686,27 +53938,33 @@ type sudocmdModResponse struct {
 	Error  *Error      `json:"error"`
 	Result *SudocmdModResult `json:"result"`
 }
-
 type SudocmdModResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Sudocmd `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *SudocmdModResult) String() string {
@@ -51809,27 +54067,33 @@ type sudocmdShowResponse struct {
 	Error  *Error      `json:"error"`
 	Result *SudocmdShowResult `json:"result"`
 }
-
 type SudocmdShowResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Sudocmd `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *SudocmdShowResult) String() string {
@@ -51946,27 +54210,33 @@ type sudocmdgroupAddResponse struct {
 	Error  *Error      `json:"error"`
 	Result *SudocmdgroupAddResult `json:"result"`
 }
-
 type SudocmdgroupAddResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Sudocmdgroup `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *SudocmdgroupAddResult) String() string {
@@ -52069,27 +54339,33 @@ type sudocmdgroupAddMemberResponse struct {
 	Error  *Error      `json:"error"`
 	Result *SudocmdgroupAddMemberResult `json:"result"`
 }
-
 type SudocmdgroupAddMemberResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be added
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of members added
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *SudocmdgroupAddMemberResult) String() string {
@@ -52174,27 +54450,33 @@ type sudocmdgroupDelResponse struct {
 	Error  *Error      `json:"error"`
 	Result *SudocmdgroupDelResult `json:"result"`
 }
-
 type SudocmdgroupDelResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 List of deletions that failed
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Value []string `json:"value,omitempty"`
+    
   }
 
 func (t *SudocmdgroupDelResult) String() string {
@@ -52316,33 +54598,41 @@ type sudocmdgroupFindResponse struct {
 	Error  *Error      `json:"error"`
 	Result *SudocmdgroupFindResult `json:"result"`
 }
-
 type SudocmdgroupFindResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result []Sudocmdgroup `json:"result,omitempty"`
+    
   
     /*
 Number of entries returned
     (required)
     */
+    
     Count int `json:"count,omitempty"`
+    
   
     /*
 True if not all results were returned
     (required)
     */
+    
     Truncated bool `json:"truncated,omitempty"`
+    
   }
 
 func (t *SudocmdgroupFindResult) String() string {
@@ -52472,27 +54762,33 @@ type sudocmdgroupModResponse struct {
 	Error  *Error      `json:"error"`
 	Result *SudocmdgroupModResult `json:"result"`
 }
-
 type SudocmdgroupModResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Sudocmdgroup `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *SudocmdgroupModResult) String() string {
@@ -52595,27 +54891,33 @@ type sudocmdgroupRemoveMemberResponse struct {
 	Error  *Error      `json:"error"`
 	Result *SudocmdgroupRemoveMemberResult `json:"result"`
 }
-
 type SudocmdgroupRemoveMemberResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be removed
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of members removed
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *SudocmdgroupRemoveMemberResult) String() string {
@@ -52718,27 +55020,33 @@ type sudocmdgroupShowResponse struct {
 	Error  *Error      `json:"error"`
 	Result *SudocmdgroupShowResult `json:"result"`
 }
-
 type SudocmdgroupShowResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Sudocmdgroup `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *SudocmdgroupShowResult) String() string {
@@ -52921,27 +55229,33 @@ type sudoruleAddResponse struct {
 	Error  *Error      `json:"error"`
 	Result *SudoruleAddResult `json:"result"`
 }
-
 type SudoruleAddResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Sudorule `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *SudoruleAddResult) String() string {
@@ -53050,27 +55364,33 @@ type sudoruleAddAllowCommandResponse struct {
 	Error  *Error      `json:"error"`
 	Result *SudoruleAddAllowCommandResult `json:"result"`
 }
-
 type SudoruleAddAllowCommandResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be added
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of members added
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *SudoruleAddAllowCommandResult) String() string {
@@ -53179,27 +55499,33 @@ type sudoruleAddDenyCommandResponse struct {
 	Error  *Error      `json:"error"`
 	Result *SudoruleAddDenyCommandResult `json:"result"`
 }
-
 type SudoruleAddDenyCommandResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be added
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of members added
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *SudoruleAddDenyCommandResult) String() string {
@@ -53314,27 +55640,33 @@ type sudoruleAddHostResponse struct {
 	Error  *Error      `json:"error"`
 	Result *SudoruleAddHostResult `json:"result"`
 }
-
 type SudoruleAddHostResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be added
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of members added
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *SudoruleAddHostResult) String() string {
@@ -53437,27 +55769,33 @@ type sudoruleAddOptionResponse struct {
 	Error  *Error      `json:"error"`
 	Result *SudoruleAddOptionResult `json:"result"`
 }
-
 type SudoruleAddOptionResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *SudoruleAddOptionResult) String() string {
@@ -53560,27 +55898,33 @@ type sudoruleAddRunasgroupResponse struct {
 	Error  *Error      `json:"error"`
 	Result *SudoruleAddRunasgroupResult `json:"result"`
 }
-
 type SudoruleAddRunasgroupResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be added
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of members added
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *SudoruleAddRunasgroupResult) String() string {
@@ -53689,27 +56033,33 @@ type sudoruleAddRunasuserResponse struct {
 	Error  *Error      `json:"error"`
 	Result *SudoruleAddRunasuserResult `json:"result"`
 }
-
 type SudoruleAddRunasuserResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be added
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of members added
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *SudoruleAddRunasuserResult) String() string {
@@ -53818,27 +56168,33 @@ type sudoruleAddUserResponse struct {
 	Error  *Error      `json:"error"`
 	Result *SudoruleAddUserResult `json:"result"`
 }
-
 type SudoruleAddUserResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be added
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of members added
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *SudoruleAddUserResult) String() string {
@@ -53923,27 +56279,33 @@ type sudoruleDelResponse struct {
 	Error  *Error      `json:"error"`
 	Result *SudoruleDelResult `json:"result"`
 }
-
 type SudoruleDelResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 List of deletions that failed
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Value []string `json:"value,omitempty"`
+    
   }
 
 func (t *SudoruleDelResult) String() string {
@@ -54022,15 +56384,17 @@ type sudoruleDisableResponse struct {
 	Error  *Error      `json:"error"`
 	Result *SudoruleDisableResult `json:"result"`
 }
-
 type SudoruleDisableResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   }
 
 func (t *SudoruleDisableResult) String() string {
@@ -54109,15 +56473,17 @@ type sudoruleEnableResponse struct {
 	Error  *Error      `json:"error"`
 	Result *SudoruleEnableResult `json:"result"`
 }
-
 type SudoruleEnableResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   }
 
 func (t *SudoruleEnableResult) String() string {
@@ -54305,33 +56671,41 @@ type sudoruleFindResponse struct {
 	Error  *Error      `json:"error"`
 	Result *SudoruleFindResult `json:"result"`
 }
-
 type SudoruleFindResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result []Sudorule `json:"result,omitempty"`
+    
   
     /*
 Number of entries returned
     (required)
     */
+    
     Count int `json:"count,omitempty"`
+    
   
     /*
 True if not all results were returned
     (required)
     */
+    
     Truncated bool `json:"truncated,omitempty"`
+    
   }
 
 func (t *SudoruleFindResult) String() string {
@@ -54533,27 +56907,33 @@ type sudoruleModResponse struct {
 	Error  *Error      `json:"error"`
 	Result *SudoruleModResult `json:"result"`
 }
-
 type SudoruleModResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Sudorule `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *SudoruleModResult) String() string {
@@ -54662,27 +57042,33 @@ type sudoruleRemoveAllowCommandResponse struct {
 	Error  *Error      `json:"error"`
 	Result *SudoruleRemoveAllowCommandResult `json:"result"`
 }
-
 type SudoruleRemoveAllowCommandResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be removed
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of members removed
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *SudoruleRemoveAllowCommandResult) String() string {
@@ -54791,27 +57177,33 @@ type sudoruleRemoveDenyCommandResponse struct {
 	Error  *Error      `json:"error"`
 	Result *SudoruleRemoveDenyCommandResult `json:"result"`
 }
-
 type SudoruleRemoveDenyCommandResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be removed
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of members removed
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *SudoruleRemoveDenyCommandResult) String() string {
@@ -54926,27 +57318,33 @@ type sudoruleRemoveHostResponse struct {
 	Error  *Error      `json:"error"`
 	Result *SudoruleRemoveHostResult `json:"result"`
 }
-
 type SudoruleRemoveHostResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be removed
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of members removed
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *SudoruleRemoveHostResult) String() string {
@@ -55049,27 +57447,33 @@ type sudoruleRemoveOptionResponse struct {
 	Error  *Error      `json:"error"`
 	Result *SudoruleRemoveOptionResult `json:"result"`
 }
-
 type SudoruleRemoveOptionResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *SudoruleRemoveOptionResult) String() string {
@@ -55172,27 +57576,33 @@ type sudoruleRemoveRunasgroupResponse struct {
 	Error  *Error      `json:"error"`
 	Result *SudoruleRemoveRunasgroupResult `json:"result"`
 }
-
 type SudoruleRemoveRunasgroupResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be removed
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of members removed
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *SudoruleRemoveRunasgroupResult) String() string {
@@ -55301,27 +57711,33 @@ type sudoruleRemoveRunasuserResponse struct {
 	Error  *Error      `json:"error"`
 	Result *SudoruleRemoveRunasuserResult `json:"result"`
 }
-
 type SudoruleRemoveRunasuserResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be removed
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of members removed
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *SudoruleRemoveRunasuserResult) String() string {
@@ -55430,27 +57846,33 @@ type sudoruleRemoveUserResponse struct {
 	Error  *Error      `json:"error"`
 	Result *SudoruleRemoveUserResult `json:"result"`
 }
-
 type SudoruleRemoveUserResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be removed
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of members removed
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *SudoruleRemoveUserResult) String() string {
@@ -55553,27 +57975,33 @@ type sudoruleShowResponse struct {
 	Error  *Error      `json:"error"`
 	Result *SudoruleShowResult `json:"result"`
 }
-
 type SudoruleShowResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Sudorule `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *SudoruleShowResult) String() string {
@@ -55665,33 +58093,41 @@ type topicFindResponse struct {
 	Error  *Error      `json:"error"`
 	Result *TopicFindResult `json:"result"`
 }
-
 type TopicFindResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result []Topic `json:"result,omitempty"`
+    
   
     /*
 Number of entries returned
     (required)
     */
+    
     Count int `json:"count,omitempty"`
+    
   
     /*
 True if not all results were returned
     (required)
     */
+    
     Truncated bool `json:"truncated,omitempty"`
+    
   }
 
 func (t *TopicFindResult) String() string {
@@ -55782,27 +58218,33 @@ type topicShowResponse struct {
 	Error  *Error      `json:"error"`
 	Result *TopicShowResult `json:"result"`
 }
-
 type TopicShowResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Topic `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *TopicShowResult) String() string {
@@ -55961,27 +58403,33 @@ type topologysegmentAddResponse struct {
 	Error  *Error      `json:"error"`
 	Result *TopologysegmentAddResult `json:"result"`
 }
-
 type TopologysegmentAddResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Topologysegment `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *TopologysegmentAddResult) String() string {
@@ -56072,27 +58520,33 @@ type topologysegmentDelResponse struct {
 	Error  *Error      `json:"error"`
 	Result *TopologysegmentDelResult `json:"result"`
 }
-
 type TopologysegmentDelResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 List of deletions that failed
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Value []string `json:"value,omitempty"`
+    
   }
 
 func (t *TopologysegmentDelResult) String() string {
@@ -56256,33 +58710,41 @@ type topologysegmentFindResponse struct {
 	Error  *Error      `json:"error"`
 	Result *TopologysegmentFindResult `json:"result"`
 }
-
 type TopologysegmentFindResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result []Topologysegment `json:"result,omitempty"`
+    
   
     /*
 Number of entries returned
     (required)
     */
+    
     Count int `json:"count,omitempty"`
+    
   
     /*
 True if not all results were returned
     (required)
     */
+    
     Truncated bool `json:"truncated,omitempty"`
+    
   }
 
 func (t *TopologysegmentFindResult) String() string {
@@ -56436,27 +58898,33 @@ type topologysegmentModResponse struct {
 	Error  *Error      `json:"error"`
 	Result *TopologysegmentModResult `json:"result"`
 }
-
 type TopologysegmentModResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Topologysegment `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *TopologysegmentModResult) String() string {
@@ -56559,27 +59027,33 @@ type topologysegmentReinitializeResponse struct {
 	Error  *Error      `json:"error"`
 	Result *TopologysegmentReinitializeResult `json:"result"`
 }
-
 type TopologysegmentReinitializeResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 True means the operation was successful
     (required)
     */
+    
     Result bool `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *TopologysegmentReinitializeResult) String() string {
@@ -56682,27 +59156,33 @@ type topologysegmentShowResponse struct {
 	Error  *Error      `json:"error"`
 	Result *TopologysegmentShowResult `json:"result"`
 }
-
 type TopologysegmentShowResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Topologysegment `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *TopologysegmentShowResult) String() string {
@@ -56813,27 +59293,33 @@ type topologysuffixAddResponse struct {
 	Error  *Error      `json:"error"`
 	Result *TopologysuffixAddResult `json:"result"`
 }
-
 type TopologysuffixAddResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Topologysuffix `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *TopologysuffixAddResult) String() string {
@@ -56918,27 +59404,33 @@ type topologysuffixDelResponse struct {
 	Error  *Error      `json:"error"`
 	Result *TopologysuffixDelResult `json:"result"`
 }
-
 type TopologysuffixDelResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 List of deletions that failed
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Value []string `json:"value,omitempty"`
+    
   }
 
 func (t *TopologysuffixDelResult) String() string {
@@ -57054,33 +59546,41 @@ type topologysuffixFindResponse struct {
 	Error  *Error      `json:"error"`
 	Result *TopologysuffixFindResult `json:"result"`
 }
-
 type TopologysuffixFindResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result []Topologysuffix `json:"result,omitempty"`
+    
   
     /*
 Number of entries returned
     (required)
     */
+    
     Count int `json:"count,omitempty"`
+    
   
     /*
 True if not all results were returned
     (required)
     */
+    
     Truncated bool `json:"truncated,omitempty"`
+    
   }
 
 func (t *TopologysuffixFindResult) String() string {
@@ -57204,27 +59704,33 @@ type topologysuffixModResponse struct {
 	Error  *Error      `json:"error"`
 	Result *TopologysuffixModResult `json:"result"`
 }
-
 type TopologysuffixModResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Topologysuffix `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *TopologysuffixModResult) String() string {
@@ -57321,27 +59827,33 @@ type topologysuffixShowResponse struct {
 	Error  *Error      `json:"error"`
 	Result *TopologysuffixShowResult `json:"result"`
 }
-
 type TopologysuffixShowResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Topologysuffix `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *TopologysuffixShowResult) String() string {
@@ -57426,15 +59938,17 @@ type topologysuffixVerifyResponse struct {
 	Error  *Error      `json:"error"`
 	Result *TopologysuffixVerifyResult `json:"result"`
 }
-
 type TopologysuffixVerifyResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   }
 
 func (t *TopologysuffixVerifyResult) String() string {
@@ -57614,27 +60128,33 @@ type trustAddResponse struct {
 	Error  *Error      `json:"error"`
 	Result *TrustAddResult `json:"result"`
 }
-
 type TrustAddResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Trust `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *TrustAddResult) String() string {
@@ -57719,27 +60239,33 @@ type trustDelResponse struct {
 	Error  *Error      `json:"error"`
 	Result *TrustDelResult `json:"result"`
 }
-
 type TrustDelResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 List of deletions that failed
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Value []string `json:"value,omitempty"`
+    
   }
 
 func (t *TrustDelResult) String() string {
@@ -57751,6 +60277,117 @@ func (t *TrustDelResult) String() string {
     return fmt.Sprintf("TrustDelResult[failed json.Marshal: %v]", e)
   }
   return fmt.Sprintf("TrustDelResult%v", string(b))
+}
+
+/*
+Configure this server as a trust agent.
+*/
+func (c *Client) TrustEnableAgent(
+  reqArgs *TrustEnableAgentArgs,
+  optArgs *TrustEnableAgentOptionalArgs, // can be nil
+) (*TrustEnableAgentResult, error) {
+  if reqArgs == nil {
+    return nil, fmt.Errorf("reqArgs cannot be nil")
+  }
+  kwp := trustEnableAgentKwParams{
+    TrustEnableAgentArgs: reqArgs,
+    TrustEnableAgentOptionalArgs: optArgs,
+    Version: apiVersion,
+  }
+  req := request{
+    Method: "trust_enable_agent",
+    Params: []interface{}{
+      []interface{}{}, &kwp},
+  }
+  readCloser, e := c.exec(&req)
+  if e != nil {
+    return nil, e
+  }
+  defer readCloser.Close()
+  var res trustEnableAgentResponse
+	if e := json.NewDecoder(readCloser).Decode(&res); e != nil {
+		return nil, e
+	}
+	if res.Error != nil {
+		return nil, res.Error
+	}
+  if res.Result == nil {
+    return nil, fmt.Errorf("missing result in response")
+  }
+  return res.Result, nil
+}
+
+type TrustEnableAgentArgs struct {
+  
+    /*
+Remote server name
+Remote IPA server hostname
+    */
+    RemoteCn string `json:"remote_cn,omitempty"`
+  }
+
+type TrustEnableAgentOptionalArgs struct {
+  
+    /*
+
+Enable support for trusted domains for old clients
+    */
+    EnableCompat *bool `json:"enable_compat,omitempty"`
+  }
+
+type trustEnableAgentKwParams struct {
+  *TrustEnableAgentArgs
+  *TrustEnableAgentOptionalArgs
+
+  /*
+  Automatically set.
+  Used by the server to determine whether to accept the request.
+  */
+  Version string `json:"version"`
+}
+
+type trustEnableAgentResponse struct {
+	Error  *Error      `json:"error"`
+	Result *TrustEnableAgentResult `json:"result"`
+}
+type TrustEnableAgentResult struct {
+  
+  
+  
+    /*
+User-friendly description of action performed
+    (optional)
+    */
+    
+    Summary *string `json:"summary,omitempty"`
+    
+  
+    /*
+True means the operation was successful
+    (required)
+    */
+    
+    Result bool `json:"result,omitempty"`
+    
+  
+    /*
+The primary_key value of the entry, e.g. 'jdoe' for a user
+    (required)
+    */
+    
+    Value interface{} `json:"value,omitempty"`
+    
+  }
+
+func (t *TrustEnableAgentResult) String() string {
+  if t == nil {
+    return "<nil>"
+  }
+  b, e := json.Marshal(t)
+  if e != nil {
+    return fmt.Sprintf("TrustEnableAgentResult[failed json.Marshal: %v]", e)
+  }
+  return fmt.Sprintf("TrustEnableAgentResult%v", string(b))
 }
 
 /*
@@ -57854,33 +60491,41 @@ type trustFetchDomainsResponse struct {
 	Error  *Error      `json:"error"`
 	Result *TrustFetchDomainsResult `json:"result"`
 }
-
 type TrustFetchDomainsResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result []interface{} `json:"result,omitempty"`
+    
   
     /*
 Number of entries returned
     (required)
     */
+    
     Count int `json:"count,omitempty"`
+    
   
     /*
 True if not all results were returned
     (required)
     */
+    
     Truncated bool `json:"truncated,omitempty"`
+    
   }
 
 func (t *TrustFetchDomainsResult) String() string {
@@ -58014,33 +60659,41 @@ type trustFindResponse struct {
 	Error  *Error      `json:"error"`
 	Result *TrustFindResult `json:"result"`
 }
-
 type TrustFindResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result []Trust `json:"result,omitempty"`
+    
   
     /*
 Number of entries returned
     (required)
     */
+    
     Count int `json:"count,omitempty"`
+    
   
     /*
 True if not all results were returned
     (required)
     */
+    
     Truncated bool `json:"truncated,omitempty"`
+    
   }
 
 func (t *TrustFindResult) String() string {
@@ -58179,27 +60832,33 @@ type trustModResponse struct {
 	Error  *Error      `json:"error"`
 	Result *TrustModResult `json:"result"`
 }
-
 type TrustModResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Trust `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *TrustModResult) String() string {
@@ -58290,15 +60949,17 @@ type trustResolveResponse struct {
 	Error  *Error      `json:"error"`
 	Result *TrustResolveResult `json:"result"`
 }
-
 type TrustResolveResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result []interface{} `json:"result,omitempty"`
+    
   }
 
 func (t *TrustResolveResult) String() string {
@@ -58395,27 +61056,33 @@ type trustShowResponse struct {
 	Error  *Error      `json:"error"`
 	Result *TrustShowResult `json:"result"`
 }
-
 type TrustShowResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Trust `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *TrustShowResult) String() string {
@@ -58539,27 +61206,33 @@ type trustconfigModResponse struct {
 	Error  *Error      `json:"error"`
 	Result *TrustconfigModResult `json:"result"`
 }
-
 type TrustconfigModResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Trustconfig `json:"result,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *TrustconfigModResult) String() string {
@@ -58656,27 +61329,33 @@ type trustconfigShowResponse struct {
 	Error  *Error      `json:"error"`
 	Result *TrustconfigShowResult `json:"result"`
 }
-
 type TrustconfigShowResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Trustconfig `json:"result,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *TrustconfigShowResult) String() string {
@@ -58805,27 +61484,33 @@ type trustdomainAddResponse struct {
 	Error  *Error      `json:"error"`
 	Result *TrustdomainAddResult `json:"result"`
 }
-
 type TrustdomainAddResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Trustdomain `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *TrustdomainAddResult) String() string {
@@ -58916,27 +61601,33 @@ type trustdomainDelResponse struct {
 	Error  *Error      `json:"error"`
 	Result *TrustdomainDelResult `json:"result"`
 }
-
 type TrustdomainDelResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 List of deletions that failed
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Value []string `json:"value,omitempty"`
+    
   }
 
 func (t *TrustdomainDelResult) String() string {
@@ -59021,27 +61712,33 @@ type trustdomainDisableResponse struct {
 	Error  *Error      `json:"error"`
 	Result *TrustdomainDisableResult `json:"result"`
 }
-
 type TrustdomainDisableResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 True means the operation was successful
     (required)
     */
+    
     Result bool `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *TrustdomainDisableResult) String() string {
@@ -59126,27 +61823,33 @@ type trustdomainEnableResponse struct {
 	Error  *Error      `json:"error"`
 	Result *TrustdomainEnableResult `json:"result"`
 }
-
 type TrustdomainEnableResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 True means the operation was successful
     (required)
     */
+    
     Result bool `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *TrustdomainEnableResult) String() string {
@@ -59274,33 +61977,41 @@ type trustdomainFindResponse struct {
 	Error  *Error      `json:"error"`
 	Result *TrustdomainFindResult `json:"result"`
 }
-
 type TrustdomainFindResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result []Trustdomain `json:"result,omitempty"`
+    
   
     /*
 Number of entries returned
     (required)
     */
+    
     Count int `json:"count,omitempty"`
+    
   
     /*
 True if not all results were returned
     (required)
     */
+    
     Truncated bool `json:"truncated,omitempty"`
+    
   }
 
 func (t *TrustdomainFindResult) String() string {
@@ -59442,27 +62153,33 @@ type trustdomainModResponse struct {
 	Error  *Error      `json:"error"`
 	Result *TrustdomainModResult `json:"result"`
 }
-
 type TrustdomainModResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Trustdomain `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *TrustdomainModResult) String() string {
@@ -59813,27 +62530,33 @@ type userAddResponse struct {
 	Error  *Error      `json:"error"`
 	Result *UserAddResult `json:"result"`
 }
-
 type UserAddResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result User `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *UserAddResult) String() string {
@@ -59936,27 +62659,33 @@ type userAddCertResponse struct {
 	Error  *Error      `json:"error"`
 	Result *UserAddCertResult `json:"result"`
 }
-
 type UserAddCertResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *UserAddCertResult) String() string {
@@ -60072,27 +62801,33 @@ type userAddCertmapdataResponse struct {
 	Error  *Error      `json:"error"`
 	Result *UserAddCertmapdataResult `json:"result"`
 }
-
 type UserAddCertmapdataResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *UserAddCertmapdataResult) String() string {
@@ -60195,27 +62930,33 @@ type userAddManagerResponse struct {
 	Error  *Error      `json:"error"`
 	Result *UserAddManagerResult `json:"result"`
 }
-
 type UserAddManagerResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be added
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of members added
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *UserAddManagerResult) String() string {
@@ -60318,27 +63059,33 @@ type userAddPrincipalResponse struct {
 	Error  *Error      `json:"error"`
 	Result *UserAddPrincipalResult `json:"result"`
 }
-
 type UserAddPrincipalResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *UserAddPrincipalResult) String() string {
@@ -60429,27 +63176,33 @@ type userDelResponse struct {
 	Error  *Error      `json:"error"`
 	Result *UserDelResult `json:"result"`
 }
-
 type UserDelResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 List of deletions that failed
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Value []string `json:"value,omitempty"`
+    
   }
 
 func (t *UserDelResult) String() string {
@@ -60528,27 +63281,33 @@ type userDisableResponse struct {
 	Error  *Error      `json:"error"`
 	Result *UserDisableResult `json:"result"`
 }
-
 type UserDisableResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 True means the operation was successful
     (required)
     */
+    
     Result bool `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *UserDisableResult) String() string {
@@ -60627,27 +63386,33 @@ type userEnableResponse struct {
 	Error  *Error      `json:"error"`
 	Result *UserEnableResult `json:"result"`
 }
-
 type UserEnableResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 True means the operation was successful
     (required)
     */
+    
     Result bool `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *UserEnableResult) String() string {
@@ -61057,33 +63822,41 @@ type userFindResponse struct {
 	Error  *Error      `json:"error"`
 	Result *UserFindResult `json:"result"`
 }
-
 type UserFindResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result []User `json:"result,omitempty"`
+    
   
     /*
 Number of entries returned
     (required)
     */
+    
     Count int `json:"count,omitempty"`
+    
   
     /*
 True if not all results were returned
     (required)
     */
+    
     Truncated bool `json:"truncated,omitempty"`
+    
   }
 
 func (t *UserFindResult) String() string {
@@ -61447,27 +64220,33 @@ type userModResponse struct {
 	Error  *Error      `json:"error"`
 	Result *UserModResult `json:"result"`
 }
-
 type UserModResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result User `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *UserModResult) String() string {
@@ -61570,27 +64349,33 @@ type userRemoveCertResponse struct {
 	Error  *Error      `json:"error"`
 	Result *UserRemoveCertResult `json:"result"`
 }
-
 type UserRemoveCertResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *UserRemoveCertResult) String() string {
@@ -61706,27 +64491,33 @@ type userRemoveCertmapdataResponse struct {
 	Error  *Error      `json:"error"`
 	Result *UserRemoveCertmapdataResult `json:"result"`
 }
-
 type UserRemoveCertmapdataResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *UserRemoveCertmapdataResult) String() string {
@@ -61829,27 +64620,33 @@ type userRemoveManagerResponse struct {
 	Error  *Error      `json:"error"`
 	Result *UserRemoveManagerResult `json:"result"`
 }
-
 type UserRemoveManagerResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be removed
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of members removed
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *UserRemoveManagerResult) String() string {
@@ -61952,27 +64749,33 @@ type userRemovePrincipalResponse struct {
 	Error  *Error      `json:"error"`
 	Result *UserRemovePrincipalResult `json:"result"`
 }
-
 type UserRemovePrincipalResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *UserRemovePrincipalResult) String() string {
@@ -62081,27 +64884,33 @@ type userShowResponse struct {
 	Error  *Error      `json:"error"`
 	Result *UserShowResult `json:"result"`
 }
-
 type UserShowResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result User `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *UserShowResult) String() string {
@@ -62186,27 +64995,33 @@ type userStageResponse struct {
 	Error  *Error      `json:"error"`
 	Result *UserStageResult `json:"result"`
 }
-
 type UserStageResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 List of deletions that failed
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Value []string `json:"value,omitempty"`
+    
   }
 
 func (t *UserStageResult) String() string {
@@ -62316,33 +65131,41 @@ type userStatusResponse struct {
 	Error  *Error      `json:"error"`
 	Result *UserStatusResult `json:"result"`
 }
-
 type UserStatusResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result []Userstatus `json:"result,omitempty"`
+    
   
     /*
 Number of entries returned
     (required)
     */
+    
     Count int `json:"count,omitempty"`
+    
   
     /*
 True if not all results were returned
     (required)
     */
+    
     Truncated bool `json:"truncated,omitempty"`
+    
   }
 
 func (t *UserStatusResult) String() string {
@@ -62421,27 +65244,33 @@ type userUndelResponse struct {
 	Error  *Error      `json:"error"`
 	Result *UserUndelResult `json:"result"`
 }
-
 type UserUndelResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 True means the operation was successful
     (required)
     */
+    
     Result bool `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *UserUndelResult) String() string {
@@ -62525,27 +65354,33 @@ type userUnlockResponse struct {
 	Error  *Error      `json:"error"`
 	Result *UserUnlockResult `json:"result"`
 }
-
 type UserUnlockResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 True means the operation was successful
     (required)
     */
+    
     Result bool `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *UserUnlockResult) String() string {
@@ -62698,27 +65533,33 @@ type vaultAddInternalResponse struct {
 	Error  *Error      `json:"error"`
 	Result *VaultAddInternalResult `json:"result"`
 }
-
 type VaultAddInternalResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *VaultAddInternalResult) String() string {
@@ -62851,27 +65692,33 @@ type vaultAddMemberResponse struct {
 	Error  *Error      `json:"error"`
 	Result *VaultAddMemberResult `json:"result"`
 }
-
 type VaultAddMemberResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be added
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of members added
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *VaultAddMemberResult) String() string {
@@ -63004,27 +65851,33 @@ type vaultAddOwnerResponse struct {
 	Error  *Error      `json:"error"`
 	Result *VaultAddOwnerResult `json:"result"`
 }
-
 type VaultAddOwnerResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Owners that could not be added
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of owners added
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *VaultAddOwnerResult) String() string {
@@ -63151,27 +66004,33 @@ type vaultArchiveInternalResponse struct {
 	Error  *Error      `json:"error"`
 	Result *VaultArchiveInternalResult `json:"result"`
 }
-
 type VaultArchiveInternalResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *VaultArchiveInternalResult) String() string {
@@ -63274,27 +66133,33 @@ type vaultDelResponse struct {
 	Error  *Error      `json:"error"`
 	Result *VaultDelResult `json:"result"`
 }
-
 type VaultDelResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 List of deletions that failed
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Value []string `json:"value,omitempty"`
+    
   }
 
 func (t *VaultDelResult) String() string {
@@ -63452,33 +66317,41 @@ type vaultFindResponse struct {
 	Error  *Error      `json:"error"`
 	Result *VaultFindResult `json:"result"`
 }
-
 type VaultFindResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result []Vault `json:"result,omitempty"`
+    
   
     /*
 Number of entries returned
     (required)
     */
+    
     Count int `json:"count,omitempty"`
+    
   
     /*
 True if not all results were returned
     (required)
     */
+    
     Truncated bool `json:"truncated,omitempty"`
+    
   }
 
 func (t *VaultFindResult) String() string {
@@ -63644,27 +66517,33 @@ type vaultModInternalResponse struct {
 	Error  *Error      `json:"error"`
 	Result *VaultModInternalResult `json:"result"`
 }
-
 type VaultModInternalResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *VaultModInternalResult) String() string {
@@ -63797,27 +66676,33 @@ type vaultRemoveMemberResponse struct {
 	Error  *Error      `json:"error"`
 	Result *VaultRemoveMemberResult `json:"result"`
 }
-
 type VaultRemoveMemberResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Members that could not be removed
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of members removed
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *VaultRemoveMemberResult) String() string {
@@ -63950,27 +66835,33 @@ type vaultRemoveOwnerResponse struct {
 	Error  *Error      `json:"error"`
 	Result *VaultRemoveOwnerResult `json:"result"`
 }
-
 type VaultRemoveOwnerResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Owners that could not be removed
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of owners removed
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *VaultRemoveOwnerResult) String() string {
@@ -64085,27 +66976,33 @@ type vaultRetrieveInternalResponse struct {
 	Error  *Error      `json:"error"`
 	Result *VaultRetrieveInternalResult `json:"result"`
 }
-
 type VaultRetrieveInternalResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *VaultRetrieveInternalResult) String() string {
@@ -64226,27 +67123,33 @@ type vaultShowResponse struct {
 	Error  *Error      `json:"error"`
 	Result *VaultShowResult `json:"result"`
 }
-
 type VaultShowResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Vault `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value string `json:"value,omitempty"`
+    
   }
 
 func (t *VaultShowResult) String() string {
@@ -64337,27 +67240,33 @@ type vaultconfigShowResponse struct {
 	Error  *Error      `json:"error"`
 	Result *VaultconfigShowResult `json:"result"`
 }
-
 type VaultconfigShowResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Vaultconfig `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value interface{} `json:"value,omitempty"`
+    
   }
 
 func (t *VaultconfigShowResult) String() string {
@@ -64484,27 +67393,33 @@ type vaultcontainerAddOwnerResponse struct {
 	Error  *Error      `json:"error"`
 	Result *VaultcontainerAddOwnerResult `json:"result"`
 }
-
 type VaultcontainerAddOwnerResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Owners that could not be added
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of owners added
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *VaultcontainerAddOwnerResult) String() string {
@@ -64601,27 +67516,33 @@ type vaultcontainerDelResponse struct {
 	Error  *Error      `json:"error"`
 	Result *VaultcontainerDelResult `json:"result"`
 }
-
 type VaultcontainerDelResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 List of deletions that failed
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Value []interface{} `json:"value,omitempty"`
+    
   }
 
 func (t *VaultcontainerDelResult) String() string {
@@ -64748,27 +67669,33 @@ type vaultcontainerRemoveOwnerResponse struct {
 	Error  *Error      `json:"error"`
 	Result *VaultcontainerRemoveOwnerResult `json:"result"`
 }
-
 type VaultcontainerRemoveOwnerResult struct {
+  
   
   
     /*
 
     (required)
     */
+    
     Result interface{} `json:"result,omitempty"`
+    
   
     /*
 Owners that could not be removed
     (required)
     */
-    Failed interface{} `json:"failed,omitempty"`
+    
+    Failed FailedOperations`json:"failed,omitempty"`
+    
   
     /*
 Number of owners removed
     (required)
     */
+    
     Completed int `json:"completed,omitempty"`
+    
   }
 
 func (t *VaultcontainerRemoveOwnerResult) String() string {
@@ -64883,27 +67810,33 @@ type vaultcontainerShowResponse struct {
 	Error  *Error      `json:"error"`
 	Result *VaultcontainerShowResult `json:"result"`
 }
-
 type VaultcontainerShowResult struct {
+  
   
   
     /*
 User-friendly description of action performed
     (optional)
     */
+    
     Summary *string `json:"summary,omitempty"`
+    
   
     /*
 
     (required)
     */
+    
     Result Vaultcontainer `json:"result,omitempty"`
+    
   
     /*
 The primary_key value of the entry, e.g. 'jdoe' for a user
     (required)
     */
+    
     Value interface{} `json:"value,omitempty"`
+    
   }
 
 func (t *VaultcontainerShowResult) String() string {
@@ -64976,27 +67909,33 @@ type whoamiResponse struct {
 	Error  *Error      `json:"error"`
 	Result *WhoamiResult `json:"result"`
 }
-
 type WhoamiResult struct {
+  
   
   
     /*
 Object class name
     (required)
     */
+    
     Object string `json:"object,omitempty"`
+    
   
     /*
 Function to get details
     (required)
     */
+    
     Command string `json:"command,omitempty"`
+    
   
     /*
 Arguments to details function
     (required)
     */
+    
     Arguments []interface{} `json:"arguments,omitempty"`
+    
   }
 
 func (t *WhoamiResult) String() string {
@@ -65151,8 +68090,11 @@ func (out *Aci) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -65187,8 +68129,11 @@ func (out *Aci) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -65224,8 +68169,11 @@ func (out *Aci) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -65261,8 +68209,11 @@ func (out *Aci) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -65297,8 +68248,11 @@ func (out *Aci) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -65329,8 +68283,11 @@ func (out *Aci) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -65366,8 +68323,11 @@ func (out *Aci) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -65403,8 +68363,11 @@ func (out *Aci) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -65440,8 +68403,11 @@ func (out *Aci) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -65477,8 +68443,11 @@ func (out *Aci) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -65514,8 +68483,24 @@ func (out *Aci) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          
+          // See https://github.com/tehwalris/go-freeipa/issues/3
+          // Sometimes IPA returns ["TRUE"] as a boolean value
+          strV, strOk := rawItem.(string)
+          if strOk {
+            boolV, err := strconv.ParseBool(strV)
+            if err != nil {
+              sliceOk = false
+              break
+            }
+
+            itemV = boolV
+          } else {
+            sliceOk = false
+            break
+          }
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -65551,8 +68536,11 @@ func (out *Aci) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -65587,8 +68575,11 @@ func (out *Aci) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -65688,8 +68679,11 @@ func (out *Automember) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -65724,8 +68718,11 @@ func (out *Automember) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -65761,8 +68758,11 @@ func (out *Automember) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -65798,8 +68798,11 @@ func (out *Automember) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -65830,8 +68833,11 @@ func (out *Automember) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -65919,8 +68925,11 @@ func (out *AutomemberDefaultGroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -65956,8 +68965,11 @@ func (out *AutomemberDefaultGroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -65993,8 +69005,11 @@ func (out *AutomemberDefaultGroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -66025,8 +69040,11 @@ func (out *AutomemberDefaultGroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -66090,8 +69108,11 @@ func (out *AutomemberTask) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -66175,8 +69196,11 @@ func (out *Automountkey) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -66211,8 +69235,11 @@ func (out *Automountkey) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -66247,8 +69274,11 @@ func (out *Automountkey) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -66317,8 +69347,11 @@ func (out *Automountlocation) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -66394,8 +69427,11 @@ func (out *Automountmap) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -66430,8 +69466,11 @@ func (out *Automountmap) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -66548,8 +69587,11 @@ func (out *Ca) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -66584,8 +69626,11 @@ func (out *Ca) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -66621,8 +69666,11 @@ func (out *Ca) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -66657,8 +69705,11 @@ func (out *Ca) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -66693,8 +69744,11 @@ func (out *Ca) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -66729,8 +69783,11 @@ func (out *Ca) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -66765,8 +69822,11 @@ func (out *Ca) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -66853,25 +69913,25 @@ Profiles
 Users
 
     */
-    MemberuserUser *string `json:"memberuser_user,omitempty"`
+    MemberuserUser *[]string `json:"memberuser_user,omitempty"`
   
     /*
 User Groups
 
     */
-    MemberuserGroup *string `json:"memberuser_group,omitempty"`
+    MemberuserGroup *[]string `json:"memberuser_group,omitempty"`
   
     /*
 Hosts
 
     */
-    MemberhostHost *string `json:"memberhost_host,omitempty"`
+    MemberhostHost *[]string `json:"memberhost_host,omitempty"`
   
     /*
 Host Groups
 
     */
-    MemberhostHostgroup *string `json:"memberhost_hostgroup,omitempty"`
+    MemberhostHostgroup *[]string `json:"memberhost_hostgroup,omitempty"`
   
     /*
 Services
@@ -66942,8 +70002,11 @@ func (out *Caacl) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -66978,8 +70041,11 @@ func (out *Caacl) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -67015,8 +70081,24 @@ func (out *Caacl) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          
+          // See https://github.com/tehwalris/go-freeipa/issues/3
+          // Sometimes IPA returns ["TRUE"] as a boolean value
+          strV, strOk := rawItem.(string)
+          if strOk {
+            boolV, err := strconv.ParseBool(strV)
+            if err != nil {
+              sliceOk = false
+              break
+            }
+
+            itemV = boolV
+          } else {
+            sliceOk = false
+            break
+          }
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -67052,8 +70134,11 @@ func (out *Caacl) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -67089,8 +70174,11 @@ func (out *Caacl) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -67126,8 +70214,11 @@ func (out *Caacl) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -67163,8 +70254,11 @@ func (out *Caacl) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -67200,8 +70294,11 @@ func (out *Caacl) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -67237,8 +70334,11 @@ func (out *Caacl) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -67274,8 +70374,11 @@ func (out *Caacl) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -67311,8 +70414,11 @@ func (out *Caacl) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -67321,15 +70427,10 @@ func (out *Caacl) UnmarshalJSON(data []byte) error {
     }
     
       if plainOk {
-        out.MemberuserUser = &plainV
+        out.MemberuserUser = &[]string{plainV}
       } else if sliceOk {
         
-          if len(sliceV) == 1 {
-            out.MemberuserUser = &sliceV[0]
-          } else if len(sliceV) > 1 {
-            return fmt.Errorf("unexpected value for field MemberuserUser: %v; expected at most one element", raw)
-          }
-        
+        out.MemberuserUser = &sliceV
       } else {
         return fmt.Errorf("unexpected value for field MemberuserUser: %v (%v)", raw, reflect.TypeOf(raw))
       }
@@ -67348,8 +70449,11 @@ func (out *Caacl) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -67358,15 +70462,10 @@ func (out *Caacl) UnmarshalJSON(data []byte) error {
     }
     
       if plainOk {
-        out.MemberuserGroup = &plainV
+        out.MemberuserGroup = &[]string{plainV}
       } else if sliceOk {
         
-          if len(sliceV) == 1 {
-            out.MemberuserGroup = &sliceV[0]
-          } else if len(sliceV) > 1 {
-            return fmt.Errorf("unexpected value for field MemberuserGroup: %v; expected at most one element", raw)
-          }
-        
+        out.MemberuserGroup = &sliceV
       } else {
         return fmt.Errorf("unexpected value for field MemberuserGroup: %v (%v)", raw, reflect.TypeOf(raw))
       }
@@ -67385,8 +70484,11 @@ func (out *Caacl) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -67395,15 +70497,10 @@ func (out *Caacl) UnmarshalJSON(data []byte) error {
     }
     
       if plainOk {
-        out.MemberhostHost = &plainV
+        out.MemberhostHost = &[]string{plainV}
       } else if sliceOk {
         
-          if len(sliceV) == 1 {
-            out.MemberhostHost = &sliceV[0]
-          } else if len(sliceV) > 1 {
-            return fmt.Errorf("unexpected value for field MemberhostHost: %v; expected at most one element", raw)
-          }
-        
+        out.MemberhostHost = &sliceV
       } else {
         return fmt.Errorf("unexpected value for field MemberhostHost: %v (%v)", raw, reflect.TypeOf(raw))
       }
@@ -67422,8 +70519,11 @@ func (out *Caacl) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -67432,15 +70532,10 @@ func (out *Caacl) UnmarshalJSON(data []byte) error {
     }
     
       if plainOk {
-        out.MemberhostHostgroup = &plainV
+        out.MemberhostHostgroup = &[]string{plainV}
       } else if sliceOk {
         
-          if len(sliceV) == 1 {
-            out.MemberhostHostgroup = &sliceV[0]
-          } else if len(sliceV) > 1 {
-            return fmt.Errorf("unexpected value for field MemberhostHostgroup: %v; expected at most one element", raw)
-          }
-        
+        out.MemberhostHostgroup = &sliceV
       } else {
         return fmt.Errorf("unexpected value for field MemberhostHostgroup: %v (%v)", raw, reflect.TypeOf(raw))
       }
@@ -67459,8 +70554,11 @@ func (out *Caacl) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -67745,8 +70843,11 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -67782,8 +70883,11 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(interface{})
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -67818,8 +70922,11 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -67850,8 +70957,11 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -67886,8 +70996,11 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -67918,8 +71031,11 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -67950,8 +71066,11 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -67982,8 +71101,11 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -68014,8 +71136,11 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -68046,8 +71171,11 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -68078,8 +71206,11 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -68110,8 +71241,11 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -68142,8 +71276,11 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -68174,8 +71311,11 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -68206,8 +71346,11 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -68238,8 +71381,11 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -68274,8 +71420,23 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(time.Time)
         
         if !itemOk {
-          sliceOk = false
-          break
+          
+          // See https://github.com/ccin2p3/go-freeipa/issues/1
+          mapV, mapVOk := rawItem.(map[string]interface{})
+          if mapVOk {
+            timeV, err := tryParseFreeIPADatetimeMap(mapV)
+            if err != nil {
+              sliceOk = false
+              break
+            }
+
+            itemV = timeV
+          } else {
+            sliceOk = false
+            break
+          }
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -68310,8 +71471,23 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(time.Time)
         
         if !itemOk {
-          sliceOk = false
-          break
+          
+          // See https://github.com/ccin2p3/go-freeipa/issues/1
+          mapV, mapVOk := rawItem.(map[string]interface{})
+          if mapVOk {
+            timeV, err := tryParseFreeIPADatetimeMap(mapV)
+            if err != nil {
+              sliceOk = false
+              break
+            }
+
+            itemV = timeV
+          } else {
+            sliceOk = false
+            break
+          }
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -68346,8 +71522,11 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -68382,8 +71561,11 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -68418,8 +71600,11 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -68458,8 +71643,11 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -68494,8 +71682,11 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -68530,8 +71721,24 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          
+          // See https://github.com/tehwalris/go-freeipa/issues/3
+          // Sometimes IPA returns ["TRUE"] as a boolean value
+          strV, strOk := rawItem.(string)
+          if strOk {
+            boolV, err := strconv.ParseBool(strV)
+            if err != nil {
+              sliceOk = false
+              break
+            }
+
+            itemV = boolV
+          } else {
+            sliceOk = false
+            break
+          }
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -68567,8 +71774,11 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -68607,8 +71817,11 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -68639,8 +71852,11 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -68671,8 +71887,11 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -68744,8 +71963,11 @@ func (out *Certmap) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -68780,8 +72002,11 @@ func (out *Certmap) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -68845,8 +72070,24 @@ func (out *Certmapconfig) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          
+          // See https://github.com/tehwalris/go-freeipa/issues/3
+          // Sometimes IPA returns ["TRUE"] as a boolean value
+          strV, strOk := rawItem.(string)
+          if strOk {
+            boolV, err := strconv.ParseBool(strV)
+            if err != nil {
+              sliceOk = false
+              break
+            }
+
+            itemV = boolV
+          } else {
+            sliceOk = false
+            break
+          }
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -68963,8 +72204,11 @@ func (out *Certmaprule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -68999,8 +72243,11 @@ func (out *Certmaprule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -69036,8 +72283,11 @@ func (out *Certmaprule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -69073,8 +72323,11 @@ func (out *Certmaprule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -69110,8 +72363,11 @@ func (out *Certmaprule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -69142,8 +72398,11 @@ func (out *Certmaprule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -69183,8 +72442,24 @@ func (out *Certmaprule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          
+          // See https://github.com/tehwalris/go-freeipa/issues/3
+          // Sometimes IPA returns ["TRUE"] as a boolean value
+          strV, strOk := rawItem.(string)
+          if strOk {
+            boolV, err := strconv.ParseBool(strV)
+            if err != nil {
+              sliceOk = false
+              break
+            }
+
+            itemV = boolV
+          } else {
+            sliceOk = false
+            break
+          }
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -69277,8 +72552,11 @@ func (out *Certprofile) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -69313,8 +72591,11 @@ func (out *Certprofile) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -69349,8 +72630,11 @@ func (out *Certprofile) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -69385,8 +72669,24 @@ func (out *Certprofile) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          
+          // See https://github.com/tehwalris/go-freeipa/issues/3
+          // Sometimes IPA returns ["TRUE"] as a boolean value
+          strV, strOk := rawItem.(string)
+          if strOk {
+            boolV, err := strconv.ParseBool(strV)
+            if err != nil {
+              sliceOk = false
+              break
+            }
+
+            itemV = boolV
+          } else {
+            sliceOk = false
+            break
+          }
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -69655,8 +72955,11 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -69692,8 +72995,11 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(interface{})
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -69728,8 +73034,11 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -69760,8 +73069,11 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -69796,8 +73108,11 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -69828,8 +73143,11 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -69860,8 +73178,11 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -69892,8 +73213,11 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -69924,8 +73248,11 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -69956,8 +73283,11 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -69988,8 +73318,11 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -70020,8 +73353,11 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -70052,8 +73388,11 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -70084,8 +73423,11 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -70116,8 +73458,11 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -70148,8 +73493,11 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -70184,8 +73532,23 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(time.Time)
         
         if !itemOk {
-          sliceOk = false
-          break
+          
+          // See https://github.com/ccin2p3/go-freeipa/issues/1
+          mapV, mapVOk := rawItem.(map[string]interface{})
+          if mapVOk {
+            timeV, err := tryParseFreeIPADatetimeMap(mapV)
+            if err != nil {
+              sliceOk = false
+              break
+            }
+
+            itemV = timeV
+          } else {
+            sliceOk = false
+            break
+          }
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -70220,8 +73583,23 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(time.Time)
         
         if !itemOk {
-          sliceOk = false
-          break
+          
+          // See https://github.com/ccin2p3/go-freeipa/issues/1
+          mapV, mapVOk := rawItem.(map[string]interface{})
+          if mapVOk {
+            timeV, err := tryParseFreeIPADatetimeMap(mapV)
+            if err != nil {
+              sliceOk = false
+              break
+            }
+
+            itemV = timeV
+          } else {
+            sliceOk = false
+            break
+          }
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -70256,8 +73634,11 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -70292,8 +73673,11 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -70328,8 +73712,11 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -70368,8 +73755,11 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -70404,8 +73794,11 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -70440,8 +73833,11 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -70477,8 +73873,11 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -70513,8 +73912,11 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -70642,8 +74044,11 @@ func (out *Class) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -70678,8 +74083,11 @@ func (out *Class) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -70714,8 +74122,11 @@ func (out *Class) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -70750,8 +74161,11 @@ func (out *Class) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -70787,8 +74201,11 @@ func (out *Class) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -70819,8 +74236,11 @@ func (out *Class) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -70851,8 +74271,11 @@ func (out *Class) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -70888,8 +74311,11 @@ func (out *Class) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -71025,8 +74451,11 @@ func (out *Command) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -71061,8 +74490,11 @@ func (out *Command) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -71097,8 +74529,11 @@ func (out *Command) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -71133,8 +74568,11 @@ func (out *Command) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -71170,8 +74608,11 @@ func (out *Command) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -71202,8 +74643,11 @@ func (out *Command) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -71234,8 +74678,11 @@ func (out *Command) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -71271,8 +74718,11 @@ func (out *Command) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -71303,8 +74753,11 @@ func (out *Command) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -71340,8 +74793,11 @@ func (out *Command) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -71658,8 +75114,11 @@ func (out *Config) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -71698,8 +75157,11 @@ func (out *Config) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -71734,8 +75196,11 @@ func (out *Config) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -71770,8 +75235,11 @@ func (out *Config) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -71806,8 +75274,11 @@ func (out *Config) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -71843,8 +75314,11 @@ func (out *Config) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -71883,8 +75357,11 @@ func (out *Config) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -71923,8 +75400,11 @@ func (out *Config) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -71959,8 +75439,11 @@ func (out *Config) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -71995,8 +75478,24 @@ func (out *Config) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          
+          // See https://github.com/tehwalris/go-freeipa/issues/3
+          // Sometimes IPA returns ["TRUE"] as a boolean value
+          strV, strOk := rawItem.(string)
+          if strOk {
+            boolV, err := strconv.ParseBool(strV)
+            if err != nil {
+              sliceOk = false
+              break
+            }
+
+            itemV = boolV
+          } else {
+            sliceOk = false
+            break
+          }
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -72032,8 +75531,11 @@ func (out *Config) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -72068,8 +75570,11 @@ func (out *Config) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -72104,8 +75609,11 @@ func (out *Config) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -72140,8 +75648,11 @@ func (out *Config) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -72180,8 +75691,11 @@ func (out *Config) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -72212,8 +75726,11 @@ func (out *Config) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -72248,8 +75765,11 @@ func (out *Config) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -72285,8 +75805,11 @@ func (out *Config) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -72317,8 +75840,11 @@ func (out *Config) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -72349,8 +75875,11 @@ func (out *Config) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -72381,8 +75910,11 @@ func (out *Config) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -72413,8 +75945,11 @@ func (out *Config) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -72445,8 +75980,11 @@ func (out *Config) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -72477,8 +76015,11 @@ func (out *Config) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -72509,8 +76050,11 @@ func (out *Config) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -72541,8 +76085,11 @@ func (out *Config) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -72578,8 +76125,11 @@ func (out *Config) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -72610,8 +76160,11 @@ func (out *Config) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -72642,8 +76195,11 @@ func (out *Config) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -72679,8 +76235,11 @@ func (out *Config) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -72711,8 +76270,11 @@ func (out *Config) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -72743,8 +76305,11 @@ func (out *Config) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -72829,8 +76394,11 @@ func (out *Cosentry) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -72865,8 +76433,11 @@ func (out *Cosentry) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -72901,8 +76472,11 @@ func (out *Cosentry) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -73014,8 +76588,11 @@ func (out *Delegation) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -73050,8 +76627,11 @@ func (out *Delegation) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -73082,8 +76662,11 @@ func (out *Delegation) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -73118,8 +76701,11 @@ func (out *Delegation) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -73154,8 +76740,11 @@ func (out *Delegation) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -73190,8 +76779,11 @@ func (out *Delegation) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -73267,8 +76859,11 @@ func (out *DNSSystemRecords) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -73299,8 +76894,11 @@ func (out *DNSSystemRecords) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -73364,8 +76962,11 @@ func (out *Dnsa6record) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -73433,8 +77034,11 @@ func (out *Dnsaaaarecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -73510,8 +77114,11 @@ func (out *Dnsafsdbrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -73551,8 +77158,11 @@ func (out *Dnsafsdbrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -73645,8 +77255,11 @@ func (out *Dnsarecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -73738,8 +77351,11 @@ func (out *Dnscertrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -73778,8 +77394,11 @@ func (out *Dnscertrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -73818,8 +77437,11 @@ func (out *Dnscertrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -73858,8 +77480,11 @@ func (out *Dnscertrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -73927,8 +77552,11 @@ func (out *Dnscnamerecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -74044,8 +77672,11 @@ func (out *Dnsconfig) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -74076,8 +77707,11 @@ func (out *Dnsconfig) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -74113,8 +77747,24 @@ func (out *Dnsconfig) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          
+          // See https://github.com/tehwalris/go-freeipa/issues/3
+          // Sometimes IPA returns ["TRUE"] as a boolean value
+          strV, strOk := rawItem.(string)
+          if strOk {
+            boolV, err := strconv.ParseBool(strV)
+            if err != nil {
+              sliceOk = false
+              break
+            }
+
+            itemV = boolV
+          } else {
+            sliceOk = false
+            break
+          }
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -74150,8 +77800,11 @@ func (out *Dnsconfig) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -74191,8 +77844,11 @@ func (out *Dnsconfig) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -74232,8 +77888,11 @@ func (out *Dnsconfig) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -74264,8 +77923,11 @@ func (out *Dnsconfig) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -74383,8 +78045,11 @@ func (out *Dnsdlvrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -74423,8 +78088,11 @@ func (out *Dnsdlvrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -74463,8 +78131,11 @@ func (out *Dnsdlvrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -74503,8 +78174,11 @@ func (out *Dnsdlvrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -74572,8 +78246,11 @@ func (out *Dnsdnamerecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -74665,8 +78342,11 @@ func (out *Dnsdsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -74705,8 +78385,11 @@ func (out *Dnsdsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -74745,8 +78428,11 @@ func (out *Dnsdsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -74785,8 +78471,11 @@ func (out *Dnsdsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -74894,8 +78583,11 @@ func (out *Dnsforwardzone) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -74930,8 +78622,11 @@ func (out *Dnsforwardzone) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -74967,8 +78662,24 @@ func (out *Dnsforwardzone) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          
+          // See https://github.com/tehwalris/go-freeipa/issues/3
+          // Sometimes IPA returns ["TRUE"] as a boolean value
+          strV, strOk := rawItem.(string)
+          if strOk {
+            boolV, err := strconv.ParseBool(strV)
+            if err != nil {
+              sliceOk = false
+              break
+            }
+
+            itemV = boolV
+          } else {
+            sliceOk = false
+            break
+          }
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -75004,8 +78715,11 @@ func (out *Dnsforwardzone) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -75036,8 +78750,11 @@ func (out *Dnsforwardzone) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -75073,8 +78790,11 @@ func (out *Dnsforwardzone) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -75225,8 +78945,11 @@ func (out *Dnskxrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -75265,8 +78988,11 @@ func (out *Dnskxrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -75422,8 +79148,11 @@ func (out *Dnslocrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -75462,8 +79191,11 @@ func (out *Dnslocrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -75503,8 +79235,11 @@ func (out *Dnslocrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(float64)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -75540,8 +79275,11 @@ func (out *Dnslocrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -75576,8 +79314,11 @@ func (out *Dnslocrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -75616,8 +79357,11 @@ func (out *Dnslocrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -75657,8 +79401,11 @@ func (out *Dnslocrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(float64)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -75694,8 +79441,11 @@ func (out *Dnslocrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -75730,8 +79480,11 @@ func (out *Dnslocrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(float64)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -75766,8 +79519,11 @@ func (out *Dnslocrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(float64)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -75803,8 +79559,11 @@ func (out *Dnslocrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(float64)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -75840,8 +79599,11 @@ func (out *Dnslocrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(float64)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -75918,8 +79680,11 @@ func (out *Dnsmxrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -75958,8 +79723,11 @@ func (out *Dnsmxrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -76067,8 +79835,11 @@ func (out *Dnsnaptrrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -76107,8 +79878,11 @@ func (out *Dnsnaptrrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -76147,8 +79921,11 @@ func (out *Dnsnaptrrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -76183,8 +79960,11 @@ func (out *Dnsnaptrrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -76219,8 +79999,11 @@ func (out *Dnsnaptrrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -76255,8 +80038,11 @@ func (out *Dnsnaptrrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -76349,8 +80135,11 @@ func (out *Dnsnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -76418,8 +80207,11 @@ func (out *Dnsptrrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -77247,8 +81039,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -77283,8 +81078,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -77324,8 +81122,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -77361,8 +81162,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(interface{})
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -77398,8 +81202,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -77435,8 +81242,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -77472,8 +81282,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -77504,8 +81317,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -77541,8 +81357,24 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          
+          // See https://github.com/tehwalris/go-freeipa/issues/3
+          // Sometimes IPA returns ["TRUE"] as a boolean value
+          strV, strOk := rawItem.(string)
+          if strOk {
+            boolV, err := strconv.ParseBool(strV)
+            if err != nil {
+              sliceOk = false
+              break
+            }
+
+            itemV = boolV
+          } else {
+            sliceOk = false
+            break
+          }
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -77578,8 +81410,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -77610,8 +81445,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -77647,8 +81485,24 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          
+          // See https://github.com/tehwalris/go-freeipa/issues/3
+          // Sometimes IPA returns ["TRUE"] as a boolean value
+          strV, strOk := rawItem.(string)
+          if strOk {
+            boolV, err := strconv.ParseBool(strV)
+            if err != nil {
+              sliceOk = false
+              break
+            }
+
+            itemV = boolV
+          } else {
+            sliceOk = false
+            break
+          }
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -77684,8 +81538,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -77716,8 +81573,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -77753,8 +81613,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -77785,8 +81648,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -77826,8 +81692,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -77863,8 +81732,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -77895,8 +81767,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -77927,8 +81802,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -77968,8 +81846,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -78009,8 +81890,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -78050,8 +81934,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -78087,8 +81974,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -78119,8 +82009,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -78156,8 +82049,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -78188,8 +82084,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -78220,8 +82119,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -78261,8 +82163,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -78302,8 +82207,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -78343,8 +82251,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -78380,8 +82291,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -78412,8 +82326,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -78449,8 +82366,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -78481,8 +82401,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -78522,8 +82445,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -78563,8 +82489,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -78604,8 +82533,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -78641,8 +82573,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -78673,8 +82608,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -78705,8 +82643,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -78737,8 +82678,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -78769,8 +82713,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -78810,8 +82757,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -78847,8 +82797,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -78879,8 +82832,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -78920,8 +82876,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -78961,8 +82920,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(float64)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -78998,8 +82960,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -79035,8 +83000,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -79076,8 +83044,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -79117,8 +83088,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(float64)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -79154,8 +83128,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -79191,8 +83168,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(float64)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -79228,8 +83208,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(float64)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -79265,8 +83248,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(float64)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -79302,8 +83288,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(float64)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -79339,8 +83328,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -79371,8 +83363,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -79412,8 +83407,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -79449,8 +83447,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -79481,8 +83482,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -79522,8 +83526,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -79563,8 +83570,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -79600,8 +83610,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -79637,8 +83650,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -79674,8 +83690,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -79711,8 +83730,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -79743,8 +83765,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -79780,8 +83805,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -79812,8 +83840,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -79844,8 +83875,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -79881,8 +83915,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -79913,8 +83950,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -79945,8 +83985,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -79977,8 +84020,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -80009,8 +84055,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -80041,8 +84090,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -80082,8 +84134,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -80123,8 +84178,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -80164,8 +84222,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -80201,8 +84262,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -80233,8 +84297,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -80274,8 +84341,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -80315,8 +84385,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -80352,8 +84425,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -80384,8 +84460,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -80425,8 +84504,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -80466,8 +84548,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -80507,8 +84592,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -80544,8 +84632,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -80576,8 +84667,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -80613,8 +84707,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -80645,8 +84742,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -80686,8 +84786,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -80727,8 +84830,11 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -80871,8 +84977,11 @@ func (out *Dnsserver) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -80907,8 +85016,11 @@ func (out *Dnsserver) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -80944,8 +85056,11 @@ func (out *Dnsserver) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -80976,8 +85091,11 @@ func (out *Dnsserver) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -81120,8 +85238,11 @@ func (out *Dnssrvrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -81160,8 +85281,11 @@ func (out *Dnssrvrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -81200,8 +85324,11 @@ func (out *Dnssrvrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -81240,8 +85367,11 @@ func (out *Dnssrvrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -81325,8 +85455,11 @@ func (out *Dnssshfprecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -81365,8 +85498,11 @@ func (out *Dnssshfprecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -81405,8 +85541,11 @@ func (out *Dnssshfprecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -81498,8 +85637,11 @@ func (out *Dnstlsarecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -81538,8 +85680,11 @@ func (out *Dnstlsarecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -81578,8 +85723,11 @@ func (out *Dnstlsarecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -81618,8 +85766,11 @@ func (out *Dnstlsarecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -81687,8 +85838,11 @@ func (out *Dnstxtrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -81772,8 +85926,11 @@ func (out *Dnsurirecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -81812,8 +85969,11 @@ func (out *Dnsurirecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -81852,8 +86012,11 @@ func (out *Dnsurirecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -82097,8 +86260,11 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -82133,8 +86299,11 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -82170,8 +86339,24 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          
+          // See https://github.com/tehwalris/go-freeipa/issues/3
+          // Sometimes IPA returns ["TRUE"] as a boolean value
+          strV, strOk := rawItem.(string)
+          if strOk {
+            boolV, err := strconv.ParseBool(strV)
+            if err != nil {
+              sliceOk = false
+              break
+            }
+
+            itemV = boolV
+          } else {
+            sliceOk = false
+            break
+          }
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -82207,8 +86392,11 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -82239,8 +86427,11 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -82276,8 +86467,11 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -82312,8 +86506,11 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -82349,8 +86546,11 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -82385,8 +86585,11 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -82425,8 +86628,11 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -82465,8 +86671,11 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -82505,8 +86714,11 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -82545,8 +86757,11 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -82585,8 +86800,11 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -82626,8 +86844,11 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -82667,8 +86888,11 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -82704,8 +86928,11 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -82741,8 +86968,24 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          
+          // See https://github.com/tehwalris/go-freeipa/issues/3
+          // Sometimes IPA returns ["TRUE"] as a boolean value
+          strV, strOk := rawItem.(string)
+          if strOk {
+            boolV, err := strconv.ParseBool(strV)
+            if err != nil {
+              sliceOk = false
+              break
+            }
+
+            itemV = boolV
+          } else {
+            sliceOk = false
+            break
+          }
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -82778,8 +87021,11 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -82815,8 +87061,11 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -82852,8 +87101,24 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          
+          // See https://github.com/tehwalris/go-freeipa/issues/3
+          // Sometimes IPA returns ["TRUE"] as a boolean value
+          strV, strOk := rawItem.(string)
+          if strOk {
+            boolV, err := strconv.ParseBool(strV)
+            if err != nil {
+              sliceOk = false
+              break
+            }
+
+            itemV = boolV
+          } else {
+            sliceOk = false
+            break
+          }
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -82889,8 +87154,24 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          
+          // See https://github.com/tehwalris/go-freeipa/issues/3
+          // Sometimes IPA returns ["TRUE"] as a boolean value
+          strV, strOk := rawItem.(string)
+          if strOk {
+            boolV, err := strconv.ParseBool(strV)
+            if err != nil {
+              sliceOk = false
+              break
+            }
+
+            itemV = boolV
+          } else {
+            sliceOk = false
+            break
+          }
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -82926,8 +87207,11 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -83025,43 +87309,43 @@ Member of HBAC rule
 Indirect Member users
 
     */
-    MemberindirectUser *string `json:"memberindirect_user,omitempty"`
+    MemberindirectUser *[]string `json:"memberindirect_user,omitempty"`
   
     /*
 Indirect Member groups
 
     */
-    MemberindirectGroup *string `json:"memberindirect_group,omitempty"`
+    MemberindirectGroup *[]string `json:"memberindirect_group,omitempty"`
   
     /*
 Indirect Member of group
 
     */
-    MemberofindirectGroup *string `json:"memberofindirect_group,omitempty"`
+    MemberofindirectGroup *[]string `json:"memberofindirect_group,omitempty"`
   
     /*
 Indirect Member of netgroup
 
     */
-    MemberofindirectNetgroup *string `json:"memberofindirect_netgroup,omitempty"`
+    MemberofindirectNetgroup *[]string `json:"memberofindirect_netgroup,omitempty"`
   
     /*
 Indirect Member of role
 
     */
-    MemberofindirectRole *string `json:"memberofindirect_role,omitempty"`
+    MemberofindirectRole *[]string `json:"memberofindirect_role,omitempty"`
   
     /*
 Indirect Member of Sudo rule
 
     */
-    MemberofindirectSudorule *string `json:"memberofindirect_sudorule,omitempty"`
+    MemberofindirectSudorule *[]string `json:"memberofindirect_sudorule,omitempty"`
   
     /*
 Indirect Member of HBAC rule
 
     */
-    MemberofindirectHbacrule *string `json:"memberofindirect_hbacrule,omitempty"`
+    MemberofindirectHbacrule *[]string `json:"memberofindirect_hbacrule,omitempty"`
   }
 
 func (t *Group) String() string {
@@ -83132,8 +87416,11 @@ func (out *Group) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -83168,8 +87455,11 @@ func (out *Group) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -83205,8 +87495,11 @@ func (out *Group) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -83246,8 +87539,11 @@ func (out *Group) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -83278,8 +87574,11 @@ func (out *Group) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -83310,8 +87609,11 @@ func (out *Group) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -83342,8 +87644,11 @@ func (out *Group) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -83374,8 +87679,11 @@ func (out *Group) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -83406,8 +87714,11 @@ func (out *Group) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -83438,8 +87749,11 @@ func (out *Group) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -83470,8 +87784,11 @@ func (out *Group) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -83502,8 +87819,11 @@ func (out *Group) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -83512,15 +87832,10 @@ func (out *Group) UnmarshalJSON(data []byte) error {
     }
     
       if plainOk {
-        out.MemberindirectUser = &plainV
+        out.MemberindirectUser = &[]string{plainV}
       } else if sliceOk {
         
-          if len(sliceV) == 1 {
-            out.MemberindirectUser = &sliceV[0]
-          } else if len(sliceV) > 1 {
-            return fmt.Errorf("unexpected value for field MemberindirectUser: %v; expected at most one element", raw)
-          }
-        
+        out.MemberindirectUser = &sliceV
       } else {
         return fmt.Errorf("unexpected value for field MemberindirectUser: %v (%v)", raw, reflect.TypeOf(raw))
       }
@@ -83539,8 +87854,11 @@ func (out *Group) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -83549,15 +87867,10 @@ func (out *Group) UnmarshalJSON(data []byte) error {
     }
     
       if plainOk {
-        out.MemberindirectGroup = &plainV
+        out.MemberindirectGroup = &[]string{plainV}
       } else if sliceOk {
         
-          if len(sliceV) == 1 {
-            out.MemberindirectGroup = &sliceV[0]
-          } else if len(sliceV) > 1 {
-            return fmt.Errorf("unexpected value for field MemberindirectGroup: %v; expected at most one element", raw)
-          }
-        
+        out.MemberindirectGroup = &sliceV
       } else {
         return fmt.Errorf("unexpected value for field MemberindirectGroup: %v (%v)", raw, reflect.TypeOf(raw))
       }
@@ -83576,8 +87889,11 @@ func (out *Group) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -83586,15 +87902,10 @@ func (out *Group) UnmarshalJSON(data []byte) error {
     }
     
       if plainOk {
-        out.MemberofindirectGroup = &plainV
+        out.MemberofindirectGroup = &[]string{plainV}
       } else if sliceOk {
         
-          if len(sliceV) == 1 {
-            out.MemberofindirectGroup = &sliceV[0]
-          } else if len(sliceV) > 1 {
-            return fmt.Errorf("unexpected value for field MemberofindirectGroup: %v; expected at most one element", raw)
-          }
-        
+        out.MemberofindirectGroup = &sliceV
       } else {
         return fmt.Errorf("unexpected value for field MemberofindirectGroup: %v (%v)", raw, reflect.TypeOf(raw))
       }
@@ -83613,8 +87924,11 @@ func (out *Group) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -83623,15 +87937,10 @@ func (out *Group) UnmarshalJSON(data []byte) error {
     }
     
       if plainOk {
-        out.MemberofindirectNetgroup = &plainV
+        out.MemberofindirectNetgroup = &[]string{plainV}
       } else if sliceOk {
         
-          if len(sliceV) == 1 {
-            out.MemberofindirectNetgroup = &sliceV[0]
-          } else if len(sliceV) > 1 {
-            return fmt.Errorf("unexpected value for field MemberofindirectNetgroup: %v; expected at most one element", raw)
-          }
-        
+        out.MemberofindirectNetgroup = &sliceV
       } else {
         return fmt.Errorf("unexpected value for field MemberofindirectNetgroup: %v (%v)", raw, reflect.TypeOf(raw))
       }
@@ -83650,8 +87959,11 @@ func (out *Group) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -83660,15 +87972,10 @@ func (out *Group) UnmarshalJSON(data []byte) error {
     }
     
       if plainOk {
-        out.MemberofindirectRole = &plainV
+        out.MemberofindirectRole = &[]string{plainV}
       } else if sliceOk {
         
-          if len(sliceV) == 1 {
-            out.MemberofindirectRole = &sliceV[0]
-          } else if len(sliceV) > 1 {
-            return fmt.Errorf("unexpected value for field MemberofindirectRole: %v; expected at most one element", raw)
-          }
-        
+        out.MemberofindirectRole = &sliceV
       } else {
         return fmt.Errorf("unexpected value for field MemberofindirectRole: %v (%v)", raw, reflect.TypeOf(raw))
       }
@@ -83687,8 +87994,11 @@ func (out *Group) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -83697,15 +88007,10 @@ func (out *Group) UnmarshalJSON(data []byte) error {
     }
     
       if plainOk {
-        out.MemberofindirectSudorule = &plainV
+        out.MemberofindirectSudorule = &[]string{plainV}
       } else if sliceOk {
         
-          if len(sliceV) == 1 {
-            out.MemberofindirectSudorule = &sliceV[0]
-          } else if len(sliceV) > 1 {
-            return fmt.Errorf("unexpected value for field MemberofindirectSudorule: %v; expected at most one element", raw)
-          }
-        
+        out.MemberofindirectSudorule = &sliceV
       } else {
         return fmt.Errorf("unexpected value for field MemberofindirectSudorule: %v (%v)", raw, reflect.TypeOf(raw))
       }
@@ -83724,8 +88029,11 @@ func (out *Group) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -83734,15 +88042,10 @@ func (out *Group) UnmarshalJSON(data []byte) error {
     }
     
       if plainOk {
-        out.MemberofindirectHbacrule = &plainV
+        out.MemberofindirectHbacrule = &[]string{plainV}
       } else if sliceOk {
         
-          if len(sliceV) == 1 {
-            out.MemberofindirectHbacrule = &sliceV[0]
-          } else if len(sliceV) > 1 {
-            return fmt.Errorf("unexpected value for field MemberofindirectHbacrule: %v; expected at most one element", raw)
-          }
-        
+        out.MemberofindirectHbacrule = &sliceV
       } else {
         return fmt.Errorf("unexpected value for field MemberofindirectHbacrule: %v (%v)", raw, reflect.TypeOf(raw))
       }
@@ -83763,7 +88066,7 @@ Rule name
 Rule type
 Rule type (allow)
     */
-    Accessruletype string `json:"accessruletype,omitempty"`
+    Accessruletype *string `json:"accessruletype,omitempty"`
   
     /*
 User category
@@ -83805,25 +88108,25 @@ Enabled
 Users
 
     */
-    MemberuserUser *string `json:"memberuser_user,omitempty"`
+    MemberuserUser *[]string `json:"memberuser_user,omitempty"`
   
     /*
 User Groups
 
     */
-    MemberuserGroup *string `json:"memberuser_group,omitempty"`
+    MemberuserGroup *[]string `json:"memberuser_group,omitempty"`
   
     /*
 Hosts
 
     */
-    MemberhostHost *string `json:"memberhost_host,omitempty"`
+    MemberhostHost *[]string `json:"memberhost_host,omitempty"`
   
     /*
 Host Groups
 
     */
-    MemberhostHostgroup *string `json:"memberhost_hostgroup,omitempty"`
+    MemberhostHostgroup *[]string `json:"memberhost_hostgroup,omitempty"`
   
     /*
 Source Hosts
@@ -83841,13 +88144,13 @@ Source Host Groups
 Services
 
     */
-    MemberserviceHbacsvc *string `json:"memberservice_hbacsvc,omitempty"`
+    MemberserviceHbacsvc *[]string `json:"memberservice_hbacsvc,omitempty"`
   
     /*
 Service Groups
 
     */
-    MemberserviceHbacsvcgroup *string `json:"memberservice_hbacsvcgroup,omitempty"`
+    MemberserviceHbacsvcgroup *[]string `json:"memberservice_hbacsvcgroup,omitempty"`
   
     /*
 External host
@@ -83922,8 +88225,11 @@ func (out *Hbacrule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -83946,7 +88252,7 @@ func (out *Hbacrule) UnmarshalJSON(data []byte) error {
     
   }
   
-  if true {
+  if in.Accessruletype != nil {
     raw := in.Accessruletype
     plainV, plainOk := raw.(string)
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
@@ -83958,8 +88264,11 @@ func (out *Hbacrule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -83968,13 +88277,14 @@ func (out *Hbacrule) UnmarshalJSON(data []byte) error {
     }
     
       if plainOk {
-        out.Accessruletype = plainV
+        out.Accessruletype = &plainV
       } else if sliceOk {
         
-          if len(sliceV) != 1 {
-            return fmt.Errorf("unexpected value for field Accessruletype: %v; expected exactly one element", raw)
+          if len(sliceV) == 1 {
+            out.Accessruletype = &sliceV[0]
+          } else if len(sliceV) > 1 {
+            return fmt.Errorf("unexpected value for field Accessruletype: %v; expected at most one element", raw)
           }
-          out.Accessruletype = sliceV[0]
         
       } else {
         return fmt.Errorf("unexpected value for field Accessruletype: %v (%v)", raw, reflect.TypeOf(raw))
@@ -83994,8 +88304,11 @@ func (out *Hbacrule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -84031,8 +88344,11 @@ func (out *Hbacrule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -84068,8 +88384,11 @@ func (out *Hbacrule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -84105,8 +88424,11 @@ func (out *Hbacrule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -84142,8 +88464,11 @@ func (out *Hbacrule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -84179,8 +88504,24 @@ func (out *Hbacrule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          
+          // See https://github.com/tehwalris/go-freeipa/issues/3
+          // Sometimes IPA returns ["TRUE"] as a boolean value
+          strV, strOk := rawItem.(string)
+          if strOk {
+            boolV, err := strconv.ParseBool(strV)
+            if err != nil {
+              sliceOk = false
+              break
+            }
+
+            itemV = boolV
+          } else {
+            sliceOk = false
+            break
+          }
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -84216,8 +88557,11 @@ func (out *Hbacrule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -84226,15 +88570,10 @@ func (out *Hbacrule) UnmarshalJSON(data []byte) error {
     }
     
       if plainOk {
-        out.MemberuserUser = &plainV
+        out.MemberuserUser = &[]string{plainV}
       } else if sliceOk {
         
-          if len(sliceV) == 1 {
-            out.MemberuserUser = &sliceV[0]
-          } else if len(sliceV) > 1 {
-            return fmt.Errorf("unexpected value for field MemberuserUser: %v; expected at most one element", raw)
-          }
-        
+        out.MemberuserUser = &sliceV
       } else {
         return fmt.Errorf("unexpected value for field MemberuserUser: %v (%v)", raw, reflect.TypeOf(raw))
       }
@@ -84253,8 +88592,11 @@ func (out *Hbacrule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -84263,15 +88605,10 @@ func (out *Hbacrule) UnmarshalJSON(data []byte) error {
     }
     
       if plainOk {
-        out.MemberuserGroup = &plainV
+        out.MemberuserGroup = &[]string{plainV}
       } else if sliceOk {
         
-          if len(sliceV) == 1 {
-            out.MemberuserGroup = &sliceV[0]
-          } else if len(sliceV) > 1 {
-            return fmt.Errorf("unexpected value for field MemberuserGroup: %v; expected at most one element", raw)
-          }
-        
+        out.MemberuserGroup = &sliceV
       } else {
         return fmt.Errorf("unexpected value for field MemberuserGroup: %v (%v)", raw, reflect.TypeOf(raw))
       }
@@ -84290,8 +88627,11 @@ func (out *Hbacrule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -84300,15 +88640,10 @@ func (out *Hbacrule) UnmarshalJSON(data []byte) error {
     }
     
       if plainOk {
-        out.MemberhostHost = &plainV
+        out.MemberhostHost = &[]string{plainV}
       } else if sliceOk {
         
-          if len(sliceV) == 1 {
-            out.MemberhostHost = &sliceV[0]
-          } else if len(sliceV) > 1 {
-            return fmt.Errorf("unexpected value for field MemberhostHost: %v; expected at most one element", raw)
-          }
-        
+        out.MemberhostHost = &sliceV
       } else {
         return fmt.Errorf("unexpected value for field MemberhostHost: %v (%v)", raw, reflect.TypeOf(raw))
       }
@@ -84327,8 +88662,11 @@ func (out *Hbacrule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -84337,15 +88675,10 @@ func (out *Hbacrule) UnmarshalJSON(data []byte) error {
     }
     
       if plainOk {
-        out.MemberhostHostgroup = &plainV
+        out.MemberhostHostgroup = &[]string{plainV}
       } else if sliceOk {
         
-          if len(sliceV) == 1 {
-            out.MemberhostHostgroup = &sliceV[0]
-          } else if len(sliceV) > 1 {
-            return fmt.Errorf("unexpected value for field MemberhostHostgroup: %v; expected at most one element", raw)
-          }
-        
+        out.MemberhostHostgroup = &sliceV
       } else {
         return fmt.Errorf("unexpected value for field MemberhostHostgroup: %v (%v)", raw, reflect.TypeOf(raw))
       }
@@ -84364,8 +88697,11 @@ func (out *Hbacrule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -84401,8 +88737,11 @@ func (out *Hbacrule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -84438,8 +88777,11 @@ func (out *Hbacrule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -84448,15 +88790,10 @@ func (out *Hbacrule) UnmarshalJSON(data []byte) error {
     }
     
       if plainOk {
-        out.MemberserviceHbacsvc = &plainV
+        out.MemberserviceHbacsvc = &[]string{plainV}
       } else if sliceOk {
         
-          if len(sliceV) == 1 {
-            out.MemberserviceHbacsvc = &sliceV[0]
-          } else if len(sliceV) > 1 {
-            return fmt.Errorf("unexpected value for field MemberserviceHbacsvc: %v; expected at most one element", raw)
-          }
-        
+        out.MemberserviceHbacsvc = &sliceV
       } else {
         return fmt.Errorf("unexpected value for field MemberserviceHbacsvc: %v (%v)", raw, reflect.TypeOf(raw))
       }
@@ -84475,8 +88812,11 @@ func (out *Hbacrule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -84485,15 +88825,10 @@ func (out *Hbacrule) UnmarshalJSON(data []byte) error {
     }
     
       if plainOk {
-        out.MemberserviceHbacsvcgroup = &plainV
+        out.MemberserviceHbacsvcgroup = &[]string{plainV}
       } else if sliceOk {
         
-          if len(sliceV) == 1 {
-            out.MemberserviceHbacsvcgroup = &sliceV[0]
-          } else if len(sliceV) > 1 {
-            return fmt.Errorf("unexpected value for field MemberserviceHbacsvcgroup: %v; expected at most one element", raw)
-          }
-        
+        out.MemberserviceHbacsvcgroup = &sliceV
       } else {
         return fmt.Errorf("unexpected value for field MemberserviceHbacsvcgroup: %v (%v)", raw, reflect.TypeOf(raw))
       }
@@ -84512,8 +88847,11 @@ func (out *Hbacrule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -84593,8 +88931,11 @@ func (out *Hbacsvc) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -84629,8 +88970,11 @@ func (out *Hbacsvc) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -84666,8 +89010,11 @@ func (out *Hbacsvc) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -84747,8 +89094,11 @@ func (out *Hbacsvcgroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -84783,8 +89133,11 @@ func (out *Hbacsvcgroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -84820,8 +89173,11 @@ func (out *Hbacsvcgroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -85064,31 +89420,31 @@ Member of HBAC rule
 Indirect Member of netgroup
 
     */
-    MemberofindirectNetgroup *string `json:"memberofindirect_netgroup,omitempty"`
+    MemberofindirectNetgroup *[]string `json:"memberofindirect_netgroup,omitempty"`
   
     /*
 Indirect Member of host-group
 
     */
-    MemberofindirectHostgroup *string `json:"memberofindirect_hostgroup,omitempty"`
+    MemberofindirectHostgroup *[]string `json:"memberofindirect_hostgroup,omitempty"`
   
     /*
 Indirect Member of role
 
     */
-    MemberofindirectRole *string `json:"memberofindirect_role,omitempty"`
+    MemberofindirectRole *[]string `json:"memberofindirect_role,omitempty"`
   
     /*
 Indirect Member of Sudo rule
 
     */
-    MemberofindirectSudorule *string `json:"memberofindirect_sudorule,omitempty"`
+    MemberofindirectSudorule *[]string `json:"memberofindirect_sudorule,omitempty"`
   
     /*
 Indirect Member of HBAC rule
 
     */
-    MemberofindirectHbacrule *string `json:"memberofindirect_hbacrule,omitempty"`
+    MemberofindirectHbacrule *[]string `json:"memberofindirect_hbacrule,omitempty"`
   
     /*
 Keytab
@@ -85293,8 +89649,11 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -85329,8 +89688,11 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -85366,8 +89728,11 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -85403,8 +89768,11 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -85440,8 +89808,11 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -85477,8 +89848,11 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -85514,8 +89888,11 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -85551,8 +89928,24 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          
+          // See https://github.com/tehwalris/go-freeipa/issues/3
+          // Sometimes IPA returns ["TRUE"] as a boolean value
+          strV, strOk := rawItem.(string)
+          if strOk {
+            boolV, err := strconv.ParseBool(strV)
+            if err != nil {
+              sliceOk = false
+              break
+            }
+
+            itemV = boolV
+          } else {
+            sliceOk = false
+            break
+          }
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -85588,8 +89981,11 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -85625,8 +90021,11 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(interface{})
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -85657,8 +90056,11 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -85694,8 +90096,11 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -85731,8 +90136,11 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -85768,8 +90176,11 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -85805,8 +90216,11 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -85842,8 +90256,11 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -85879,8 +90296,11 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -85916,8 +90336,11 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -85953,8 +90376,11 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -85990,8 +90416,11 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -86027,8 +90456,11 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -86059,8 +90491,11 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -86091,8 +90526,11 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -86123,8 +90561,11 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -86155,8 +90596,11 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -86187,8 +90631,11 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -86224,8 +90671,11 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -86256,8 +90706,24 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          
+          // See https://github.com/tehwalris/go-freeipa/issues/3
+          // Sometimes IPA returns ["TRUE"] as a boolean value
+          strV, strOk := rawItem.(string)
+          if strOk {
+            boolV, err := strconv.ParseBool(strV)
+            if err != nil {
+              sliceOk = false
+              break
+            }
+
+            itemV = boolV
+          } else {
+            sliceOk = false
+            break
+          }
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -86293,8 +90759,24 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          
+          // See https://github.com/tehwalris/go-freeipa/issues/3
+          // Sometimes IPA returns ["TRUE"] as a boolean value
+          strV, strOk := rawItem.(string)
+          if strOk {
+            boolV, err := strconv.ParseBool(strV)
+            if err != nil {
+              sliceOk = false
+              break
+            }
+
+            itemV = boolV
+          } else {
+            sliceOk = false
+            break
+          }
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -86330,8 +90812,24 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          
+          // See https://github.com/tehwalris/go-freeipa/issues/3
+          // Sometimes IPA returns ["TRUE"] as a boolean value
+          strV, strOk := rawItem.(string)
+          if strOk {
+            boolV, err := strconv.ParseBool(strV)
+            if err != nil {
+              sliceOk = false
+              break
+            }
+
+            itemV = boolV
+          } else {
+            sliceOk = false
+            break
+          }
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -86367,8 +90865,24 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          
+          // See https://github.com/tehwalris/go-freeipa/issues/3
+          // Sometimes IPA returns ["TRUE"] as a boolean value
+          strV, strOk := rawItem.(string)
+          if strOk {
+            boolV, err := strconv.ParseBool(strV)
+            if err != nil {
+              sliceOk = false
+              break
+            }
+
+            itemV = boolV
+          } else {
+            sliceOk = false
+            break
+          }
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -86404,8 +90918,11 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -86436,8 +90953,11 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -86468,8 +90988,11 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -86500,8 +91023,11 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -86532,8 +91058,11 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -86564,8 +91093,11 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -86574,15 +91106,10 @@ func (out *Host) UnmarshalJSON(data []byte) error {
     }
     
       if plainOk {
-        out.MemberofindirectNetgroup = &plainV
+        out.MemberofindirectNetgroup = &[]string{plainV}
       } else if sliceOk {
         
-          if len(sliceV) == 1 {
-            out.MemberofindirectNetgroup = &sliceV[0]
-          } else if len(sliceV) > 1 {
-            return fmt.Errorf("unexpected value for field MemberofindirectNetgroup: %v; expected at most one element", raw)
-          }
-        
+        out.MemberofindirectNetgroup = &sliceV
       } else {
         return fmt.Errorf("unexpected value for field MemberofindirectNetgroup: %v (%v)", raw, reflect.TypeOf(raw))
       }
@@ -86601,8 +91128,11 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -86611,15 +91141,10 @@ func (out *Host) UnmarshalJSON(data []byte) error {
     }
     
       if plainOk {
-        out.MemberofindirectHostgroup = &plainV
+        out.MemberofindirectHostgroup = &[]string{plainV}
       } else if sliceOk {
         
-          if len(sliceV) == 1 {
-            out.MemberofindirectHostgroup = &sliceV[0]
-          } else if len(sliceV) > 1 {
-            return fmt.Errorf("unexpected value for field MemberofindirectHostgroup: %v; expected at most one element", raw)
-          }
-        
+        out.MemberofindirectHostgroup = &sliceV
       } else {
         return fmt.Errorf("unexpected value for field MemberofindirectHostgroup: %v (%v)", raw, reflect.TypeOf(raw))
       }
@@ -86638,8 +91163,11 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -86648,15 +91176,10 @@ func (out *Host) UnmarshalJSON(data []byte) error {
     }
     
       if plainOk {
-        out.MemberofindirectRole = &plainV
+        out.MemberofindirectRole = &[]string{plainV}
       } else if sliceOk {
         
-          if len(sliceV) == 1 {
-            out.MemberofindirectRole = &sliceV[0]
-          } else if len(sliceV) > 1 {
-            return fmt.Errorf("unexpected value for field MemberofindirectRole: %v; expected at most one element", raw)
-          }
-        
+        out.MemberofindirectRole = &sliceV
       } else {
         return fmt.Errorf("unexpected value for field MemberofindirectRole: %v (%v)", raw, reflect.TypeOf(raw))
       }
@@ -86675,8 +91198,11 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -86685,15 +91211,10 @@ func (out *Host) UnmarshalJSON(data []byte) error {
     }
     
       if plainOk {
-        out.MemberofindirectSudorule = &plainV
+        out.MemberofindirectSudorule = &[]string{plainV}
       } else if sliceOk {
         
-          if len(sliceV) == 1 {
-            out.MemberofindirectSudorule = &sliceV[0]
-          } else if len(sliceV) > 1 {
-            return fmt.Errorf("unexpected value for field MemberofindirectSudorule: %v; expected at most one element", raw)
-          }
-        
+        out.MemberofindirectSudorule = &sliceV
       } else {
         return fmt.Errorf("unexpected value for field MemberofindirectSudorule: %v (%v)", raw, reflect.TypeOf(raw))
       }
@@ -86712,8 +91233,11 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -86722,15 +91246,10 @@ func (out *Host) UnmarshalJSON(data []byte) error {
     }
     
       if plainOk {
-        out.MemberofindirectHbacrule = &plainV
+        out.MemberofindirectHbacrule = &[]string{plainV}
       } else if sliceOk {
         
-          if len(sliceV) == 1 {
-            out.MemberofindirectHbacrule = &sliceV[0]
-          } else if len(sliceV) > 1 {
-            return fmt.Errorf("unexpected value for field MemberofindirectHbacrule: %v; expected at most one element", raw)
-          }
-        
+        out.MemberofindirectHbacrule = &sliceV
       } else {
         return fmt.Errorf("unexpected value for field MemberofindirectHbacrule: %v (%v)", raw, reflect.TypeOf(raw))
       }
@@ -86749,8 +91268,24 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          
+          // See https://github.com/tehwalris/go-freeipa/issues/3
+          // Sometimes IPA returns ["TRUE"] as a boolean value
+          strV, strOk := rawItem.(string)
+          if strOk {
+            boolV, err := strconv.ParseBool(strV)
+            if err != nil {
+              sliceOk = false
+              break
+            }
+
+            itemV = boolV
+          } else {
+            sliceOk = false
+            break
+          }
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -86786,8 +91321,11 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -86822,8 +91360,11 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -86859,8 +91400,11 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -86896,8 +91440,11 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -86933,8 +91480,11 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -86970,8 +91520,11 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -87007,8 +91560,11 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -87044,8 +91600,11 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -87081,8 +91640,11 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -87118,8 +91680,11 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -87199,31 +91764,31 @@ Member of HBAC rule
 Indirect Member hosts
 
     */
-    MemberindirectHost *string `json:"memberindirect_host,omitempty"`
+    MemberindirectHost *[]string `json:"memberindirect_host,omitempty"`
   
     /*
 Indirect Member host-groups
 
     */
-    MemberindirectHostgroup *string `json:"memberindirect_hostgroup,omitempty"`
+    MemberindirectHostgroup *[]string `json:"memberindirect_hostgroup,omitempty"`
   
     /*
 Indirect Member of host-group
 
     */
-    MemberofindirectHostgroup *string `json:"memberofindirect_hostgroup,omitempty"`
+    MemberofindirectHostgroup *[]string `json:"memberofindirect_hostgroup,omitempty"`
   
     /*
 Indirect Member of Sudo rule
 
     */
-    MemberofindirectSudorule *string `json:"memberofindirect_sudorule,omitempty"`
+    MemberofindirectSudorule *[]string `json:"memberofindirect_sudorule,omitempty"`
   
     /*
 Indirect Member of HBAC rule
 
     */
-    MemberofindirectHbacrule *string `json:"memberofindirect_hbacrule,omitempty"`
+    MemberofindirectHbacrule *[]string `json:"memberofindirect_hbacrule,omitempty"`
   }
 
 func (t *Hostgroup) String() string {
@@ -87284,8 +91849,11 @@ func (out *Hostgroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -87320,8 +91888,11 @@ func (out *Hostgroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -87357,8 +91928,11 @@ func (out *Hostgroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -87389,8 +91963,11 @@ func (out *Hostgroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -87421,8 +91998,11 @@ func (out *Hostgroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -87453,8 +92033,11 @@ func (out *Hostgroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -87485,8 +92068,11 @@ func (out *Hostgroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -87517,8 +92103,11 @@ func (out *Hostgroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -87549,8 +92138,11 @@ func (out *Hostgroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -87559,15 +92151,10 @@ func (out *Hostgroup) UnmarshalJSON(data []byte) error {
     }
     
       if plainOk {
-        out.MemberindirectHost = &plainV
+        out.MemberindirectHost = &[]string{plainV}
       } else if sliceOk {
         
-          if len(sliceV) == 1 {
-            out.MemberindirectHost = &sliceV[0]
-          } else if len(sliceV) > 1 {
-            return fmt.Errorf("unexpected value for field MemberindirectHost: %v; expected at most one element", raw)
-          }
-        
+        out.MemberindirectHost = &sliceV
       } else {
         return fmt.Errorf("unexpected value for field MemberindirectHost: %v (%v)", raw, reflect.TypeOf(raw))
       }
@@ -87586,8 +92173,11 @@ func (out *Hostgroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -87596,15 +92186,10 @@ func (out *Hostgroup) UnmarshalJSON(data []byte) error {
     }
     
       if plainOk {
-        out.MemberindirectHostgroup = &plainV
+        out.MemberindirectHostgroup = &[]string{plainV}
       } else if sliceOk {
         
-          if len(sliceV) == 1 {
-            out.MemberindirectHostgroup = &sliceV[0]
-          } else if len(sliceV) > 1 {
-            return fmt.Errorf("unexpected value for field MemberindirectHostgroup: %v; expected at most one element", raw)
-          }
-        
+        out.MemberindirectHostgroup = &sliceV
       } else {
         return fmt.Errorf("unexpected value for field MemberindirectHostgroup: %v (%v)", raw, reflect.TypeOf(raw))
       }
@@ -87623,8 +92208,11 @@ func (out *Hostgroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -87633,15 +92221,10 @@ func (out *Hostgroup) UnmarshalJSON(data []byte) error {
     }
     
       if plainOk {
-        out.MemberofindirectHostgroup = &plainV
+        out.MemberofindirectHostgroup = &[]string{plainV}
       } else if sliceOk {
         
-          if len(sliceV) == 1 {
-            out.MemberofindirectHostgroup = &sliceV[0]
-          } else if len(sliceV) > 1 {
-            return fmt.Errorf("unexpected value for field MemberofindirectHostgroup: %v; expected at most one element", raw)
-          }
-        
+        out.MemberofindirectHostgroup = &sliceV
       } else {
         return fmt.Errorf("unexpected value for field MemberofindirectHostgroup: %v (%v)", raw, reflect.TypeOf(raw))
       }
@@ -87660,8 +92243,11 @@ func (out *Hostgroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -87670,15 +92256,10 @@ func (out *Hostgroup) UnmarshalJSON(data []byte) error {
     }
     
       if plainOk {
-        out.MemberofindirectSudorule = &plainV
+        out.MemberofindirectSudorule = &[]string{plainV}
       } else if sliceOk {
         
-          if len(sliceV) == 1 {
-            out.MemberofindirectSudorule = &sliceV[0]
-          } else if len(sliceV) > 1 {
-            return fmt.Errorf("unexpected value for field MemberofindirectSudorule: %v; expected at most one element", raw)
-          }
-        
+        out.MemberofindirectSudorule = &sliceV
       } else {
         return fmt.Errorf("unexpected value for field MemberofindirectSudorule: %v (%v)", raw, reflect.TypeOf(raw))
       }
@@ -87697,8 +92278,11 @@ func (out *Hostgroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -87707,15 +92291,10 @@ func (out *Hostgroup) UnmarshalJSON(data []byte) error {
     }
     
       if plainOk {
-        out.MemberofindirectHbacrule = &plainV
+        out.MemberofindirectHbacrule = &[]string{plainV}
       } else if sliceOk {
         
-          if len(sliceV) == 1 {
-            out.MemberofindirectHbacrule = &sliceV[0]
-          } else if len(sliceV) > 1 {
-            return fmt.Errorf("unexpected value for field MemberofindirectHbacrule: %v; expected at most one element", raw)
-          }
-        
+        out.MemberofindirectHbacrule = &sliceV
       } else {
         return fmt.Errorf("unexpected value for field MemberofindirectHbacrule: %v (%v)", raw, reflect.TypeOf(raw))
       }
@@ -87791,8 +92370,11 @@ func (out *Idoverridegroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -87827,8 +92409,11 @@ func (out *Idoverridegroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -87864,8 +92449,11 @@ func (out *Idoverridegroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -87901,8 +92489,11 @@ func (out *Idoverridegroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -88055,8 +92646,11 @@ func (out *Idoverrideuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -88091,8 +92685,11 @@ func (out *Idoverrideuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -88128,8 +92725,11 @@ func (out *Idoverrideuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -88165,8 +92765,11 @@ func (out *Idoverrideuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -88206,8 +92809,11 @@ func (out *Idoverrideuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -88243,8 +92849,11 @@ func (out *Idoverrideuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -88284,8 +92893,11 @@ func (out *Idoverrideuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -88321,8 +92933,11 @@ func (out *Idoverrideuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -88358,8 +92973,11 @@ func (out *Idoverrideuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -88395,8 +93013,11 @@ func (out *Idoverrideuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -88427,8 +93048,11 @@ func (out *Idoverrideuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(interface{})
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -88548,8 +93172,11 @@ func (out *Idrange) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -88584,8 +93211,11 @@ func (out *Idrange) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -88624,8 +93254,11 @@ func (out *Idrange) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -88664,8 +93297,11 @@ func (out *Idrange) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -88705,8 +93341,11 @@ func (out *Idrange) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -88746,8 +93385,11 @@ func (out *Idrange) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -88783,8 +93425,11 @@ func (out *Idrange) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -88820,8 +93465,11 @@ func (out *Idrange) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -88930,8 +93578,11 @@ func (out *Idview) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -88966,8 +93617,11 @@ func (out *Idview) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -89003,8 +93657,11 @@ func (out *Idview) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -89039,8 +93696,11 @@ func (out *Idview) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -89075,8 +93735,11 @@ func (out *Idview) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -89111,8 +93774,11 @@ func (out *Idview) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -89197,8 +93863,11 @@ func (out *Krbtpolicy) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -89234,8 +93903,11 @@ func (out *Krbtpolicy) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -89275,8 +93947,11 @@ func (out *Krbtpolicy) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -89373,8 +94048,11 @@ func (out *Location) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -89409,8 +94087,11 @@ func (out *Location) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -89446,8 +94127,11 @@ func (out *Location) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -89478,8 +94162,11 @@ func (out *Location) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -89599,8 +94286,11 @@ func (out *Metaobject) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -89635,8 +94325,11 @@ func (out *Metaobject) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -89671,8 +94364,11 @@ func (out *Metaobject) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -89707,8 +94403,11 @@ func (out *Metaobject) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -89744,8 +94443,11 @@ func (out *Metaobject) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -89776,8 +94478,11 @@ func (out *Metaobject) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -89808,8 +94513,11 @@ func (out *Metaobject) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -89845,8 +94553,11 @@ func (out *Metaobject) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -89927,31 +94638,31 @@ Member of netgroups
 Indirect Member netgroups
 
     */
-    MemberindirectNetgroup *string `json:"memberindirect_netgroup,omitempty"`
+    MemberindirectNetgroup *[]string `json:"memberindirect_netgroup,omitempty"`
   
     /*
 Member User
 
     */
-    MemberuserUser *string `json:"memberuser_user,omitempty"`
+    MemberuserUser *[]string `json:"memberuser_user,omitempty"`
   
     /*
 Member Group
 
     */
-    MemberuserGroup *string `json:"memberuser_group,omitempty"`
+    MemberuserGroup *[]string `json:"memberuser_group,omitempty"`
   
     /*
 Member Host
 
     */
-    MemberhostHost *string `json:"memberhost_host,omitempty"`
+    MemberhostHost *[]string `json:"memberhost_host,omitempty"`
   
     /*
 Member Hostgroup
 
     */
-    MemberhostHostgroup *string `json:"memberhost_hostgroup,omitempty"`
+    MemberhostHostgroup *[]string `json:"memberhost_hostgroup,omitempty"`
   }
 
 func (t *Netgroup) String() string {
@@ -90014,8 +94725,11 @@ func (out *Netgroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -90050,8 +94764,11 @@ func (out *Netgroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -90087,8 +94804,11 @@ func (out *Netgroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -90124,8 +94844,11 @@ func (out *Netgroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -90161,8 +94884,11 @@ func (out *Netgroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -90198,8 +94924,11 @@ func (out *Netgroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -90235,8 +94964,11 @@ func (out *Netgroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -90267,8 +94999,11 @@ func (out *Netgroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -90299,8 +95034,11 @@ func (out *Netgroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -90331,8 +95069,11 @@ func (out *Netgroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -90341,15 +95082,10 @@ func (out *Netgroup) UnmarshalJSON(data []byte) error {
     }
     
       if plainOk {
-        out.MemberindirectNetgroup = &plainV
+        out.MemberindirectNetgroup = &[]string{plainV}
       } else if sliceOk {
         
-          if len(sliceV) == 1 {
-            out.MemberindirectNetgroup = &sliceV[0]
-          } else if len(sliceV) > 1 {
-            return fmt.Errorf("unexpected value for field MemberindirectNetgroup: %v; expected at most one element", raw)
-          }
-        
+        out.MemberindirectNetgroup = &sliceV
       } else {
         return fmt.Errorf("unexpected value for field MemberindirectNetgroup: %v (%v)", raw, reflect.TypeOf(raw))
       }
@@ -90368,8 +95104,11 @@ func (out *Netgroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -90378,15 +95117,10 @@ func (out *Netgroup) UnmarshalJSON(data []byte) error {
     }
     
       if plainOk {
-        out.MemberuserUser = &plainV
+        out.MemberuserUser = &[]string{plainV}
       } else if sliceOk {
         
-          if len(sliceV) == 1 {
-            out.MemberuserUser = &sliceV[0]
-          } else if len(sliceV) > 1 {
-            return fmt.Errorf("unexpected value for field MemberuserUser: %v; expected at most one element", raw)
-          }
-        
+        out.MemberuserUser = &sliceV
       } else {
         return fmt.Errorf("unexpected value for field MemberuserUser: %v (%v)", raw, reflect.TypeOf(raw))
       }
@@ -90405,8 +95139,11 @@ func (out *Netgroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -90415,15 +95152,10 @@ func (out *Netgroup) UnmarshalJSON(data []byte) error {
     }
     
       if plainOk {
-        out.MemberuserGroup = &plainV
+        out.MemberuserGroup = &[]string{plainV}
       } else if sliceOk {
         
-          if len(sliceV) == 1 {
-            out.MemberuserGroup = &sliceV[0]
-          } else if len(sliceV) > 1 {
-            return fmt.Errorf("unexpected value for field MemberuserGroup: %v; expected at most one element", raw)
-          }
-        
+        out.MemberuserGroup = &sliceV
       } else {
         return fmt.Errorf("unexpected value for field MemberuserGroup: %v (%v)", raw, reflect.TypeOf(raw))
       }
@@ -90442,8 +95174,11 @@ func (out *Netgroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -90452,15 +95187,10 @@ func (out *Netgroup) UnmarshalJSON(data []byte) error {
     }
     
       if plainOk {
-        out.MemberhostHost = &plainV
+        out.MemberhostHost = &[]string{plainV}
       } else if sliceOk {
         
-          if len(sliceV) == 1 {
-            out.MemberhostHost = &sliceV[0]
-          } else if len(sliceV) > 1 {
-            return fmt.Errorf("unexpected value for field MemberhostHost: %v; expected at most one element", raw)
-          }
-        
+        out.MemberhostHost = &sliceV
       } else {
         return fmt.Errorf("unexpected value for field MemberhostHost: %v (%v)", raw, reflect.TypeOf(raw))
       }
@@ -90479,8 +95209,11 @@ func (out *Netgroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -90489,15 +95222,10 @@ func (out *Netgroup) UnmarshalJSON(data []byte) error {
     }
     
       if plainOk {
-        out.MemberhostHostgroup = &plainV
+        out.MemberhostHostgroup = &[]string{plainV}
       } else if sliceOk {
         
-          if len(sliceV) == 1 {
-            out.MemberhostHostgroup = &sliceV[0]
-          } else if len(sliceV) > 1 {
-            return fmt.Errorf("unexpected value for field MemberhostHostgroup: %v; expected at most one element", raw)
-          }
-        
+        out.MemberhostHostgroup = &sliceV
       } else {
         return fmt.Errorf("unexpected value for field MemberhostHostgroup: %v (%v)", raw, reflect.TypeOf(raw))
       }
@@ -90573,8 +95301,11 @@ func (out *Otpconfig) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -90613,8 +95344,11 @@ func (out *Otpconfig) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -90653,8 +95387,11 @@ func (out *Otpconfig) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -90693,8 +95430,11 @@ func (out *Otpconfig) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -90902,8 +95642,11 @@ func (out *Otptoken) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -90938,8 +95681,11 @@ func (out *Otptoken) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -90975,8 +95721,11 @@ func (out *Otptoken) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -91012,8 +95761,11 @@ func (out *Otptoken) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -91049,8 +95801,11 @@ func (out *Otptoken) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -91086,8 +95841,24 @@ func (out *Otptoken) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          
+          // See https://github.com/tehwalris/go-freeipa/issues/3
+          // Sometimes IPA returns ["TRUE"] as a boolean value
+          strV, strOk := rawItem.(string)
+          if strOk {
+            boolV, err := strconv.ParseBool(strV)
+            if err != nil {
+              sliceOk = false
+              break
+            }
+
+            itemV = boolV
+          } else {
+            sliceOk = false
+            break
+          }
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -91123,8 +95894,23 @@ func (out *Otptoken) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(time.Time)
         
         if !itemOk {
-          sliceOk = false
-          break
+          
+          // See https://github.com/ccin2p3/go-freeipa/issues/1
+          mapV, mapVOk := rawItem.(map[string]interface{})
+          if mapVOk {
+            timeV, err := tryParseFreeIPADatetimeMap(mapV)
+            if err != nil {
+              sliceOk = false
+              break
+            }
+
+            itemV = timeV
+          } else {
+            sliceOk = false
+            break
+          }
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -91160,8 +95946,23 @@ func (out *Otptoken) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(time.Time)
         
         if !itemOk {
-          sliceOk = false
-          break
+          
+          // See https://github.com/ccin2p3/go-freeipa/issues/1
+          mapV, mapVOk := rawItem.(map[string]interface{})
+          if mapVOk {
+            timeV, err := tryParseFreeIPADatetimeMap(mapV)
+            if err != nil {
+              sliceOk = false
+              break
+            }
+
+            itemV = timeV
+          } else {
+            sliceOk = false
+            break
+          }
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -91197,8 +95998,11 @@ func (out *Otptoken) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -91234,8 +96038,11 @@ func (out *Otptoken) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -91271,8 +96078,11 @@ func (out *Otptoken) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -91308,8 +96118,11 @@ func (out *Otptoken) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -91345,8 +96158,11 @@ func (out *Otptoken) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -91382,8 +96198,11 @@ func (out *Otptoken) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -91423,8 +96242,11 @@ func (out *Otptoken) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -91464,8 +96286,11 @@ func (out *Otptoken) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -91505,8 +96330,11 @@ func (out *Otptoken) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -91546,8 +96374,11 @@ func (out *Otptoken) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -91664,8 +96495,11 @@ func (out *Output) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -91700,8 +96534,11 @@ func (out *Output) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -91737,8 +96574,11 @@ func (out *Output) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -91769,8 +96609,11 @@ func (out *Output) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -91801,8 +96644,11 @@ func (out *Output) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -91838,8 +96684,24 @@ func (out *Output) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          
+          // See https://github.com/tehwalris/go-freeipa/issues/3
+          // Sometimes IPA returns ["TRUE"] as a boolean value
+          strV, strOk := rawItem.(string)
+          if strOk {
+            boolV, err := strconv.ParseBool(strV)
+            if err != nil {
+              sliceOk = false
+              break
+            }
+
+            itemV = boolV
+          } else {
+            sliceOk = false
+            break
+          }
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -91875,8 +96737,24 @@ func (out *Output) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          
+          // See https://github.com/tehwalris/go-freeipa/issues/3
+          // Sometimes IPA returns ["TRUE"] as a boolean value
+          strV, strOk := rawItem.(string)
+          if strOk {
+            boolV, err := strconv.ParseBool(strV)
+            if err != nil {
+              sliceOk = false
+              break
+            }
+
+            itemV = boolV
+          } else {
+            sliceOk = false
+            break
+          }
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -92081,8 +96959,11 @@ func (out *Param) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -92117,8 +96998,11 @@ func (out *Param) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -92154,8 +97038,11 @@ func (out *Param) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -92186,8 +97073,11 @@ func (out *Param) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -92218,8 +97108,11 @@ func (out *Param) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -92255,8 +97148,24 @@ func (out *Param) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          
+          // See https://github.com/tehwalris/go-freeipa/issues/3
+          // Sometimes IPA returns ["TRUE"] as a boolean value
+          strV, strOk := rawItem.(string)
+          if strOk {
+            boolV, err := strconv.ParseBool(strV)
+            if err != nil {
+              sliceOk = false
+              break
+            }
+
+            itemV = boolV
+          } else {
+            sliceOk = false
+            break
+          }
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -92292,8 +97201,24 @@ func (out *Param) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          
+          // See https://github.com/tehwalris/go-freeipa/issues/3
+          // Sometimes IPA returns ["TRUE"] as a boolean value
+          strV, strOk := rawItem.(string)
+          if strOk {
+            boolV, err := strconv.ParseBool(strV)
+            if err != nil {
+              sliceOk = false
+              break
+            }
+
+            itemV = boolV
+          } else {
+            sliceOk = false
+            break
+          }
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -92329,8 +97254,24 @@ func (out *Param) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          
+          // See https://github.com/tehwalris/go-freeipa/issues/3
+          // Sometimes IPA returns ["TRUE"] as a boolean value
+          strV, strOk := rawItem.(string)
+          if strOk {
+            boolV, err := strconv.ParseBool(strV)
+            if err != nil {
+              sliceOk = false
+              break
+            }
+
+            itemV = boolV
+          } else {
+            sliceOk = false
+            break
+          }
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -92366,8 +97307,11 @@ func (out *Param) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -92403,8 +97347,11 @@ func (out *Param) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -92440,8 +97387,24 @@ func (out *Param) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          
+          // See https://github.com/tehwalris/go-freeipa/issues/3
+          // Sometimes IPA returns ["TRUE"] as a boolean value
+          strV, strOk := rawItem.(string)
+          if strOk {
+            boolV, err := strconv.ParseBool(strV)
+            if err != nil {
+              sliceOk = false
+              break
+            }
+
+            itemV = boolV
+          } else {
+            sliceOk = false
+            break
+          }
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -92477,8 +97440,11 @@ func (out *Param) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -92509,8 +97475,11 @@ func (out *Param) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -92541,8 +97510,11 @@ func (out *Param) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -92578,8 +97550,24 @@ func (out *Param) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          
+          // See https://github.com/tehwalris/go-freeipa/issues/3
+          // Sometimes IPA returns ["TRUE"] as a boolean value
+          strV, strOk := rawItem.(string)
+          if strOk {
+            boolV, err := strconv.ParseBool(strV)
+            if err != nil {
+              sliceOk = false
+              break
+            }
+
+            itemV = boolV
+          } else {
+            sliceOk = false
+            break
+          }
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -92615,8 +97603,11 @@ func (out *Param) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -92652,8 +97643,24 @@ func (out *Param) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          
+          // See https://github.com/tehwalris/go-freeipa/issues/3
+          // Sometimes IPA returns ["TRUE"] as a boolean value
+          strV, strOk := rawItem.(string)
+          if strOk {
+            boolV, err := strconv.ParseBool(strV)
+            if err != nil {
+              sliceOk = false
+              break
+            }
+
+            itemV = boolV
+          } else {
+            sliceOk = false
+            break
+          }
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -92689,8 +97696,24 @@ func (out *Param) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          
+          // See https://github.com/tehwalris/go-freeipa/issues/3
+          // Sometimes IPA returns ["TRUE"] as a boolean value
+          strV, strOk := rawItem.(string)
+          if strOk {
+            boolV, err := strconv.ParseBool(strV)
+            if err != nil {
+              sliceOk = false
+              break
+            }
+
+            itemV = boolV
+          } else {
+            sliceOk = false
+            break
+          }
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -92854,7 +97877,7 @@ Granted to Privilege
 Indirect Member of roles
 
     */
-    MemberindirectRole *string `json:"memberindirect_role,omitempty"`
+    MemberindirectRole *[]string `json:"memberindirect_role,omitempty"`
   }
 
 func (t *Permission) String() string {
@@ -92935,8 +97958,11 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -92971,8 +97997,11 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -93003,8 +98032,11 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -93035,8 +98067,11 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -93067,8 +98102,11 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -93099,8 +98137,11 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -93131,8 +98172,11 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -93167,8 +98211,11 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -93204,8 +98251,11 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -93236,8 +98286,11 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -93268,8 +98321,11 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -93305,8 +98361,11 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -93342,8 +98401,11 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -93379,8 +98441,11 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -93411,8 +98476,11 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -93448,8 +98516,11 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -93485,8 +98556,11 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -93517,8 +98591,11 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -93549,8 +98626,11 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -93581,8 +98661,11 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -93617,8 +98700,11 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -93653,8 +98739,11 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -93685,8 +98774,11 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -93695,15 +98787,10 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
     }
     
       if plainOk {
-        out.MemberindirectRole = &plainV
+        out.MemberindirectRole = &[]string{plainV}
       } else if sliceOk {
         
-          if len(sliceV) == 1 {
-            out.MemberindirectRole = &sliceV[0]
-          } else if len(sliceV) > 1 {
-            return fmt.Errorf("unexpected value for field MemberindirectRole: %v; expected at most one element", raw)
-          }
-        
+        out.MemberindirectRole = &sliceV
       } else {
         return fmt.Errorf("unexpected value for field MemberindirectRole: %v (%v)", raw, reflect.TypeOf(raw))
       }
@@ -93763,8 +98850,11 @@ func (out *Pkinit) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -93800,8 +98890,11 @@ func (out *Pkinit) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -93894,8 +98987,11 @@ func (out *Privilege) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -93930,8 +99026,11 @@ func (out *Privilege) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -93967,8 +99066,11 @@ func (out *Privilege) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -93999,8 +99101,11 @@ func (out *Privilege) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -94136,8 +99241,11 @@ func (out *Pwpolicy) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -94173,8 +99281,11 @@ func (out *Pwpolicy) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -94214,8 +99325,11 @@ func (out *Pwpolicy) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -94255,8 +99369,11 @@ func (out *Pwpolicy) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -94296,8 +99413,11 @@ func (out *Pwpolicy) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -94337,8 +99457,11 @@ func (out *Pwpolicy) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -94378,8 +99501,11 @@ func (out *Pwpolicy) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -94418,8 +99544,11 @@ func (out *Pwpolicy) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -94459,8 +99588,11 @@ func (out *Pwpolicy) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -94500,8 +99632,11 @@ func (out *Pwpolicy) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -94622,8 +99757,11 @@ func (out *Radiusproxy) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -94658,8 +99796,11 @@ func (out *Radiusproxy) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -94695,8 +99836,11 @@ func (out *Radiusproxy) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -94731,8 +99875,11 @@ func (out *Radiusproxy) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -94767,8 +99914,11 @@ func (out *Radiusproxy) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -94808,8 +99958,11 @@ func (out *Radiusproxy) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -94849,8 +100002,11 @@ func (out *Radiusproxy) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -94935,8 +100091,11 @@ func (out *Realmdomains) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -94971,8 +100130,11 @@ func (out *Realmdomains) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -95008,8 +100170,11 @@ func (out *Realmdomains) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -95134,8 +100299,11 @@ func (out *Role) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -95170,8 +100338,11 @@ func (out *Role) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -95207,8 +100378,11 @@ func (out *Role) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -95239,8 +100413,11 @@ func (out *Role) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -95271,8 +100448,11 @@ func (out *Role) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -95303,8 +100483,11 @@ func (out *Role) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -95335,8 +100518,11 @@ func (out *Role) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -95367,8 +100553,11 @@ func (out *Role) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -95456,8 +100645,11 @@ func (out *Selfservice) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -95492,8 +100684,11 @@ func (out *Selfservice) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -95524,8 +100719,11 @@ func (out *Selfservice) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -95560,8 +100758,11 @@ func (out *Selfservice) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -95634,25 +100835,25 @@ Enabled
 Users
 
     */
-    MemberuserUser *string `json:"memberuser_user,omitempty"`
+    MemberuserUser *[]string `json:"memberuser_user,omitempty"`
   
     /*
 User Groups
 
     */
-    MemberuserGroup *string `json:"memberuser_group,omitempty"`
+    MemberuserGroup *[]string `json:"memberuser_group,omitempty"`
   
     /*
 Hosts
 
     */
-    MemberhostHost *string `json:"memberhost_host,omitempty"`
+    MemberhostHost *[]string `json:"memberhost_host,omitempty"`
   
     /*
 Host Groups
 
     */
-    MemberhostHostgroup *string `json:"memberhost_hostgroup,omitempty"`
+    MemberhostHostgroup *[]string `json:"memberhost_hostgroup,omitempty"`
   }
 
 func (t *Selinuxusermap) String() string {
@@ -95709,8 +100910,11 @@ func (out *Selinuxusermap) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -95745,8 +100949,11 @@ func (out *Selinuxusermap) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -95781,8 +100988,11 @@ func (out *Selinuxusermap) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -95818,8 +101028,11 @@ func (out *Selinuxusermap) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -95855,8 +101068,11 @@ func (out *Selinuxusermap) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -95892,8 +101108,11 @@ func (out *Selinuxusermap) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -95929,8 +101148,24 @@ func (out *Selinuxusermap) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          
+          // See https://github.com/tehwalris/go-freeipa/issues/3
+          // Sometimes IPA returns ["TRUE"] as a boolean value
+          strV, strOk := rawItem.(string)
+          if strOk {
+            boolV, err := strconv.ParseBool(strV)
+            if err != nil {
+              sliceOk = false
+              break
+            }
+
+            itemV = boolV
+          } else {
+            sliceOk = false
+            break
+          }
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -95966,8 +101201,11 @@ func (out *Selinuxusermap) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -95976,15 +101214,10 @@ func (out *Selinuxusermap) UnmarshalJSON(data []byte) error {
     }
     
       if plainOk {
-        out.MemberuserUser = &plainV
+        out.MemberuserUser = &[]string{plainV}
       } else if sliceOk {
         
-          if len(sliceV) == 1 {
-            out.MemberuserUser = &sliceV[0]
-          } else if len(sliceV) > 1 {
-            return fmt.Errorf("unexpected value for field MemberuserUser: %v; expected at most one element", raw)
-          }
-        
+        out.MemberuserUser = &sliceV
       } else {
         return fmt.Errorf("unexpected value for field MemberuserUser: %v (%v)", raw, reflect.TypeOf(raw))
       }
@@ -96003,8 +101236,11 @@ func (out *Selinuxusermap) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -96013,15 +101249,10 @@ func (out *Selinuxusermap) UnmarshalJSON(data []byte) error {
     }
     
       if plainOk {
-        out.MemberuserGroup = &plainV
+        out.MemberuserGroup = &[]string{plainV}
       } else if sliceOk {
         
-          if len(sliceV) == 1 {
-            out.MemberuserGroup = &sliceV[0]
-          } else if len(sliceV) > 1 {
-            return fmt.Errorf("unexpected value for field MemberuserGroup: %v; expected at most one element", raw)
-          }
-        
+        out.MemberuserGroup = &sliceV
       } else {
         return fmt.Errorf("unexpected value for field MemberuserGroup: %v (%v)", raw, reflect.TypeOf(raw))
       }
@@ -96040,8 +101271,11 @@ func (out *Selinuxusermap) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -96050,15 +101284,10 @@ func (out *Selinuxusermap) UnmarshalJSON(data []byte) error {
     }
     
       if plainOk {
-        out.MemberhostHost = &plainV
+        out.MemberhostHost = &[]string{plainV}
       } else if sliceOk {
         
-          if len(sliceV) == 1 {
-            out.MemberhostHost = &sliceV[0]
-          } else if len(sliceV) > 1 {
-            return fmt.Errorf("unexpected value for field MemberhostHost: %v; expected at most one element", raw)
-          }
-        
+        out.MemberhostHost = &sliceV
       } else {
         return fmt.Errorf("unexpected value for field MemberhostHost: %v (%v)", raw, reflect.TypeOf(raw))
       }
@@ -96077,8 +101306,11 @@ func (out *Selinuxusermap) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -96087,15 +101319,10 @@ func (out *Selinuxusermap) UnmarshalJSON(data []byte) error {
     }
     
       if plainOk {
-        out.MemberhostHostgroup = &plainV
+        out.MemberhostHostgroup = &[]string{plainV}
       } else if sliceOk {
         
-          if len(sliceV) == 1 {
-            out.MemberhostHostgroup = &sliceV[0]
-          } else if len(sliceV) > 1 {
-            return fmt.Errorf("unexpected value for field MemberhostHostgroup: %v; expected at most one element", raw)
-          }
-        
+        out.MemberhostHostgroup = &sliceV
       } else {
         return fmt.Errorf("unexpected value for field MemberhostHostgroup: %v (%v)", raw, reflect.TypeOf(raw))
       }
@@ -96211,8 +101438,11 @@ func (out *Server) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -96247,8 +101477,11 @@ func (out *Server) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -96279,8 +101512,11 @@ func (out *Server) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -96311,8 +101547,11 @@ func (out *Server) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -96351,8 +101590,11 @@ func (out *Server) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -96391,8 +101633,11 @@ func (out *Server) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -96428,8 +101673,11 @@ func (out *Server) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -96469,8 +101717,11 @@ func (out *Server) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -96505,8 +101756,11 @@ func (out *Server) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -96586,8 +101840,11 @@ func (out *ServerRole) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -96622,8 +101879,11 @@ func (out *ServerRole) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -96658,8 +101918,11 @@ func (out *ServerRole) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -96944,8 +102207,11 @@ func (out *Service) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -96980,8 +102246,11 @@ func (out *Service) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -97012,8 +102281,11 @@ func (out *Service) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(interface{})
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -97044,8 +102316,11 @@ func (out *Service) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -97080,8 +102355,11 @@ func (out *Service) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -97116,8 +102394,11 @@ func (out *Service) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -97152,8 +102433,11 @@ func (out *Service) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -97188,8 +102472,11 @@ func (out *Service) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -97224,8 +102511,11 @@ func (out *Service) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -97260,8 +102550,11 @@ func (out *Service) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -97296,8 +102589,11 @@ func (out *Service) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -97332,8 +102628,11 @@ func (out *Service) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -97369,8 +102668,11 @@ func (out *Service) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -97401,8 +102703,11 @@ func (out *Service) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -97433,8 +102738,24 @@ func (out *Service) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          
+          // See https://github.com/tehwalris/go-freeipa/issues/3
+          // Sometimes IPA returns ["TRUE"] as a boolean value
+          strV, strOk := rawItem.(string)
+          if strOk {
+            boolV, err := strconv.ParseBool(strV)
+            if err != nil {
+              sliceOk = false
+              break
+            }
+
+            itemV = boolV
+          } else {
+            sliceOk = false
+            break
+          }
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -97470,8 +102791,24 @@ func (out *Service) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          
+          // See https://github.com/tehwalris/go-freeipa/issues/3
+          // Sometimes IPA returns ["TRUE"] as a boolean value
+          strV, strOk := rawItem.(string)
+          if strOk {
+            boolV, err := strconv.ParseBool(strV)
+            if err != nil {
+              sliceOk = false
+              break
+            }
+
+            itemV = boolV
+          } else {
+            sliceOk = false
+            break
+          }
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -97507,8 +102844,24 @@ func (out *Service) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          
+          // See https://github.com/tehwalris/go-freeipa/issues/3
+          // Sometimes IPA returns ["TRUE"] as a boolean value
+          strV, strOk := rawItem.(string)
+          if strOk {
+            boolV, err := strconv.ParseBool(strV)
+            if err != nil {
+              sliceOk = false
+              break
+            }
+
+            itemV = boolV
+          } else {
+            sliceOk = false
+            break
+          }
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -97544,8 +102897,11 @@ func (out *Service) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -97576,8 +102932,24 @@ func (out *Service) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          
+          // See https://github.com/tehwalris/go-freeipa/issues/3
+          // Sometimes IPA returns ["TRUE"] as a boolean value
+          strV, strOk := rawItem.(string)
+          if strOk {
+            boolV, err := strconv.ParseBool(strV)
+            if err != nil {
+              sliceOk = false
+              break
+            }
+
+            itemV = boolV
+          } else {
+            sliceOk = false
+            break
+          }
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -97613,8 +102985,11 @@ func (out *Service) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -97649,8 +103024,11 @@ func (out *Service) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -97685,8 +103063,11 @@ func (out *Service) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -97721,8 +103102,11 @@ func (out *Service) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -97757,8 +103141,11 @@ func (out *Service) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -97793,8 +103180,11 @@ func (out *Service) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -97829,8 +103219,11 @@ func (out *Service) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -97865,8 +103258,11 @@ func (out *Service) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -97901,8 +103297,11 @@ func (out *Service) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -97994,8 +103393,11 @@ func (out *Servicedelegationrule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -98030,8 +103432,11 @@ func (out *Servicedelegationrule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -98066,8 +103471,11 @@ func (out *Servicedelegationrule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -98102,8 +103510,11 @@ func (out *Servicedelegationrule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -98195,8 +103606,11 @@ func (out *Servicedelegationtarget) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -98231,8 +103645,11 @@ func (out *Servicedelegationtarget) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -98267,8 +103684,11 @@ func (out *Servicedelegationtarget) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -98303,8 +103723,11 @@ func (out *Servicedelegationtarget) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -98372,8 +103795,11 @@ func (out *Servrole) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -98698,31 +104124,31 @@ Member of HBAC rule
 Indirect Member of group
 
     */
-    MemberofindirectGroup *string `json:"memberofindirect_group,omitempty"`
+    MemberofindirectGroup *[]string `json:"memberofindirect_group,omitempty"`
   
     /*
 Indirect Member of netgroup
 
     */
-    MemberofindirectNetgroup *string `json:"memberofindirect_netgroup,omitempty"`
+    MemberofindirectNetgroup *[]string `json:"memberofindirect_netgroup,omitempty"`
   
     /*
 Indirect Member of role
 
     */
-    MemberofindirectRole *string `json:"memberofindirect_role,omitempty"`
+    MemberofindirectRole *[]string `json:"memberofindirect_role,omitempty"`
   
     /*
 Indirect Member of Sudo rule
 
     */
-    MemberofindirectSudorule *string `json:"memberofindirect_sudorule,omitempty"`
+    MemberofindirectSudorule *[]string `json:"memberofindirect_sudorule,omitempty"`
   
     /*
 Indirect Member of HBAC rule
 
     */
-    MemberofindirectHbacrule *string `json:"memberofindirect_hbacrule,omitempty"`
+    MemberofindirectHbacrule *[]string `json:"memberofindirect_hbacrule,omitempty"`
   
     /*
 Kerberos keys available
@@ -98873,8 +104299,11 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -98909,8 +104338,11 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -98945,8 +104377,11 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -98981,8 +104416,11 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -99017,8 +104455,11 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -99054,8 +104495,11 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -99091,8 +104535,11 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -99128,8 +104575,11 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -99165,8 +104615,11 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -99202,8 +104655,11 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -99239,8 +104695,11 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -99271,8 +104730,23 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(time.Time)
         
         if !itemOk {
-          sliceOk = false
-          break
+          
+          // See https://github.com/ccin2p3/go-freeipa/issues/1
+          mapV, mapVOk := rawItem.(map[string]interface{})
+          if mapVOk {
+            timeV, err := tryParseFreeIPADatetimeMap(mapV)
+            if err != nil {
+              sliceOk = false
+              break
+            }
+
+            itemV = timeV
+          } else {
+            sliceOk = false
+            break
+          }
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -99308,8 +104782,23 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(time.Time)
         
         if !itemOk {
-          sliceOk = false
-          break
+          
+          // See https://github.com/ccin2p3/go-freeipa/issues/1
+          mapV, mapVOk := rawItem.(map[string]interface{})
+          if mapVOk {
+            timeV, err := tryParseFreeIPADatetimeMap(mapV)
+            if err != nil {
+              sliceOk = false
+              break
+            }
+
+            itemV = timeV
+          } else {
+            sliceOk = false
+            break
+          }
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -99345,8 +104834,11 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -99377,8 +104869,11 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -99414,8 +104909,24 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          
+          // See https://github.com/tehwalris/go-freeipa/issues/3
+          // Sometimes IPA returns ["TRUE"] as a boolean value
+          strV, strOk := rawItem.(string)
+          if strOk {
+            boolV, err := strconv.ParseBool(strV)
+            if err != nil {
+              sliceOk = false
+              break
+            }
+
+            itemV = boolV
+          } else {
+            sliceOk = false
+            break
+          }
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -99451,8 +104962,11 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -99488,8 +105002,11 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -99529,8 +105046,11 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -99570,8 +105090,11 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -99607,8 +105130,11 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -99644,8 +105170,11 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -99681,8 +105210,11 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -99718,8 +105250,11 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -99750,8 +105285,11 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -99782,8 +105320,11 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -99814,8 +105355,11 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -99846,8 +105390,11 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -99883,8 +105430,11 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -99920,8 +105470,11 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -99957,8 +105510,11 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -99989,8 +105545,11 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -100021,8 +105580,11 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -100053,8 +105615,11 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -100085,8 +105650,11 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -100117,8 +105685,11 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -100154,8 +105725,11 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -100191,8 +105765,11 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -100223,8 +105800,11 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -100260,8 +105840,11 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -100297,8 +105880,11 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -100334,8 +105920,11 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(interface{})
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -100366,8 +105955,11 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -100398,8 +105990,24 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          
+          // See https://github.com/tehwalris/go-freeipa/issues/3
+          // Sometimes IPA returns ["TRUE"] as a boolean value
+          strV, strOk := rawItem.(string)
+          if strOk {
+            boolV, err := strconv.ParseBool(strV)
+            if err != nil {
+              sliceOk = false
+              break
+            }
+
+            itemV = boolV
+          } else {
+            sliceOk = false
+            break
+          }
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -100435,8 +106043,11 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -100467,8 +106078,11 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -100499,8 +106113,11 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -100531,8 +106148,11 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -100563,8 +106183,11 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -100595,8 +106218,11 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -100605,15 +106231,10 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
     }
     
       if plainOk {
-        out.MemberofindirectGroup = &plainV
+        out.MemberofindirectGroup = &[]string{plainV}
       } else if sliceOk {
         
-          if len(sliceV) == 1 {
-            out.MemberofindirectGroup = &sliceV[0]
-          } else if len(sliceV) > 1 {
-            return fmt.Errorf("unexpected value for field MemberofindirectGroup: %v; expected at most one element", raw)
-          }
-        
+        out.MemberofindirectGroup = &sliceV
       } else {
         return fmt.Errorf("unexpected value for field MemberofindirectGroup: %v (%v)", raw, reflect.TypeOf(raw))
       }
@@ -100632,8 +106253,11 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -100642,15 +106266,10 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
     }
     
       if plainOk {
-        out.MemberofindirectNetgroup = &plainV
+        out.MemberofindirectNetgroup = &[]string{plainV}
       } else if sliceOk {
         
-          if len(sliceV) == 1 {
-            out.MemberofindirectNetgroup = &sliceV[0]
-          } else if len(sliceV) > 1 {
-            return fmt.Errorf("unexpected value for field MemberofindirectNetgroup: %v; expected at most one element", raw)
-          }
-        
+        out.MemberofindirectNetgroup = &sliceV
       } else {
         return fmt.Errorf("unexpected value for field MemberofindirectNetgroup: %v (%v)", raw, reflect.TypeOf(raw))
       }
@@ -100669,8 +106288,11 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -100679,15 +106301,10 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
     }
     
       if plainOk {
-        out.MemberofindirectRole = &plainV
+        out.MemberofindirectRole = &[]string{plainV}
       } else if sliceOk {
         
-          if len(sliceV) == 1 {
-            out.MemberofindirectRole = &sliceV[0]
-          } else if len(sliceV) > 1 {
-            return fmt.Errorf("unexpected value for field MemberofindirectRole: %v; expected at most one element", raw)
-          }
-        
+        out.MemberofindirectRole = &sliceV
       } else {
         return fmt.Errorf("unexpected value for field MemberofindirectRole: %v (%v)", raw, reflect.TypeOf(raw))
       }
@@ -100706,8 +106323,11 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -100716,15 +106336,10 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
     }
     
       if plainOk {
-        out.MemberofindirectSudorule = &plainV
+        out.MemberofindirectSudorule = &[]string{plainV}
       } else if sliceOk {
         
-          if len(sliceV) == 1 {
-            out.MemberofindirectSudorule = &sliceV[0]
-          } else if len(sliceV) > 1 {
-            return fmt.Errorf("unexpected value for field MemberofindirectSudorule: %v; expected at most one element", raw)
-          }
-        
+        out.MemberofindirectSudorule = &sliceV
       } else {
         return fmt.Errorf("unexpected value for field MemberofindirectSudorule: %v (%v)", raw, reflect.TypeOf(raw))
       }
@@ -100743,8 +106358,11 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -100753,15 +106371,10 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
     }
     
       if plainOk {
-        out.MemberofindirectHbacrule = &plainV
+        out.MemberofindirectHbacrule = &[]string{plainV}
       } else if sliceOk {
         
-          if len(sliceV) == 1 {
-            out.MemberofindirectHbacrule = &sliceV[0]
-          } else if len(sliceV) > 1 {
-            return fmt.Errorf("unexpected value for field MemberofindirectHbacrule: %v; expected at most one element", raw)
-          }
-        
+        out.MemberofindirectHbacrule = &sliceV
       } else {
         return fmt.Errorf("unexpected value for field MemberofindirectHbacrule: %v (%v)", raw, reflect.TypeOf(raw))
       }
@@ -100780,8 +106393,24 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          
+          // See https://github.com/tehwalris/go-freeipa/issues/3
+          // Sometimes IPA returns ["TRUE"] as a boolean value
+          strV, strOk := rawItem.(string)
+          if strOk {
+            boolV, err := strconv.ParseBool(strV)
+            if err != nil {
+              sliceOk = false
+              break
+            }
+
+            itemV = boolV
+          } else {
+            sliceOk = false
+            break
+          }
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -100866,8 +106495,11 @@ func (out *Sudocmd) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -100902,8 +106534,11 @@ func (out *Sudocmd) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -100939,8 +106574,11 @@ func (out *Sudocmd) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -100979,13 +106617,13 @@ Group description
 Commands
 
     */
-    MembercmdSudocmd *string `json:"membercmd_sudocmd,omitempty"`
+    MembercmdSudocmd *[]string `json:"membercmd_sudocmd,omitempty"`
   
     /*
 Sudo Command Groups
 
     */
-    MembercmdSudocmdgroup *string `json:"membercmd_sudocmdgroup,omitempty"`
+    MembercmdSudocmdgroup *[]string `json:"membercmd_sudocmdgroup,omitempty"`
   
     /*
 Member Sudo commands
@@ -101036,8 +106674,11 @@ func (out *Sudocmdgroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -101072,8 +106713,11 @@ func (out *Sudocmdgroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -101109,8 +106753,11 @@ func (out *Sudocmdgroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -101119,15 +106766,10 @@ func (out *Sudocmdgroup) UnmarshalJSON(data []byte) error {
     }
     
       if plainOk {
-        out.MembercmdSudocmd = &plainV
+        out.MembercmdSudocmd = &[]string{plainV}
       } else if sliceOk {
         
-          if len(sliceV) == 1 {
-            out.MembercmdSudocmd = &sliceV[0]
-          } else if len(sliceV) > 1 {
-            return fmt.Errorf("unexpected value for field MembercmdSudocmd: %v; expected at most one element", raw)
-          }
-        
+        out.MembercmdSudocmd = &sliceV
       } else {
         return fmt.Errorf("unexpected value for field MembercmdSudocmd: %v (%v)", raw, reflect.TypeOf(raw))
       }
@@ -101146,8 +106788,11 @@ func (out *Sudocmdgroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -101156,15 +106801,10 @@ func (out *Sudocmdgroup) UnmarshalJSON(data []byte) error {
     }
     
       if plainOk {
-        out.MembercmdSudocmdgroup = &plainV
+        out.MembercmdSudocmdgroup = &[]string{plainV}
       } else if sliceOk {
         
-          if len(sliceV) == 1 {
-            out.MembercmdSudocmdgroup = &sliceV[0]
-          } else if len(sliceV) > 1 {
-            return fmt.Errorf("unexpected value for field MembercmdSudocmdgroup: %v; expected at most one element", raw)
-          }
-        
+        out.MembercmdSudocmdgroup = &sliceV
       } else {
         return fmt.Errorf("unexpected value for field MembercmdSudocmdgroup: %v (%v)", raw, reflect.TypeOf(raw))
       }
@@ -101183,8 +106823,11 @@ func (out *Sudocmdgroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -101265,37 +106908,37 @@ integer to order the Sudo rules
 Users
 
     */
-    MemberuserUser *string `json:"memberuser_user,omitempty"`
+    MemberuserUser *[]string `json:"memberuser_user,omitempty"`
   
     /*
 User Groups
 
     */
-    MemberuserGroup *string `json:"memberuser_group,omitempty"`
+    MemberuserGroup *[]string `json:"memberuser_group,omitempty"`
   
     /*
 External User
 External User the rule applies to (sudorule-find only)
     */
-    Externaluser *string `json:"externaluser,omitempty"`
+    Externaluser *[]string `json:"externaluser,omitempty"`
   
     /*
 Hosts
 
     */
-    MemberhostHost *string `json:"memberhost_host,omitempty"`
+    MemberhostHost *[]string `json:"memberhost_host,omitempty"`
   
     /*
 Host Groups
 
     */
-    MemberhostHostgroup *string `json:"memberhost_hostgroup,omitempty"`
+    MemberhostHostgroup *[]string `json:"memberhost_hostgroup,omitempty"`
   
     /*
 Host Masks
 
     */
-    Hostmask []string `json:"hostmask,omitempty"`
+    Hostmask *[]string `json:"hostmask,omitempty"`
   
     /*
 External host
@@ -101307,67 +106950,67 @@ External host
 Sudo Allow Commands
 
     */
-    MemberallowcmdSudocmd *string `json:"memberallowcmd_sudocmd,omitempty"`
+    MemberallowcmdSudocmd *[]string `json:"memberallowcmd_sudocmd,omitempty"`
   
     /*
 Sudo Deny Commands
 
     */
-    MemberdenycmdSudocmd *string `json:"memberdenycmd_sudocmd,omitempty"`
+    MemberdenycmdSudocmd *[]string `json:"memberdenycmd_sudocmd,omitempty"`
   
     /*
 Sudo Allow Command Groups
 
     */
-    MemberallowcmdSudocmdgroup *string `json:"memberallowcmd_sudocmdgroup,omitempty"`
+    MemberallowcmdSudocmdgroup *[]string `json:"memberallowcmd_sudocmdgroup,omitempty"`
   
     /*
 Sudo Deny Command Groups
 
     */
-    MemberdenycmdSudocmdgroup *string `json:"memberdenycmd_sudocmdgroup,omitempty"`
+    MemberdenycmdSudocmdgroup *[]string `json:"memberdenycmd_sudocmdgroup,omitempty"`
   
     /*
 RunAs Users
 Run as a user
     */
-    IpasudorunasUser *string `json:"ipasudorunas_user,omitempty"`
+    IpasudorunasUser *[]string `json:"ipasudorunas_user,omitempty"`
   
     /*
 Groups of RunAs Users
 Run as any user within a specified group
     */
-    IpasudorunasGroup *string `json:"ipasudorunas_group,omitempty"`
+    IpasudorunasGroup *[]string `json:"ipasudorunas_group,omitempty"`
   
     /*
 RunAs External User
 External User the commands can run as (sudorule-find only)
     */
-    Ipasudorunasextuser *string `json:"ipasudorunasextuser,omitempty"`
+    Ipasudorunasextuser *[]string `json:"ipasudorunasextuser,omitempty"`
   
     /*
 External Groups of RunAs Users
 External Groups of users that the command can run as
     */
-    Ipasudorunasextusergroup *string `json:"ipasudorunasextusergroup,omitempty"`
+    Ipasudorunasextusergroup *[]string `json:"ipasudorunasextusergroup,omitempty"`
   
     /*
 RunAs Groups
 Run with the gid of a specified POSIX group
     */
-    IpasudorunasgroupGroup *string `json:"ipasudorunasgroup_group,omitempty"`
+    IpasudorunasgroupGroup *[]string `json:"ipasudorunasgroup_group,omitempty"`
   
     /*
 RunAs External Group
 External Group the commands can run as (sudorule-find only)
     */
-    Ipasudorunasextgroup *string `json:"ipasudorunasextgroup,omitempty"`
+    Ipasudorunasextgroup *[]string `json:"ipasudorunasextgroup,omitempty"`
   
     /*
 Sudo Option
 
     */
-    Ipasudoopt *string `json:"ipasudoopt,omitempty"`
+    Ipasudoopt *[]string `json:"ipasudoopt,omitempty"`
   }
 
 func (t *Sudorule) String() string {
@@ -101456,8 +107099,11 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -101492,8 +107138,11 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -101529,8 +107178,24 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          
+          // See https://github.com/tehwalris/go-freeipa/issues/3
+          // Sometimes IPA returns ["TRUE"] as a boolean value
+          strV, strOk := rawItem.(string)
+          if strOk {
+            boolV, err := strconv.ParseBool(strV)
+            if err != nil {
+              sliceOk = false
+              break
+            }
+
+            itemV = boolV
+          } else {
+            sliceOk = false
+            break
+          }
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -101566,8 +107231,11 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -101603,8 +107271,11 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -101640,8 +107311,11 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -101677,8 +107351,11 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -101714,8 +107391,11 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -101751,8 +107431,11 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -101792,8 +107475,11 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -101802,15 +107488,10 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
     }
     
       if plainOk {
-        out.MemberuserUser = &plainV
+        out.MemberuserUser = &[]string{plainV}
       } else if sliceOk {
         
-          if len(sliceV) == 1 {
-            out.MemberuserUser = &sliceV[0]
-          } else if len(sliceV) > 1 {
-            return fmt.Errorf("unexpected value for field MemberuserUser: %v; expected at most one element", raw)
-          }
-        
+        out.MemberuserUser = &sliceV
       } else {
         return fmt.Errorf("unexpected value for field MemberuserUser: %v (%v)", raw, reflect.TypeOf(raw))
       }
@@ -101829,8 +107510,11 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -101839,15 +107523,10 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
     }
     
       if plainOk {
-        out.MemberuserGroup = &plainV
+        out.MemberuserGroup = &[]string{plainV}
       } else if sliceOk {
         
-          if len(sliceV) == 1 {
-            out.MemberuserGroup = &sliceV[0]
-          } else if len(sliceV) > 1 {
-            return fmt.Errorf("unexpected value for field MemberuserGroup: %v; expected at most one element", raw)
-          }
-        
+        out.MemberuserGroup = &sliceV
       } else {
         return fmt.Errorf("unexpected value for field MemberuserGroup: %v (%v)", raw, reflect.TypeOf(raw))
       }
@@ -101866,8 +107545,11 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -101876,15 +107558,10 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
     }
     
       if plainOk {
-        out.Externaluser = &plainV
+        out.Externaluser = &[]string{plainV}
       } else if sliceOk {
         
-          if len(sliceV) == 1 {
-            out.Externaluser = &sliceV[0]
-          } else if len(sliceV) > 1 {
-            return fmt.Errorf("unexpected value for field Externaluser: %v; expected at most one element", raw)
-          }
-        
+        out.Externaluser = &sliceV
       } else {
         return fmt.Errorf("unexpected value for field Externaluser: %v (%v)", raw, reflect.TypeOf(raw))
       }
@@ -101903,8 +107580,11 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -101913,15 +107593,10 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
     }
     
       if plainOk {
-        out.MemberhostHost = &plainV
+        out.MemberhostHost = &[]string{plainV}
       } else if sliceOk {
         
-          if len(sliceV) == 1 {
-            out.MemberhostHost = &sliceV[0]
-          } else if len(sliceV) > 1 {
-            return fmt.Errorf("unexpected value for field MemberhostHost: %v; expected at most one element", raw)
-          }
-        
+        out.MemberhostHost = &sliceV
       } else {
         return fmt.Errorf("unexpected value for field MemberhostHost: %v (%v)", raw, reflect.TypeOf(raw))
       }
@@ -101940,8 +107615,11 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -101950,22 +107628,17 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
     }
     
       if plainOk {
-        out.MemberhostHostgroup = &plainV
+        out.MemberhostHostgroup = &[]string{plainV}
       } else if sliceOk {
         
-          if len(sliceV) == 1 {
-            out.MemberhostHostgroup = &sliceV[0]
-          } else if len(sliceV) > 1 {
-            return fmt.Errorf("unexpected value for field MemberhostHostgroup: %v; expected at most one element", raw)
-          }
-        
+        out.MemberhostHostgroup = &sliceV
       } else {
         return fmt.Errorf("unexpected value for field MemberhostHostgroup: %v (%v)", raw, reflect.TypeOf(raw))
       }
     
   }
   
-  if true {
+  if in.Hostmask != nil {
     raw := in.Hostmask
     plainV, plainOk := raw.(string)
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
@@ -101977,8 +107650,11 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -101987,14 +107663,10 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
     }
     
       if plainOk {
-        out.Hostmask = []string{plainV}
+        out.Hostmask = &[]string{plainV}
       } else if sliceOk {
         
-          if len(sliceV) < 1 {
-            return fmt.Errorf("unexpected value for field Hostmask: %v; expected at least one element", raw)
-          }
-        
-        out.Hostmask = sliceV
+        out.Hostmask = &sliceV
       } else {
         return fmt.Errorf("unexpected value for field Hostmask: %v (%v)", raw, reflect.TypeOf(raw))
       }
@@ -102013,8 +107685,11 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -102045,8 +107720,11 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -102055,15 +107733,10 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
     }
     
       if plainOk {
-        out.MemberallowcmdSudocmd = &plainV
+        out.MemberallowcmdSudocmd = &[]string{plainV}
       } else if sliceOk {
         
-          if len(sliceV) == 1 {
-            out.MemberallowcmdSudocmd = &sliceV[0]
-          } else if len(sliceV) > 1 {
-            return fmt.Errorf("unexpected value for field MemberallowcmdSudocmd: %v; expected at most one element", raw)
-          }
-        
+        out.MemberallowcmdSudocmd = &sliceV
       } else {
         return fmt.Errorf("unexpected value for field MemberallowcmdSudocmd: %v (%v)", raw, reflect.TypeOf(raw))
       }
@@ -102082,8 +107755,11 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -102092,15 +107768,10 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
     }
     
       if plainOk {
-        out.MemberdenycmdSudocmd = &plainV
+        out.MemberdenycmdSudocmd = &[]string{plainV}
       } else if sliceOk {
         
-          if len(sliceV) == 1 {
-            out.MemberdenycmdSudocmd = &sliceV[0]
-          } else if len(sliceV) > 1 {
-            return fmt.Errorf("unexpected value for field MemberdenycmdSudocmd: %v; expected at most one element", raw)
-          }
-        
+        out.MemberdenycmdSudocmd = &sliceV
       } else {
         return fmt.Errorf("unexpected value for field MemberdenycmdSudocmd: %v (%v)", raw, reflect.TypeOf(raw))
       }
@@ -102119,8 +107790,11 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -102129,15 +107803,10 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
     }
     
       if plainOk {
-        out.MemberallowcmdSudocmdgroup = &plainV
+        out.MemberallowcmdSudocmdgroup = &[]string{plainV}
       } else if sliceOk {
         
-          if len(sliceV) == 1 {
-            out.MemberallowcmdSudocmdgroup = &sliceV[0]
-          } else if len(sliceV) > 1 {
-            return fmt.Errorf("unexpected value for field MemberallowcmdSudocmdgroup: %v; expected at most one element", raw)
-          }
-        
+        out.MemberallowcmdSudocmdgroup = &sliceV
       } else {
         return fmt.Errorf("unexpected value for field MemberallowcmdSudocmdgroup: %v (%v)", raw, reflect.TypeOf(raw))
       }
@@ -102156,8 +107825,11 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -102166,15 +107838,10 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
     }
     
       if plainOk {
-        out.MemberdenycmdSudocmdgroup = &plainV
+        out.MemberdenycmdSudocmdgroup = &[]string{plainV}
       } else if sliceOk {
         
-          if len(sliceV) == 1 {
-            out.MemberdenycmdSudocmdgroup = &sliceV[0]
-          } else if len(sliceV) > 1 {
-            return fmt.Errorf("unexpected value for field MemberdenycmdSudocmdgroup: %v; expected at most one element", raw)
-          }
-        
+        out.MemberdenycmdSudocmdgroup = &sliceV
       } else {
         return fmt.Errorf("unexpected value for field MemberdenycmdSudocmdgroup: %v (%v)", raw, reflect.TypeOf(raw))
       }
@@ -102193,8 +107860,11 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -102203,15 +107873,10 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
     }
     
       if plainOk {
-        out.IpasudorunasUser = &plainV
+        out.IpasudorunasUser = &[]string{plainV}
       } else if sliceOk {
         
-          if len(sliceV) == 1 {
-            out.IpasudorunasUser = &sliceV[0]
-          } else if len(sliceV) > 1 {
-            return fmt.Errorf("unexpected value for field IpasudorunasUser: %v; expected at most one element", raw)
-          }
-        
+        out.IpasudorunasUser = &sliceV
       } else {
         return fmt.Errorf("unexpected value for field IpasudorunasUser: %v (%v)", raw, reflect.TypeOf(raw))
       }
@@ -102230,8 +107895,11 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -102240,15 +107908,10 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
     }
     
       if plainOk {
-        out.IpasudorunasGroup = &plainV
+        out.IpasudorunasGroup = &[]string{plainV}
       } else if sliceOk {
         
-          if len(sliceV) == 1 {
-            out.IpasudorunasGroup = &sliceV[0]
-          } else if len(sliceV) > 1 {
-            return fmt.Errorf("unexpected value for field IpasudorunasGroup: %v; expected at most one element", raw)
-          }
-        
+        out.IpasudorunasGroup = &sliceV
       } else {
         return fmt.Errorf("unexpected value for field IpasudorunasGroup: %v (%v)", raw, reflect.TypeOf(raw))
       }
@@ -102267,8 +107930,11 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -102277,15 +107943,10 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
     }
     
       if plainOk {
-        out.Ipasudorunasextuser = &plainV
+        out.Ipasudorunasextuser = &[]string{plainV}
       } else if sliceOk {
         
-          if len(sliceV) == 1 {
-            out.Ipasudorunasextuser = &sliceV[0]
-          } else if len(sliceV) > 1 {
-            return fmt.Errorf("unexpected value for field Ipasudorunasextuser: %v; expected at most one element", raw)
-          }
-        
+        out.Ipasudorunasextuser = &sliceV
       } else {
         return fmt.Errorf("unexpected value for field Ipasudorunasextuser: %v (%v)", raw, reflect.TypeOf(raw))
       }
@@ -102304,8 +107965,11 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -102314,15 +107978,10 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
     }
     
       if plainOk {
-        out.Ipasudorunasextusergroup = &plainV
+        out.Ipasudorunasextusergroup = &[]string{plainV}
       } else if sliceOk {
         
-          if len(sliceV) == 1 {
-            out.Ipasudorunasextusergroup = &sliceV[0]
-          } else if len(sliceV) > 1 {
-            return fmt.Errorf("unexpected value for field Ipasudorunasextusergroup: %v; expected at most one element", raw)
-          }
-        
+        out.Ipasudorunasextusergroup = &sliceV
       } else {
         return fmt.Errorf("unexpected value for field Ipasudorunasextusergroup: %v (%v)", raw, reflect.TypeOf(raw))
       }
@@ -102341,8 +108000,11 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -102351,15 +108013,10 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
     }
     
       if plainOk {
-        out.IpasudorunasgroupGroup = &plainV
+        out.IpasudorunasgroupGroup = &[]string{plainV}
       } else if sliceOk {
         
-          if len(sliceV) == 1 {
-            out.IpasudorunasgroupGroup = &sliceV[0]
-          } else if len(sliceV) > 1 {
-            return fmt.Errorf("unexpected value for field IpasudorunasgroupGroup: %v; expected at most one element", raw)
-          }
-        
+        out.IpasudorunasgroupGroup = &sliceV
       } else {
         return fmt.Errorf("unexpected value for field IpasudorunasgroupGroup: %v (%v)", raw, reflect.TypeOf(raw))
       }
@@ -102378,8 +108035,11 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -102388,15 +108048,10 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
     }
     
       if plainOk {
-        out.Ipasudorunasextgroup = &plainV
+        out.Ipasudorunasextgroup = &[]string{plainV}
       } else if sliceOk {
         
-          if len(sliceV) == 1 {
-            out.Ipasudorunasextgroup = &sliceV[0]
-          } else if len(sliceV) > 1 {
-            return fmt.Errorf("unexpected value for field Ipasudorunasextgroup: %v; expected at most one element", raw)
-          }
-        
+        out.Ipasudorunasextgroup = &sliceV
       } else {
         return fmt.Errorf("unexpected value for field Ipasudorunasextgroup: %v (%v)", raw, reflect.TypeOf(raw))
       }
@@ -102415,8 +108070,11 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -102425,15 +108083,10 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
     }
     
       if plainOk {
-        out.Ipasudoopt = &plainV
+        out.Ipasudoopt = &[]string{plainV}
       } else if sliceOk {
         
-          if len(sliceV) == 1 {
-            out.Ipasudoopt = &sliceV[0]
-          } else if len(sliceV) > 1 {
-            return fmt.Errorf("unexpected value for field Ipasudoopt: %v; expected at most one element", raw)
-          }
-        
+        out.Ipasudoopt = &sliceV
       } else {
         return fmt.Errorf("unexpected value for field Ipasudoopt: %v (%v)", raw, reflect.TypeOf(raw))
       }
@@ -102533,8 +108186,11 @@ func (out *Topic) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -102569,8 +108225,11 @@ func (out *Topic) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -102605,8 +108264,11 @@ func (out *Topic) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -102641,8 +108303,11 @@ func (out *Topic) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -102678,8 +108343,11 @@ func (out *Topic) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -102710,8 +108378,11 @@ func (out *Topic) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -102742,8 +108413,11 @@ func (out *Topic) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -102876,8 +108550,11 @@ func (out *Topologysegment) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -102912,8 +108589,11 @@ func (out *Topologysegment) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -102948,8 +108628,11 @@ func (out *Topologysegment) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -102984,8 +108667,11 @@ func (out *Topologysegment) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -103020,8 +108706,11 @@ func (out *Topologysegment) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -103057,8 +108746,11 @@ func (out *Topologysegment) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -103094,8 +108786,11 @@ func (out *Topologysegment) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -103131,8 +108826,11 @@ func (out *Topologysegment) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -103172,8 +108870,11 @@ func (out *Topologysegment) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -103250,8 +108951,11 @@ func (out *Topologysuffix) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -103286,8 +108990,11 @@ func (out *Topologysuffix) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -103419,8 +109126,11 @@ func (out *Trust) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -103455,8 +109165,11 @@ func (out *Trust) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -103491,8 +109204,11 @@ func (out *Trust) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -103527,8 +109243,11 @@ func (out *Trust) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -103559,8 +109278,11 @@ func (out *Trust) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -103591,8 +109313,11 @@ func (out *Trust) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -103627,8 +109352,11 @@ func (out *Trust) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -103663,8 +109391,11 @@ func (out *Trust) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -103699,8 +109430,11 @@ func (out *Trust) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -103812,8 +109546,11 @@ func (out *Trustconfig) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -103848,8 +109585,11 @@ func (out *Trustconfig) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -103884,8 +109624,11 @@ func (out *Trustconfig) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -103920,8 +109663,11 @@ func (out *Trustconfig) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -103956,8 +109702,11 @@ func (out *Trustconfig) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -103992,8 +109741,11 @@ func (out *Trustconfig) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -104024,8 +109776,11 @@ func (out *Trustconfig) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -104113,8 +109868,11 @@ func (out *Trustdomain) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -104149,8 +109907,11 @@ func (out *Trustdomain) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -104186,8 +109947,11 @@ func (out *Trustdomain) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -104223,8 +109987,24 @@ func (out *Trustdomain) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          
+          // See https://github.com/tehwalris/go-freeipa/issues/3
+          // Sometimes IPA returns ["TRUE"] as a boolean value
+          strV, strOk := rawItem.(string)
+          if strOk {
+            boolV, err := strconv.ParseBool(strV)
+            if err != nil {
+              sliceOk = false
+              break
+            }
+
+            itemV = boolV
+          } else {
+            sliceOk = false
+            break
+          }
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -104562,31 +110342,31 @@ Member of HBAC rule
 Indirect Member of group
 
     */
-    MemberofindirectGroup *string `json:"memberofindirect_group,omitempty"`
+    MemberofindirectGroup *[]string `json:"memberofindirect_group,omitempty"`
   
     /*
 Indirect Member of netgroup
 
     */
-    MemberofindirectNetgroup *string `json:"memberofindirect_netgroup,omitempty"`
+    MemberofindirectNetgroup *[]string `json:"memberofindirect_netgroup,omitempty"`
   
     /*
 Indirect Member of role
 
     */
-    MemberofindirectRole *string `json:"memberofindirect_role,omitempty"`
+    MemberofindirectRole *[]string `json:"memberofindirect_role,omitempty"`
   
     /*
 Indirect Member of Sudo rule
 
     */
-    MemberofindirectSudorule *string `json:"memberofindirect_sudorule,omitempty"`
+    MemberofindirectSudorule *[]string `json:"memberofindirect_sudorule,omitempty"`
   
     /*
 Indirect Member of HBAC rule
 
     */
-    MemberofindirectHbacrule *string `json:"memberofindirect_hbacrule,omitempty"`
+    MemberofindirectHbacrule *[]string `json:"memberofindirect_hbacrule,omitempty"`
   
     /*
 Kerberos keys available
@@ -104741,8 +110521,11 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -104777,8 +110560,11 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -104814,8 +110600,11 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -104850,8 +110639,11 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -104887,8 +110679,11 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -104924,8 +110719,11 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -104961,8 +110759,11 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -104998,8 +110799,11 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -105035,8 +110839,11 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -105072,8 +110879,11 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -105109,8 +110919,11 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -105141,8 +110954,23 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(time.Time)
         
         if !itemOk {
-          sliceOk = false
-          break
+          
+          // See https://github.com/ccin2p3/go-freeipa/issues/1
+          mapV, mapVOk := rawItem.(map[string]interface{})
+          if mapVOk {
+            timeV, err := tryParseFreeIPADatetimeMap(mapV)
+            if err != nil {
+              sliceOk = false
+              break
+            }
+
+            itemV = timeV
+          } else {
+            sliceOk = false
+            break
+          }
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -105178,8 +111006,23 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(time.Time)
         
         if !itemOk {
-          sliceOk = false
-          break
+          
+          // See https://github.com/ccin2p3/go-freeipa/issues/1
+          mapV, mapVOk := rawItem.(map[string]interface{})
+          if mapVOk {
+            timeV, err := tryParseFreeIPADatetimeMap(mapV)
+            if err != nil {
+              sliceOk = false
+              break
+            }
+
+            itemV = timeV
+          } else {
+            sliceOk = false
+            break
+          }
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -105215,8 +111058,11 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -105247,8 +111093,11 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -105284,8 +111133,24 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          
+          // See https://github.com/tehwalris/go-freeipa/issues/3
+          // Sometimes IPA returns ["TRUE"] as a boolean value
+          strV, strOk := rawItem.(string)
+          if strOk {
+            boolV, err := strconv.ParseBool(strV)
+            if err != nil {
+              sliceOk = false
+              break
+            }
+
+            itemV = boolV
+          } else {
+            sliceOk = false
+            break
+          }
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -105321,8 +111186,11 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -105358,8 +111226,11 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -105399,8 +111270,11 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -105440,8 +111314,11 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -105477,8 +111354,11 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -105514,8 +111394,11 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -105551,8 +111434,11 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -105588,8 +111474,11 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -105620,8 +111509,11 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -105652,8 +111544,11 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -105684,8 +111579,11 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -105716,8 +111614,11 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -105753,8 +111654,11 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -105790,8 +111694,11 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -105827,8 +111734,11 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -105859,8 +111769,11 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -105891,8 +111804,11 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -105923,8 +111839,11 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -105955,8 +111874,11 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -105987,8 +111909,11 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -106024,8 +111949,11 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -106061,8 +111989,11 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -106093,8 +112024,11 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -106130,8 +112064,11 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -106167,8 +112104,11 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -106204,8 +112144,11 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(interface{})
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -106236,8 +112179,11 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -106268,8 +112214,24 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          
+          // See https://github.com/tehwalris/go-freeipa/issues/3
+          // Sometimes IPA returns ["TRUE"] as a boolean value
+          strV, strOk := rawItem.(string)
+          if strOk {
+            boolV, err := strconv.ParseBool(strV)
+            if err != nil {
+              sliceOk = false
+              break
+            }
+
+            itemV = boolV
+          } else {
+            sliceOk = false
+            break
+          }
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -106305,8 +112267,24 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          
+          // See https://github.com/tehwalris/go-freeipa/issues/3
+          // Sometimes IPA returns ["TRUE"] as a boolean value
+          strV, strOk := rawItem.(string)
+          if strOk {
+            boolV, err := strconv.ParseBool(strV)
+            if err != nil {
+              sliceOk = false
+              break
+            }
+
+            itemV = boolV
+          } else {
+            sliceOk = false
+            break
+          }
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -106342,8 +112320,24 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          
+          // See https://github.com/tehwalris/go-freeipa/issues/3
+          // Sometimes IPA returns ["TRUE"] as a boolean value
+          strV, strOk := rawItem.(string)
+          if strOk {
+            boolV, err := strconv.ParseBool(strV)
+            if err != nil {
+              sliceOk = false
+              break
+            }
+
+            itemV = boolV
+          } else {
+            sliceOk = false
+            break
+          }
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -106379,8 +112373,11 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -106411,8 +112408,11 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -106443,8 +112443,11 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -106475,8 +112478,11 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -106507,8 +112513,11 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -106539,8 +112548,11 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -106549,15 +112561,10 @@ func (out *User) UnmarshalJSON(data []byte) error {
     }
     
       if plainOk {
-        out.MemberofindirectGroup = &plainV
+        out.MemberofindirectGroup = &[]string{plainV}
       } else if sliceOk {
         
-          if len(sliceV) == 1 {
-            out.MemberofindirectGroup = &sliceV[0]
-          } else if len(sliceV) > 1 {
-            return fmt.Errorf("unexpected value for field MemberofindirectGroup: %v; expected at most one element", raw)
-          }
-        
+        out.MemberofindirectGroup = &sliceV
       } else {
         return fmt.Errorf("unexpected value for field MemberofindirectGroup: %v (%v)", raw, reflect.TypeOf(raw))
       }
@@ -106576,8 +112583,11 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -106586,15 +112596,10 @@ func (out *User) UnmarshalJSON(data []byte) error {
     }
     
       if plainOk {
-        out.MemberofindirectNetgroup = &plainV
+        out.MemberofindirectNetgroup = &[]string{plainV}
       } else if sliceOk {
         
-          if len(sliceV) == 1 {
-            out.MemberofindirectNetgroup = &sliceV[0]
-          } else if len(sliceV) > 1 {
-            return fmt.Errorf("unexpected value for field MemberofindirectNetgroup: %v; expected at most one element", raw)
-          }
-        
+        out.MemberofindirectNetgroup = &sliceV
       } else {
         return fmt.Errorf("unexpected value for field MemberofindirectNetgroup: %v (%v)", raw, reflect.TypeOf(raw))
       }
@@ -106613,8 +112618,11 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -106623,15 +112631,10 @@ func (out *User) UnmarshalJSON(data []byte) error {
     }
     
       if plainOk {
-        out.MemberofindirectRole = &plainV
+        out.MemberofindirectRole = &[]string{plainV}
       } else if sliceOk {
         
-          if len(sliceV) == 1 {
-            out.MemberofindirectRole = &sliceV[0]
-          } else if len(sliceV) > 1 {
-            return fmt.Errorf("unexpected value for field MemberofindirectRole: %v; expected at most one element", raw)
-          }
-        
+        out.MemberofindirectRole = &sliceV
       } else {
         return fmt.Errorf("unexpected value for field MemberofindirectRole: %v (%v)", raw, reflect.TypeOf(raw))
       }
@@ -106650,8 +112653,11 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -106660,15 +112666,10 @@ func (out *User) UnmarshalJSON(data []byte) error {
     }
     
       if plainOk {
-        out.MemberofindirectSudorule = &plainV
+        out.MemberofindirectSudorule = &[]string{plainV}
       } else if sliceOk {
         
-          if len(sliceV) == 1 {
-            out.MemberofindirectSudorule = &sliceV[0]
-          } else if len(sliceV) > 1 {
-            return fmt.Errorf("unexpected value for field MemberofindirectSudorule: %v; expected at most one element", raw)
-          }
-        
+        out.MemberofindirectSudorule = &sliceV
       } else {
         return fmt.Errorf("unexpected value for field MemberofindirectSudorule: %v (%v)", raw, reflect.TypeOf(raw))
       }
@@ -106687,8 +112688,11 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -106697,15 +112701,10 @@ func (out *User) UnmarshalJSON(data []byte) error {
     }
     
       if plainOk {
-        out.MemberofindirectHbacrule = &plainV
+        out.MemberofindirectHbacrule = &[]string{plainV}
       } else if sliceOk {
         
-          if len(sliceV) == 1 {
-            out.MemberofindirectHbacrule = &sliceV[0]
-          } else if len(sliceV) > 1 {
-            return fmt.Errorf("unexpected value for field MemberofindirectHbacrule: %v; expected at most one element", raw)
-          }
-        
+        out.MemberofindirectHbacrule = &sliceV
       } else {
         return fmt.Errorf("unexpected value for field MemberofindirectHbacrule: %v (%v)", raw, reflect.TypeOf(raw))
       }
@@ -106724,8 +112723,24 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          
+          // See https://github.com/tehwalris/go-freeipa/issues/3
+          // Sometimes IPA returns ["TRUE"] as a boolean value
+          strV, strOk := rawItem.(string)
+          if strOk {
+            boolV, err := strconv.ParseBool(strV)
+            if err != nil {
+              sliceOk = false
+              break
+            }
+
+            itemV = boolV
+          } else {
+            sliceOk = false
+            break
+          }
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -106834,8 +112849,24 @@ func (out *Userstatus) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          
+          // See https://github.com/tehwalris/go-freeipa/issues/3
+          // Sometimes IPA returns ["TRUE"] as a boolean value
+          strV, strOk := rawItem.(string)
+          if strOk {
+            boolV, err := strconv.ParseBool(strV)
+            if err != nil {
+              sliceOk = false
+              break
+            }
+
+            itemV = boolV
+          } else {
+            sliceOk = false
+            break
+          }
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -106871,8 +112902,11 @@ func (out *Userstatus) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -106907,8 +112941,11 @@ func (out *Userstatus) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -106943,8 +112980,11 @@ func (out *Userstatus) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -106979,8 +113019,11 @@ func (out *Userstatus) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -107015,8 +113058,11 @@ func (out *Userstatus) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -107196,8 +113242,11 @@ func (out *Vault) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -107232,8 +113281,11 @@ func (out *Vault) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -107269,8 +113321,11 @@ func (out *Vault) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -107306,8 +113361,11 @@ func (out *Vault) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -107343,8 +113401,11 @@ func (out *Vault) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -107380,8 +113441,11 @@ func (out *Vault) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -107417,8 +113481,11 @@ func (out *Vault) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -107454,8 +113521,11 @@ func (out *Vault) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -107491,8 +113561,11 @@ func (out *Vault) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -107528,8 +113601,11 @@ func (out *Vault) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -107565,8 +113641,24 @@ func (out *Vault) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          
+          // See https://github.com/tehwalris/go-freeipa/issues/3
+          // Sometimes IPA returns ["TRUE"] as a boolean value
+          strV, strOk := rawItem.(string)
+          if strOk {
+            boolV, err := strconv.ParseBool(strV)
+            if err != nil {
+              sliceOk = false
+              break
+            }
+
+            itemV = boolV
+          } else {
+            sliceOk = false
+            break
+          }
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -107602,8 +113694,11 @@ func (out *Vault) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -107639,8 +113734,11 @@ func (out *Vault) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -107671,8 +113769,11 @@ func (out *Vault) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -107703,8 +113804,11 @@ func (out *Vault) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -107776,8 +113880,11 @@ func (out *Vaultconfig) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -107812,8 +113919,11 @@ func (out *Vaultconfig) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -107925,8 +114035,11 @@ func (out *Vaultcontainer) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -107962,8 +114075,11 @@ func (out *Vaultcontainer) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -107999,8 +114115,11 @@ func (out *Vaultcontainer) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -108036,8 +114155,11 @@ func (out *Vaultcontainer) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -108073,8 +114195,11 @@ func (out *Vaultcontainer) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -108110,8 +114235,24 @@ func (out *Vaultcontainer) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          
+          // See https://github.com/tehwalris/go-freeipa/issues/3
+          // Sometimes IPA returns ["TRUE"] as a boolean value
+          strV, strOk := rawItem.(string)
+          if strOk {
+            boolV, err := strconv.ParseBool(strV)
+            if err != nil {
+              sliceOk = false
+              break
+            }
+
+            itemV = boolV
+          } else {
+            sliceOk = false
+            break
+          }
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -108147,8 +114288,11 @@ func (out *Vaultcontainer) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
+          
           sliceOk = false
           break
+          
+
         }
         
         sliceV = append(sliceV, itemV)
@@ -108345,6 +114489,8 @@ const HTTPRequestErrorCode = 4035
 const RedundantMappingRuleCode = 4036
 
 const CSRTemplateErrorCode = 4037
+
+const AlreadyContainsValueErrorCode = 4038
 
 const BuiltinErrorCode = 4100
 

@@ -1,0 +1,60 @@
+{
+  "classes": {
+    "sudorule": {
+      "params": {
+        "hostmask": {
+          "required": false
+        },
+        "memberuser_user": {
+          "multivalue": true
+        },
+        "memberuser_group": {
+          "multivalue": true
+        },
+        "memberhost_host": {
+          "multivalue": true
+        },
+        "memberhost_hostgroup": {
+          "multivalue": true
+        },
+        "externaluser": {
+          "multivalue": true
+        },
+        "ipasudoopt": {
+          "multivalue": true
+        },
+        "ipasudorunas_user": {
+          "multivalue": true
+        },
+        "ipasudorunas_group": {
+          "multivalue": true
+        },
+        "ipasudorunasgroup_group": {
+          "multivalue": true
+        },
+        "ipasudorunasextuser": {
+          "multivalue": true
+        },
+        "ipasudorunasextusergroup": {
+          "multivalue": true
+        },
+        "ipasudorunasextgroup": {
+          "multivalue": true
+        }
+      }
+    },
+    "hbacrule": {
+      "params": {
+        "accessruletype": {
+          "required": false
+        },
+        "memberservice_hbacsvc": {
+          "multivalue": true
+        },
+        "memberservice_hbacsvcgroup": {
+          "multivalue": true
+        }
+      }
+    }
+  }
+}
