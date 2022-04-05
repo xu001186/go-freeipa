@@ -13,7 +13,7 @@ for information on how this library is generated.
 
 * Kerberos and password API authentication
 
-## History
+## History and credits
 
 ### Origins
 
