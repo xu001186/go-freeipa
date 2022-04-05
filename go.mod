@@ -1,4 +1,4 @@
-module github.com/tehwalris/go-freeipa
+module github.com/ccin2p3/go-freeipa
 
 go 1.15
 
