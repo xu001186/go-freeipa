@@ -9,7 +9,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/tehwalris/go-freeipa/freeipa"
+	"github.com/ccin2p3/go-freeipa/freeipa"
 )
 
 func Example_addUser() {

@@ -9,7 +9,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/tehwalris/go-freeipa/freeipa"
+	"github.com/ccin2p3/go-freeipa/freeipa"
 )
 
 func setup(t *testing.T) *freeipa.Client {
