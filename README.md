@@ -30,3 +30,13 @@ We want to thank [Philippe Voinov](https://github.com/tehwalris) for all the awe
 We'll provide support for this library and try to make it evolve as much as possible.
 
 Feel free to open [issues](https://github.com/ccin2p3/go-freeipa/issues) or [pull requests](https://github.com/ccin2p3/go-freeipa/pulls) to discuss.
+
+## Known issues
+
+### pkg.go.dev website refuses to display documentation
+
+[![pkg.go.dev license restrictions](doc/go_freeipa_doc_license_issue.png)](https://pkg.go.dev/github.com/ccin2p3/go-freeipa/freeipa)
+
+The official [pkg.go.dev license policy](https://pkg.go.dev/license-policy) does not actually accepts the [CeCILL LICENSE](https://cecill.info/index.en.html) we're using.
+
+We're aware of this and an [issue was opened to request the recognition of the CeCILL LICENSE on the pkg.go.dev](https://github.com/golang/go/issues/52126).
