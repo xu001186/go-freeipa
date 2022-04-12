@@ -25,9 +25,7 @@ We want to thank [Philippe Voinov](https://github.com/tehwalris) for all the awe
 
 ### Future
 
-[IN2P3 Computing Centre](https://cc.in2p3.fr) extensively relies on RedHat IDM.
-
-We'll provide support for this library and try to make it evolve as much as possible.
+[IN2P3 Computing Centre](https://cc.in2p3.fr) will provide support for this library and try to make it evolve as much as possible.
 
 Feel free to open [issues](https://github.com/ccin2p3/go-freeipa/issues) or [pull requests](https://github.com/ccin2p3/go-freeipa/pulls) to discuss.
 
