@@ -55,6 +55,13 @@
           "multivalue": true
         }
       }
+    },
+    "host": {
+      "params": {
+        "managedby_host": {
+          "required": false
+        }
+      }
     }
   }
 }
