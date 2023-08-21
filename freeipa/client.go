@@ -152,7 +152,7 @@ func ConnectWithKerberos(host string, tspt *http.Transport, k5ConnectOpts *Kerbe
 		k5client: k5client,
 	}
 	if e := c.login(); e != nil {
-		return nil, fmt.Errorf("initial login falied: %v", e)
+		return nil, fmt.Errorf("initial login failed: %v", e)
 	}
 	return c, nil
 }
@@ -195,6 +195,7 @@ func (c *Client) login() error {
 	if e != nil {
 		return e
 	}
+	defer res.Body.Close()
 
 	if res.StatusCode != http.StatusOK {
 		if res.StatusCode == http.StatusUnauthorized {
