@@ -195,6 +195,7 @@ func (c *Client) login() error {
 	if e != nil {
 		return e
 	}
+	defer res.Body.Close()
 
 	if res.StatusCode != http.StatusOK {
 		if res.StatusCode == http.StatusUnauthorized {
