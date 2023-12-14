@@ -6,7 +6,7 @@ import (
   "time"
 	"encoding/json"
   "fmt"
-  "reflect"
+  //"reflect"
   "strconv"
 )
 
@@ -235,9 +235,10 @@ func (out *{{.UpperName}}) UnmarshalJSON(data []byte) error {
           }
         {{end}}
         out.{{.UpperName}} = {{if not .Required}}&{{end}}sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field {{.UpperName}}: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field {{.UpperName}}: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     {{else}}
       if plainOk {
         out.{{.UpperName}} = {{if not .Required}}&{{end}}plainV
@@ -254,9 +255,10 @@ func (out *{{.UpperName}}) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field {{.UpperName}}: %v; expected at most one element", raw)
           }
         {{end}}
-      } else {
-        return fmt.Errorf("unexpected value for field {{.UpperName}}: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field {{.UpperName}}: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     {{end}}
   }
   {{end -}}

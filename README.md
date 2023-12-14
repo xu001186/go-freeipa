@@ -1,5 +1,32 @@
 # go-freeipa
 
+## Update
+
+1) Change the ```SanDnsname``` of ```type Cert Struct ``` to be ```SanDnsname *[]map[string]interface{} `json:"san_dnsname,omitempty" ```
+2) Change the ```ValidNotBefore``` of ```type Cert Struct ``` to be ```string `json:"valid_not_before,omitempty"` ```
+3) Change the ```ValidNotAfter``` of ```type Cert Struct ``` to be ```string `json:"valid_not_after,omitempty"` ```
+4) Update the ```SanDnsname``` handle part from ```func (out *Cert) UnmarshalJSON(data []byte) error ``` to be
+```
+  if in.SanDnsname != nil {
+    raw := in.SanDnsname
+    sliceWrapperV, sliceWrapperOk := raw.([]interface{})
+    var sliceV []map[string]interface{}
+    sliceOk := sliceWrapperOk
+    fmt.Printf("Type of integerVariable: %T\n", raw)
+
+    if sliceWrapperOk {
+      for _, rawItem := range sliceWrapperV {
+        itemV, itemOk := rawItem.(map[string]interface{})
+        if itemOk {
+          sliceV = append(sliceV, itemV)
+        }
+        
+      }
+    }
+```
+
+
+
 [![Go Reference](https://pkg.go.dev/badge/github.com/ccin2p3/go-freeipa.svg)](https://pkg.go.dev/github.com/ccin2p3/go-freeipa)
 
 A generated golang client for the FreeIPA API.

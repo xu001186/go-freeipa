@@ -6,7 +6,7 @@ import (
   "time"
 	"encoding/json"
   "fmt"
-  "reflect"
+  //"reflect"
   "strconv"
 )
 
@@ -71293,9 +71293,10 @@ func (out *Aci) UnmarshalJSON(data []byte) error {
           }
           out.Aciname = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Aciname: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Aciname: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -71333,9 +71334,10 @@ func (out *Aci) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Permission: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Permission: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Permission: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -71373,9 +71375,10 @@ func (out *Aci) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Group: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Group: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Group: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -71412,9 +71415,10 @@ func (out *Aci) UnmarshalJSON(data []byte) error {
           }
         
         out.Permissions = sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Permissions: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Permissions: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -71447,9 +71451,10 @@ func (out *Aci) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Attrs = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Attrs: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Attrs: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -71487,9 +71492,10 @@ func (out *Aci) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Type: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Type: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Type: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -71527,9 +71533,10 @@ func (out *Aci) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Memberof: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Memberof: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Memberof: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -71567,9 +71574,10 @@ func (out *Aci) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Filter: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Filter: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Filter: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -71607,9 +71615,10 @@ func (out *Aci) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Subtree: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Subtree: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Subtree: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -71647,9 +71656,10 @@ func (out *Aci) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Targetgroup: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Targetgroup: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Targetgroup: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -71700,9 +71710,10 @@ func (out *Aci) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Selfaci: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Selfaci: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Selfaci: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -71739,9 +71750,10 @@ func (out *Aci) UnmarshalJSON(data []byte) error {
           }
           out.Aciprefix = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Aciprefix: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Aciprefix: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -71778,9 +71790,10 @@ func (out *Aci) UnmarshalJSON(data []byte) error {
           }
           out.Aci = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Aci: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Aci: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -71882,9 +71895,10 @@ func (out *Automember) UnmarshalJSON(data []byte) error {
           }
           out.Cn = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Cn: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Cn: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -71922,9 +71936,10 @@ func (out *Automember) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Description: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Description: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Description: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -71962,9 +71977,10 @@ func (out *Automember) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Automemberdefaultgroup: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Automemberdefaultgroup: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Automemberdefaultgroup: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -71997,9 +72013,10 @@ func (out *Automember) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Automemberinclusiveregex = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Automemberinclusiveregex: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Automemberinclusiveregex: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -72032,9 +72049,10 @@ func (out *Automember) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Automemberexclusiveregex = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Automemberexclusiveregex: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Automemberexclusiveregex: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -72121,9 +72139,10 @@ func (out *AutomemberDefaultGroup) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Automemberdefaultgroup: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Automemberdefaultgroup: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Automemberdefaultgroup: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -72156,9 +72175,10 @@ func (out *AutomemberDefaultGroup) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Automemberinclusiveregex = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Automemberinclusiveregex: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Automemberinclusiveregex: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -72191,9 +72211,10 @@ func (out *AutomemberDefaultGroup) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Automemberexclusiveregex = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Automemberexclusiveregex: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Automemberexclusiveregex: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -72263,9 +72284,10 @@ func (out *AutomemberTask) UnmarshalJSON(data []byte) error {
           }
           out.Dn = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Dn: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Dn: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -72351,9 +72373,10 @@ func (out *Automountkey) UnmarshalJSON(data []byte) error {
           }
           out.Automountkey = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Automountkey: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Automountkey: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -72390,9 +72413,10 @@ func (out *Automountkey) UnmarshalJSON(data []byte) error {
           }
           out.Automountinformation = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Automountinformation: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Automountinformation: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -72430,9 +72454,10 @@ func (out *Automountkey) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Description: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Description: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Description: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -72502,9 +72527,10 @@ func (out *Automountlocation) UnmarshalJSON(data []byte) error {
           }
           out.Cn = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Cn: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Cn: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -72582,9 +72608,10 @@ func (out *Automountmap) UnmarshalJSON(data []byte) error {
           }
           out.Automountmapname = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Automountmapname: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Automountmapname: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -72622,9 +72649,10 @@ func (out *Automountmap) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Description: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Description: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Description: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -72750,9 +72778,10 @@ func (out *Ca) UnmarshalJSON(data []byte) error {
           }
           out.Cn = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Cn: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Cn: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -72790,9 +72819,10 @@ func (out *Ca) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Description: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Description: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Description: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -72829,9 +72859,10 @@ func (out *Ca) UnmarshalJSON(data []byte) error {
           }
           out.Ipacaid = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipacaid: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipacaid: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -72868,9 +72899,10 @@ func (out *Ca) UnmarshalJSON(data []byte) error {
           }
           out.Ipacasubjectdn = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipacasubjectdn: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipacasubjectdn: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -72907,9 +72939,10 @@ func (out *Ca) UnmarshalJSON(data []byte) error {
           }
           out.Ipacaissuerdn = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipacaissuerdn: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipacaissuerdn: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -72946,9 +72979,10 @@ func (out *Ca) UnmarshalJSON(data []byte) error {
           }
           out.Certificate = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Certificate: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Certificate: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -72981,9 +73015,10 @@ func (out *Ca) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.CertificateChain = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field CertificateChain: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field CertificateChain: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -73024,9 +73059,10 @@ func (out *Ca) UnmarshalJSON(data []byte) error {
           }
           out.Ipacarandomserialnumberversion = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipacarandomserialnumberversion: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipacarandomserialnumberversion: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -73208,9 +73244,10 @@ func (out *Caacl) UnmarshalJSON(data []byte) error {
           }
           out.Cn = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Cn: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Cn: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -73248,9 +73285,10 @@ func (out *Caacl) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Description: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Description: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Description: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -73301,9 +73339,10 @@ func (out *Caacl) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipaenabledflag: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipaenabledflag: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipaenabledflag: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -73341,9 +73380,10 @@ func (out *Caacl) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipacacategory: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipacacategory: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipacacategory: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -73381,9 +73421,10 @@ func (out *Caacl) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipacertprofilecategory: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipacertprofilecategory: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipacertprofilecategory: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -73421,9 +73462,10 @@ func (out *Caacl) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Usercategory: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Usercategory: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Usercategory: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -73461,9 +73503,10 @@ func (out *Caacl) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Hostcategory: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Hostcategory: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Hostcategory: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -73501,9 +73544,10 @@ func (out *Caacl) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Servicecategory: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Servicecategory: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Servicecategory: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -73541,9 +73585,10 @@ func (out *Caacl) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field IpamembercaCa: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field IpamembercaCa: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field IpamembercaCa: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -73581,9 +73626,10 @@ func (out *Caacl) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field IpamembercertprofileCertprofile: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field IpamembercertprofileCertprofile: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field IpamembercertprofileCertprofile: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -73616,9 +73662,10 @@ func (out *Caacl) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberuserUser = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberuserUser: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberuserUser: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -73651,9 +73698,10 @@ func (out *Caacl) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberuserGroup = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberuserGroup: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberuserGroup: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -73686,9 +73734,10 @@ func (out *Caacl) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberhostHost = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberhostHost: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberhostHost: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -73721,9 +73770,10 @@ func (out *Caacl) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberhostHostgroup = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberhostHostgroup: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberhostHostgroup: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -73761,9 +73811,10 @@ func (out *Caacl) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field MemberserviceService: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field MemberserviceService: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field MemberserviceService: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -73805,7 +73856,7 @@ Subject email address
 Subject DNS name
 
     */
-    SanDnsname *[]string `json:"san_dnsname,omitempty"`
+    SanDnsname *[]map[string]interface{} `json:"san_dnsname,omitempty"`
   
     /*
 Subject X.400 address
@@ -73871,13 +73922,13 @@ Issuer DN
 Not Before
 
     */
-    ValidNotBefore time.Time `json:"valid_not_before,omitempty"`
+    ValidNotBefore string `json:"valid_not_before,omitempty"`
   
     /*
 Not After
 
     */
-    ValidNotAfter time.Time `json:"valid_not_after,omitempty"`
+    ValidNotAfter string `json:"valid_not_after,omitempty"`
   
     /*
 Fingerprint (SHA1)
@@ -74050,9 +74101,10 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Cacn: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Cacn: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Cacn: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -74089,9 +74141,10 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
           }
           out.Certificate = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Certificate: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Certificate: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -74124,9 +74177,10 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.CertificateChain = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field CertificateChain: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field CertificateChain: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -74163,9 +74217,10 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
           }
           out.Subject = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Subject: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Subject: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -74198,44 +74253,33 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.SanRfc822name = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field SanRfc822name: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field SanRfc822name: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
   if in.SanDnsname != nil {
     raw := in.SanDnsname
-    plainV, plainOk := raw.(string)
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
-    var sliceV []string
+    var sliceV []map[string]interface{}
     sliceOk := sliceWrapperOk
+    fmt.Printf("Type of integerVariable: %T\n", raw)
+
     if sliceWrapperOk {
       for _, rawItem := range sliceWrapperV {
-        
-        itemV, itemOk := rawItem.(string)
-        
-        if !itemOk {
-          
-          sliceOk = false
-          break
-          
-
+        itemV, itemOk := rawItem.(map[string]interface{})
+        if itemOk {
+          sliceV = append(sliceV, itemV)
         }
-        
-        sliceV = append(sliceV, itemV)
         
       }
     }
-    
-      if plainOk {
-        out.SanDnsname = &[]string{plainV}
-      } else if sliceOk {
-        
+  
+    if sliceOk {
         out.SanDnsname = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field SanDnsname: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
     
   }
   
@@ -74268,9 +74312,10 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.SanX400address = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field SanX400address: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field SanX400address: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -74303,9 +74348,10 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.SanDirectoryname = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field SanDirectoryname: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field SanDirectoryname: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -74338,9 +74384,10 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.SanEdipartyname = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field SanEdipartyname: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field SanEdipartyname: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -74373,9 +74420,10 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.SanURI = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field SanURI: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field SanURI: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -74408,9 +74456,10 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.SanIpaddress = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field SanIpaddress: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field SanIpaddress: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -74443,9 +74492,10 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.SanOid = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field SanOid: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field SanOid: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -74478,9 +74528,10 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.SanOtherUpn = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field SanOtherUpn: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field SanOtherUpn: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -74513,9 +74564,10 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.SanOtherKpn = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field SanOtherKpn: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field SanOtherKpn: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -74548,9 +74600,10 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.SanOther = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field SanOther: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field SanOther: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -74587,113 +74640,30 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
           }
           out.Issuer = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Issuer: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Issuer: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
   if true {
     raw := in.ValidNotBefore
-    plainV, plainOk := raw.(time.Time)
-    sliceWrapperV, sliceWrapperOk := raw.([]interface{})
-    var sliceV []time.Time
-    sliceOk := sliceWrapperOk
-    if sliceWrapperOk {
-      for _, rawItem := range sliceWrapperV {
-        
-        itemV, itemOk := rawItem.(time.Time)
-        
-        if !itemOk {
-          
-          // See https://github.com/ccin2p3/go-freeipa/issues/1
-          mapV, mapVOk := rawItem.(map[string]interface{})
-          if mapVOk {
-            timeV, err := tryParseFreeIPADatetimeMap(mapV)
-            if err != nil {
-              sliceOk = false
-              break
-            }
-
-            itemV = timeV
-          } else {
-            sliceOk = false
-            break
-          }
-          
-
-        }
-        
-        sliceV = append(sliceV, itemV)
-        
-      }
+    plainV, plainOk := raw.(string)
+    if plainOk{
+      out.ValidNotBefore = plainV
     }
-    
-      if plainOk {
-        out.ValidNotBefore = plainV
-      } else if sliceOk {
-        
-          if len(sliceV) != 1 {
-            return fmt.Errorf("unexpected value for field ValidNotBefore: %v; expected exactly one element", raw)
-          }
-          out.ValidNotBefore = sliceV[0]
-        
-      } else {
-        return fmt.Errorf("unexpected value for field ValidNotBefore: %v (%v)", raw, reflect.TypeOf(raw))
-      }
-    
+
   }
-  
+
   if true {
     raw := in.ValidNotAfter
-    plainV, plainOk := raw.(time.Time)
-    sliceWrapperV, sliceWrapperOk := raw.([]interface{})
-    var sliceV []time.Time
-    sliceOk := sliceWrapperOk
-    if sliceWrapperOk {
-      for _, rawItem := range sliceWrapperV {
-        
-        itemV, itemOk := rawItem.(time.Time)
-        
-        if !itemOk {
-          
-          // See https://github.com/ccin2p3/go-freeipa/issues/1
-          mapV, mapVOk := rawItem.(map[string]interface{})
-          if mapVOk {
-            timeV, err := tryParseFreeIPADatetimeMap(mapV)
-            if err != nil {
-              sliceOk = false
-              break
-            }
-
-            itemV = timeV
-          } else {
-            sliceOk = false
-            break
-          }
-          
-
-        }
-        
-        sliceV = append(sliceV, itemV)
-        
-      }
+    plainV, plainOk := raw.(string)
+    if plainOk{
+      out.ValidNotAfter = plainV
     }
-    
-      if plainOk {
-        out.ValidNotAfter = plainV
-      } else if sliceOk {
-        
-          if len(sliceV) != 1 {
-            return fmt.Errorf("unexpected value for field ValidNotAfter: %v; expected exactly one element", raw)
-          }
-          out.ValidNotAfter = sliceV[0]
-        
-      } else {
-        return fmt.Errorf("unexpected value for field ValidNotAfter: %v (%v)", raw, reflect.TypeOf(raw))
-      }
-    
   }
+  
   
   if true {
     raw := in.Sha1Fingerprint
@@ -74728,9 +74698,10 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
           }
           out.Sha1Fingerprint = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Sha1Fingerprint: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Sha1Fingerprint: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -74767,9 +74738,10 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
           }
           out.Sha256Fingerprint = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Sha256Fingerprint: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Sha256Fingerprint: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -74806,9 +74778,10 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
           }
           out.SerialNumber = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field SerialNumber: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field SerialNumber: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -74845,9 +74818,10 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
           }
           out.SerialNumberHex = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field SerialNumberHex: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field SerialNumberHex: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -74884,9 +74858,10 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
           }
           out.Status = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Status: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Status: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -74937,9 +74912,10 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Revoked: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Revoked: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Revoked: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -74980,9 +74956,10 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
           }
           out.RevocationReason = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field RevocationReason: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field RevocationReason: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -75015,9 +74992,10 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.OwnerUser = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field OwnerUser: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field OwnerUser: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -75050,9 +75028,10 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.OwnerHost = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field OwnerHost: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field OwnerHost: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -75085,9 +75064,10 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.OwnerService = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field OwnerService: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field OwnerService: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -75165,9 +75145,10 @@ func (out *Certmap) UnmarshalJSON(data []byte) error {
           }
           out.Domain = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Domain: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Domain: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -75200,9 +75181,10 @@ func (out *Certmap) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.UID = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field UID: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field UID: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -75286,9 +75268,10 @@ func (out *Certmapconfig) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipacertmappromptusername: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipacertmappromptusername: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipacertmappromptusername: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -75406,9 +75389,10 @@ func (out *Certmaprule) UnmarshalJSON(data []byte) error {
           }
           out.Cn = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Cn: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Cn: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -75446,9 +75430,10 @@ func (out *Certmaprule) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Description: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Description: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Description: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -75486,9 +75471,10 @@ func (out *Certmaprule) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipacertmapmaprule: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipacertmapmaprule: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipacertmapmaprule: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -75526,9 +75512,10 @@ func (out *Certmaprule) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipacertmapmatchrule: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipacertmapmatchrule: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipacertmapmatchrule: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -75561,9 +75548,10 @@ func (out *Certmaprule) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Associateddomain = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Associateddomain: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Associateddomain: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -75605,9 +75593,10 @@ func (out *Certmaprule) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipacertmappriority: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipacertmappriority: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipacertmappriority: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -75658,9 +75647,10 @@ func (out *Certmaprule) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipaenabledflag: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipaenabledflag: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipaenabledflag: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -75754,9 +75744,10 @@ func (out *Certprofile) UnmarshalJSON(data []byte) error {
           }
           out.Cn = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Cn: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Cn: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -75793,9 +75784,10 @@ func (out *Certprofile) UnmarshalJSON(data []byte) error {
           }
           out.Config = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Config: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Config: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -75832,9 +75824,10 @@ func (out *Certprofile) UnmarshalJSON(data []byte) error {
           }
           out.Description = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Description: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Description: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -75885,9 +75878,10 @@ func (out *Certprofile) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipacertprofilestoreissued: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipacertprofilestoreissued: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipacertprofilestoreissued: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -76158,9 +76152,10 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Cacn: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Cacn: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Cacn: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -76197,9 +76192,10 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
           }
           out.Certificate = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Certificate: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Certificate: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -76232,9 +76228,10 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.CertificateChain = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field CertificateChain: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field CertificateChain: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -76271,9 +76268,10 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
           }
           out.Subject = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Subject: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Subject: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -76306,9 +76304,10 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.SanRfc822name = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field SanRfc822name: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field SanRfc822name: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -76341,9 +76340,10 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.SanDnsname = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field SanDnsname: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field SanDnsname: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -76376,9 +76376,10 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.SanX400address = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field SanX400address: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field SanX400address: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -76411,9 +76412,10 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.SanDirectoryname = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field SanDirectoryname: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field SanDirectoryname: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -76446,9 +76448,10 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.SanEdipartyname = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field SanEdipartyname: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field SanEdipartyname: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -76481,9 +76484,10 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.SanURI = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field SanURI: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field SanURI: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -76516,9 +76520,10 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.SanIpaddress = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field SanIpaddress: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field SanIpaddress: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -76551,9 +76556,10 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.SanOid = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field SanOid: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field SanOid: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -76586,9 +76592,10 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.SanOtherUpn = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field SanOtherUpn: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field SanOtherUpn: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -76621,9 +76628,10 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.SanOtherKpn = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field SanOtherKpn: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field SanOtherKpn: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -76656,9 +76664,10 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.SanOther = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field SanOther: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field SanOther: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -76695,9 +76704,10 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
           }
           out.Issuer = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Issuer: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Issuer: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -76746,9 +76756,10 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
           }
           out.ValidNotBefore = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field ValidNotBefore: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field ValidNotBefore: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -76797,9 +76808,10 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
           }
           out.ValidNotAfter = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field ValidNotAfter: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field ValidNotAfter: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -76836,9 +76848,10 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
           }
           out.Sha1Fingerprint = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Sha1Fingerprint: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Sha1Fingerprint: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -76875,9 +76888,10 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
           }
           out.Sha256Fingerprint = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Sha256Fingerprint: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Sha256Fingerprint: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -76914,9 +76928,10 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
           }
           out.SerialNumber = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field SerialNumber: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field SerialNumber: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -76953,9 +76968,10 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
           }
           out.SerialNumberHex = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field SerialNumberHex: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field SerialNumberHex: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -76992,9 +77008,10 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
           }
           out.RequestType = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field RequestType: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field RequestType: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -77032,9 +77049,10 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field ProfileID: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field ProfileID: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field ProfileID: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -77071,9 +77089,10 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
           }
           out.CertRequestStatus = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field CertRequestStatus: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field CertRequestStatus: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -77110,9 +77129,10 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
           }
           out.RequestID = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field RequestID: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field RequestID: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -77238,9 +77258,10 @@ func (out *Class) UnmarshalJSON(data []byte) error {
           }
           out.Name = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Name: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Name: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -77277,9 +77298,10 @@ func (out *Class) UnmarshalJSON(data []byte) error {
           }
           out.Version = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Version: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Version: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -77316,9 +77338,10 @@ func (out *Class) UnmarshalJSON(data []byte) error {
           }
           out.FullName = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field FullName: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field FullName: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -77356,9 +77379,10 @@ func (out *Class) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Doc: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Doc: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Doc: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -77391,9 +77415,10 @@ func (out *Class) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Exclude = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Exclude: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Exclude: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -77426,9 +77451,10 @@ func (out *Class) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Include = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Include: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Include: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -77466,9 +77492,10 @@ func (out *Class) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field TopicTopic: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field TopicTopic: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field TopicTopic: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -77501,9 +77528,10 @@ func (out *Class) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.ParamsParam = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field ParamsParam: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field ParamsParam: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -77645,9 +77673,10 @@ func (out *Command) UnmarshalJSON(data []byte) error {
           }
           out.Name = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Name: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Name: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -77684,9 +77713,10 @@ func (out *Command) UnmarshalJSON(data []byte) error {
           }
           out.Version = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Version: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Version: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -77723,9 +77753,10 @@ func (out *Command) UnmarshalJSON(data []byte) error {
           }
           out.FullName = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field FullName: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field FullName: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -77763,9 +77794,10 @@ func (out *Command) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Doc: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Doc: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Doc: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -77798,9 +77830,10 @@ func (out *Command) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Exclude = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Exclude: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Exclude: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -77833,9 +77866,10 @@ func (out *Command) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Include = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Include: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Include: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -77873,9 +77907,10 @@ func (out *Command) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field TopicTopic: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field TopicTopic: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field TopicTopic: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -77908,9 +77943,10 @@ func (out *Command) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.ParamsParam = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field ParamsParam: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field ParamsParam: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -77948,9 +77984,10 @@ func (out *Command) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field ObjClass: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field ObjClass: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field ObjClass: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -77988,9 +78025,10 @@ func (out *Command) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field AttrName: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field AttrName: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field AttrName: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -78344,9 +78382,10 @@ func (out *Config) UnmarshalJSON(data []byte) error {
           }
           out.Ipamaxusernamelength = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipamaxusernamelength: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipamaxusernamelength: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -78387,9 +78426,10 @@ func (out *Config) UnmarshalJSON(data []byte) error {
           }
           out.Ipamaxhostnamelength = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipamaxhostnamelength: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipamaxhostnamelength: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -78426,9 +78466,10 @@ func (out *Config) UnmarshalJSON(data []byte) error {
           }
           out.Ipahomesrootdir = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipahomesrootdir: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipahomesrootdir: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -78465,9 +78506,10 @@ func (out *Config) UnmarshalJSON(data []byte) error {
           }
           out.Ipadefaultloginshell = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipadefaultloginshell: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipadefaultloginshell: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -78504,9 +78546,10 @@ func (out *Config) UnmarshalJSON(data []byte) error {
           }
           out.Ipadefaultprimarygroup = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipadefaultprimarygroup: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipadefaultprimarygroup: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -78544,9 +78587,10 @@ func (out *Config) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipadefaultemaildomain: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipadefaultemaildomain: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipadefaultemaildomain: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -78587,9 +78631,10 @@ func (out *Config) UnmarshalJSON(data []byte) error {
           }
           out.Ipasearchtimelimit = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipasearchtimelimit: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipasearchtimelimit: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -78630,9 +78675,10 @@ func (out *Config) UnmarshalJSON(data []byte) error {
           }
           out.Ipasearchrecordslimit = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipasearchrecordslimit: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipasearchrecordslimit: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -78669,9 +78715,10 @@ func (out *Config) UnmarshalJSON(data []byte) error {
           }
           out.Ipausersearchfields = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipausersearchfields: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipausersearchfields: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -78708,9 +78755,10 @@ func (out *Config) UnmarshalJSON(data []byte) error {
           }
           out.Ipagroupsearchfields = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipagroupsearchfields: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipagroupsearchfields: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -78761,9 +78809,10 @@ func (out *Config) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipamigrationenabled: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipamigrationenabled: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipamigrationenabled: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -78800,9 +78849,10 @@ func (out *Config) UnmarshalJSON(data []byte) error {
           }
           out.Ipacertificatesubjectbase = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipacertificatesubjectbase: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipacertificatesubjectbase: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -78839,9 +78889,10 @@ func (out *Config) UnmarshalJSON(data []byte) error {
           }
         
         out.Ipagroupobjectclasses = sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Ipagroupobjectclasses: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Ipagroupobjectclasses: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -78878,9 +78929,10 @@ func (out *Config) UnmarshalJSON(data []byte) error {
           }
         
         out.Ipauserobjectclasses = sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Ipauserobjectclasses: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Ipauserobjectclasses: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -78921,9 +78973,10 @@ func (out *Config) UnmarshalJSON(data []byte) error {
           }
           out.Ipapwdexpadvnotify = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipapwdexpadvnotify: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipapwdexpadvnotify: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -78956,9 +79009,10 @@ func (out *Config) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Ipaconfigstring = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Ipaconfigstring: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Ipaconfigstring: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -78995,9 +79049,10 @@ func (out *Config) UnmarshalJSON(data []byte) error {
           }
           out.Ipaselinuxusermaporder = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipaselinuxusermaporder: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipaselinuxusermaporder: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -79035,9 +79090,10 @@ func (out *Config) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipaselinuxusermapdefault: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipaselinuxusermapdefault: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipaselinuxusermapdefault: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -79070,9 +79126,10 @@ func (out *Config) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Ipakrbauthzdata = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Ipakrbauthzdata: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Ipakrbauthzdata: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -79105,9 +79162,10 @@ func (out *Config) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Ipauserauthtype = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Ipauserauthtype: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Ipauserauthtype: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -79158,9 +79216,10 @@ func (out *Config) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipauserdefaultsubordinateid: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipauserdefaultsubordinateid: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipauserdefaultsubordinateid: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -79193,9 +79252,10 @@ func (out *Config) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.IpaMasterServer = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field IpaMasterServer: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field IpaMasterServer: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -79228,9 +79288,10 @@ func (out *Config) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.IpaMasterHiddenServer = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field IpaMasterHiddenServer: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field IpaMasterHiddenServer: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -79263,9 +79324,10 @@ func (out *Config) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.PkinitServerServer = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field PkinitServerServer: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field PkinitServerServer: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -79298,9 +79360,10 @@ func (out *Config) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.CaServerServer = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field CaServerServer: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field CaServerServer: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -79333,9 +79396,10 @@ func (out *Config) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.CaServerHiddenServer = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field CaServerHiddenServer: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field CaServerHiddenServer: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -79373,9 +79437,10 @@ func (out *Config) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field CaRenewalMasterServer: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field CaRenewalMasterServer: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field CaRenewalMasterServer: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -79408,9 +79473,10 @@ func (out *Config) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.KraServerServer = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field KraServerServer: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field KraServerServer: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -79443,9 +79509,10 @@ func (out *Config) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.KraServerHiddenServer = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field KraServerHiddenServer: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field KraServerHiddenServer: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -79483,9 +79550,10 @@ func (out *Config) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipadomainresolutionorder: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipadomainresolutionorder: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipadomainresolutionorder: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -79518,9 +79586,10 @@ func (out *Config) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.DNSServerServer = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field DNSServerServer: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field DNSServerServer: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -79553,9 +79622,10 @@ func (out *Config) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.DNSServerHiddenServer = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field DNSServerHiddenServer: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field DNSServerHiddenServer: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -79593,9 +79663,10 @@ func (out *Config) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field DnssecKeyMasterServer: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field DnssecKeyMasterServer: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field DnssecKeyMasterServer: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -79646,9 +79717,10 @@ func (out *Config) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field EnableSid: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field EnableSid: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field EnableSid: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -79699,9 +79771,10 @@ func (out *Config) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field AddSids: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field AddSids: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field AddSids: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -79739,9 +79812,10 @@ func (out *Config) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field NetbiosName: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field NetbiosName: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field NetbiosName: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -79827,9 +79901,10 @@ func (out *Cosentry) UnmarshalJSON(data []byte) error {
           }
           out.Cn = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Cn: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Cn: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -79866,9 +79941,10 @@ func (out *Cosentry) UnmarshalJSON(data []byte) error {
           }
           out.Krbpwdpolicyreference = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Krbpwdpolicyreference: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Krbpwdpolicyreference: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -79909,9 +79985,10 @@ func (out *Cosentry) UnmarshalJSON(data []byte) error {
           }
           out.Cospriority = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Cospriority: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Cospriority: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -80021,9 +80098,10 @@ func (out *Delegation) UnmarshalJSON(data []byte) error {
           }
           out.Aciname = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Aciname: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Aciname: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -80056,9 +80134,10 @@ func (out *Delegation) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Permissions = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Permissions: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Permissions: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -80095,9 +80174,10 @@ func (out *Delegation) UnmarshalJSON(data []byte) error {
           }
         
         out.Attrs = sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Attrs: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Attrs: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -80134,9 +80214,10 @@ func (out *Delegation) UnmarshalJSON(data []byte) error {
           }
           out.Memberof = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Memberof: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Memberof: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -80173,9 +80254,10 @@ func (out *Delegation) UnmarshalJSON(data []byte) error {
           }
           out.Group = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Group: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Group: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -80212,9 +80294,10 @@ func (out *Delegation) UnmarshalJSON(data []byte) error {
           }
           out.Aci = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Aci: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Aci: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -80288,9 +80371,10 @@ func (out *DNSSystemRecords) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.IpaRecords = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field IpaRecords: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field IpaRecords: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -80323,9 +80407,10 @@ func (out *DNSSystemRecords) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.LocationRecords = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field LocationRecords: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field LocationRecords: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -80395,9 +80480,10 @@ func (out *Dnsa6record) UnmarshalJSON(data []byte) error {
           }
           out.Data = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Data: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Data: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -80467,9 +80553,10 @@ func (out *Dnsaaaarecord) UnmarshalJSON(data []byte) error {
           }
           out.IPAddress = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field IPAddress: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field IPAddress: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -80552,9 +80639,10 @@ func (out *Dnsafsdbrecord) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Subtype: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Subtype: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Subtype: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -80591,9 +80679,10 @@ func (out *Dnsafsdbrecord) UnmarshalJSON(data []byte) error {
           }
           out.Hostname = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Hostname: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Hostname: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -80688,9 +80777,10 @@ func (out *Dnsarecord) UnmarshalJSON(data []byte) error {
           }
           out.IPAddress = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field IPAddress: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field IPAddress: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -80788,9 +80878,10 @@ func (out *Dnscertrecord) UnmarshalJSON(data []byte) error {
           }
           out.Type = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Type: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Type: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -80831,9 +80922,10 @@ func (out *Dnscertrecord) UnmarshalJSON(data []byte) error {
           }
           out.KeyTag = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field KeyTag: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field KeyTag: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -80874,9 +80966,10 @@ func (out *Dnscertrecord) UnmarshalJSON(data []byte) error {
           }
           out.Algorithm = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Algorithm: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Algorithm: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -80913,9 +81006,10 @@ func (out *Dnscertrecord) UnmarshalJSON(data []byte) error {
           }
           out.CertificateOrCrl = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field CertificateOrCrl: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field CertificateOrCrl: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -80985,9 +81079,10 @@ func (out *Dnscnamerecord) UnmarshalJSON(data []byte) error {
           }
           out.Hostname = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Hostname: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Hostname: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -81101,9 +81196,10 @@ func (out *Dnsconfig) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Idnsforwarders = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Idnsforwarders: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Idnsforwarders: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -81141,9 +81237,10 @@ func (out *Dnsconfig) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Idnsforwardpolicy: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Idnsforwardpolicy: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Idnsforwardpolicy: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -81194,9 +81291,10 @@ func (out *Dnsconfig) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Idnsallowsyncptr: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Idnsallowsyncptr: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Idnsallowsyncptr: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -81238,9 +81336,10 @@ func (out *Dnsconfig) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Idnszonerefresh: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Idnszonerefresh: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Idnszonerefresh: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -81282,9 +81381,10 @@ func (out *Dnsconfig) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipadnsversion: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipadnsversion: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipadnsversion: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -81317,9 +81417,10 @@ func (out *Dnsconfig) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.DNSServerServer = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field DNSServerServer: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field DNSServerServer: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -81357,9 +81458,10 @@ func (out *Dnsconfig) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field DnssecKeyMasterServer: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field DnssecKeyMasterServer: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field DnssecKeyMasterServer: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -81482,9 +81584,10 @@ func (out *Dnsdlvrecord) UnmarshalJSON(data []byte) error {
           }
           out.KeyTag = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field KeyTag: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field KeyTag: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -81525,9 +81628,10 @@ func (out *Dnsdlvrecord) UnmarshalJSON(data []byte) error {
           }
           out.Algorithm = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Algorithm: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Algorithm: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -81568,9 +81672,10 @@ func (out *Dnsdlvrecord) UnmarshalJSON(data []byte) error {
           }
           out.DigestType = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field DigestType: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field DigestType: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -81607,9 +81712,10 @@ func (out *Dnsdlvrecord) UnmarshalJSON(data []byte) error {
           }
           out.Digest = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Digest: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Digest: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -81679,9 +81785,10 @@ func (out *Dnsdnamerecord) UnmarshalJSON(data []byte) error {
           }
           out.Target = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Target: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Target: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -81779,9 +81886,10 @@ func (out *Dnsdsrecord) UnmarshalJSON(data []byte) error {
           }
           out.KeyTag = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field KeyTag: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field KeyTag: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -81822,9 +81930,10 @@ func (out *Dnsdsrecord) UnmarshalJSON(data []byte) error {
           }
           out.Algorithm = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Algorithm: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Algorithm: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -81865,9 +81974,10 @@ func (out *Dnsdsrecord) UnmarshalJSON(data []byte) error {
           }
           out.DigestType = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field DigestType: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field DigestType: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -81904,9 +82014,10 @@ func (out *Dnsdsrecord) UnmarshalJSON(data []byte) error {
           }
           out.Digest = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Digest: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Digest: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -82016,9 +82127,10 @@ func (out *Dnsforwardzone) UnmarshalJSON(data []byte) error {
           }
           out.Idnsname = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Idnsname: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Idnsname: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -82056,9 +82168,10 @@ func (out *Dnsforwardzone) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field NameFromIP: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field NameFromIP: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field NameFromIP: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -82109,9 +82222,10 @@ func (out *Dnsforwardzone) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Idnszoneactive: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Idnszoneactive: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Idnszoneactive: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -82144,9 +82258,10 @@ func (out *Dnsforwardzone) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Idnsforwarders = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Idnsforwarders: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Idnsforwarders: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -82184,9 +82299,10 @@ func (out *Dnsforwardzone) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Idnsforwardpolicy: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Idnsforwardpolicy: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Idnsforwardpolicy: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -82223,9 +82339,10 @@ func (out *Dnsforwardzone) UnmarshalJSON(data []byte) error {
           }
           out.Managedby = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Managedby: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Managedby: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -82382,9 +82499,10 @@ func (out *Dnskxrecord) UnmarshalJSON(data []byte) error {
           }
           out.Preference = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Preference: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Preference: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -82421,9 +82539,10 @@ func (out *Dnskxrecord) UnmarshalJSON(data []byte) error {
           }
           out.Exchanger = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Exchanger: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Exchanger: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -82585,9 +82704,10 @@ func (out *Dnslocrecord) UnmarshalJSON(data []byte) error {
           }
           out.LatDeg = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field LatDeg: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field LatDeg: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -82629,9 +82749,10 @@ func (out *Dnslocrecord) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field LatMin: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field LatMin: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field LatMin: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -82669,9 +82790,10 @@ func (out *Dnslocrecord) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field LatSec: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field LatSec: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field LatSec: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -82708,9 +82830,10 @@ func (out *Dnslocrecord) UnmarshalJSON(data []byte) error {
           }
           out.LatDir = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field LatDir: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field LatDir: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -82751,9 +82874,10 @@ func (out *Dnslocrecord) UnmarshalJSON(data []byte) error {
           }
           out.LonDeg = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field LonDeg: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field LonDeg: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -82795,9 +82919,10 @@ func (out *Dnslocrecord) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field LonMin: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field LonMin: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field LonMin: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -82835,9 +82960,10 @@ func (out *Dnslocrecord) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field LonSec: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field LonSec: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field LonSec: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -82874,9 +83000,10 @@ func (out *Dnslocrecord) UnmarshalJSON(data []byte) error {
           }
           out.LonDir = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field LonDir: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field LonDir: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -82913,9 +83040,10 @@ func (out *Dnslocrecord) UnmarshalJSON(data []byte) error {
           }
           out.Altitude = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Altitude: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Altitude: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -82953,9 +83081,10 @@ func (out *Dnslocrecord) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Size: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Size: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Size: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -82993,9 +83122,10 @@ func (out *Dnslocrecord) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field HPrecision: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field HPrecision: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field HPrecision: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -83033,9 +83163,10 @@ func (out *Dnslocrecord) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field VPrecision: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field VPrecision: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field VPrecision: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -83117,9 +83248,10 @@ func (out *Dnsmxrecord) UnmarshalJSON(data []byte) error {
           }
           out.Preference = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Preference: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Preference: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -83156,9 +83288,10 @@ func (out *Dnsmxrecord) UnmarshalJSON(data []byte) error {
           }
           out.Exchanger = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Exchanger: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Exchanger: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -83272,9 +83405,10 @@ func (out *Dnsnaptrrecord) UnmarshalJSON(data []byte) error {
           }
           out.Order = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Order: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Order: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -83315,9 +83449,10 @@ func (out *Dnsnaptrrecord) UnmarshalJSON(data []byte) error {
           }
           out.Preference = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Preference: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Preference: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -83354,9 +83489,10 @@ func (out *Dnsnaptrrecord) UnmarshalJSON(data []byte) error {
           }
           out.Flags = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Flags: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Flags: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -83393,9 +83529,10 @@ func (out *Dnsnaptrrecord) UnmarshalJSON(data []byte) error {
           }
           out.Service = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Service: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Service: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -83432,9 +83569,10 @@ func (out *Dnsnaptrrecord) UnmarshalJSON(data []byte) error {
           }
           out.Regexp = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Regexp: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Regexp: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -83471,9 +83609,10 @@ func (out *Dnsnaptrrecord) UnmarshalJSON(data []byte) error {
           }
           out.Replacement = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Replacement: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Replacement: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -83568,9 +83707,10 @@ func (out *Dnsnsrecord) UnmarshalJSON(data []byte) error {
           }
           out.Hostname = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Hostname: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Hostname: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -83640,9 +83780,10 @@ func (out *Dnsptrrecord) UnmarshalJSON(data []byte) error {
           }
           out.Hostname = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Hostname: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Hostname: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -84472,9 +84613,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
           }
           out.Idnsname = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Idnsname: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Idnsname: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -84516,9 +84658,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Dnsttl: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Dnsttl: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Dnsttl: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -84556,9 +84699,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Dnsclass: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Dnsclass: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Dnsclass: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -84596,9 +84740,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Dnsrecords: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Dnsrecords: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Dnsrecords: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -84636,9 +84781,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Dnstype: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Dnstype: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Dnstype: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -84676,9 +84822,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Dnsdata: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Dnsdata: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Dnsdata: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -84711,9 +84858,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Arecord = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Arecord: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Arecord: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -84751,9 +84899,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field APartIPAddress: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field APartIPAddress: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field APartIPAddress: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -84804,9 +84953,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field AExtraCreateReverse: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field AExtraCreateReverse: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field AExtraCreateReverse: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -84839,9 +84989,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Aaaarecord = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Aaaarecord: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Aaaarecord: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -84879,9 +85030,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field AaaaPartIPAddress: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field AaaaPartIPAddress: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field AaaaPartIPAddress: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -84932,9 +85084,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field AaaaExtraCreateReverse: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field AaaaExtraCreateReverse: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field AaaaExtraCreateReverse: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -84967,9 +85120,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.A6record = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field A6record: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field A6record: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -85007,9 +85161,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field A6PartData: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field A6PartData: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field A6PartData: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -85042,9 +85197,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Afsdbrecord = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Afsdbrecord: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Afsdbrecord: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -85086,9 +85242,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field AfsdbPartSubtype: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field AfsdbPartSubtype: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field AfsdbPartSubtype: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -85126,9 +85283,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field AfsdbPartHostname: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field AfsdbPartHostname: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field AfsdbPartHostname: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -85161,9 +85319,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Aplrecord = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Aplrecord: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Aplrecord: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -85196,9 +85355,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Certrecord = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Certrecord: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Certrecord: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -85240,9 +85400,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field CertPartType: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field CertPartType: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field CertPartType: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -85284,9 +85445,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field CertPartKeyTag: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field CertPartKeyTag: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field CertPartKeyTag: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -85328,9 +85490,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field CertPartAlgorithm: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field CertPartAlgorithm: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field CertPartAlgorithm: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -85368,9 +85531,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field CertPartCertificateOrCrl: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field CertPartCertificateOrCrl: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field CertPartCertificateOrCrl: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -85403,9 +85567,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Cnamerecord = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Cnamerecord: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Cnamerecord: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -85443,9 +85608,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field CnamePartHostname: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field CnamePartHostname: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field CnamePartHostname: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -85478,9 +85644,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Dhcidrecord = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Dhcidrecord: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Dhcidrecord: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -85513,9 +85680,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Dlvrecord = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Dlvrecord: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Dlvrecord: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -85557,9 +85725,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field DlvPartKeyTag: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field DlvPartKeyTag: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field DlvPartKeyTag: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -85601,9 +85770,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field DlvPartAlgorithm: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field DlvPartAlgorithm: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field DlvPartAlgorithm: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -85645,9 +85815,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field DlvPartDigestType: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field DlvPartDigestType: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field DlvPartDigestType: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -85685,9 +85856,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field DlvPartDigest: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field DlvPartDigest: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field DlvPartDigest: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -85720,9 +85892,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Dnamerecord = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Dnamerecord: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Dnamerecord: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -85760,9 +85933,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field DnamePartTarget: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field DnamePartTarget: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field DnamePartTarget: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -85795,9 +85969,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Dsrecord = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Dsrecord: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Dsrecord: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -85839,9 +86014,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field DsPartKeyTag: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field DsPartKeyTag: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field DsPartKeyTag: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -85883,9 +86059,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field DsPartAlgorithm: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field DsPartAlgorithm: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field DsPartAlgorithm: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -85927,9 +86104,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field DsPartDigestType: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field DsPartDigestType: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field DsPartDigestType: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -85967,9 +86145,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field DsPartDigest: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field DsPartDigest: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field DsPartDigest: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -86002,9 +86181,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Hiprecord = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Hiprecord: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Hiprecord: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -86037,9 +86217,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Ipseckeyrecord = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Ipseckeyrecord: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Ipseckeyrecord: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -86072,9 +86253,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Keyrecord = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Keyrecord: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Keyrecord: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -86107,9 +86289,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Kxrecord = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Kxrecord: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Kxrecord: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -86151,9 +86334,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field KxPartPreference: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field KxPartPreference: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field KxPartPreference: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -86191,9 +86375,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field KxPartExchanger: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field KxPartExchanger: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field KxPartExchanger: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -86226,9 +86411,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Locrecord = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Locrecord: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Locrecord: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -86270,9 +86456,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field LocPartLatDeg: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field LocPartLatDeg: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field LocPartLatDeg: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -86314,9 +86501,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field LocPartLatMin: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field LocPartLatMin: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field LocPartLatMin: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -86354,9 +86542,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field LocPartLatSec: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field LocPartLatSec: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field LocPartLatSec: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -86394,9 +86583,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field LocPartLatDir: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field LocPartLatDir: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field LocPartLatDir: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -86438,9 +86628,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field LocPartLonDeg: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field LocPartLonDeg: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field LocPartLonDeg: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -86482,9 +86673,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field LocPartLonMin: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field LocPartLonMin: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field LocPartLonMin: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -86522,9 +86714,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field LocPartLonSec: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field LocPartLonSec: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field LocPartLonSec: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -86562,9 +86755,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field LocPartLonDir: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field LocPartLonDir: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field LocPartLonDir: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -86602,9 +86796,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field LocPartAltitude: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field LocPartAltitude: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field LocPartAltitude: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -86642,9 +86837,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field LocPartSize: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field LocPartSize: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field LocPartSize: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -86682,9 +86878,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field LocPartHPrecision: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field LocPartHPrecision: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field LocPartHPrecision: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -86722,9 +86919,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field LocPartVPrecision: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field LocPartVPrecision: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field LocPartVPrecision: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -86757,9 +86955,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Mxrecord = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Mxrecord: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Mxrecord: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -86801,9 +87000,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field MxPartPreference: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field MxPartPreference: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field MxPartPreference: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -86841,9 +87041,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field MxPartExchanger: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field MxPartExchanger: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field MxPartExchanger: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -86876,9 +87077,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Naptrrecord = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Naptrrecord: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Naptrrecord: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -86920,9 +87122,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field NaptrPartOrder: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field NaptrPartOrder: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field NaptrPartOrder: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -86964,9 +87167,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field NaptrPartPreference: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field NaptrPartPreference: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field NaptrPartPreference: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -87004,9 +87208,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field NaptrPartFlags: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field NaptrPartFlags: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field NaptrPartFlags: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -87044,9 +87249,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field NaptrPartService: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field NaptrPartService: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field NaptrPartService: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -87084,9 +87290,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field NaptrPartRegexp: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field NaptrPartRegexp: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field NaptrPartRegexp: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -87124,9 +87331,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field NaptrPartReplacement: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field NaptrPartReplacement: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field NaptrPartReplacement: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -87159,9 +87367,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Nsrecord = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Nsrecord: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Nsrecord: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -87199,9 +87408,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field NsPartHostname: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field NsPartHostname: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field NsPartHostname: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -87234,9 +87444,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Nsecrecord = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Nsecrecord: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Nsecrecord: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -87269,9 +87480,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Ptrrecord = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Ptrrecord: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Ptrrecord: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -87309,9 +87521,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field PtrPartHostname: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field PtrPartHostname: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field PtrPartHostname: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -87344,9 +87557,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Rrsigrecord = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Rrsigrecord: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Rrsigrecord: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -87379,9 +87593,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Rprecord = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Rprecord: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Rprecord: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -87414,9 +87629,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Sigrecord = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Sigrecord: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Sigrecord: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -87449,9 +87665,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Spfrecord = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Spfrecord: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Spfrecord: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -87484,9 +87701,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Srvrecord = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Srvrecord: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Srvrecord: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -87528,9 +87746,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field SrvPartPriority: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field SrvPartPriority: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field SrvPartPriority: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -87572,9 +87791,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field SrvPartWeight: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field SrvPartWeight: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field SrvPartWeight: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -87616,9 +87836,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field SrvPartPort: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field SrvPartPort: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field SrvPartPort: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -87656,9 +87877,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field SrvPartTarget: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field SrvPartTarget: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field SrvPartTarget: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -87691,9 +87913,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Sshfprecord = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Sshfprecord: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Sshfprecord: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -87735,9 +87958,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field SshfpPartAlgorithm: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field SshfpPartAlgorithm: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field SshfpPartAlgorithm: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -87779,9 +88003,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field SshfpPartFpType: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field SshfpPartFpType: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field SshfpPartFpType: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -87819,9 +88044,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field SshfpPartFingerprint: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field SshfpPartFingerprint: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field SshfpPartFingerprint: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -87854,9 +88080,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Tlsarecord = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Tlsarecord: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Tlsarecord: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -87898,9 +88125,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field TlsaPartCertUsage: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field TlsaPartCertUsage: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field TlsaPartCertUsage: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -87942,9 +88170,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field TlsaPartSelector: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field TlsaPartSelector: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field TlsaPartSelector: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -87986,9 +88215,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field TlsaPartMatchingType: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field TlsaPartMatchingType: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field TlsaPartMatchingType: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -88026,9 +88256,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field TlsaPartCertAssociationData: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field TlsaPartCertAssociationData: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field TlsaPartCertAssociationData: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -88061,9 +88292,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Txtrecord = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Txtrecord: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Txtrecord: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -88101,9 +88333,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field TxtPartData: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field TxtPartData: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field TxtPartData: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -88136,9 +88369,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Urirecord = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Urirecord: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Urirecord: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -88180,9 +88414,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field URIPartPriority: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field URIPartPriority: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field URIPartPriority: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -88224,9 +88459,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field URIPartWeight: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field URIPartWeight: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field URIPartWeight: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -88264,9 +88500,10 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field URIPartTarget: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field URIPartTarget: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field URIPartTarget: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -88410,9 +88647,10 @@ func (out *Dnsserver) UnmarshalJSON(data []byte) error {
           }
           out.Idnsserverid = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Idnsserverid: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Idnsserverid: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -88450,9 +88688,10 @@ func (out *Dnsserver) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Idnssoamname: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Idnssoamname: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Idnssoamname: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -88485,9 +88724,10 @@ func (out *Dnsserver) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Idnsforwarders = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Idnsforwarders: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Idnsforwarders: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -88525,9 +88765,10 @@ func (out *Dnsserver) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Idnsforwardpolicy: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Idnsforwardpolicy: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Idnsforwardpolicy: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -88675,9 +88916,10 @@ func (out *Dnssrvrecord) UnmarshalJSON(data []byte) error {
           }
           out.Priority = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Priority: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Priority: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -88718,9 +88960,10 @@ func (out *Dnssrvrecord) UnmarshalJSON(data []byte) error {
           }
           out.Weight = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Weight: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Weight: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -88761,9 +89004,10 @@ func (out *Dnssrvrecord) UnmarshalJSON(data []byte) error {
           }
           out.Port = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Port: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Port: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -88800,9 +89044,10 @@ func (out *Dnssrvrecord) UnmarshalJSON(data []byte) error {
           }
           out.Target = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Target: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Target: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -88892,9 +89137,10 @@ func (out *Dnssshfprecord) UnmarshalJSON(data []byte) error {
           }
           out.Algorithm = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Algorithm: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Algorithm: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -88935,9 +89181,10 @@ func (out *Dnssshfprecord) UnmarshalJSON(data []byte) error {
           }
           out.FpType = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field FpType: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field FpType: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -88974,9 +89221,10 @@ func (out *Dnssshfprecord) UnmarshalJSON(data []byte) error {
           }
           out.Fingerprint = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Fingerprint: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Fingerprint: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -89074,9 +89322,10 @@ func (out *Dnstlsarecord) UnmarshalJSON(data []byte) error {
           }
           out.CertUsage = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field CertUsage: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field CertUsage: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -89117,9 +89366,10 @@ func (out *Dnstlsarecord) UnmarshalJSON(data []byte) error {
           }
           out.Selector = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Selector: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Selector: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -89160,9 +89410,10 @@ func (out *Dnstlsarecord) UnmarshalJSON(data []byte) error {
           }
           out.MatchingType = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field MatchingType: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field MatchingType: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -89199,9 +89450,10 @@ func (out *Dnstlsarecord) UnmarshalJSON(data []byte) error {
           }
           out.CertAssociationData = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field CertAssociationData: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field CertAssociationData: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -89271,9 +89523,10 @@ func (out *Dnstxtrecord) UnmarshalJSON(data []byte) error {
           }
           out.Data = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Data: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Data: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -89363,9 +89616,10 @@ func (out *Dnsurirecord) UnmarshalJSON(data []byte) error {
           }
           out.Priority = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Priority: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Priority: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -89406,9 +89660,10 @@ func (out *Dnsurirecord) UnmarshalJSON(data []byte) error {
           }
           out.Weight = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Weight: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Weight: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -89445,9 +89700,10 @@ func (out *Dnsurirecord) UnmarshalJSON(data []byte) error {
           }
           out.Target = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Target: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Target: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -89693,9 +89949,10 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
           }
           out.Idnsname = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Idnsname: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Idnsname: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -89733,9 +89990,10 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field NameFromIP: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field NameFromIP: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field NameFromIP: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -89786,9 +90044,10 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Idnszoneactive: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Idnszoneactive: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Idnszoneactive: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -89821,9 +90080,10 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Idnsforwarders = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Idnsforwarders: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Idnsforwarders: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -89861,9 +90121,10 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Idnsforwardpolicy: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Idnsforwardpolicy: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Idnsforwardpolicy: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -89900,9 +90161,10 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
           }
           out.Managedby = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Managedby: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Managedby: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -89940,9 +90202,10 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Idnssoamname: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Idnssoamname: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Idnssoamname: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -89979,9 +90242,10 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
           }
           out.Idnssoarname = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Idnssoarname: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Idnssoarname: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -90023,9 +90287,10 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Idnssoaserial: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Idnssoaserial: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Idnssoaserial: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -90066,9 +90331,10 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
           }
           out.Idnssoarefresh = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Idnssoarefresh: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Idnssoarefresh: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -90109,9 +90375,10 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
           }
           out.Idnssoaretry = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Idnssoaretry: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Idnssoaretry: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -90152,9 +90419,10 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
           }
           out.Idnssoaexpire = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Idnssoaexpire: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Idnssoaexpire: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -90195,9 +90463,10 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
           }
           out.Idnssoaminimum = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Idnssoaminimum: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Idnssoaminimum: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -90239,9 +90508,10 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Dnsttl: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Dnsttl: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Dnsttl: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -90283,9 +90553,10 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Dnsdefaultttl: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Dnsdefaultttl: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Dnsdefaultttl: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -90323,9 +90594,10 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Dnsclass: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Dnsclass: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Dnsclass: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -90363,9 +90635,10 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Idnsupdatepolicy: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Idnsupdatepolicy: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Idnsupdatepolicy: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -90416,9 +90689,10 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Idnsallowdynupdate: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Idnsallowdynupdate: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Idnsallowdynupdate: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -90456,9 +90730,10 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Idnsallowquery: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Idnsallowquery: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Idnsallowquery: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -90496,9 +90771,10 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Idnsallowtransfer: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Idnsallowtransfer: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Idnsallowtransfer: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -90549,9 +90825,10 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Idnsallowsyncptr: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Idnsallowsyncptr: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Idnsallowsyncptr: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -90602,9 +90879,10 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Idnssecinlinesigning: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Idnssecinlinesigning: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Idnssecinlinesigning: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -90642,9 +90920,10 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Nsec3paramrecord: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Nsec3paramrecord: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Nsec3paramrecord: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -90890,9 +91169,10 @@ func (out *Group) UnmarshalJSON(data []byte) error {
           }
           out.Cn = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Cn: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Cn: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -90930,9 +91210,10 @@ func (out *Group) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Description: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Description: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Description: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -90974,9 +91255,10 @@ func (out *Group) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Gidnumber: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Gidnumber: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Gidnumber: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -91009,9 +91291,10 @@ func (out *Group) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Ipaexternalmember = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Ipaexternalmember: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Ipaexternalmember: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -91044,9 +91327,10 @@ func (out *Group) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberUser = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberUser: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberUser: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -91079,9 +91363,10 @@ func (out *Group) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberGroup = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberGroup: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberGroup: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -91114,9 +91399,10 @@ func (out *Group) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberofGroup = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberofGroup: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberofGroup: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -91149,9 +91435,10 @@ func (out *Group) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberofRole = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberofRole: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberofRole: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -91184,9 +91471,10 @@ func (out *Group) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberofNetgroup = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberofNetgroup: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberofNetgroup: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -91219,9 +91507,10 @@ func (out *Group) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberService = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberService: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberService: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -91254,9 +91543,10 @@ func (out *Group) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberofSudorule = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberofSudorule: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberofSudorule: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -91289,9 +91579,10 @@ func (out *Group) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberofHbacrule = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberofHbacrule: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberofHbacrule: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -91324,9 +91615,10 @@ func (out *Group) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberIdoverrideuser = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberIdoverrideuser: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberIdoverrideuser: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -91359,9 +91651,10 @@ func (out *Group) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberindirectIdoverrideuser = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberindirectIdoverrideuser: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberindirectIdoverrideuser: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -91394,9 +91687,10 @@ func (out *Group) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberindirectUser = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberindirectUser: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberindirectUser: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -91429,9 +91723,10 @@ func (out *Group) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberindirectGroup = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberindirectGroup: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberindirectGroup: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -91464,9 +91759,10 @@ func (out *Group) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberofindirectGroup = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberofindirectGroup: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberofindirectGroup: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -91499,9 +91795,10 @@ func (out *Group) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberofindirectNetgroup = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberofindirectNetgroup: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberofindirectNetgroup: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -91534,9 +91831,10 @@ func (out *Group) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberofindirectRole = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberofindirectRole: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberofindirectRole: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -91569,9 +91867,10 @@ func (out *Group) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberofindirectSudorule = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberofindirectSudorule: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberofindirectSudorule: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -91604,9 +91903,10 @@ func (out *Group) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberofindirectHbacrule = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberofindirectHbacrule: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberofindirectHbacrule: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -91643,9 +91943,10 @@ func (out *Group) UnmarshalJSON(data []byte) error {
           }
           out.MembermanagerGroup = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field MembermanagerGroup: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field MembermanagerGroup: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -91682,9 +91983,10 @@ func (out *Group) UnmarshalJSON(data []byte) error {
           }
           out.MembermanagerUser = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field MembermanagerUser: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field MembermanagerUser: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -91882,9 +92184,10 @@ func (out *Hbacrule) UnmarshalJSON(data []byte) error {
           }
           out.Cn = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Cn: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Cn: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -91922,9 +92225,10 @@ func (out *Hbacrule) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Accessruletype: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Accessruletype: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Accessruletype: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -91962,9 +92266,10 @@ func (out *Hbacrule) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Usercategory: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Usercategory: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Usercategory: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -92002,9 +92307,10 @@ func (out *Hbacrule) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Hostcategory: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Hostcategory: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Hostcategory: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -92042,9 +92348,10 @@ func (out *Hbacrule) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Sourcehostcategory: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Sourcehostcategory: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Sourcehostcategory: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -92082,9 +92389,10 @@ func (out *Hbacrule) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Servicecategory: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Servicecategory: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Servicecategory: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -92122,9 +92430,10 @@ func (out *Hbacrule) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Description: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Description: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Description: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -92175,9 +92484,10 @@ func (out *Hbacrule) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipaenabledflag: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipaenabledflag: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipaenabledflag: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -92210,9 +92520,10 @@ func (out *Hbacrule) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberuserUser = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberuserUser: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberuserUser: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -92245,9 +92556,10 @@ func (out *Hbacrule) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberuserGroup = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberuserGroup: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberuserGroup: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -92280,9 +92592,10 @@ func (out *Hbacrule) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberhostHost = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberhostHost: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberhostHost: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -92315,9 +92628,10 @@ func (out *Hbacrule) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberhostHostgroup = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberhostHostgroup: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberhostHostgroup: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -92355,9 +92669,10 @@ func (out *Hbacrule) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field SourcehostHost: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field SourcehostHost: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field SourcehostHost: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -92395,9 +92710,10 @@ func (out *Hbacrule) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field SourcehostHostgroup: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field SourcehostHostgroup: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field SourcehostHostgroup: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -92430,9 +92746,10 @@ func (out *Hbacrule) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberserviceHbacsvc = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberserviceHbacsvc: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberserviceHbacsvc: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -92465,9 +92782,10 @@ func (out *Hbacrule) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberserviceHbacsvcgroup = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberserviceHbacsvcgroup: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberserviceHbacsvcgroup: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -92500,9 +92818,10 @@ func (out *Hbacrule) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Externalhost = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Externalhost: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Externalhost: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -92588,9 +92907,10 @@ func (out *Hbacsvc) UnmarshalJSON(data []byte) error {
           }
           out.Cn = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Cn: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Cn: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -92628,9 +92948,10 @@ func (out *Hbacsvc) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Description: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Description: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Description: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -92663,9 +92984,10 @@ func (out *Hbacsvc) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberofHbacsvcgroup = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberofHbacsvcgroup: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberofHbacsvcgroup: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -92751,9 +93073,10 @@ func (out *Hbacsvcgroup) UnmarshalJSON(data []byte) error {
           }
           out.Cn = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Cn: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Cn: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -92791,9 +93114,10 @@ func (out *Hbacsvcgroup) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Description: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Description: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Description: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -92826,9 +93150,10 @@ func (out *Hbacsvcgroup) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberHbacsvc = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberHbacsvc: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberHbacsvc: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -93306,9 +93631,10 @@ func (out *Host) UnmarshalJSON(data []byte) error {
           }
           out.Fqdn = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Fqdn: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Fqdn: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -93346,9 +93672,10 @@ func (out *Host) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Description: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Description: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Description: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -93386,9 +93713,10 @@ func (out *Host) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field L: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field L: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field L: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -93426,9 +93754,10 @@ func (out *Host) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Nshostlocation: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Nshostlocation: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Nshostlocation: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -93466,9 +93795,10 @@ func (out *Host) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Nshardwareplatform: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Nshardwareplatform: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Nshardwareplatform: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -93506,9 +93836,10 @@ func (out *Host) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Nsosversion: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Nsosversion: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Nsosversion: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -93546,9 +93877,10 @@ func (out *Host) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Userpassword: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Userpassword: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Userpassword: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -93599,9 +93931,10 @@ func (out *Host) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Random: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Random: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Random: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -93639,9 +93972,10 @@ func (out *Host) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Randompassword: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Randompassword: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Randompassword: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -93674,9 +94008,10 @@ func (out *Host) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Usercertificate = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Usercertificate: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Usercertificate: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -93714,9 +94049,10 @@ func (out *Host) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Subject: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Subject: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Subject: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -93754,9 +94090,10 @@ func (out *Host) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field SerialNumber: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field SerialNumber: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field SerialNumber: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -93794,9 +94131,10 @@ func (out *Host) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field SerialNumberHex: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field SerialNumberHex: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field SerialNumberHex: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -93834,9 +94172,10 @@ func (out *Host) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Issuer: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Issuer: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Issuer: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -93874,9 +94213,10 @@ func (out *Host) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field ValidNotBefore: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field ValidNotBefore: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field ValidNotBefore: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -93914,9 +94254,10 @@ func (out *Host) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field ValidNotAfter: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field ValidNotAfter: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field ValidNotAfter: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -93954,9 +94295,10 @@ func (out *Host) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Sha1Fingerprint: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Sha1Fingerprint: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Sha1Fingerprint: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -93994,9 +94336,10 @@ func (out *Host) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Sha256Fingerprint: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Sha256Fingerprint: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Sha256Fingerprint: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -94034,9 +94377,10 @@ func (out *Host) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field RevocationReason: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field RevocationReason: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field RevocationReason: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -94074,9 +94418,10 @@ func (out *Host) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Krbcanonicalname: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Krbcanonicalname: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Krbcanonicalname: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -94109,9 +94454,10 @@ func (out *Host) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Krbprincipalname = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Krbprincipalname: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Krbprincipalname: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -94144,9 +94490,10 @@ func (out *Host) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Macaddress = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Macaddress: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Macaddress: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -94179,9 +94526,10 @@ func (out *Host) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Ipasshpubkey = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Ipasshpubkey: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Ipasshpubkey: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -94214,9 +94562,10 @@ func (out *Host) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Sshpubkeyfp = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Sshpubkeyfp: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Sshpubkeyfp: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -94249,9 +94598,10 @@ func (out *Host) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Userclass = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Userclass: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Userclass: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -94289,9 +94639,10 @@ func (out *Host) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipaassignedidview: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipaassignedidview: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipaassignedidview: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -94324,9 +94675,10 @@ func (out *Host) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Krbprincipalauthind = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Krbprincipalauthind: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Krbprincipalauthind: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -94377,9 +94729,10 @@ func (out *Host) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipakrbrequirespreauth: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipakrbrequirespreauth: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipakrbrequirespreauth: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -94430,9 +94783,10 @@ func (out *Host) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipakrbokasdelegate: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipakrbokasdelegate: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipakrbokasdelegate: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -94483,9 +94837,10 @@ func (out *Host) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipakrboktoauthasdelegate: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipakrboktoauthasdelegate: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipakrboktoauthasdelegate: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -94536,9 +94891,10 @@ func (out *Host) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field HasPassword: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field HasPassword: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field HasPassword: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -94571,9 +94927,10 @@ func (out *Host) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberofHostgroup = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberofHostgroup: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberofHostgroup: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -94606,9 +94963,10 @@ func (out *Host) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberofRole = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberofRole: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberofRole: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -94641,9 +94999,10 @@ func (out *Host) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberofNetgroup = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberofNetgroup: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberofNetgroup: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -94676,9 +95035,10 @@ func (out *Host) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberofSudorule = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberofSudorule: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberofSudorule: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -94711,9 +95071,10 @@ func (out *Host) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberofHbacrule = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberofHbacrule: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberofHbacrule: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -94746,9 +95107,10 @@ func (out *Host) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberofindirectNetgroup = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberofindirectNetgroup: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberofindirectNetgroup: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -94781,9 +95143,10 @@ func (out *Host) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberofindirectHostgroup = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberofindirectHostgroup: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberofindirectHostgroup: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -94816,9 +95179,10 @@ func (out *Host) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberofindirectRole = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberofindirectRole: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberofindirectRole: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -94851,9 +95215,10 @@ func (out *Host) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberofindirectSudorule = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberofindirectSudorule: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberofindirectSudorule: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -94886,9 +95251,10 @@ func (out *Host) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberofindirectHbacrule = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberofindirectHbacrule: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberofindirectHbacrule: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -94939,9 +95305,10 @@ func (out *Host) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field HasKeytab: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field HasKeytab: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field HasKeytab: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -94979,9 +95346,10 @@ func (out *Host) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field ManagedbyHost: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field ManagedbyHost: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field ManagedbyHost: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -95019,9 +95387,10 @@ func (out *Host) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field ManagingHost: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field ManagingHost: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field ManagingHost: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -95059,9 +95428,10 @@ func (out *Host) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field IpaallowedtoperformReadKeysUser: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field IpaallowedtoperformReadKeysUser: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field IpaallowedtoperformReadKeysUser: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -95099,9 +95469,10 @@ func (out *Host) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field IpaallowedtoperformReadKeysGroup: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field IpaallowedtoperformReadKeysGroup: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field IpaallowedtoperformReadKeysGroup: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -95139,9 +95510,10 @@ func (out *Host) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field IpaallowedtoperformReadKeysHost: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field IpaallowedtoperformReadKeysHost: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field IpaallowedtoperformReadKeysHost: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -95179,9 +95551,10 @@ func (out *Host) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field IpaallowedtoperformReadKeysHostgroup: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field IpaallowedtoperformReadKeysHostgroup: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field IpaallowedtoperformReadKeysHostgroup: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -95219,9 +95592,10 @@ func (out *Host) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field IpaallowedtoperformWriteKeysUser: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field IpaallowedtoperformWriteKeysUser: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field IpaallowedtoperformWriteKeysUser: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -95259,9 +95633,10 @@ func (out *Host) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field IpaallowedtoperformWriteKeysGroup: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field IpaallowedtoperformWriteKeysGroup: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field IpaallowedtoperformWriteKeysGroup: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -95299,9 +95674,10 @@ func (out *Host) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field IpaallowedtoperformWriteKeysHost: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field IpaallowedtoperformWriteKeysHost: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field IpaallowedtoperformWriteKeysHost: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -95339,9 +95715,10 @@ func (out *Host) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field IpaallowedtoperformWriteKeysHostgroup: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field IpaallowedtoperformWriteKeysHostgroup: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field IpaallowedtoperformWriteKeysHostgroup: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -95523,9 +95900,10 @@ func (out *Hostgroup) UnmarshalJSON(data []byte) error {
           }
           out.Cn = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Cn: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Cn: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -95563,9 +95941,10 @@ func (out *Hostgroup) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Description: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Description: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Description: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -95598,9 +95977,10 @@ func (out *Hostgroup) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberHost = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberHost: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberHost: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -95633,9 +96013,10 @@ func (out *Hostgroup) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberHostgroup = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberHostgroup: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberHostgroup: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -95668,9 +96049,10 @@ func (out *Hostgroup) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberofHostgroup = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberofHostgroup: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberofHostgroup: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -95703,9 +96085,10 @@ func (out *Hostgroup) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberofNetgroup = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberofNetgroup: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberofNetgroup: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -95738,9 +96121,10 @@ func (out *Hostgroup) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberofSudorule = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberofSudorule: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberofSudorule: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -95773,9 +96157,10 @@ func (out *Hostgroup) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberofHbacrule = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberofHbacrule: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberofHbacrule: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -95808,9 +96193,10 @@ func (out *Hostgroup) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberindirectHost = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberindirectHost: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberindirectHost: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -95843,9 +96229,10 @@ func (out *Hostgroup) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberindirectHostgroup = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberindirectHostgroup: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberindirectHostgroup: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -95878,9 +96265,10 @@ func (out *Hostgroup) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberofindirectHostgroup = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberofindirectHostgroup: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberofindirectHostgroup: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -95913,9 +96301,10 @@ func (out *Hostgroup) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberofindirectSudorule = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberofindirectSudorule: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberofindirectSudorule: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -95948,9 +96337,10 @@ func (out *Hostgroup) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberofindirectHbacrule = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberofindirectHbacrule: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberofindirectHbacrule: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -95987,9 +96377,10 @@ func (out *Hostgroup) UnmarshalJSON(data []byte) error {
           }
           out.MembermanagerGroup = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field MembermanagerGroup: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field MembermanagerGroup: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -96026,9 +96417,10 @@ func (out *Hostgroup) UnmarshalJSON(data []byte) error {
           }
           out.MembermanagerUser = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field MembermanagerUser: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field MembermanagerUser: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -96122,9 +96514,10 @@ func (out *Idoverridegroup) UnmarshalJSON(data []byte) error {
           }
           out.Ipaanchoruuid = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipaanchoruuid: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipaanchoruuid: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -96162,9 +96555,10 @@ func (out *Idoverridegroup) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Description: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Description: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Description: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -96202,9 +96596,10 @@ func (out *Idoverridegroup) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Cn: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Cn: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Cn: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -96246,9 +96641,10 @@ func (out *Idoverridegroup) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Gidnumber: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Gidnumber: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Gidnumber: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -96430,9 +96826,10 @@ func (out *Idoverrideuser) UnmarshalJSON(data []byte) error {
           }
           out.Ipaanchoruuid = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipaanchoruuid: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipaanchoruuid: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -96470,9 +96867,10 @@ func (out *Idoverrideuser) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Description: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Description: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Description: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -96510,9 +96908,10 @@ func (out *Idoverrideuser) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field UID: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field UID: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field UID: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -96554,9 +96953,10 @@ func (out *Idoverrideuser) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Uidnumber: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Uidnumber: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Uidnumber: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -96594,9 +96994,10 @@ func (out *Idoverrideuser) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Gecos: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Gecos: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Gecos: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -96638,9 +97039,10 @@ func (out *Idoverrideuser) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Gidnumber: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Gidnumber: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Gidnumber: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -96678,9 +97080,10 @@ func (out *Idoverrideuser) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Homedirectory: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Homedirectory: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Homedirectory: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -96718,9 +97121,10 @@ func (out *Idoverrideuser) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Loginshell: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Loginshell: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Loginshell: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -96758,9 +97162,10 @@ func (out *Idoverrideuser) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipaoriginaluid: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipaoriginaluid: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipaoriginaluid: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -96793,9 +97198,10 @@ func (out *Idoverrideuser) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Ipasshpubkey = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Ipasshpubkey: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Ipasshpubkey: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -96828,9 +97234,10 @@ func (out *Idoverrideuser) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Usercertificate = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Usercertificate: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Usercertificate: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -96863,9 +97270,10 @@ func (out *Idoverrideuser) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberofGroup = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberofGroup: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberofGroup: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -96898,9 +97306,10 @@ func (out *Idoverrideuser) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberofRole = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberofRole: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberofRole: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -96933,9 +97342,10 @@ func (out *Idoverrideuser) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberofindirectGroup = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberofindirectGroup: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberofindirectGroup: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -96968,9 +97378,10 @@ func (out *Idoverrideuser) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberofindirectRole = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberofindirectRole: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberofindirectRole: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -97120,9 +97531,10 @@ func (out *Idp) UnmarshalJSON(data []byte) error {
           }
           out.Cn = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Cn: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Cn: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -97160,9 +97572,10 @@ func (out *Idp) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipaidpauthendpoint: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipaidpauthendpoint: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipaidpauthendpoint: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -97200,9 +97613,10 @@ func (out *Idp) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipaidpdevauthendpoint: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipaidpdevauthendpoint: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipaidpdevauthendpoint: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -97240,9 +97654,10 @@ func (out *Idp) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipaidptokenendpoint: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipaidptokenendpoint: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipaidptokenendpoint: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -97280,9 +97695,10 @@ func (out *Idp) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipaidpuserinfoendpoint: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipaidpuserinfoendpoint: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipaidpuserinfoendpoint: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -97320,9 +97736,10 @@ func (out *Idp) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipaidpkeysendpoint: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipaidpkeysendpoint: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipaidpkeysendpoint: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -97360,9 +97777,10 @@ func (out *Idp) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipaidpissuerurl: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipaidpissuerurl: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipaidpissuerurl: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -97399,9 +97817,10 @@ func (out *Idp) UnmarshalJSON(data []byte) error {
           }
           out.Ipaidpclientid = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipaidpclientid: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipaidpclientid: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -97439,9 +97858,10 @@ func (out *Idp) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipaidpclientsecret: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipaidpclientsecret: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipaidpclientsecret: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -97479,9 +97899,10 @@ func (out *Idp) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipaidpscope: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipaidpscope: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipaidpscope: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -97519,9 +97940,10 @@ func (out *Idp) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipaidpsub: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipaidpsub: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipaidpsub: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -97655,9 +98077,10 @@ func (out *Idrange) UnmarshalJSON(data []byte) error {
           }
           out.Cn = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Cn: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Cn: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -97698,9 +98121,10 @@ func (out *Idrange) UnmarshalJSON(data []byte) error {
           }
           out.Ipabaseid = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipabaseid: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipabaseid: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -97741,9 +98165,10 @@ func (out *Idrange) UnmarshalJSON(data []byte) error {
           }
           out.Ipaidrangesize = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipaidrangesize: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipaidrangesize: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -97785,9 +98210,10 @@ func (out *Idrange) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipabaserid: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipabaserid: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipabaserid: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -97829,9 +98255,10 @@ func (out *Idrange) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipasecondarybaserid: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipasecondarybaserid: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipasecondarybaserid: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -97869,9 +98296,10 @@ func (out *Idrange) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipanttrusteddomainsid: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipanttrusteddomainsid: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipanttrusteddomainsid: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -97909,9 +98337,10 @@ func (out *Idrange) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipanttrusteddomainname: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipanttrusteddomainname: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipanttrusteddomainname: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -97949,9 +98378,10 @@ func (out *Idrange) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Iparangetype: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Iparangetype: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Iparangetype: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -97989,9 +98419,10 @@ func (out *Idrange) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipaautoprivategroups: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipaautoprivategroups: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipaautoprivategroups: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -98101,9 +98532,10 @@ func (out *Idview) UnmarshalJSON(data []byte) error {
           }
           out.Cn = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Cn: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Cn: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -98141,9 +98573,10 @@ func (out *Idview) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Description: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Description: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Description: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -98180,9 +98613,10 @@ func (out *Idview) UnmarshalJSON(data []byte) error {
           }
           out.Useroverrides = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Useroverrides: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Useroverrides: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -98219,9 +98653,10 @@ func (out *Idview) UnmarshalJSON(data []byte) error {
           }
           out.Groupoverrides = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Groupoverrides: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Groupoverrides: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -98258,9 +98693,10 @@ func (out *Idview) UnmarshalJSON(data []byte) error {
           }
           out.Appliedtohosts = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Appliedtohosts: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Appliedtohosts: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -98298,9 +98734,10 @@ func (out *Idview) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipadomainresolutionorder: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipadomainresolutionorder: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipadomainresolutionorder: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -98467,9 +98904,10 @@ func (out *Krbtpolicy) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field UID: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field UID: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field UID: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -98511,9 +98949,10 @@ func (out *Krbtpolicy) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Krbmaxticketlife: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Krbmaxticketlife: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Krbmaxticketlife: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -98555,9 +98994,10 @@ func (out *Krbtpolicy) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Krbmaxrenewableage: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Krbmaxrenewableage: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Krbmaxrenewableage: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -98599,9 +99039,10 @@ func (out *Krbtpolicy) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field KrbauthindmaxticketlifeOtp: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field KrbauthindmaxticketlifeOtp: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field KrbauthindmaxticketlifeOtp: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -98643,9 +99084,10 @@ func (out *Krbtpolicy) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field KrbauthindmaxrenewableageOtp: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field KrbauthindmaxrenewableageOtp: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field KrbauthindmaxrenewableageOtp: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -98687,9 +99129,10 @@ func (out *Krbtpolicy) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field KrbauthindmaxticketlifeRadius: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field KrbauthindmaxticketlifeRadius: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field KrbauthindmaxticketlifeRadius: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -98731,9 +99174,10 @@ func (out *Krbtpolicy) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field KrbauthindmaxrenewableageRadius: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field KrbauthindmaxrenewableageRadius: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field KrbauthindmaxrenewableageRadius: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -98775,9 +99219,10 @@ func (out *Krbtpolicy) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field KrbauthindmaxticketlifePkinit: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field KrbauthindmaxticketlifePkinit: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field KrbauthindmaxticketlifePkinit: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -98819,9 +99264,10 @@ func (out *Krbtpolicy) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field KrbauthindmaxrenewableagePkinit: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field KrbauthindmaxrenewableagePkinit: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field KrbauthindmaxrenewableagePkinit: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -98863,9 +99309,10 @@ func (out *Krbtpolicy) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field KrbauthindmaxticketlifeHardened: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field KrbauthindmaxticketlifeHardened: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field KrbauthindmaxticketlifeHardened: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -98907,9 +99354,10 @@ func (out *Krbtpolicy) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field KrbauthindmaxrenewableageHardened: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field KrbauthindmaxrenewableageHardened: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field KrbauthindmaxrenewableageHardened: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -98951,9 +99399,10 @@ func (out *Krbtpolicy) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field KrbauthindmaxticketlifeIdp: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field KrbauthindmaxticketlifeIdp: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field KrbauthindmaxticketlifeIdp: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -98995,9 +99444,10 @@ func (out *Krbtpolicy) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field KrbauthindmaxrenewableageIdp: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field KrbauthindmaxrenewableageIdp: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field KrbauthindmaxrenewableageIdp: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -99091,9 +99541,10 @@ func (out *Location) UnmarshalJSON(data []byte) error {
           }
           out.Idnsname = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Idnsname: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Idnsname: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -99131,9 +99582,10 @@ func (out *Location) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Description: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Description: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Description: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -99166,9 +99618,10 @@ func (out *Location) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.ServersServer = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field ServersServer: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field ServersServer: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -99201,9 +99654,10 @@ func (out *Location) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.DNSServer = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field DNSServer: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field DNSServer: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -99329,9 +99783,10 @@ func (out *Metaobject) UnmarshalJSON(data []byte) error {
           }
           out.Name = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Name: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Name: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -99368,9 +99823,10 @@ func (out *Metaobject) UnmarshalJSON(data []byte) error {
           }
           out.Version = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Version: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Version: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -99407,9 +99863,10 @@ func (out *Metaobject) UnmarshalJSON(data []byte) error {
           }
           out.FullName = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field FullName: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field FullName: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -99447,9 +99904,10 @@ func (out *Metaobject) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Doc: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Doc: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Doc: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -99482,9 +99940,10 @@ func (out *Metaobject) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Exclude = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Exclude: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Exclude: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -99517,9 +99976,10 @@ func (out *Metaobject) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Include = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Include: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Include: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -99557,9 +100017,10 @@ func (out *Metaobject) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field TopicTopic: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field TopicTopic: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field TopicTopic: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -99592,9 +100053,10 @@ func (out *Metaobject) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.ParamsParam = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field ParamsParam: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field ParamsParam: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -99768,9 +100230,10 @@ func (out *Netgroup) UnmarshalJSON(data []byte) error {
           }
           out.Cn = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Cn: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Cn: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -99808,9 +100271,10 @@ func (out *Netgroup) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Description: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Description: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Description: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -99848,9 +100312,10 @@ func (out *Netgroup) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Nisdomainname: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Nisdomainname: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Nisdomainname: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -99888,9 +100353,10 @@ func (out *Netgroup) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipauniqueid: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipauniqueid: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipauniqueid: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -99928,9 +100394,10 @@ func (out *Netgroup) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Usercategory: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Usercategory: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Usercategory: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -99968,9 +100435,10 @@ func (out *Netgroup) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Hostcategory: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Hostcategory: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Hostcategory: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -100003,9 +100471,10 @@ func (out *Netgroup) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Externalhost = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Externalhost: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Externalhost: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -100038,9 +100507,10 @@ func (out *Netgroup) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberNetgroup = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberNetgroup: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberNetgroup: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -100073,9 +100543,10 @@ func (out *Netgroup) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberofNetgroup = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberofNetgroup: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberofNetgroup: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -100108,9 +100579,10 @@ func (out *Netgroup) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberindirectNetgroup = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberindirectNetgroup: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberindirectNetgroup: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -100143,9 +100615,10 @@ func (out *Netgroup) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberuserUser = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberuserUser: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberuserUser: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -100178,9 +100651,10 @@ func (out *Netgroup) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberuserGroup = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberuserGroup: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberuserGroup: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -100213,9 +100687,10 @@ func (out *Netgroup) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberhostHost = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberhostHost: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberhostHost: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -100248,9 +100723,10 @@ func (out *Netgroup) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberhostHostgroup = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberhostHostgroup: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberhostHostgroup: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -100348,9 +100824,10 @@ func (out *Otpconfig) UnmarshalJSON(data []byte) error {
           }
           out.Ipatokentotpauthwindow = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipatokentotpauthwindow: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipatokentotpauthwindow: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -100391,9 +100868,10 @@ func (out *Otpconfig) UnmarshalJSON(data []byte) error {
           }
           out.Ipatokentotpsyncwindow = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipatokentotpsyncwindow: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipatokentotpsyncwindow: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -100434,9 +100912,10 @@ func (out *Otpconfig) UnmarshalJSON(data []byte) error {
           }
           out.Ipatokenhotpauthwindow = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipatokenhotpauthwindow: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipatokenhotpauthwindow: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -100477,9 +100956,10 @@ func (out *Otpconfig) UnmarshalJSON(data []byte) error {
           }
           out.Ipatokenhotpsyncwindow = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipatokenhotpsyncwindow: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipatokenhotpsyncwindow: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -100685,9 +101165,10 @@ func (out *Otptoken) UnmarshalJSON(data []byte) error {
           }
           out.Ipatokenuniqueid = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipatokenuniqueid: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipatokenuniqueid: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -100725,9 +101206,10 @@ func (out *Otptoken) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Type: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Type: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Type: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -100765,9 +101247,10 @@ func (out *Otptoken) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Description: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Description: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Description: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -100805,9 +101288,10 @@ func (out *Otptoken) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipatokenowner: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipatokenowner: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipatokenowner: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -100845,9 +101329,10 @@ func (out *Otptoken) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field ManagedbyUser: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field ManagedbyUser: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field ManagedbyUser: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -100898,9 +101383,10 @@ func (out *Otptoken) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipatokendisabled: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipatokendisabled: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipatokendisabled: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -100950,9 +101436,10 @@ func (out *Otptoken) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipatokennotbefore: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipatokennotbefore: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipatokennotbefore: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -101002,9 +101489,10 @@ func (out *Otptoken) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipatokennotafter: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipatokennotafter: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipatokennotafter: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -101042,9 +101530,10 @@ func (out *Otptoken) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipatokenvendor: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipatokenvendor: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipatokenvendor: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -101082,9 +101571,10 @@ func (out *Otptoken) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipatokenmodel: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipatokenmodel: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipatokenmodel: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -101122,9 +101612,10 @@ func (out *Otptoken) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipatokenserial: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipatokenserial: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipatokenserial: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -101162,9 +101653,10 @@ func (out *Otptoken) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipatokenotpkey: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipatokenotpkey: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipatokenotpkey: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -101202,9 +101694,10 @@ func (out *Otptoken) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipatokenotpalgorithm: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipatokenotpalgorithm: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipatokenotpalgorithm: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -101246,9 +101739,10 @@ func (out *Otptoken) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipatokenotpdigits: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipatokenotpdigits: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipatokenotpdigits: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -101290,9 +101784,10 @@ func (out *Otptoken) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipatokentotpclockoffset: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipatokentotpclockoffset: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipatokentotpclockoffset: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -101334,9 +101829,10 @@ func (out *Otptoken) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipatokentotptimestep: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipatokentotptimestep: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipatokentotptimestep: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -101378,9 +101874,10 @@ func (out *Otptoken) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipatokenhotpcounter: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipatokenhotpcounter: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipatokenhotpcounter: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -101418,9 +101915,10 @@ func (out *Otptoken) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field URI: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field URI: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field URI: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -101538,9 +102036,10 @@ func (out *Output) UnmarshalJSON(data []byte) error {
           }
           out.Name = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Name: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Name: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -101578,9 +102077,10 @@ func (out *Output) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Doc: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Doc: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Doc: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -101613,9 +102113,10 @@ func (out *Output) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Exclude = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Exclude: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Exclude: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -101648,9 +102149,10 @@ func (out *Output) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Include = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Include: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Include: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -101688,9 +102190,10 @@ func (out *Output) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Type: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Type: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Type: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -101741,9 +102244,10 @@ func (out *Output) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Required: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Required: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Required: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -101794,9 +102298,10 @@ func (out *Output) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Multivalue: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Multivalue: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Multivalue: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -102002,9 +102507,10 @@ func (out *Param) UnmarshalJSON(data []byte) error {
           }
           out.Name = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Name: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Name: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -102042,9 +102548,10 @@ func (out *Param) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Doc: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Doc: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Doc: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -102077,9 +102584,10 @@ func (out *Param) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Exclude = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Exclude: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Exclude: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -102112,9 +102620,10 @@ func (out *Param) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Include = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Include: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Include: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -102152,9 +102661,10 @@ func (out *Param) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Type: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Type: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Type: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -102205,9 +102715,10 @@ func (out *Param) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Required: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Required: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Required: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -102258,9 +102769,10 @@ func (out *Param) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Multivalue: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Multivalue: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Multivalue: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -102311,9 +102823,10 @@ func (out *Param) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Alwaysask: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Alwaysask: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Alwaysask: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -102351,9 +102864,10 @@ func (out *Param) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field CliMetavar: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field CliMetavar: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field CliMetavar: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -102391,9 +102905,10 @@ func (out *Param) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field CliName: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field CliName: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field CliName: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -102444,9 +102959,10 @@ func (out *Param) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Confirm: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Confirm: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Confirm: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -102479,9 +102995,10 @@ func (out *Param) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Default = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Default: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Default: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -102514,9 +103031,10 @@ func (out *Param) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.DefaultFromParam = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field DefaultFromParam: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field DefaultFromParam: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -102554,9 +103072,10 @@ func (out *Param) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Label: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Label: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Label: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -102607,9 +103126,10 @@ func (out *Param) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field NoConvert: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field NoConvert: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field NoConvert: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -102647,9 +103167,10 @@ func (out *Param) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field OptionGroup: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field OptionGroup: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field OptionGroup: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -102700,9 +103221,10 @@ func (out *Param) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Sensitive: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Sensitive: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Sensitive: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -102753,9 +103275,10 @@ func (out *Param) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Positional: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Positional: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Positional: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -103001,9 +103524,10 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
           }
           out.Cn = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Cn: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Cn: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -103036,9 +103560,10 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Ipapermright = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Ipapermright: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Ipapermright: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -103071,9 +103596,10 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Attrs = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Attrs: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Attrs: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -103106,9 +103632,10 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Ipapermincludedattr = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Ipapermincludedattr: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Ipapermincludedattr: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -103141,9 +103668,10 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Ipapermexcludedattr = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Ipapermexcludedattr: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Ipapermexcludedattr: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -103176,9 +103704,10 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Ipapermdefaultattr = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Ipapermdefaultattr: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Ipapermdefaultattr: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -103215,9 +103744,10 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
           }
           out.Ipapermbindruletype = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipapermbindruletype: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipapermbindruletype: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -103255,9 +103785,10 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipapermlocation: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipapermlocation: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipapermlocation: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -103290,9 +103821,10 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Extratargetfilter = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Extratargetfilter: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Extratargetfilter: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -103325,9 +103857,10 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Ipapermtargetfilter = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Ipapermtargetfilter: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Ipapermtargetfilter: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -103365,9 +103898,10 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipapermtarget: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipapermtarget: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipapermtarget: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -103405,9 +103939,10 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipapermtargetto: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipapermtargetto: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipapermtargetto: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -103445,9 +103980,10 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipapermtargetfrom: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipapermtargetfrom: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipapermtargetfrom: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -103480,9 +104016,10 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Memberof = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Memberof: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Memberof: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -103520,9 +104057,10 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Targetgroup: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Targetgroup: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Targetgroup: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -103560,9 +104098,10 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Type: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Type: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Type: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -103595,9 +104134,10 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Permissions = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Permissions: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Permissions: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -103630,9 +104170,10 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Filter = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Filter: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Filter: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -103665,9 +104206,10 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Subtree = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Subtree: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Subtree: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -103704,9 +104246,10 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
           }
         
         out.Ipapermissiontype = sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Ipapermissiontype: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Ipapermissiontype: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -103743,9 +104286,10 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
           }
           out.Aci = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Aci: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Aci: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -103778,9 +104322,10 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberPrivilege = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberPrivilege: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberPrivilege: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -103813,9 +104358,10 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberindirectRole = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberindirectRole: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberindirectRole: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -103894,9 +104440,10 @@ func (out *Pkinit) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field ServerServer: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field ServerServer: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field ServerServer: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -103934,9 +104481,10 @@ func (out *Pkinit) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Status: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Status: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Status: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -104030,9 +104578,10 @@ func (out *Privilege) UnmarshalJSON(data []byte) error {
           }
           out.Cn = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Cn: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Cn: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -104070,9 +104619,10 @@ func (out *Privilege) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Description: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Description: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Description: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -104105,9 +104655,10 @@ func (out *Privilege) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberofPermission = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberofPermission: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberofPermission: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -104140,9 +104691,10 @@ func (out *Privilege) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberRole = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberRole: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberRole: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -104325,9 +104877,10 @@ func (out *Pwpolicy) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Cn: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Cn: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Cn: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -104369,9 +104922,10 @@ func (out *Pwpolicy) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Krbmaxpwdlife: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Krbmaxpwdlife: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Krbmaxpwdlife: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -104413,9 +104967,10 @@ func (out *Pwpolicy) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Krbminpwdlife: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Krbminpwdlife: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Krbminpwdlife: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -104457,9 +105012,10 @@ func (out *Pwpolicy) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Krbpwdhistorylength: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Krbpwdhistorylength: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Krbpwdhistorylength: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -104501,9 +105057,10 @@ func (out *Pwpolicy) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Krbpwdmindiffchars: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Krbpwdmindiffchars: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Krbpwdmindiffchars: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -104545,9 +105102,10 @@ func (out *Pwpolicy) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Krbpwdminlength: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Krbpwdminlength: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Krbpwdminlength: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -104588,9 +105146,10 @@ func (out *Pwpolicy) UnmarshalJSON(data []byte) error {
           }
           out.Cospriority = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Cospriority: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Cospriority: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -104632,9 +105191,10 @@ func (out *Pwpolicy) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Krbpwdmaxfailure: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Krbpwdmaxfailure: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Krbpwdmaxfailure: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -104676,9 +105236,10 @@ func (out *Pwpolicy) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Krbpwdfailurecountinterval: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Krbpwdfailurecountinterval: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Krbpwdfailurecountinterval: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -104720,9 +105281,10 @@ func (out *Pwpolicy) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Krbpwdlockoutduration: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Krbpwdlockoutduration: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Krbpwdlockoutduration: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -104764,9 +105326,10 @@ func (out *Pwpolicy) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipapwdmaxrepeat: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipapwdmaxrepeat: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipapwdmaxrepeat: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -104808,9 +105371,10 @@ func (out *Pwpolicy) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipapwdmaxsequence: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipapwdmaxsequence: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipapwdmaxsequence: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -104861,9 +105425,10 @@ func (out *Pwpolicy) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipapwddictcheck: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipapwddictcheck: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipapwddictcheck: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -104914,9 +105479,10 @@ func (out *Pwpolicy) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipapwdusercheck: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipapwdusercheck: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipapwdusercheck: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -104958,9 +105524,10 @@ func (out *Pwpolicy) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Passwordgracelimit: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Passwordgracelimit: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Passwordgracelimit: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -105078,9 +105645,10 @@ func (out *Radiusproxy) UnmarshalJSON(data []byte) error {
           }
           out.Cn = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Cn: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Cn: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -105118,9 +105686,10 @@ func (out *Radiusproxy) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Description: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Description: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Description: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -105157,9 +105726,10 @@ func (out *Radiusproxy) UnmarshalJSON(data []byte) error {
           }
           out.Ipatokenradiusserver = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipatokenradiusserver: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipatokenradiusserver: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -105196,9 +105766,10 @@ func (out *Radiusproxy) UnmarshalJSON(data []byte) error {
           }
           out.Ipatokenradiussecret = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipatokenradiussecret: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipatokenradiussecret: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -105240,9 +105811,10 @@ func (out *Radiusproxy) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipatokenradiustimeout: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipatokenradiustimeout: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipatokenradiustimeout: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -105284,9 +105856,10 @@ func (out *Radiusproxy) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipatokenradiusretries: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipatokenradiusretries: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipatokenradiusretries: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -105324,9 +105897,10 @@ func (out *Radiusproxy) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipatokenusermapattribute: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipatokenusermapattribute: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipatokenusermapattribute: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -105412,9 +105986,10 @@ func (out *Realmdomains) UnmarshalJSON(data []byte) error {
           }
         
         out.Associateddomain = sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Associateddomain: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Associateddomain: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -105452,9 +106027,10 @@ func (out *Realmdomains) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field AddDomain: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field AddDomain: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field AddDomain: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -105492,9 +106068,10 @@ func (out *Realmdomains) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field DelDomain: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field DelDomain: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field DelDomain: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -105628,9 +106205,10 @@ func (out *Role) UnmarshalJSON(data []byte) error {
           }
           out.Cn = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Cn: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Cn: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -105668,9 +106246,10 @@ func (out *Role) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Description: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Description: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Description: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -105703,9 +106282,10 @@ func (out *Role) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberUser = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberUser: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberUser: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -105738,9 +106318,10 @@ func (out *Role) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberGroup = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberGroup: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberGroup: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -105773,9 +106354,10 @@ func (out *Role) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberHost = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberHost: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberHost: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -105808,9 +106390,10 @@ func (out *Role) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberHostgroup = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberHostgroup: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberHostgroup: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -105843,9 +106426,10 @@ func (out *Role) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberofPrivilege = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberofPrivilege: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberofPrivilege: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -105878,9 +106462,10 @@ func (out *Role) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberService = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberService: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberService: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -105913,9 +106498,10 @@ func (out *Role) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberIdoverrideuser = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberIdoverrideuser: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberIdoverrideuser: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -106009,9 +106595,10 @@ func (out *Selfservice) UnmarshalJSON(data []byte) error {
           }
           out.Aciname = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Aciname: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Aciname: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -106044,9 +106631,10 @@ func (out *Selfservice) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Permissions = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Permissions: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Permissions: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -106083,9 +106671,10 @@ func (out *Selfservice) UnmarshalJSON(data []byte) error {
           }
         
         out.Attrs = sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Attrs: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Attrs: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -106122,9 +106711,10 @@ func (out *Selfservice) UnmarshalJSON(data []byte) error {
           }
           out.Aci = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Aci: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Aci: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -106274,9 +106864,10 @@ func (out *Selinuxusermap) UnmarshalJSON(data []byte) error {
           }
           out.Cn = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Cn: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Cn: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -106313,9 +106904,10 @@ func (out *Selinuxusermap) UnmarshalJSON(data []byte) error {
           }
           out.Ipaselinuxuser = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipaselinuxuser: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipaselinuxuser: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -106353,9 +106945,10 @@ func (out *Selinuxusermap) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Seealso: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Seealso: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Seealso: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -106393,9 +106986,10 @@ func (out *Selinuxusermap) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Usercategory: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Usercategory: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Usercategory: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -106433,9 +107027,10 @@ func (out *Selinuxusermap) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Hostcategory: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Hostcategory: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Hostcategory: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -106473,9 +107068,10 @@ func (out *Selinuxusermap) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Description: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Description: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Description: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -106526,9 +107122,10 @@ func (out *Selinuxusermap) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipaenabledflag: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipaenabledflag: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipaenabledflag: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -106561,9 +107158,10 @@ func (out *Selinuxusermap) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberuserUser = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberuserUser: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberuserUser: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -106596,9 +107194,10 @@ func (out *Selinuxusermap) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberuserGroup = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberuserGroup: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberuserGroup: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -106631,9 +107230,10 @@ func (out *Selinuxusermap) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberhostHost = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberhostHost: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberhostHost: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -106666,9 +107266,10 @@ func (out *Selinuxusermap) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberhostHostgroup = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberhostHostgroup: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberhostHostgroup: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -106802,9 +107403,10 @@ func (out *Server) UnmarshalJSON(data []byte) error {
           }
           out.Cn = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Cn: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Cn: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -106837,9 +107439,10 @@ func (out *Server) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Iparepltopomanagedsuffix = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Iparepltopomanagedsuffix: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Iparepltopomanagedsuffix: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -106872,9 +107475,10 @@ func (out *Server) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.IparepltopomanagedsuffixTopologysuffix = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field IparepltopomanagedsuffixTopologysuffix: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field IparepltopomanagedsuffixTopologysuffix: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -106915,9 +107519,10 @@ func (out *Server) UnmarshalJSON(data []byte) error {
           }
           out.Ipamindomainlevel = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipamindomainlevel: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipamindomainlevel: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -106958,9 +107563,10 @@ func (out *Server) UnmarshalJSON(data []byte) error {
           }
           out.Ipamaxdomainlevel = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipamaxdomainlevel: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipamaxdomainlevel: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -106998,9 +107604,10 @@ func (out *Server) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field IpalocationLocation: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field IpalocationLocation: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field IpalocationLocation: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -107042,9 +107649,10 @@ func (out *Server) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipaserviceweight: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipaserviceweight: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipaserviceweight: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -107081,9 +107689,10 @@ func (out *Server) UnmarshalJSON(data []byte) error {
           }
           out.ServiceRelativeWeight = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field ServiceRelativeWeight: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field ServiceRelativeWeight: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -107116,9 +107725,10 @@ func (out *Server) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.EnabledRoleServrole = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field EnabledRoleServrole: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field EnabledRoleServrole: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -107204,9 +107814,10 @@ func (out *ServerRole) UnmarshalJSON(data []byte) error {
           }
           out.ServerServer = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field ServerServer: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field ServerServer: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -107243,9 +107854,10 @@ func (out *ServerRole) UnmarshalJSON(data []byte) error {
           }
           out.RoleServrole = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field RoleServrole: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field RoleServrole: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -107283,9 +107895,10 @@ func (out *ServerRole) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Status: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Status: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Status: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -107571,9 +108184,10 @@ func (out *Service) UnmarshalJSON(data []byte) error {
           }
           out.Krbcanonicalname = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Krbcanonicalname: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Krbcanonicalname: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -107606,9 +108220,10 @@ func (out *Service) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Krbprincipalname = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Krbprincipalname: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Krbprincipalname: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -107641,9 +108256,10 @@ func (out *Service) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Usercertificate = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Usercertificate: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Usercertificate: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -107680,9 +108296,10 @@ func (out *Service) UnmarshalJSON(data []byte) error {
           }
           out.Subject = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Subject: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Subject: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -107719,9 +108336,10 @@ func (out *Service) UnmarshalJSON(data []byte) error {
           }
           out.SerialNumber = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field SerialNumber: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field SerialNumber: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -107758,9 +108376,10 @@ func (out *Service) UnmarshalJSON(data []byte) error {
           }
           out.SerialNumberHex = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field SerialNumberHex: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field SerialNumberHex: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -107797,9 +108416,10 @@ func (out *Service) UnmarshalJSON(data []byte) error {
           }
           out.Issuer = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Issuer: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Issuer: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -107836,9 +108456,10 @@ func (out *Service) UnmarshalJSON(data []byte) error {
           }
           out.ValidNotBefore = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field ValidNotBefore: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field ValidNotBefore: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -107875,9 +108496,10 @@ func (out *Service) UnmarshalJSON(data []byte) error {
           }
           out.ValidNotAfter = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field ValidNotAfter: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field ValidNotAfter: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -107914,9 +108536,10 @@ func (out *Service) UnmarshalJSON(data []byte) error {
           }
           out.Sha1Fingerprint = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Sha1Fingerprint: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Sha1Fingerprint: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -107953,9 +108576,10 @@ func (out *Service) UnmarshalJSON(data []byte) error {
           }
           out.Sha256Fingerprint = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Sha256Fingerprint: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Sha256Fingerprint: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -107993,9 +108617,10 @@ func (out *Service) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field RevocationReason: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field RevocationReason: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field RevocationReason: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -108028,9 +108653,10 @@ func (out *Service) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Ipakrbauthzdata = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Ipakrbauthzdata: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Ipakrbauthzdata: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -108063,9 +108689,10 @@ func (out *Service) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Krbprincipalauthind = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Krbprincipalauthind: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Krbprincipalauthind: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -108116,9 +108743,10 @@ func (out *Service) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipakrbrequirespreauth: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipakrbrequirespreauth: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipakrbrequirespreauth: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -108169,9 +108797,10 @@ func (out *Service) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipakrbokasdelegate: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipakrbokasdelegate: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipakrbokasdelegate: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -108222,9 +108851,10 @@ func (out *Service) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipakrboktoauthasdelegate: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipakrboktoauthasdelegate: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipakrboktoauthasdelegate: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -108257,9 +108887,10 @@ func (out *Service) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberofRole = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberofRole: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberofRole: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -108310,9 +108941,10 @@ func (out *Service) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field HasKeytab: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field HasKeytab: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field HasKeytab: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -108349,9 +108981,10 @@ func (out *Service) UnmarshalJSON(data []byte) error {
           }
           out.ManagedbyHost = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field ManagedbyHost: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field ManagedbyHost: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -108388,9 +109021,10 @@ func (out *Service) UnmarshalJSON(data []byte) error {
           }
           out.IpaallowedtoperformReadKeysUser = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field IpaallowedtoperformReadKeysUser: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field IpaallowedtoperformReadKeysUser: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -108427,9 +109061,10 @@ func (out *Service) UnmarshalJSON(data []byte) error {
           }
           out.IpaallowedtoperformReadKeysGroup = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field IpaallowedtoperformReadKeysGroup: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field IpaallowedtoperformReadKeysGroup: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -108466,9 +109101,10 @@ func (out *Service) UnmarshalJSON(data []byte) error {
           }
           out.IpaallowedtoperformReadKeysHost = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field IpaallowedtoperformReadKeysHost: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field IpaallowedtoperformReadKeysHost: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -108505,9 +109141,10 @@ func (out *Service) UnmarshalJSON(data []byte) error {
           }
           out.IpaallowedtoperformReadKeysHostgroup = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field IpaallowedtoperformReadKeysHostgroup: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field IpaallowedtoperformReadKeysHostgroup: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -108544,9 +109181,10 @@ func (out *Service) UnmarshalJSON(data []byte) error {
           }
           out.IpaallowedtoperformWriteKeysUser = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field IpaallowedtoperformWriteKeysUser: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field IpaallowedtoperformWriteKeysUser: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -108583,9 +109221,10 @@ func (out *Service) UnmarshalJSON(data []byte) error {
           }
           out.IpaallowedtoperformWriteKeysGroup = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field IpaallowedtoperformWriteKeysGroup: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field IpaallowedtoperformWriteKeysGroup: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -108622,9 +109261,10 @@ func (out *Service) UnmarshalJSON(data []byte) error {
           }
           out.IpaallowedtoperformWriteKeysHost = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field IpaallowedtoperformWriteKeysHost: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field IpaallowedtoperformWriteKeysHost: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -108661,9 +109301,10 @@ func (out *Service) UnmarshalJSON(data []byte) error {
           }
           out.IpaallowedtoperformWriteKeysHostgroup = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field IpaallowedtoperformWriteKeysHostgroup: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field IpaallowedtoperformWriteKeysHostgroup: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -108757,9 +109398,10 @@ func (out *Servicedelegationrule) UnmarshalJSON(data []byte) error {
           }
           out.Cn = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Cn: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Cn: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -108796,9 +109438,10 @@ func (out *Servicedelegationrule) UnmarshalJSON(data []byte) error {
           }
           out.IpaallowedtargetServicedelegationtarget = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field IpaallowedtargetServicedelegationtarget: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field IpaallowedtargetServicedelegationtarget: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -108835,9 +109478,10 @@ func (out *Servicedelegationrule) UnmarshalJSON(data []byte) error {
           }
           out.Ipaallowedtoimpersonate = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipaallowedtoimpersonate: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipaallowedtoimpersonate: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -108874,9 +109518,10 @@ func (out *Servicedelegationrule) UnmarshalJSON(data []byte) error {
           }
           out.Memberprincipal = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Memberprincipal: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Memberprincipal: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -108970,9 +109615,10 @@ func (out *Servicedelegationtarget) UnmarshalJSON(data []byte) error {
           }
           out.Cn = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Cn: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Cn: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -109009,9 +109655,10 @@ func (out *Servicedelegationtarget) UnmarshalJSON(data []byte) error {
           }
           out.IpaallowedtargetServicedelegationtarget = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field IpaallowedtargetServicedelegationtarget: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field IpaallowedtargetServicedelegationtarget: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -109048,9 +109695,10 @@ func (out *Servicedelegationtarget) UnmarshalJSON(data []byte) error {
           }
           out.Ipaallowedtoimpersonate = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipaallowedtoimpersonate: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipaallowedtoimpersonate: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -109087,9 +109735,10 @@ func (out *Servicedelegationtarget) UnmarshalJSON(data []byte) error {
           }
           out.Memberprincipal = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Memberprincipal: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Memberprincipal: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -109159,9 +109808,10 @@ func (out *Servrole) UnmarshalJSON(data []byte) error {
           }
           out.Name = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Name: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Name: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -109719,9 +110369,10 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
           }
           out.UID = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field UID: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field UID: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -109758,9 +110409,10 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
           }
           out.Givenname = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Givenname: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Givenname: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -109797,9 +110449,10 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
           }
           out.Sn = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Sn: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Sn: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -109836,9 +110489,10 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
           }
           out.Cn = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Cn: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Cn: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -109876,9 +110530,10 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Displayname: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Displayname: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Displayname: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -109916,9 +110571,10 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Initials: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Initials: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Initials: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -109956,9 +110612,10 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Homedirectory: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Homedirectory: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Homedirectory: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -109996,9 +110653,10 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Gecos: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Gecos: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Gecos: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -110036,9 +110694,10 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Loginshell: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Loginshell: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Loginshell: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -110076,9 +110735,10 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Krbcanonicalname: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Krbcanonicalname: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Krbcanonicalname: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -110111,9 +110771,10 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Krbprincipalname = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Krbprincipalname: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Krbprincipalname: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -110163,9 +110824,10 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Krbprincipalexpiration: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Krbprincipalexpiration: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Krbprincipalexpiration: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -110215,9 +110877,10 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Krbpasswordexpiration: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Krbpasswordexpiration: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Krbpasswordexpiration: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -110250,9 +110913,10 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Mail = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Mail: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Mail: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -110290,9 +110954,10 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Userpassword: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Userpassword: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Userpassword: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -110343,9 +111008,10 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Random: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Random: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Random: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -110383,9 +111049,10 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Randompassword: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Randompassword: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Randompassword: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -110427,9 +111094,10 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Uidnumber: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Uidnumber: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Uidnumber: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -110471,9 +111139,10 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Gidnumber: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Gidnumber: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Gidnumber: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -110511,9 +111180,10 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Street: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Street: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Street: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -110551,9 +111221,10 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field L: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field L: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field L: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -110591,9 +111262,10 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field St: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field St: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field St: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -110631,9 +111303,10 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Postalcode: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Postalcode: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Postalcode: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -110666,9 +111339,10 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Telephonenumber = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Telephonenumber: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Telephonenumber: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -110701,9 +111375,10 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Mobile = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Mobile: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Mobile: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -110736,9 +111411,10 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Pager = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Pager: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Pager: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -110771,9 +111447,10 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Facsimiletelephonenumber = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Facsimiletelephonenumber: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Facsimiletelephonenumber: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -110811,9 +111488,10 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ou: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ou: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ou: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -110851,9 +111529,10 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Title: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Title: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Title: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -110891,9 +111570,10 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Manager: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Manager: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Manager: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -110926,9 +111606,10 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Carlicense = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Carlicense: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Carlicense: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -110961,9 +111642,10 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Ipasshpubkey = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Ipasshpubkey: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Ipasshpubkey: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -110996,9 +111678,10 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Sshpubkeyfp = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Sshpubkeyfp: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Sshpubkeyfp: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -111031,9 +111714,10 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Ipauserauthtype = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Ipauserauthtype: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Ipauserauthtype: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -111066,9 +111750,10 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Userclass = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Userclass: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Userclass: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -111106,9 +111791,10 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipatokenradiusconfiglink: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipatokenradiusconfiglink: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipatokenradiusconfiglink: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -111146,9 +111832,10 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipatokenradiususername: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipatokenradiususername: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipatokenradiususername: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -111186,9 +111873,10 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipaidpconfiglink: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipaidpconfiglink: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipaidpconfiglink: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -111226,9 +111914,10 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipaidpsub: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipaidpsub: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipaidpsub: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -111261,9 +111950,10 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Departmentnumber = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Departmentnumber: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Departmentnumber: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -111301,9 +111991,10 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Employeenumber: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Employeenumber: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Employeenumber: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -111341,9 +112032,10 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Employeetype: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Employeetype: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Employeetype: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -111381,9 +112073,10 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Preferredlanguage: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Preferredlanguage: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Preferredlanguage: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -111416,9 +112109,10 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Usercertificate = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Usercertificate: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Usercertificate: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -111451,9 +112145,10 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Ipacertmapdata = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Ipacertmapdata: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Ipacertmapdata: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -111491,9 +112186,10 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipantlogonscript: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipantlogonscript: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipantlogonscript: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -111531,9 +112227,10 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipantprofilepath: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipantprofilepath: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipantprofilepath: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -111571,9 +112268,10 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipanthomedirectory: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipanthomedirectory: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipanthomedirectory: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -111611,9 +112309,10 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipanthomedirectorydrive: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipanthomedirectorydrive: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipanthomedirectorydrive: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -111664,9 +112363,10 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field HasPassword: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field HasPassword: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field HasPassword: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -111699,9 +112399,10 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberofGroup = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberofGroup: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberofGroup: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -111734,9 +112435,10 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberofRole = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberofRole: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberofRole: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -111769,9 +112471,10 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberofNetgroup = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberofNetgroup: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberofNetgroup: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -111804,9 +112507,10 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberofSudorule = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberofSudorule: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberofSudorule: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -111839,9 +112543,10 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberofHbacrule = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberofHbacrule: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberofHbacrule: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -111874,9 +112579,10 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberofSubid = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberofSubid: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberofSubid: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -111909,9 +112615,10 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberofindirectGroup = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberofindirectGroup: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberofindirectGroup: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -111944,9 +112651,10 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberofindirectNetgroup = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberofindirectNetgroup: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberofindirectNetgroup: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -111979,9 +112687,10 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberofindirectRole = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberofindirectRole: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberofindirectRole: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -112014,9 +112723,10 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberofindirectSudorule = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberofindirectSudorule: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberofindirectSudorule: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -112049,9 +112759,10 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberofindirectHbacrule = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberofindirectHbacrule: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberofindirectHbacrule: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -112102,9 +112813,10 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field HasKeytab: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field HasKeytab: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field HasKeytab: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -112222,9 +112934,10 @@ func (out *Subid) UnmarshalJSON(data []byte) error {
           }
           out.Ipauniqueid = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipauniqueid: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipauniqueid: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -112262,9 +112975,10 @@ func (out *Subid) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Description: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Description: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Description: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -112301,9 +113015,10 @@ func (out *Subid) UnmarshalJSON(data []byte) error {
           }
           out.Ipaowner = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipaowner: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipaowner: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -112345,9 +113060,10 @@ func (out *Subid) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipasubuidnumber: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipasubuidnumber: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipasubuidnumber: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -112389,9 +113105,10 @@ func (out *Subid) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipasubuidcount: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipasubuidcount: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipasubuidcount: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -112433,9 +113150,10 @@ func (out *Subid) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipasubgidnumber: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipasubgidnumber: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipasubgidnumber: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -112477,9 +113195,10 @@ func (out *Subid) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipasubgidcount: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipasubgidcount: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipasubgidcount: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -112565,9 +113284,10 @@ func (out *Sudocmd) UnmarshalJSON(data []byte) error {
           }
           out.Sudocmd = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Sudocmd: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Sudocmd: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -112605,9 +113325,10 @@ func (out *Sudocmd) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Description: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Description: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Description: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -112640,9 +113361,10 @@ func (out *Sudocmd) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberofSudocmdgroup = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberofSudocmdgroup: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberofSudocmdgroup: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -112744,9 +113466,10 @@ func (out *Sudocmdgroup) UnmarshalJSON(data []byte) error {
           }
           out.Cn = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Cn: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Cn: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -112784,9 +113507,10 @@ func (out *Sudocmdgroup) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Description: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Description: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Description: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -112819,9 +113543,10 @@ func (out *Sudocmdgroup) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MembercmdSudocmd = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MembercmdSudocmd: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MembercmdSudocmd: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -112854,9 +113579,10 @@ func (out *Sudocmdgroup) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MembercmdSudocmdgroup = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MembercmdSudocmdgroup: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MembercmdSudocmdgroup: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -112889,9 +113615,10 @@ func (out *Sudocmdgroup) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberSudocmd = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberSudocmd: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberSudocmd: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -113169,9 +113896,10 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
           }
           out.Cn = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Cn: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Cn: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -113209,9 +113937,10 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Description: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Description: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Description: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -113262,9 +113991,10 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipaenabledflag: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipaenabledflag: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipaenabledflag: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -113302,9 +114032,10 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Usercategory: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Usercategory: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Usercategory: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -113342,9 +114073,10 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Hostcategory: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Hostcategory: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Hostcategory: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -113382,9 +114114,10 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Cmdcategory: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Cmdcategory: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Cmdcategory: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -113422,9 +114155,10 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipasudorunasusercategory: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipasudorunasusercategory: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipasudorunasusercategory: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -113462,9 +114196,10 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipasudorunasgroupcategory: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipasudorunasgroupcategory: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipasudorunasgroupcategory: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -113506,9 +114241,10 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Sudoorder: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Sudoorder: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Sudoorder: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -113541,9 +114277,10 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberuserUser = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberuserUser: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberuserUser: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -113576,9 +114313,10 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberuserGroup = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberuserGroup: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberuserGroup: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -113611,9 +114349,10 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Externaluser = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Externaluser: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Externaluser: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -113646,9 +114385,10 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberhostHost = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberhostHost: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberhostHost: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -113681,9 +114421,10 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberhostHostgroup = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberhostHostgroup: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberhostHostgroup: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -113716,9 +114457,10 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Hostmask = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Hostmask: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Hostmask: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -113751,9 +114493,10 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Externalhost = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Externalhost: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Externalhost: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -113786,9 +114529,10 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberallowcmdSudocmd = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberallowcmdSudocmd: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberallowcmdSudocmd: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -113821,9 +114565,10 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberdenycmdSudocmd = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberdenycmdSudocmd: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberdenycmdSudocmd: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -113856,9 +114601,10 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberallowcmdSudocmdgroup = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberallowcmdSudocmdgroup: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberallowcmdSudocmdgroup: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -113891,9 +114637,10 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberdenycmdSudocmdgroup = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberdenycmdSudocmdgroup: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberdenycmdSudocmdgroup: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -113926,9 +114673,10 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.IpasudorunasUser = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field IpasudorunasUser: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field IpasudorunasUser: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -113961,9 +114709,10 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.IpasudorunasGroup = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field IpasudorunasGroup: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field IpasudorunasGroup: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -113996,9 +114745,10 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Ipasudorunasextuser = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Ipasudorunasextuser: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Ipasudorunasextuser: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -114031,9 +114781,10 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Ipasudorunasextusergroup = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Ipasudorunasextusergroup: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Ipasudorunasextusergroup: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -114066,9 +114817,10 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.IpasudorunasgroupGroup = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field IpasudorunasgroupGroup: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field IpasudorunasgroupGroup: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -114101,9 +114853,10 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Ipasudorunasextgroup = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Ipasudorunasextgroup: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Ipasudorunasextgroup: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -114136,9 +114889,10 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Ipasudoopt = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Ipasudoopt: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Ipasudoopt: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -114256,9 +115010,10 @@ func (out *Topic) UnmarshalJSON(data []byte) error {
           }
           out.Name = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Name: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Name: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -114295,9 +115050,10 @@ func (out *Topic) UnmarshalJSON(data []byte) error {
           }
           out.Version = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Version: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Version: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -114334,9 +115090,10 @@ func (out *Topic) UnmarshalJSON(data []byte) error {
           }
           out.FullName = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field FullName: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field FullName: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -114374,9 +115131,10 @@ func (out *Topic) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Doc: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Doc: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Doc: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -114409,9 +115167,10 @@ func (out *Topic) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Exclude = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Exclude: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Exclude: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -114444,9 +115203,10 @@ func (out *Topic) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Include = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Include: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Include: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -114484,9 +115244,10 @@ func (out *Topic) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field TopicTopic: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field TopicTopic: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field TopicTopic: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -114620,9 +115381,10 @@ func (out *Topologysegment) UnmarshalJSON(data []byte) error {
           }
           out.Cn = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Cn: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Cn: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -114659,9 +115421,10 @@ func (out *Topologysegment) UnmarshalJSON(data []byte) error {
           }
           out.Iparepltoposegmentleftnode = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Iparepltoposegmentleftnode: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Iparepltoposegmentleftnode: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -114698,9 +115461,10 @@ func (out *Topologysegment) UnmarshalJSON(data []byte) error {
           }
           out.Iparepltoposegmentrightnode = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Iparepltoposegmentrightnode: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Iparepltoposegmentrightnode: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -114737,9 +115501,10 @@ func (out *Topologysegment) UnmarshalJSON(data []byte) error {
           }
           out.Iparepltoposegmentdirection = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Iparepltoposegmentdirection: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Iparepltoposegmentdirection: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -114777,9 +115542,10 @@ func (out *Topologysegment) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Nsds5replicastripattrs: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Nsds5replicastripattrs: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Nsds5replicastripattrs: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -114817,9 +115583,10 @@ func (out *Topologysegment) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Nsds5replicatedattributelist: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Nsds5replicatedattributelist: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Nsds5replicatedattributelist: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -114857,9 +115624,10 @@ func (out *Topologysegment) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Nsds5replicatedattributelisttotal: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Nsds5replicatedattributelisttotal: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Nsds5replicatedattributelisttotal: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -114901,9 +115669,10 @@ func (out *Topologysegment) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Nsds5replicatimeout: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Nsds5replicatimeout: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Nsds5replicatimeout: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -114941,9 +115710,10 @@ func (out *Topologysegment) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Nsds5replicaenabled: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Nsds5replicaenabled: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Nsds5replicaenabled: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -115021,9 +115791,10 @@ func (out *Topologysuffix) UnmarshalJSON(data []byte) error {
           }
           out.Cn = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Cn: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Cn: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -115060,9 +115831,10 @@ func (out *Topologysuffix) UnmarshalJSON(data []byte) error {
           }
           out.Iparepltopoconfroot = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Iparepltopoconfroot: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Iparepltopoconfroot: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -115196,9 +115968,10 @@ func (out *Trust) UnmarshalJSON(data []byte) error {
           }
           out.Cn = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Cn: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Cn: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -115235,9 +116008,10 @@ func (out *Trust) UnmarshalJSON(data []byte) error {
           }
           out.Ipantflatname = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipantflatname: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipantflatname: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -115274,9 +116048,10 @@ func (out *Trust) UnmarshalJSON(data []byte) error {
           }
           out.Ipanttrusteddomainsid = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipanttrusteddomainsid: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipanttrusteddomainsid: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -115309,9 +116084,10 @@ func (out *Trust) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Ipantsidblacklistincoming = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Ipantsidblacklistincoming: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Ipantsidblacklistincoming: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -115344,9 +116120,10 @@ func (out *Trust) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Ipantsidblacklistoutgoing = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Ipantsidblacklistoutgoing: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Ipantsidblacklistoutgoing: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -115383,9 +116160,10 @@ func (out *Trust) UnmarshalJSON(data []byte) error {
           }
           out.Trustdirection = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Trustdirection: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Trustdirection: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -115422,9 +116200,10 @@ func (out *Trust) UnmarshalJSON(data []byte) error {
           }
           out.Trusttype = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Trusttype: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Trusttype: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -115461,9 +116240,10 @@ func (out *Trust) UnmarshalJSON(data []byte) error {
           }
           out.Truststatus = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Truststatus: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Truststatus: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -115496,9 +116276,10 @@ func (out *Trust) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Ipantadditionalsuffixes = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Ipantadditionalsuffixes: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Ipantadditionalsuffixes: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -115616,9 +116397,10 @@ func (out *Trustconfig) UnmarshalJSON(data []byte) error {
           }
           out.Cn = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Cn: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Cn: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -115655,9 +116437,10 @@ func (out *Trustconfig) UnmarshalJSON(data []byte) error {
           }
           out.Ipantsecurityidentifier = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipantsecurityidentifier: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipantsecurityidentifier: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -115694,9 +116477,10 @@ func (out *Trustconfig) UnmarshalJSON(data []byte) error {
           }
           out.Ipantflatname = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipantflatname: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipantflatname: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -115733,9 +116517,10 @@ func (out *Trustconfig) UnmarshalJSON(data []byte) error {
           }
           out.Ipantdomainguid = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipantdomainguid: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipantdomainguid: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -115772,9 +116557,10 @@ func (out *Trustconfig) UnmarshalJSON(data []byte) error {
           }
           out.Ipantfallbackprimarygroup = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipantfallbackprimarygroup: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipantfallbackprimarygroup: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -115807,9 +116593,10 @@ func (out *Trustconfig) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.AdTrustAgentServer = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field AdTrustAgentServer: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field AdTrustAgentServer: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -115842,9 +116629,10 @@ func (out *Trustconfig) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.AdTrustControllerServer = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field AdTrustControllerServer: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field AdTrustControllerServer: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -115938,9 +116726,10 @@ func (out *Trustdomain) UnmarshalJSON(data []byte) error {
           }
           out.Cn = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Cn: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Cn: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -115978,9 +116767,10 @@ func (out *Trustdomain) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipantflatname: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipantflatname: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipantflatname: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -116018,9 +116808,10 @@ func (out *Trustdomain) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipanttrusteddomainsid: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipanttrusteddomainsid: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipanttrusteddomainsid: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -116071,9 +116862,10 @@ func (out *Trustdomain) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field DomainEnabled: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field DomainEnabled: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field DomainEnabled: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -116647,9 +117439,10 @@ func (out *User) UnmarshalJSON(data []byte) error {
           }
           out.UID = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field UID: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field UID: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -116687,9 +117480,10 @@ func (out *User) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Givenname: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Givenname: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Givenname: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -116726,9 +117520,10 @@ func (out *User) UnmarshalJSON(data []byte) error {
           }
           out.Sn = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Sn: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Sn: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -116766,9 +117561,10 @@ func (out *User) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Cn: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Cn: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Cn: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -116806,9 +117602,10 @@ func (out *User) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Displayname: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Displayname: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Displayname: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -116846,9 +117643,10 @@ func (out *User) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Initials: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Initials: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Initials: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -116886,9 +117684,10 @@ func (out *User) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Homedirectory: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Homedirectory: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Homedirectory: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -116926,9 +117725,10 @@ func (out *User) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Gecos: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Gecos: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Gecos: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -116966,9 +117766,10 @@ func (out *User) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Loginshell: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Loginshell: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Loginshell: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -117006,9 +117807,10 @@ func (out *User) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Krbcanonicalname: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Krbcanonicalname: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Krbcanonicalname: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -117041,9 +117843,10 @@ func (out *User) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Krbprincipalname = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Krbprincipalname: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Krbprincipalname: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -117093,9 +117896,10 @@ func (out *User) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Krbprincipalexpiration: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Krbprincipalexpiration: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Krbprincipalexpiration: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -117145,9 +117949,10 @@ func (out *User) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Krbpasswordexpiration: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Krbpasswordexpiration: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Krbpasswordexpiration: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -117180,9 +117985,10 @@ func (out *User) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Mail = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Mail: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Mail: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -117220,9 +118026,10 @@ func (out *User) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Userpassword: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Userpassword: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Userpassword: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -117273,9 +118080,10 @@ func (out *User) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Random: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Random: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Random: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -117313,9 +118121,10 @@ func (out *User) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Randompassword: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Randompassword: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Randompassword: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -117357,9 +118166,10 @@ func (out *User) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Uidnumber: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Uidnumber: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Uidnumber: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -117401,9 +118211,10 @@ func (out *User) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Gidnumber: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Gidnumber: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Gidnumber: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -117441,9 +118252,10 @@ func (out *User) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Street: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Street: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Street: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -117481,9 +118293,10 @@ func (out *User) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field L: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field L: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field L: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -117521,9 +118334,10 @@ func (out *User) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field St: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field St: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field St: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -117561,9 +118375,10 @@ func (out *User) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Postalcode: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Postalcode: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Postalcode: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -117596,9 +118411,10 @@ func (out *User) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Telephonenumber = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Telephonenumber: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Telephonenumber: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -117631,9 +118447,10 @@ func (out *User) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Mobile = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Mobile: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Mobile: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -117666,9 +118483,10 @@ func (out *User) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Pager = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Pager: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Pager: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -117701,9 +118519,10 @@ func (out *User) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Facsimiletelephonenumber = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Facsimiletelephonenumber: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Facsimiletelephonenumber: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -117741,9 +118560,10 @@ func (out *User) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ou: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ou: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ou: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -117781,9 +118601,10 @@ func (out *User) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Title: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Title: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Title: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -117821,9 +118642,10 @@ func (out *User) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Manager: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Manager: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Manager: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -117856,9 +118678,10 @@ func (out *User) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Carlicense = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Carlicense: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Carlicense: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -117891,9 +118714,10 @@ func (out *User) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Ipasshpubkey = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Ipasshpubkey: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Ipasshpubkey: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -117926,9 +118750,10 @@ func (out *User) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Sshpubkeyfp = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Sshpubkeyfp: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Sshpubkeyfp: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -117961,9 +118786,10 @@ func (out *User) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Ipauserauthtype = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Ipauserauthtype: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Ipauserauthtype: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -117996,9 +118822,10 @@ func (out *User) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Userclass = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Userclass: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Userclass: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -118036,9 +118863,10 @@ func (out *User) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipatokenradiusconfiglink: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipatokenradiusconfiglink: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipatokenradiusconfiglink: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -118076,9 +118904,10 @@ func (out *User) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipatokenradiususername: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipatokenradiususername: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipatokenradiususername: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -118116,9 +118945,10 @@ func (out *User) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipaidpconfiglink: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipaidpconfiglink: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipaidpconfiglink: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -118156,9 +118986,10 @@ func (out *User) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipaidpsub: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipaidpsub: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipaidpsub: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -118191,9 +119022,10 @@ func (out *User) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Departmentnumber = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Departmentnumber: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Departmentnumber: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -118231,9 +119063,10 @@ func (out *User) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Employeenumber: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Employeenumber: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Employeenumber: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -118271,9 +119104,10 @@ func (out *User) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Employeetype: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Employeetype: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Employeetype: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -118311,9 +119145,10 @@ func (out *User) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Preferredlanguage: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Preferredlanguage: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Preferredlanguage: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -118346,9 +119181,10 @@ func (out *User) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Usercertificate = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Usercertificate: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Usercertificate: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -118381,9 +119217,10 @@ func (out *User) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.Ipacertmapdata = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field Ipacertmapdata: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field Ipacertmapdata: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -118421,9 +119258,10 @@ func (out *User) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipantlogonscript: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipantlogonscript: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipantlogonscript: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -118461,9 +119299,10 @@ func (out *User) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipantprofilepath: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipantprofilepath: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipantprofilepath: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -118501,9 +119340,10 @@ func (out *User) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipanthomedirectory: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipanthomedirectory: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipanthomedirectory: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -118541,9 +119381,10 @@ func (out *User) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipanthomedirectorydrive: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipanthomedirectorydrive: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipanthomedirectorydrive: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -118594,9 +119435,10 @@ func (out *User) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Nsaccountlock: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Nsaccountlock: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Nsaccountlock: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -118647,9 +119489,10 @@ func (out *User) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Preserved: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Preserved: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Preserved: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -118700,9 +119543,10 @@ func (out *User) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field HasPassword: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field HasPassword: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field HasPassword: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -118735,9 +119579,10 @@ func (out *User) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberofGroup = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberofGroup: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberofGroup: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -118770,9 +119615,10 @@ func (out *User) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberofRole = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberofRole: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberofRole: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -118805,9 +119651,10 @@ func (out *User) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberofNetgroup = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberofNetgroup: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberofNetgroup: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -118840,9 +119687,10 @@ func (out *User) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberofSudorule = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberofSudorule: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberofSudorule: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -118875,9 +119723,10 @@ func (out *User) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberofHbacrule = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberofHbacrule: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberofHbacrule: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -118910,9 +119759,10 @@ func (out *User) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberofSubid = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberofSubid: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberofSubid: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -118945,9 +119795,10 @@ func (out *User) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberofindirectGroup = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberofindirectGroup: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberofindirectGroup: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -118980,9 +119831,10 @@ func (out *User) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberofindirectNetgroup = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberofindirectNetgroup: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberofindirectNetgroup: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -119015,9 +119867,10 @@ func (out *User) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberofindirectRole = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberofindirectRole: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberofindirectRole: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -119050,9 +119903,10 @@ func (out *User) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberofindirectSudorule = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberofindirectSudorule: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberofindirectSudorule: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -119085,9 +119939,10 @@ func (out *User) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberofindirectHbacrule = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberofindirectHbacrule: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberofindirectHbacrule: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -119138,9 +119993,10 @@ func (out *User) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field HasKeytab: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field HasKeytab: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field HasKeytab: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -119272,9 +120128,10 @@ func (out *Userstatus) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Preserved: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Preserved: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Preserved: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -119311,9 +120168,10 @@ func (out *Userstatus) UnmarshalJSON(data []byte) error {
           }
           out.Server = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Server: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Server: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -119350,9 +120208,10 @@ func (out *Userstatus) UnmarshalJSON(data []byte) error {
           }
           out.Krbloginfailedcount = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Krbloginfailedcount: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Krbloginfailedcount: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -119389,9 +120248,10 @@ func (out *Userstatus) UnmarshalJSON(data []byte) error {
           }
           out.Krblastsuccessfulauth = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Krblastsuccessfulauth: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Krblastsuccessfulauth: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -119428,9 +120288,10 @@ func (out *Userstatus) UnmarshalJSON(data []byte) error {
           }
           out.Krblastfailedauth = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Krblastfailedauth: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Krblastfailedauth: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -119467,9 +120328,10 @@ func (out *Userstatus) UnmarshalJSON(data []byte) error {
           }
           out.Now = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Now: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Now: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -119506,9 +120368,10 @@ func (out *Userstatus) UnmarshalJSON(data []byte) error {
           }
           out.Passwordgraceusertime = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Passwordgraceusertime: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Passwordgraceusertime: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -119690,9 +120553,10 @@ func (out *Vault) UnmarshalJSON(data []byte) error {
           }
           out.Cn = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field Cn: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Cn: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -119730,9 +120594,10 @@ func (out *Vault) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Description: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Description: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Description: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -119770,9 +120635,10 @@ func (out *Vault) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipavaulttype: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipavaulttype: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipavaulttype: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -119810,9 +120676,10 @@ func (out *Vault) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipavaultsalt: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipavaultsalt: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipavaultsalt: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -119850,9 +120717,10 @@ func (out *Vault) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Ipavaultpublickey: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Ipavaultpublickey: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Ipavaultpublickey: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -119890,9 +120758,10 @@ func (out *Vault) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field OwnerUser: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field OwnerUser: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field OwnerUser: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -119930,9 +120799,10 @@ func (out *Vault) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field OwnerGroup: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field OwnerGroup: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field OwnerGroup: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -119970,9 +120840,10 @@ func (out *Vault) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field OwnerService: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field OwnerService: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field OwnerService: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -120010,9 +120881,10 @@ func (out *Vault) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Owner: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Owner: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Owner: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -120050,9 +120922,10 @@ func (out *Vault) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Service: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Service: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Service: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -120103,9 +120976,10 @@ func (out *Vault) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Shared: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Shared: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Shared: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -120143,9 +121017,10 @@ func (out *Vault) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Username: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Username: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Username: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -120178,9 +121053,10 @@ func (out *Vault) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberUser = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberUser: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberUser: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -120213,9 +121089,10 @@ func (out *Vault) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberGroup = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberGroup: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberGroup: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -120248,9 +121125,10 @@ func (out *Vault) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.MemberService = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field MemberService: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field MemberService: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -120328,9 +121206,10 @@ func (out *Vaultconfig) UnmarshalJSON(data []byte) error {
           }
           out.TransportCert = sliceV[0]
         
-      } else {
-        return fmt.Errorf("unexpected value for field TransportCert: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field TransportCert: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -120363,9 +121242,10 @@ func (out *Vaultconfig) UnmarshalJSON(data []byte) error {
       } else if sliceOk {
         
         out.KraServerServer = &sliceV
-      } else {
-        return fmt.Errorf("unexpected value for field KraServerServer: %v (%v)", raw, reflect.TypeOf(raw))
-      }
+      } 
+        //else {
+        //return fmt.Errorf("unexpected value for field KraServerServer: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil
@@ -120484,9 +121364,10 @@ func (out *Vaultcontainer) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field OwnerUser: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field OwnerUser: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field OwnerUser: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -120524,9 +121405,10 @@ func (out *Vaultcontainer) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field OwnerGroup: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field OwnerGroup: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field OwnerGroup: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -120564,9 +121446,10 @@ func (out *Vaultcontainer) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field OwnerService: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field OwnerService: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field OwnerService: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -120604,9 +121487,10 @@ func (out *Vaultcontainer) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Owner: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Owner: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Owner: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -120644,9 +121528,10 @@ func (out *Vaultcontainer) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Service: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Service: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Service: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -120697,9 +121582,10 @@ func (out *Vaultcontainer) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Shared: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Shared: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Shared: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   
@@ -120737,9 +121623,10 @@ func (out *Vaultcontainer) UnmarshalJSON(data []byte) error {
             return fmt.Errorf("unexpected value for field Username: %v; expected at most one element", raw)
           }
         
-      } else {
-        return fmt.Errorf("unexpected value for field Username: %v (%v)", raw, reflect.TypeOf(raw))
       }
+      // else {
+       // return fmt.Errorf("unexpected value for field Username: %v (%v)", raw, reflect.TypeOf(raw))
+      //}
     
   }
   return nil

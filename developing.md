@@ -44,6 +44,11 @@ the following curl command does:
 ```bash
 curl 'https://dc1.test.local/ipa/session/json' -H 'Origin: https://dc1.test.local' -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'Cookie: ipa_session=3057327ac9ea5622d7011b122d47790e' -H 'Referer: https://dc1.test.local/ipa/ui/' --data-binary '{"method":"schema","params":[[],{"version":"2.170"}]}' --insecure > ./data/schema.json
 ```
+or 
+```bash
+curl 'https://dc1.test.local/ipa/session/json' -H 'Origin: https://dc1.test.local' -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'Referer: https://dc1.test.local/ipa/ui/'  --data-binary '{"method":"schema","params":[[],{"version":"2.251"}]}' --insecure    --negotiate -u : \
+--cacert /etc/ipa/ca.crt  > ./data/schema.json
+```
 
 You'll need to adjust the URLs and the value of the `ipa_session` cookie. You
 may alse need to adjust `version` in the request body.

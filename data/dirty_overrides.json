@@ -1,4 +1,5 @@
 {
+
   "classes": {
     "sudorule": {
       "params": {
@@ -62,6 +63,17 @@
           "required": false
         }
       }
+    },
+    "Cert": {
+      "params": {
+        "valid_not_before": {
+          "type": "str"
+        },
+        "valid_not_after": {
+          "type": "str"
+        }
+      }
     }
+    
   }
 }
