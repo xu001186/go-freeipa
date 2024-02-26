@@ -49,7 +49,7 @@ func setup(t *testing.T) *freeipa.Client {
 			InsecureSkipVerify: true,
 		},
 	}
-	client, e := freeipa.Connect("dc1.test.local", tspt, "admin", "Cz25FAQfBJ3juh124xG3")
+	client, e := freeipa.Connect(time.Second*10, "epididmcor49d.elysium.epicon.com", tspt, "admin", "Cz25FAQfBJ3juh124xG3")
 	if e != nil {
 		t.Fatal(e)
 	}

@@ -6,6 +6,7 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"time"
 
 	"github.com/xu001186/go-freeipa/freeipa"
 )
@@ -39,7 +40,7 @@ func main() {
 		},
 	}
 
-	c, err := freeipa.ConnectWithKerberos(os.Getenv("IPA_HOST"), tspt, krb5ConnectOption)
+	c, err := freeipa.ConnectWithKerberos(time.Second*10, os.Getenv("IPA_HOST"), tspt, krb5ConnectOption)
 	if err != nil {
 		log.Fatal(err)
 	}
