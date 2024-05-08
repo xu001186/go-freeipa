@@ -66,6 +66,7 @@ import (
 	"net/http"
 	"net/http/cookiejar"
 	"net/url"
+	"strings"
 	"time"
 
 	k5client "github.com/jcmturner/gokrb5/v8/client"
@@ -194,7 +195,17 @@ func (c *Client) login() error {
 		"user":     []string{c.user},
 		"password": []string{c.pw},
 	}
-	res, e := c.hc.PostForm(fmt.Sprintf("https://%v/ipa/session/login_password", c.host), data)
+
+	req, e := http.NewRequest("POST", fmt.Sprintf("https://%v/ipa/session/login_password", c.host), strings.NewReader(data.Encode()))
+	if e != nil {
+		return e
+	}
+
+	req.Header.Add("referer", fmt.Sprintf("https://%s/ipa", c.host))
+	req.Header.Add("Content-Type", "application/x-www-form-urlencoded")
+
+	res, e := c.hc.Do(req)
+
 	if e != nil {
 		return e
 	}
@@ -204,7 +215,12 @@ func (c *Client) login() error {
 		if res.StatusCode == http.StatusUnauthorized {
 			return unauthorizedHTTPResponseToFreeipaError(res)
 		}
-		return fmt.Errorf("unexpected http status code: %v", res.StatusCode)
+		bodyBytes, e := io.ReadAll(res.Body)
+		if e != nil {
+			return e
+		}
+
+		return fmt.Errorf("unexpected http status code: %v, error details is: %s ", res.StatusCode, string(bodyBytes))
 	}
 	return nil
 }
